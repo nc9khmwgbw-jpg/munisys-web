@@ -7053,3 +7053,124 @@ html[data-theme="dark"] body #munisys-wrapper .ref-logo {
     text-shadow: 0 10px 20px rgba(147, 197, 253, 0.2) !important;
     -webkit-text-stroke: 0px !important;
 }
+
+/* ==========================================================================
+   PREMIUM DESIGN OVERRIDES (Added via Automation)
+   ========================================================================== */
+
+/* 1. Advanced Glassmorphism & Depth - Navbar */
+#munisys-global-header .nav.scrolled {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05) !important;
+}
+[data-theme="dark"] #munisys-global-header .nav.scrolled {
+  background: rgba(15, 23, 42, 0.75) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 2. Micro-Animations - Buttons */
+#munisys-wrapper .btn-elegant {
+  box-shadow: 0 4px 15px rgba(29, 78, 121, 0.15) !important;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+#munisys-wrapper .btn-elegant:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 12px 24px rgba(146, 43, 85, 0.25) !important;
+}
+
+/* 3. Advanced Glassmorphism - Bento Cards */
+#munisys-wrapper .bento-card {
+  border-radius: 24px !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+#munisys-wrapper .bento-card.glass {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+}
+[data-theme="dark"] #munisys-wrapper .bento-card {
+  background: rgba(30, 41, 59, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Bento Card Hover lift */
+#munisys-wrapper .bento-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+}
+[data-theme="dark"] #munisys-wrapper .bento-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Insights Cards Enhancement */
+.ins-card {
+  border-radius: 20px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04) !important;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  border: 1px solid rgba(0,0,0,0.03) !important;
+  background: #ffffff;
+}
+.ins-card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08) !important;
+}
+[data-theme="dark"] .ins-card {
+  background: rgba(30, 41, 59, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 4. Hero Section Mesh Glow Gradient */
+.hero-container {
+  position: relative;
+  overflow: hidden;
+}
+.hero-container::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(131, 165, 194, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 60%;
+  height: 70%;
+  background: radial-gradient(circle, rgba(146, 43, 85, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+[data-theme="dark"] .hero-container::before {
+  background: radial-gradient(circle, rgba(131, 165, 194, 0.08) 0%, transparent 70%);
+}
+[data-theme="dark"] .hero-container::after {
+  background: radial-gradient(circle, rgba(146, 43, 85, 0.05) 0%, transparent 70%);
+}
+
+/* 5. Typography Polish */
+h1, h2, h3 {
+  letter-spacing: -0.02em !important;
+}
+.hero-container .title {
+  line-height: 1.1 !important;
+}
+.hero-container .desc {
+  line-height: 1.6 !important;
+  font-size: 1.1rem !important;
+}
