@@ -117,7 +117,7 @@ export default function EditableNavigation() {
               </div>
             </li>
 
-            {(nav.mainLinks || []).map((item, idx) => (
+            {(dbData?.navigation?.mainLinks || navDump.mainLinks || []).map((item, idx) => (
               <li key={idx} className="nav-item">
                 <Magnetic strength={0.3}>
                   <Link href={item.href || '#'} style={{ fontSize: '0.65rem', padding: '0.2rem', letterSpacing: '0', display: 'flex', alignItems: 'center' }}>
