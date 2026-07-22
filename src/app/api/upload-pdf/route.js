@@ -1,9 +1,22 @@
 import fs from 'fs/promises';
 import path from 'path';
 import { NextResponse } from 'next/server';
-import pdfParse from 'pdf-parse';
+import PDFParser from 'pdf2json';
 
 export const dynamic = 'force-dynamic';
+
+function parsePdfBuffer(buffer) {
+  return new Promise((resolve, reject) => {
+    const pdfParser = new PDFParser(null, 1);
+    
+    pdfParser.on("pdfParser_dataError", errData => reject(errData.parserError));
+    pdfParser.on("pdfParser_dataReady", () => {
+      resolve(pdfParser.getRawTextContent());
+    });
+    
+    pdfParser.parseBuffer(buffer);
+  });
+}
 
 export async function POST(request) {
   try {
@@ -30,15 +43,14 @@ export async function POST(request) {
     // Parse the PDF text
     let parsedText = '';
     try {
-      const pdfData = await pdfParse(buffer);
-      parsedText = pdfData.text || '';
+      parsedText = await parsePdfBuffer(buffer);
     } catch (parseErr) {
-      console.warn('Erreur lors du parsing PDF:', parseErr);
-      // We can continue even if parsing fails, just use default values
+      console.warn('Erreur lors du parsing PDF avec pdf2json:', parseErr);
     }
 
-    // Extract Title and Description via Heuristics
-    const lines = parsedText.split('\n').map(l => l.trim()).filter(l => l.length > 3);
+    // Clean up text format from pdf2json (remove crazy spaces and line breaks)
+    const cleanText = parsedText.replace(/\r\n/g, '\n').replace(/----------------Page \(0\)[a-zA-Z0-9\s-]+/g, '');
+    const lines = cleanText.split('\n').map(l => l.trim()).filter(l => l.length > 3);
     
     let extractedTitle = 'Communiqué de Presse';
     let extractedDesc = 'Consultez notre dernier communiqué de presse pour plus d\'informations.';
