@@ -412,15 +412,21 @@ export default function Home() {
                   key={i}
                   href={sol.link}
                   className={`bento-card${sol.span === 'glass' ? ' glass' : ''}`}
-                  style={sol.span === 'span-2x3' ? { gridColumn: 'span 2', gridRow: 'span 3' }
-                    : sol.span === 'span-2x1' ? { gridColumn: 'span 2', gridRow: 'span 1' }
-                    : {}}
+                  style={{
+                    position: 'relative',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    ...(sol.span === 'span-2x3' ? { gridColumn: 'span 2', gridRow: 'span 3' }
+                      : sol.span === 'span-2x1' ? { gridColumn: 'span 2', gridRow: 'span 1' }
+                      : {})
+                  }}
                 >
                   <InlineImageEditor
                     dbPath={['homepage', 'solutions', i, 'img']}
                     fallback={sol.img || ''}
                     className="bento-bg-editor"
-                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+                    style={{ position: 'relative', width: '100%', height: '280px', objectFit: 'cover', flexShrink: 0 }}
                   >
                     {(src) => (
                       <img src={src} className="bento-bg" alt="" />
