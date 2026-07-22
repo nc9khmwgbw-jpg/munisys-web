@@ -554,14 +554,9 @@ export default function Home() {
 
       {/* ── 5. CUSTOMER REFERENCES (Infinite Marquee) ── */}
       <FadeIn>
-        <section className="ref-sec" id="customer-references">
-          <div className="ref-top">
-            <InlineEditor as="h2" className="ref-title" dbPath={['homepage', 'sections', 'referencesTitle']} fallback="They trust us" />
-            <InlineEditor as="p" className="ref-desc" dbPath={['homepage', 'sections', 'referencesDesc']} fallback="As a trusted advisor, our contribution to the design, deployment and support of technological solutions is delivered in the best interests of our clients, prioritizing integrity and long-term partnerships." />
-          </div>
-
+        <section className="ref-sec" id="customer-references" style={{ paddingTop: '4rem' }}>
           {/* Marquee 1 - Left to Right */}
-          <div style={{ overflow: 'hidden', marginBottom: '4rem', position: 'relative' }}>
+          <div style={{ overflow: 'hidden', marginBottom: '3rem', position: 'relative' }}>
             <div className="marquee-wrapper">
               {[...marqueeRow1, ...marqueeRow1].map((name, i) => (
                 <div className="marquee-grid" key={i} style={{ display: 'flex', gap: '4rem', padding: '0 2rem', flexShrink: 0 }}>
@@ -582,13 +577,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', paddingTop: '5rem', paddingBottom: '2rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%', paddingTop: '4rem', paddingBottom: '3rem' }}>
             <Link
               href="/customer-references"
-              className="btn-elegant"
-              style={{ margin: '0 auto', display: 'flex' }}
+              style={{ margin: '0 auto', display: 'inline-block', fontWeight: 800, color: 'var(--bordeaux)', textTransform: 'uppercase', textDecoration: 'none', borderBottom: '2px solid var(--bordeaux)', paddingBottom: '6px', fontSize: '1rem', letterSpacing: '1px' }}
             >
-              <InlineEditor as="span" dbPath={['homepage', 'sections', 'referencesLinkText']} fallback="Discover our references" />
+              <InlineEditor as="span" dbPath={['homepage', 'sections', 'referencesLinkText']} fallback="VOIR TOUTES LES RÉFÉRENCES" />
             </Link>
           </div>
         </section>
