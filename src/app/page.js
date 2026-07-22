@@ -427,11 +427,7 @@ export default function Home() {
                     fallback={sol.img || ''}
                     className="bento-bg-editor"
                     style={{ position: 'relative', width: '100%', height: '280px', objectFit: 'cover', flexShrink: 0 }}
-                  >
-                    {(src) => (
-                      <img src={src} className="bento-bg" alt="" />
-                    )}
-                  </InlineImageEditor>
+                  />
                   <div className="bento-overlay"></div>
                   <div className="bento-content">
                     <InlineEditor as="h3" dbPath={['homepage', 'solutions', i, 'title']} fallback={sol.title} />
