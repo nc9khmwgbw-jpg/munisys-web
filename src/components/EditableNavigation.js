@@ -1,11 +1,12 @@
 "use client";
-import Link from 'next/link';
 
-import InlineEditor from './InlineEditor';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useCMS } from './CMSProvider';
-import SearchOverlay from './SearchOverlay';
+import InlineEditor from './InlineEditor';
 import Magnetic from './Magnetic';
+import navDump from '../../nav_dump.json';
+import SearchOverlay from './SearchOverlay';
 
 export default function EditableNavigation() {
   const { dbData, lang, setLang, fullDb } = useCMS();
@@ -93,7 +94,7 @@ export default function EditableNavigation() {
                 </button>
               </Magnetic>
               <div className="mega-menu">
-                {Object.values(dbData?.navigation?.megaMenu || {}).map((col, colIdx) => (
+                {Object.values(dbData?.navigation?.megaMenu || navDump.megaMenu).map((col, colIdx) => (
                   <div key={colIdx} className="mega-col">
                     <Link href={col.href || '#'} className="mega-col-title">
                       <InlineEditor 
