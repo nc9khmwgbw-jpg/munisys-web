@@ -212,7 +212,7 @@ function useCounter(target, duration = 2000) {
 }
 
 function FigureItem({ idx, defaultNum, defaultLabel, defaultPrefix }) {
-  const { dbData } = useCMS();
+  const { dbData, isEditMode, isPreviewMode } = useCMS();
   const numRaw = dbData?.homepage?.figures?.[idx]?.num || defaultNum;
   const num = parseInt(numRaw) || 0;
   const [count, ref] = useCounter(num);
@@ -221,7 +221,11 @@ function FigureItem({ idx, defaultNum, defaultLabel, defaultPrefix }) {
       <h3>
         <InlineEditor as="span" dbPath={['homepage', 'figures', idx, 'prefix']} fallback={defaultPrefix || ''} />
         <span>
-          <InlineEditor as="span" dbPath={['homepage', 'figures', idx, 'num']} fallback={defaultNum.toString()} />
+          {(isEditMode && !isPreviewMode) ? (
+            <InlineEditor as="span" dbPath={['homepage', 'figures', idx, 'num']} fallback={defaultNum.toString()} />
+          ) : (
+            count
+          )}
         </span>
       </h3>
       <InlineEditor as="p" dbPath={['homepage', 'figures', idx, 'label']} fallback={defaultLabel} />
