@@ -1,13 +1,11 @@
-import fs from 'fs/promises';
-import path from 'path';
 import { NextResponse } from 'next/server';
 import DOMPurify from 'isomorphic-dompurify';
+import dbConnect from '@/lib/mongodb';
+import MunisysState from '@/models/MunisysState';
 import { createBackup } from '../backups/route';
 import defaultDb from '@/data/db.json';
 
 export const dynamic = 'force-dynamic';
-
-const dbPath = path.join(process.cwd(), 'src/data/db.json');
 
 // Recursive function to sanitize all strings in an object/array
 const sanitizeData = (data) => {
@@ -32,11 +30,18 @@ const sanitizeData = (data) => {
 
 export async function GET() {
   try {
-    const fileContents = await fs.readFile(dbPath, 'utf8');
-    const data = JSON.parse(fileContents);
-    return NextResponse.json(data);
+    await dbConnect();
+    // Chercher le seul et unique document d'état
+    const stateDoc = await MunisysState.findOne().lean();
+    
+    if (!stateDoc || !stateDoc.data) {
+      // Si la DB est vide, on renvoie le JSON par défaut
+      return NextResponse.json(defaultDb);
+    }
+    
+    return NextResponse.json(stateDoc.data);
   } catch (error) {
-    console.error('Error reading DB, falling back to bundled JSON:', error);
+    console.error('Error reading MongoDB, falling back to bundled JSON:', error);
     return NextResponse.json(defaultDb);
   }
 }
@@ -45,35 +50,35 @@ export async function POST(request) {
   try {
     const rawData = await request.json();
     
-    // Validate we are receiving an object
     if (typeof rawData !== 'object' || rawData === null) {
       return NextResponse.json({ error: 'Invalid data format' }, { status: 400 });
     }
 
-    // Sanitize data to prevent XSS
     const newData = sanitizeData(rawData);
 
-    // Read current data to merge
-    let currentData = {};
-    try {
-      const fileContents = await fs.readFile(dbPath, 'utf8');
-      currentData = JSON.parse(fileContents);
-      
-      // AUTO-BACKUP: Before overwriting, create a backup
-      await createBackup();
-      
-    } catch (e) {
-      // Ignore if file doesn't exist yet
+    await dbConnect();
+    
+    let stateDoc = await MunisysState.findOne();
+    
+    let mergedData;
+    if (stateDoc) {
+      // Create backup before modifying
+      await createBackup(); // Optional: might need refactoring if it relies on files
+      mergedData = { ...stateDoc.data, ...newData };
+      stateDoc.data = mergedData;
+      // Tell mongoose that a Mixed type has changed
+      stateDoc.markModified('data');
+      await stateDoc.save();
+    } else {
+      // First time saving
+      mergedData = { ...defaultDb, ...newData };
+      stateDoc = new MunisysState({ data: mergedData });
+      await stateDoc.save();
     }
-
-    const mergedData = { ...currentData, ...newData };
-
-    // Write back to file
-    await fs.writeFile(dbPath, JSON.stringify(mergedData, null, 2), 'utf8');
     
     return NextResponse.json({ success: true, message: 'Database updated successfully' });
   } catch (error) {
-    console.error('Error writing DB:', error);
+    console.error('Error writing to MongoDB:', error);
     return NextResponse.json({ error: 'Failed to update database' }, { status: 500 });
   }
 }
