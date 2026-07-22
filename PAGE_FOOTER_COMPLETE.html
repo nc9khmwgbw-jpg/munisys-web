@@ -1,0 +1,91 @@
+<style>
+/* --- FOOTER STYLES --- */
+#munisys-footer-wrapper {
+  --bordeaux: #922b55;
+  --blue-dark: #1d4e79;
+  --text-dark: #333333;
+  font-family: 'Montserrat', sans-serif !important;
+  background: #1a1a1a !important;
+  width: 100vw !important;
+  position: relative;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  text-align: left;
+}
+#munisys-footer-wrapper *, #munisys-footer-wrapper *::before, #munisys-footer-wrapper *::after {
+  box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif !important;
+}
+#munisys-footer-wrapper a { text-decoration: none; color: inherit; }
+#munisys-footer-wrapper ul { list-style: none; }
+
+#munisys-footer-wrapper .ft { background: #1a1a1a !important; color: rgba(255,255,255,0.6) !important; max-width: 1440px !important; margin: 0 auto !important; }
+#munisys-footer-wrapper .ft-top { display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 2.5rem 5rem !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+#munisys-footer-wrapper .ft-brand { font-size: 1.4rem !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 1px !important; }
+#munisys-footer-wrapper .ft-linkedin { border: 1px solid rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.7) !important; font-size: 0.82rem !important; font-weight: 600 !important; padding: 0.5rem 1.2rem !important; border-radius: 3px !important; transition: color 0.18s, border-color 0.18s !important; }
+#munisys-footer-wrapper .ft-linkedin:hover { color: #fff !important; border-color: #fff !important; }
+#munisys-footer-wrapper .ft-main { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 2rem !important; padding: 3rem 5rem !important; }
+#munisys-footer-wrapper .ft-col h4 { color: #fff !important; font-size: 0.68rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 2px !important; margin-bottom: 1rem !important; }
+#munisys-footer-wrapper .ft-col ul { display: flex !important; flex-direction: column !important; gap: 0.6rem !important; }
+#munisys-footer-wrapper .ft-col a { font-size: 0.83rem !important; color: rgba(255,255,255,0.45) !important; transition: color 0.2s !important; }
+#munisys-footer-wrapper .ft-col a:hover { color: #fff !important; }
+#munisys-footer-wrapper .ft-bottom { padding: 1.5rem 5rem !important; display: flex !important; justify-content: space-between !important; font-size: 0.75rem !important; color: rgba(255,255,255,0.25) !important; border-top: 1px solid rgba(255,255,255,0.06) !important; }
+@media(max-width:1024px) {
+  #munisys-footer-wrapper .ft-main { grid-template-columns: 1fr 1fr !important; }
+  #munisys-footer-wrapper .ft-top { flex-direction: column !important; gap: 1.5rem !important; text-align: center !important; }
+  #munisys-footer-wrapper .ft-bottom { flex-direction: column !important; gap: 1rem !important; text-align: center !important; }
+}
+@media(max-width:768px) {
+  #munisys-footer-wrapper .ft-main { grid-template-columns: 1fr !important; text-align: center !important; }
+}
+</style>
+
+<div id="munisys-footer-wrapper">
+  <footer class="ft">
+    <div class="ft-top">
+      <div class="ft-brand">MUNISYS</div>
+      <a href="https://www.linkedin.com/company/munisys" target="_blank" class="ft-linkedin">Follow us on LinkedIn</a>
+    </div>
+    <div class="ft-main">
+      <div class="ft-col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="/solutions#core-infrastructure">Core Infrastructure</a></li>
+          <li><a href="/solutions#system-integration">System Integration</a></li>
+          <li><a href="/solutions#cybersecurity">Cybersecurity</a></li>
+          <li><a href="/solutions#cloud-services">Cloud Services</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="/about-us">About us</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/insights">Insights</a></li>
+          <li><a href="/customer-reference">Customer references</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Partners</h4>
+        <ul>
+          <li><a href="/technology-partners">Technology partners</a></li>
+          <li><a href="/become-partner">Become a partner</a></li>
+          <li><a href="/certifications">Certifications</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@munisys.ma">contact@munisys.ma</a></li>
+          <li><a href="/contact">Casablanca, Morocco</a></li>
+          <li><a href="tel:+212500000000">+212 5XX XXX XXX</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div>© 2026 Munisys. All rights reserved.</div>
+      <div><a href="/privacy-policy">Privacy Policy</a> · <a href="/legal">Legal Notice</a></div>
+    </div>
+  </footer>
+</div>

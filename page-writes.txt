@@ -1,0 +1,730 @@
+==== WRITE ====
+"use client";
+
+import { useState, useEffect, useCallback } from 'react';
+import InlineEditor from '@/components/InlineEditor';
+import { useCMS } from '@/components/CMSProvider';
+
+const LogoSmall = () => (
+  <svg width="45" height="45" viewBox="0 0 100 100" fill="none">
+    <polygon points="10,20 40,50 10,80" fill="#83a5c2" />
+    <polygon points="10,20 40,50 40,20" fill="#1d4e79" />
+    <polygon points="40,50 70,20 70,80" fill="#922b55" />
+    <polygon points="70,20 100,20 70,50" fill="#1d4e79" />
+  </svg>
+);
+
+/* ── ACCORDION ── */
+function Acc({ icon, idx, dbPathRoot, fallbackTitle, fallbackBody }) {
+  const [o, setO] = useState(false);
+  return (
+    <div className={`srv-acc${o ? ' open' : ''}`}>
+      <div className="srv-acc-head" onClick={() => setO(v => !v)}>
+        <span className="srv-acc-title">
+          <span className="srv-icon">{icon}</span>
+          <InlineEditor as="span" dbPath={[...dbPathRoot, idx, 'title']} fallback={fallbackTitle} />
+        </span>
+        <span className="acc-x" style={{ fontSize: '2rem', fontWeight: 300, color: '#1d4e79' }}>{o ? '−' : '+'}</span>
+      </div>
+      <div className="srv-acc-body" onClick={e => e.stopPropagation()}>
+        <InlineEditor as="p" dbPath={[...dbPathRoot, idx, 'body']} fallback={fallbackBody} />
+        <InlineEditor as="a" href="/services" className="srv-readmore" dbPath={['homepage', 'services', idx, 'readMoreLabel']} fallback="Read more" />
+      </div>
+    </div>
+  );
+}
+
+const tabsData = [
+  { title: "Core Infrastructure Technologies", desc: "<p>Munisys leverages its unique and extensive experience to help IT organizations to setup, manage, secure and seamlessly run consistent compute, storage, networking and backup infrastructure across data centers and public clouds, through either traditional or software-defined approaches.</p><p style='margin-top:1rem'>We focus on a range of leading data-centric, adaptable and efficient solutions that offer cloud-native operating experience, AI driven management, enhanced security and optimized performance.</p>" },
+  { title: "Cybersecurity Solutions", desc: "<p>Comprehensive protection for your enterprise. We secure your network, endpoints, and data against evolving digital threats with zero-trust architectures and proactive monitoring.</p>" },
+  { title: "Infrastructure Software", desc: "<p>Optimize your operations with enterprise-grade software solutions for monitoring, management, and automation across your entire IT stack.</p>" },
+  { title: "Managed & Cloud Services", desc: "<p>Seamless cloud integration and managed services to accelerate your digital transformation journey while controlling costs and ensuring high availability.</p>" },
+  { title: "Endpoint solutions", desc: "<p>Empower your workforce with secure, high-performance computing devices and intelligent endpoint management solutions designed for the modern hybrid workplace.</p>" }
+];
+
+const defaultSlides = [
+  { h1: "We orchestrate <strong>digital infrastructure</strong> technologies for a unique <strong>customer experience</strong>", cta: "Our solutions", ctaHref: "#solutions-section", img: "/slide1.png", imgAlt: "Datacenter" },
+  { h1: "Protecting your <strong>digital assets</strong> with cutting-edge <strong>cybersecurity</strong> solutions", cta: "Discover security", ctaHref: "/solutions#cybersecurity", img: "/slide2.png", imgAlt: "Cybersecurity" },
+  { h1: "Accelerating your <strong>cloud journey</strong> with seamless <strong>managed services</strong>", cta: "Cloud services", ctaHref: "/solutions#cloud-services", img: "/slide3.png", imgAlt: "Cloud Services" }
+];
+
+export default function Home() {
+  const { isEditMode, dbData } = useCMS();
+
+  const homepageData = dbData?.homepage || {};
+  const slides = (homepageData.slides?.length ? homepageData.slides : defaultSlides).map((s, i) => ({
+    ...defaultSlides[i],
+    ...s,
+    img: homepageData.images?.[`slide${i + 1}`] || s.img || defaultSlides[i].img,
+  }));
+
+  const [si, setSi] = useState(0);
+  const [activeSolTab, setActiveSolTab] = useState(0);
+
+  const next = useCallback(() => setSi(i => (i + 1) % slides.length), [slides.length]);
+  const prev = useCallback(() => setSi(i => (i - 1 + slides.length) % slides.length), [slides.length]);
+
+  useEffect(() => {
+    if (isEditMode) return;
+    const t = setInterval(next, 4000);
+    return () => clearInterval(t);
+  }, [next, isEditMode]);
+
+  const handleHeroCTA = (e, href) => {
+    if (href === '#solutions-section') {
+      e.preventDefault();
+      const el = document.querySelector('#solutions-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const CheckIcon = () => (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" /><path d="M8 12l3 3 5-6" />
+    </svg>
+  );
+
+  const solutionMenuItems = homepageData.solutionMenuItems || tabsData.map(t => t.title);
+
+  return (
+    <div id="munisys-wrapper">
+
+      {/* ── HERO (WordPress style) ── */}
+      <section className="hero" id="munisys-hero">
+
+        {slides.map((slide, i) => (
+          <div key={i} className={`hero-slide${i === si ? ' active' : ''}`}>
+            <div className="hero-text">
+              <h1 className="hero-h1" dangerouslySetInnerHTML={{ __html: slide.h1 }} />
+              <a
+                href={slide.ctaHref || '#solutions-section'}
+                className="hero-cta-btn"
+                onClick={(e) => handleHeroCTA(e, slide.ctaHref || '#solutions-section')}
+              >
+                {slide.cta || 'Our solutions'}
+              </a>
+            </div>
+            <div className="hero-visual">
+              <div className="hero-img-wrap">
+                <div className="hero-img-clip">
+                  <img src={slide.img} alt={slide.imgAlt} />
+                </div>
+                <div className="hero-tri-blue"></div>
+                <div className="hero-tri-bordeaux"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+        {/* Navigation Arrows */}
+        <button className="hero-arrow hero-arrow-prev" aria-label="Previous slide" onClick={prev}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+        <button className="hero-arrow hero-arrow-next" aria-label="Next slide" onClick={next}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+
+        {/* Dot Indicators */}
+        <div className="hero-dots">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              className={`hero-dot${i === si ? ' active' : ''}`}
+              aria-label={`Slide ${i + 1}`}
+              onClick={() => setSi(i)}
+            />
+          ))}
+        </div>
+
+      </section>
+
+      {/* ── 1. SOLUTIONS SECTION (Dark Blue) ── */}
+      <div className="sol-wrapper" id="solutions-section">
+        <section className="sol-sec">
+          <InlineEditor as="h2" className="sol-title" dbPath={['homepage', 'sections', 'solutionsTitle']} fallback={homepageData.sections?.solutionsTitle || 'Solutions'} />
+          <div className="sol-grid">
+            <div className="sol-menu">
+              {solutionMenuItems.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`sol-menu-item${idx === activeSolTab ? ' active' : ''}`}
+                  style={idx === solutionMenuItems.length - 1 ? { borderBottom: 'none' } : {}}
+                  onClick={() => setActiveSolTab(idx)}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+            <div className="sol-img-container">
+              <img src={homepageData.images?.solutionsDC || '/datacenter.png'} alt="Datacenter" />
+            </div>
+            <div className="sol-content">
+              <h3>{tabsData[activeSolTab]?.title || homepageData.sections?.solutionContentTitle || 'Core Infrastructure Technologies'}</h3>
+              <div dangerouslySetInnerHTML={{ __html: tabsData[activeSolTab]?.desc || `<p>${homepageData.sections?.solutionContentDesc || ''}</p>` }} />
+              <a href="/solutions" className="sol-link">Read more <span style={{ marginLeft: '5px' }}>→</span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── 2. OFFERINGS SECTION ── */}
+      <section className="off-sec">
+        <div className="off-header">
+          <InlineEditor as="h2" className="off-title" dbPath={['homepage', 'sections', 'offeringsTitle']} fallback={homepageData.sections?.offeringsTitle || 'Offerings'} />
+          <InlineEditor as="p" className="off-desc" dbPath={['homepage', 'sections', 'offeringsDesc']} fallback={homepageData.sections?.offeringsDesc || 'An end-to-end & coherent offer of solutions & services for secure digital infrastructures'} />
+        </div>
+        <div className="off-flow">
+          <div className="off-label-vert off-label-through">Through</div>
+          <div className="off-col">
+            {(homepageData.offeringsThrough || ['Best of breed technologies', 'Skillful integrations', 'Sound architectures', 'Automation and orchestration', 'Qualified end-to-end services']).map((t, idx) => (
+              <div className="off-item" key={idx}>
+                <span className="off-check" style={{ color: '#922b55' }}><CheckIcon /></span>
+                <InlineEditor as="span" dbPath={['homepage', 'offeringsThrough', idx]} fallback={t} />
+              </div>
+            ))}
+          </div>
+          <div className="off-label-vert off-label-achieve">We achieve</div>
+          <div className="off-col">
+            {(homepageData.offeringsAchieve || ['Efficient use of converging technologies', 'Control over complexity', 'Simplified IT Operations', 'Agile infrastructure resources', 'Optimal performance and true resilience', 'Deep and broad support capabilities']).map((t, idx) => (
+              <div className="off-item" key={idx}>
+                <span className="off-check" style={{ color: '#83a5c2' }}><CheckIcon /></span>
+                <InlineEditor as="span" dbPath={['homepage', 'offeringsAchieve', idx]} fallback={t} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. SERVICES SECTION (Light Blue) ── */}
+      <div className="srv-wrapper">
+        <section className="srv-sec" id="services">
+          <div className="srv-left">
+            <InlineEditor as="h2" dbPath={['homepage', 'sections', 'servicesTitle']} fallback={homepageData.sections?.servicesTitle || 'Our services'} />
+            <InlineEditor as="p" dbPath={['homepage', 'sections', 'servicesDesc']} fallback={homepageData.sections?.servicesDesc || 'A comprehensive catalog of IT Services to cover the entire lifecycle of your IT infrastructure'} />
+          </div>
+          <div className="srv-right">
+            {homepageData.services?.map((s, idx) => (
+              <Acc
+                key={idx}
+                idx={idx}
+                dbPathRoot={['homepage', 'services']}
+                icon={<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>}
+                fallbackTitle={s.title}
+                fallbackBody={s.body}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* ── 4. INSIGHTS SECTION ── */}
+      <section className="ins-sec">
+        <InlineEditor as="div" className="ins-title" dbPath={['homepage', 'sections', 'insightsTitle']} fallback={homepageData.sections?.insightsTitle || 'Insights'} />
+        <div className="ins-grid">
+          <a href="/a-new-visual-identity-for-munisys" className="ins-card" style={{ textDecoration: 'none' }}>
+            <div className="ins-img-wrap contain">
+              <LogoSmall /> <span style={{ fontSize: '2rem', fontWeight: 800, color: '#1d4e79', marginLeft: '10px' }}>MUNISYS</span>
+            </div>
+            <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'sections', 'insightsCard1']} fallback={homepageData.sections?.insightsCard1 || 'A new visual identity for Munisys'} />
+          </a>
+          <a href="/new-headquarters" className="ins-card" style={{ textDecoration: 'none' }}>
+            <div className="ins-img-wrap">
+              <img src={homepageData.images?.insightsHQ || '/datacenter.png'} alt="Headquarters" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            </div>
+            <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'sections', 'insightsCard2']} fallback={homepageData.sections?.insightsCard2 || 'New headquarters'} />
+          </a>
+          <a href="/press-release-page" className="ins-card" style={{ textDecoration: 'none' }}>
+            <div className="ins-img-wrap contain" style={{ flexDirection: 'column', gap: '2rem', border: 'none', padding: '2rem 0' }}>
+              <h2 style={{ fontSize: '2.5rem', fontWeight: 300, color: '#111', margin: 0 }}>HELIOS <span style={{ color: '#f97316' }}>Investment<br />Partners</span></h2>
+              <h1 style={{ fontSize: '3rem', fontWeight: 900, color: '#1d4e79', margin: 0 }}>FIPAR</h1>
+            </div>
+            <InlineEditor as="div" className="ins-text" style={{ textTransform: 'uppercase' }} dbPath={['homepage', 'sections', 'insightsCard3']} fallback={homepageData.sections?.insightsCard3 || 'PRESS RELEASE'} />
+          </a>
+        </div>
+      </section>
+
+      {/* ── 5. CUSTOMER REFERENCES ── */}
+      <section className="ref-sec">
+        <div className="ref-top">
+          <InlineEditor as="h2" className="ref-title" dbPath={['homepage', 'sections', 'customersTitle']} fallback={homepageData.sections?.customersTitle || 'They trust us'} />
+          <InlineEditor as="p" className="ref-desc" dbPath={['homepage', 'sections', 'customersDesc']} fallback={homepageData.sections?.customersDesc || 'As a trusted advisor, we make sure that our contribution to the design, deployment and support of technological solutions within the organizations we serve is delivered in their best interests, giving the highest priority to integrity, fulfillment of our commitments and long-term partnerships.'} />
+        </div>
+        <div className="ref-grid">
+          {homepageData.customers?.map((c, idx) => (
+            <InlineEditor
+              key={idx}
+              as="div"
+              className="ref-logo"
+              style={{ fontWeight: 800, fontSize: '1.2rem', color: '#1d4e79', textAlign: 'center' }}
+              dbPath={['homepage', 'customers', idx]}
+              fallback={c}
+            />
+          ))}
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <InlineEditor as="a" href="/customer-references" className="ref-seeall" dbPath={['homepage', 'sections', 'customersSeeAllLabel']} fallback="See all" />
+        </div>
+      </section>
+
+    </div>
+  );
+}
+
+
+==== WRITE ====
+"use client";
+
+import { useState, useEffect, useCallback, useRef } from 'react';
+import InlineEditor from '@/components/InlineEditor';
+import { useCMS } from '@/components/CMSProvider';
+
+const CheckIcon = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" /><path d="M8 12l3 3 5-6" />
+  </svg>
+);
+
+const ArrowIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M5 12h14M12 5l7 7-7 7" />
+  </svg>
+);
+
+// ── Default Data ──────────────────────────────────────
+const defaultSlides = [
+  {
+    meta: 'Core Infrastructure',
+    title: 'We orchestrate <strong>digital infrastructure</strong> for a unique <strong>experience.</strong>',
+    desc: 'Setup, manage, and secure your compute, storage, and networking across data centers and public clouds with our leading data-centric solutions.',
+    btnText: 'Our solutions',
+    btnLink: '#solutions-section',
+    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2560&auto=format&fit=crop'
+  },
+  {
+    meta: 'Cybersecurity',
+    title: 'Protecting your <strong>digital assets</strong> with cutting-edge <strong>security.</strong>',
+    desc: 'Secure your network, endpoints, and data against evolving digital threats with zero-trust architectures and proactive monitoring.',
+    btnText: 'Discover security',
+    btnLink: '/solutions/',
+    img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2560&auto=format&fit=crop'
+  },
+  {
+    meta: 'Managed Services',
+    title: 'Accelerating your <strong>cloud journey</strong> with seamless <strong>management.</strong>',
+    desc: 'Seamless cloud integration and managed services to accelerate your digital transformation journey while ensuring high availability.',
+    btnText: 'Cloud services',
+    btnLink: '/solutions/',
+    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2560&auto=format&fit=crop'
+  }
+];
+
+const bentoSolutions = [
+  { title: 'Core Infrastructure<br/>Technologies', desc: 'Compute, storage, networking and backup infrastructure across data centers and public clouds with leading data-centric solutions.', btn: 'Read more', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop', link: '/solutions/', span: 'span-2x3' },
+  { title: 'Cybersecurity<br/>Solutions', desc: 'End-to-end security architectures to protect your digital assets from evolving threats.', btn: 'Discover', img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'span-2x1' },
+  { title: 'Infrastructure<br/>Software', desc: 'Software-defined approaches and robust integrations for modern IT operations.', btn: '', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'glass' },
+  { title: 'Managed &<br/>Cloud Services', desc: 'Seamless operations across public, private, and hybrid cloud environments.', btn: '', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'glass' },
+  { title: 'Endpoint Solutions', desc: 'Empowering your workforce with secure and efficient computing devices.', btn: 'View Offerings', img: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'span-2x1' }
+];
+
+const defaultServices = [
+  { num: '01', title: 'IT integration', desc: 'At every stage in the lifecycle of your IT Infrastructures, we ensure smooth, efficient, and robust technology alignment.', link: '/services/' },
+  { num: '02', title: 'IT support', desc: 'Reactive and proactive support services to guarantee maximum uptime, security, and continuous business operations.', link: '/services/' },
+  { num: '03', title: 'Managed services', desc: 'Offload your daily IT operations to our certified experts, allowing your team to focus strictly on innovation and growth.', link: '/services/' }
+];
+
+const defaultFigures = [
+  { num: 34, label: 'years<br/>in business', prefix: '+' },
+  { num: 330, label: 'employees', prefix: '' },
+  { num: 700, label: 'MMAD Revenue', prefix: '' },
+  { num: 18, label: 'Support<br/>centers', prefix: '' }
+];
+
+const offeringsThrough = ['Best of breed technologies', 'Skillful integrations', 'Sound architectures', 'Automation and orchestration', 'Qualified end-to-end services'];
+const offeringsAchieve = ['Efficient use of converging technologies', 'Control over complexity', 'Simplified IT Operations', 'Agile infrastructure resources', 'Optimal performance and true resilience', 'Deep and broad support capabilities'];
+
+const marqueeRow1 = ['Attijariwafa bank', 'Autoroutes du Maroc', 'Bank Al-Maghrib', 'BANK OF AFRICA', 'BANQUE POPULAIRE'];
+const marqueeRow2 = ['CDG', 'EURAFRIC', 'Maroc Telecom', 'inwi', 'LafargeHolcim', 'MARBIO', 'OCP', 'ONCF'];
+
+// ── COUNTER HOOK ──────────────────────────────────────
+function useCounter(target, duration = 2000) {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting && !started) {
+        setStarted(true);
+      }
+    }, { threshold: 0.5 });
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { setCount(target); clearInterval(timer); }
+      else setCount(Math.floor(start));
+    }, 16);
+    return () => clearInterval(timer);
+  }, [started, target, duration]);
+
+  return [count, ref];
+}
+
+function FigureItem({ num, label, prefix }) {
+  const [count, ref] = useCounter(parseInt(num) || 0);
+  return (
+    <div className="fig-item" ref={ref}>
+      <h3>{prefix}<span>{count}</span></h3>
+      <p dangerouslySetInnerHTML={{ __html: label }} />
+    </div>
+  );
+}
+
+// ── MAIN COMPONENT ────────────────────────────────────
+export default function Home() {
+  const { isEditMode, dbData } = useCMS();
+  const homepageData = dbData?.homepage || {};
+
+  const slides = homepageData.slides?.length
+    ? homepageData.slides.map((s, i) => ({
+        ...defaultSlides[i] || defaultSlides[0],
+        ...s,
+        img: homepageData.images?.[`slide${i + 1}`] || defaultSlides[i]?.img,
+        meta: s.meta || defaultSlides[i]?.meta,
+        desc: s.desc || defaultSlides[i]?.desc,
+        btnText: s.btnText || s.cta || defaultSlides[i]?.btnText,
+        btnLink: s.btnLink || s.ctaHref || defaultSlides[i]?.btnLink,
+      }))
+    : defaultSlides;
+
+  const [si, setSi] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const progressRef = useRef(null);
+  const timerRef = useRef(null);
+  const panelRef = useRef(null);
+
+  const changeSlide = useCallback((newIndex) => {
+    if (isAnimating || newIndex === si) return;
+    setIsAnimating(true);
+    setSi(newIndex);
+    if (panelRef.current) {
+      if (newIndex % 2 !== 0) panelRef.current.classList.add('is-right');
+      else panelRef.current.classList.remove('is-right');
+    }
+    if (progressRef.current) {
+      progressRef.current.style.transition = 'none';
+      progressRef.current.style.width = '0%';
+      setTimeout(() => {
+        if (progressRef.current) {
+          progressRef.current.style.transition = 'width 6000ms linear';
+          progressRef.current.style.width = '100%';
+        }
+        setIsAnimating(false);
+      }, 1400);
+    } else {
+      setTimeout(() => setIsAnimating(false), 1400);
+    }
+  }, [isAnimating, si]);
+
+  const next = useCallback(() => changeSlide((si + 1) % slides.length), [si, slides.length, changeSlide]);
+  const prev = useCallback(() => changeSlide((si - 1 + slides.length) % slides.length), [si, slides.length, changeSlide]);
+
+  const resetTimer = useCallback(() => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(next, 6000);
+  }, [next]);
+
+  useEffect(() => {
+    if (isEditMode) return;
+    if (progressRef.current) {
+      setTimeout(() => {
+        if (progressRef.current) {
+          progressRef.current.style.transition = 'width 6000ms linear';
+          progressRef.current.style.width = '100%';
+        }
+      }, 50);
+    }
+    resetTimer();
+    return () => clearInterval(timerRef.current);
+  }, [resetTimer, isEditMode]);
+
+  const handlePrev = () => { if (timerRef.current) clearInterval(timerRef.current); prev(); resetTimer(); };
+  const handleNext = () => { if (timerRef.current) clearInterval(timerRef.current); next(); resetTimer(); };
+
+  const handleBtnClick = (e, link) => {
+    if (link === '#solutions-section') {
+      e.preventDefault();
+      const el = document.querySelector('#solutions-section');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const services = homepageData.services?.length ? homepageData.services.map((s, i) => ({
+    ...defaultServices[i] || {},
+    ...s,
+    num: `0${i + 1}`
+  })) : defaultServices;
+
+  return (
+    <div id="munisys-wrapper">
+
+      {/* ── HERO ── */}
+      <div className="hero-container">
+        <div className="images-wrapper">
+          {slides.map((slide, i) => (
+            <img
+              key={i}
+              src={slide.img}
+              className={`bg-image${i === si ? ' active' : ''}`}
+              alt={slide.meta}
+            />
+          ))}
+        </div>
+
+        <div className="text-panel" id="main-panel" ref={panelRef}>
+          <div className="text-slides-wrapper">
+            {slides.map((slide, i) => (
+              <div key={i} className={`text-slide${i === si ? ' active' : ''}`}>
+                <div className="meta">{slide.meta}</div>
+                <h1 className="title" dangerouslySetInnerHTML={{ __html: slide.h1 || slide.title }} />
+                <p className="desc">{slide.desc}</p>
+                <div className="btn-wrap">
+                  <a
+                    href={slide.btnLink || '#solutions-section'}
+                    className="btn-elegant"
+                    onClick={(e) => handleBtnClick(e, slide.btnLink)}
+                  >
+                    <span>{slide.btnText || 'Our solutions'}</span>
+                    <ArrowIcon />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="controls-wrapper">
+            <div className="slide-numbers">
+              <span className="current">0{si + 1}</span>
+              <span className="separator">/</span>
+              <span className="total">0{slides.length}</span>
+            </div>
+            <div className="nav-buttons">
+              <button className="nav-btn" id="btn-prev" onClick={handlePrev}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button className="nav-btn" id="btn-next" onClick={handleNext}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div className="global-progress">
+            <div className="fill" ref={progressRef}></div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── 1. SOLUTIONS (BENTO GRID) ── */}
+      <div className="sol-wrapper" id="solutions-section">
+        <section className="sol-sec">
+          <h2 className="sol-title">Our Solutions</h2>
+          <div className="bento-grid">
+            {bentoSolutions.map((sol, i) => (
+              <a
+                key={i}
+                href={sol.link}
+                className={`bento-card${sol.span === 'glass' ? ' glass' : ''}`}
+                style={sol.span === 'span-2x3' ? { gridColumn: 'span 2', gridRow: 'span 3' }
+                  : sol.span === 'span-2x1' ? { gridColumn: 'span 2', gridRow: 'span 1' }
+                  : {}}
+              >
+                <img src={sol.img} className="bento-bg" alt={sol.title.replace(/<[^>]+>/g, ' ')} />
+                <div className="bento-overlay"></div>
+                <div className="bento-content">
+                  <h3 dangerouslySetInnerHTML={{ __html: sol.title }} />
+                  <p>{sol.desc}</p>
+                  {sol.btn && (
+                    <span className="bento-link">
+                      {sol.btn}
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* ── 2. OFFERINGS ── */}
+      <section className="off-sec">
+        <div className="off-header">
+          <InlineEditor as="h2" className="off-title" dbPath={['homepage', 'sections', 'offeringsTitle']} fallback="Offerings" />
+          <InlineEditor as="p" className="off-desc" dbPath={['homepage', 'sections', 'offeringsDesc']} fallback="An end-to-end &amp; coherent offer of solutions &amp; services for secure digital infrastructures" />
+        </div>
+        <div className="off-flow">
+          <div className="off-label-vert off-label-through">Through</div>
+          <div className="off-col">
+            {offeringsThrough.map((t, i) => (
+              <div className="off-item" key={i}>
+                <span className="off-check"><CheckIcon /></span>
+                <span>{t}</span>
+              </div>
+            ))}
+          </div>
+          <div className="off-label-vert off-label-achieve">We achieve</div>
+          <div className="off-col">
+            {offeringsAchieve.map((t, i) => (
+              <div className="off-item" key={i}>
+                <span className="off-check"><CheckIcon /></span>
+                <span>{t}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. SERVICES (Premium Hover List) ── */}
+      <div className="srv-wrapper">
+        <section className="srv-sec" id="services">
+          <div className="srv-left">
+            <h2>Our Services</h2>
+          </div>
+          <div className="srv-right">
+            {services.map((s, i) => (
+              <a key={i} href={s.link || '/services/'} className="srv-item">
+                <div className="srv-title-wrap">
+                  <span className="srv-num">{s.num || `0${i + 1}`}</span>
+                  <h3 className="srv-title">{s.title}</h3>
+                </div>
+                <div className="srv-desc-wrap">
+                  <p>{s.desc || s.body}</p>
+                </div>
+                <div className="srv-arrow">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      </div>
+
+      {/* ── 3.5 SOME FIGURES ── */}
+      <section className="figures-sec" id="about-us">
+        <div className="fig-vertical">SOME<br />FIGURES</div>
+        <div className="fig-grid">
+          {defaultFigures.map((fig, i) => (
+            <FigureItem key={i} num={fig.num} label={fig.label} prefix={fig.prefix} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── 4. INSIGHTS ── */}
+      <section className="ins-sec">
+        <div className="ins-title">Insights</div>
+        <div className="ins-grid">
+          <a href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
+            <div className="ins-img-wrap contain" style={{ background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <span style={{ fontSize: '2.5rem', fontWeight: 800, color: '#1d4e79', letterSpacing: '2px' }}>MUNISYS</span>
+            </div>
+            <div className="ins-text">A new visual identity for Munisys</div>
+          </a>
+          <a href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
+            <div className="ins-img-wrap">
+              <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="New headquarters" />
+            </div>
+            <div className="ins-text">New headquarters</div>
+          </a>
+          <a href="/press-release" className="ins-card" style={{ textDecoration: 'none' }}>
+            <div className="ins-img-wrap contain" style={{ flexDirection: 'column', gap: '1rem', textAlign: 'center' }}>
+              <h2 style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', fontWeight: 300, color: '#111', margin: 0, lineHeight: 1.2 }}>
+                HELIOS <br /><span style={{ color: '#f97316' }}>Investment Partners</span>
+              </h2>
+              <h1 style={{ fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 900, color: '#1d4e79', margin: 0 }}>FIPAR</h1>
+            </div>
+            <div className="ins-text" style={{ textTransform: 'uppercase' }}>PRESS RELEASE</div>
+          </a>
+        </div>
+      </section>
+
+      {/* ── 4.5 TECHNOLOGY PARTNERS (Glassmorphism) ── */}
+      <section className="partners-sec" id="technology-partners">
+        <div className="part-content">
+          <h2>Technology partners</h2>
+          <p>The IT infrastructures we design and deploy for our clients are at the heart of their business and determine their capacity to innovate and stand out. We build solid ties with our technology partners and acquire in-house expertise to ensure true resilience and agility.</p>
+          <a href="/technology-partners" className="part-link">
+            Read more <ArrowIcon />
+          </a>
+        </div>
+      </section>
+
+      {/* ── 5. CUSTOMER REFERENCES (Infinite Marquee) ── */}
+      <section className="ref-sec" id="customer-references">
+        <div className="ref-top">
+          <h2 className="ref-title">They trust us</h2>
+          <p className="ref-desc">As a trusted advisor, our contribution to the design, deployment and support of technological solutions is delivered in the best interests of our clients, prioritizing integrity and long-term partnerships.</p>
+        </div>
+
+        {/* Marquee 1 - Left to Right */}
+        <div style={{ overflow: 'hidden', marginBottom: '2rem', position: 'relative' }}>
+          <div className="marquee-wrapper">
+            {[...marqueeRow1, ...marqueeRow1].map((name, i) => (
+              <div className="marquee-grid" key={i} style={{ display: 'flex', gap: '4rem', padding: '0 2rem', flexShrink: 0 }}>
+                <div className="ref-logo">{name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Marquee 2 - Right to Left */}
+        <div style={{ overflow: 'hidden', position: 'relative' }}>
+          <div className="marquee-wrapper" style={{ animationDirection: 'reverse', animationDuration: '40s' }}>
+            {[...marqueeRow2, ...marqueeRow2].map((name, i) => (
+              <div className="marquee-grid" key={i} style={{ display: 'flex', gap: '4rem', padding: '0 2rem', flexShrink: 0 }}>
+                <div className="ref-logo">{name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '1.5rem' }}>
+          <a
+            href="/customer-references"
+            style={{
+              textDecoration: 'none',
+              borderBottom: '2px solid #922b55',
+              paddingBottom: '5px',
+              letterSpacing: '1px',
+              textTransform: 'uppercase',
+              fontWeight: 700,
+              color: '#922b55'
+            }}
+          >
+            See all references
+          </a>
+        </div>
+      </section>
+
+    </div>
+  );
+}
+
+

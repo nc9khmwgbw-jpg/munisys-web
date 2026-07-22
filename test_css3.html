@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  :root {
+    --font-primary: 'Arial', sans-serif; /* valid list */
+  }
+  body {
+    font-family: var(--font-primary);
+  }
+</style>
+</head>
+<body>
+  <h1 id="text">Hello World</h1>
+  <script>
+    // JS sets the literal string with double quotes: "'Times New Roman', serif"
+    document.documentElement.style.setProperty('--font-primary', '"\'Times New Roman\', serif"');
+    console.log("Current body font (should be invalid if double quoted):", window.getComputedStyle(document.body).fontFamily);
+    
+    // JS sets it CORRECTLY WITHOUT surrounding double quotes
+    document.documentElement.style.setProperty('--font-primary', "'Times New Roman', serif");
+    console.log("Current body font (correct):", window.getComputedStyle(document.body).fontFamily);
+  </script>
+</body>
+</html>

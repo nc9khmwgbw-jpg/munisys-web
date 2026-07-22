@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html style="--font-primary: 'Times New Roman', serif;">
+<head>
+<style>
+  :root {
+    --font-primary: 'Arial', sans-serif;
+  }
+  h1 {
+    font-family: var(--font-primary, 'Montserrat', sans-serif) !important;
+  }
+</style>
+</head>
+<body>
+  <h1 id="text">Hello World</h1>
+  <script>
+    console.log(window.getComputedStyle(document.querySelector('h1')).fontFamily);
+  </script>
+</body>
+</html>

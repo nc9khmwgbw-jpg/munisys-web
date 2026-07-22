@@ -1,0 +1,2 @@
+"        #munisys-tp-wrapper {\n            --bordeaux: #922b55;\n            --blue-dark: #1d4e79;\n            --blue-light: #83a5c2;\n            --text-dark: #333333;\n            --text-gray: #666666;\n            --bg-gray: #f9fafb;\n            font
+<truncated 5693 bytes>

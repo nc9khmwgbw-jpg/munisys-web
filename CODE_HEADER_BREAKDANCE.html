@@ -1,0 +1,206 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+#munisys-wrapper {
+  --bordeaux: #922b55;
+  --blue-dark: #1d4e79;
+  --blue-light: #83a5c2;
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --bg-gray: #fcfcfc;
+  font-family: 'Montserrat', sans-serif !important;
+  background: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  width: 100vw !important;
+  position: relative;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  text-align: left;
+}
+
+#munisys-wrapper *, #munisys-wrapper *::before, #munisys-wrapper *::after { 
+  box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif !important;
+}
+
+#munisys-wrapper section {
+  display: block !important; width: 100% !important; text-align: left !important; clear: both;
+}
+
+#munisys-wrapper a { text-decoration: none; color: inherit; }
+#munisys-wrapper ul { list-style: none; }
+#munisys-wrapper button { font-family: inherit; cursor: pointer; border: none; background: none; }
+#munisys-wrapper img { display: block; max-width: 100%; }
+
+/* ── HERO (HOMEPAGE) ── */
+#munisys-wrapper .hero {
+  position: relative !important; height: calc(100vh - 90px) !important; min-height: 600px !important;
+  background: #ffffff !important; overflow: hidden !important;
+  max-width: 1440px !important; margin: 0 auto !important;
+}
+#munisys-wrapper .hero-slide {
+  position: absolute !important; inset: 0 !important; display: flex !important; flex-direction: row !important;
+  opacity: 1 !important; pointer-events: auto !important; z-index: 5 !important;
+}
+#munisys-wrapper .hero-text {
+  position: relative !important; z-index: 10 !important;
+  display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: flex-start !important;
+  padding: 0 0 0 5rem !important; width: 55% !important;
+}
+#munisys-wrapper .hero-h1 {
+  font-size: clamp(2.5rem, 3.8vw, 3.8rem) !important;
+  font-weight: 300 !important; color: var(--text-dark) !important;
+  line-height: 1.25 !important; margin-bottom: 3.5rem !important;
+  text-align: left !important;
+}
+#munisys-wrapper .hero-h1 strong { font-weight: 700 !important; color: var(--text-dark) !important; }
+#munisys-wrapper .hero-cta-btn {
+  display: inline-flex !important; align-items: center !important; justify-content: center !important;
+  border: 2px solid var(--bordeaux) !important; color: var(--bordeaux) !important;
+  font-size: 1rem !important; font-weight: 700 !important;
+  padding: 1.2rem 2.5rem !important; width: fit-content !important;
+  transition: all 0.2s !important;
+  background: transparent !important;
+}
+#munisys-wrapper .hero-cta-btn:hover { background: var(--bordeaux) !important; color: #fff !important; }
+
+#munisys-wrapper .hero-visual {
+  position: absolute !important; right: 0 !important; top: 0 !important; bottom: 0 !important; width: 45% !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+}
+#munisys-wrapper .hero-img-wrap { position: absolute !important; right: 0 !important; top: 0 !important; bottom: 0 !important; width: 100% !important; }
+#munisys-wrapper .hero-img-clip {
+  position: absolute !important; right: 0 !important; top: 0 !important; bottom: 0 !important; width: 85% !important;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%) !important;
+}
+#munisys-wrapper .hero-img-clip img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#munisys-wrapper .hero-tri-blue {
+  position: absolute !important; bottom: auto !important; top: 10% !important; left: 5% !important; width: 30% !important; height: 50% !important;
+  background: var(--bordeaux) !important; clip-path: polygon(0 100%, 100% 0, 100% 100%) !important; z-index: 2 !important;
+}
+#munisys-wrapper .hero-tri-bordeaux {
+  position: absolute !important; top: auto !important; bottom: 0 !important; right: 5% !important; width: 25% !important; height: 40% !important;
+  background: var(--blue-dark) !important; clip-path: polygon(0 0, 100% 0, 0 100%) !important; z-index: 2 !important;
+}
+
+/* ── 1. SOLUTIONS SECTION (Dark Blue) ── */
+#munisys-wrapper .sol-wrapper {
+  background: var(--blue-dark) !important;
+  width: 100% !important;
+}
+#munisys-wrapper .sol-sec { 
+  background: var(--blue-dark) !important; color: #fff !important; padding: 5rem !important; position: relative !important;
+  max-width: 1440px !important; margin: 0 auto !important; overflow: hidden !important;
+}
+#munisys-wrapper .sol-sec::before {
+  content: ''; position: absolute !important; top: 0 !important; right: 0 !important; width: 15% !important; height: 25% !important;
+  background: var(--bordeaux) !important; clip-path: polygon(100% 0, 100% 100%, 0 0) !important;
+}
+#munisys-wrapper .sol-grid { 
+  display: grid !important; grid-template-columns: 350px 350px 1fr !important; gap: 4rem !important; align-items: center !important; position: relative !important; z-index: 2 !important;
+}
+#munisys-wrapper .sol-title { font-size: 2.2rem !important; font-weight: 300 !important; margin-bottom: 3rem !important; color: #fff !important; }
+#munisys-wrapper .sol-menu { display: flex !important; flex-direction: column !important; align-items: flex-start !important; }
+#munisys-wrapper .sol-menu-item { 
+  padding: 1.5rem 0 !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; width: 100% !important; text-align: left !important;
+  font-size: 1.2rem !important; font-weight: 300 !important; cursor: pointer !important; color: rgba(255,255,255,0.8) !important;
+}
+#munisys-wrapper .sol-menu-item.active { font-weight: 700 !important; color: #fff !important; border-bottom: 1px solid rgba(255,255,255,0.4) !important; }
+#munisys-wrapper .sol-img-container { width: 100% !important; aspect-ratio: 3/4 !important; overflow: hidden !important; }
+#munisys-wrapper .sol-img-container img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#munisys-wrapper .sol-content h3 { font-size: 1.8rem !important; margin-bottom: 1.5rem !important; font-weight: 700 !important; color: #fff !important; }
+#munisys-wrapper .sol-content p { font-size: 0.95rem !important; line-height: 1.8 !important; color: rgba(255,255,255,0.8) !important; margin-bottom: 2rem !important; }
+#munisys-wrapper .sol-link { font-weight: 800 !important; display: inline-flex !important; align-items: center !important; gap: 0.5rem !important; color: #fff !important; font-size: 0.9rem !important; }
+
+/* ── 2. OFFERINGS SECTION ── */
+#munisys-wrapper .off-sec { padding: 6rem 5rem !important; max-width: 1440px !important; margin: 0 auto !important; }
+#munisys-wrapper .off-header { display: flex !important; gap: 2rem !important; align-items: flex-start !important; margin-bottom: 4rem !important; flex-direction: row !important; }
+#munisys-wrapper .off-title { font-size: 3.5rem !important; font-weight: 300 !important; color: var(--bordeaux) !important; }
+#munisys-wrapper .off-desc { font-size: 0.95rem !important; color: var(--text-gray) !important; max-width: 500px !important; padding-top: 1rem !important; line-height: 1.6 !important; }
+#munisys-wrapper .off-flow { 
+  display: grid !important; grid-template-columns: auto 1fr auto 1fr !important; align-items: center !important; gap: 3rem !important;
+  border: 1px solid var(--bordeaux) !important; padding: 3rem 4rem !important; position: relative !important;
+}
+#munisys-wrapper .off-label-vert { 
+  writing-mode: vertical-lr !important; transform: rotate(180deg) !important; 
+  font-size: 3rem !important; font-weight: 800 !important; text-align: center !important;
+}
+#munisys-wrapper .off-label-through { color: var(--bordeaux) !important; }
+#munisys-wrapper .off-label-achieve { color: var(--blue-dark) !important; }
+#munisys-wrapper .off-col { display: flex !important; flex-direction: column !important; gap: 2rem !important; }
+#munisys-wrapper .off-item { display: flex !important; align-items: center !important; gap: 1rem !important; font-weight: 700 !important; font-size: 1.05rem !important; color: var(--text-dark) !important; }
+#munisys-wrapper .off-check { color: var(--blue-light) !important; display: flex !important; align-items: center !important; justify-content: center !important; }
+
+/* ── 3. SERVICES SECTION (Light Blue) ── */
+#munisys-wrapper .srv-wrapper { background: #eff3f7 !important; width: 100% !important; }
+#munisys-wrapper .srv-sec { padding: 6rem 5rem !important; display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 6rem !important; max-width: 1440px !important; margin: 0 auto !important; }
+#munisys-wrapper .srv-left h2 { font-size: 2.8rem !important; color: var(--blue-dark) !important; font-weight: 300 !important; margin-bottom: 1.5rem !important; }
+#munisys-wrapper .srv-left p { color: var(--text-gray) !important; line-height: 1.9 !important; font-size: 1rem !important; }
+#munisys-wrapper .srv-right { display: flex !important; flex-direction: column !important; }
+#munisys-wrapper .srv-acc { border-bottom: 1px solid #d4dfe8 !important; padding: 2.5rem 0 !important; }
+#munisys-wrapper .srv-acc:first-child { border-top: none !important; padding-top: 0 !important; }
+#munisys-wrapper .srv-acc-head { display: flex !important; align-items: center !important; justify-content: space-between !important; cursor: pointer !important; }
+#munisys-wrapper .srv-acc-title { display: flex !important; align-items: center !important; gap: 1.5rem !important; font-size: 1.5rem !important; font-weight: 700 !important; color: var(--blue-dark) !important; }
+#munisys-wrapper .srv-icon { width: 45px !important; height: 45px !important; color: var(--bordeaux) !important; }
+#munisys-wrapper .srv-acc-body { padding-top: 1.5rem !important; padding-left: calc(45px + 1.5rem) !important; }
+#munisys-wrapper .srv-acc-body p { color: var(--text-gray) !important; font-size: 0.95rem !important; line-height: 1.8 !important; margin-bottom: 1.5rem !important; }
+#munisys-wrapper .srv-readmore { font-size: 0.75rem !important; font-weight: 800 !important; color: var(--blue-dark) !important; text-transform: uppercase !important; text-decoration: underline !important; letter-spacing: 1px !important; }
+
+/* ── 4. INSIGHTS SECTION ── */
+#munisys-wrapper .ins-sec { padding: 6rem 5rem !important; display: flex !important; gap: 4rem !important; max-width: 1440px !important; margin: 0 auto !important; flex-direction: row !important; }
+#munisys-wrapper .ins-title { 
+  writing-mode: vertical-lr !important; transform: rotate(180deg) !important; 
+  font-size: 4.5rem !important; font-weight: 800 !important; color: var(--blue-dark) !important; 
+}
+#munisys-wrapper .ins-grid { display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 3rem !important; flex: 1 !important; }
+#munisys-wrapper .ins-card { display: flex !important; flex-direction: column !important; gap: 1.5rem !important; cursor: pointer !important; }
+#munisys-wrapper .ins-img-wrap { 
+  aspect-ratio: 1 !important; border: 1px solid #e2e8f0 !important; 
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 15%) !important;
+  display: flex !important; align-items: center !important; justify-content: center !important; overflow: hidden !important;
+  background: #fff !important; padding: 2rem !important;
+}
+#munisys-wrapper .ins-img-wrap img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+#munisys-wrapper .ins-img-wrap.contain img { object-fit: contain !important; }
+#munisys-wrapper .ins-text { font-weight: 700 !important; color: var(--text-dark) !important; font-size: 1.15rem !important; line-height: 1.4 !important; }
+
+/* ── 5. CUSTOMER REFERENCES ── */
+#munisys-wrapper .ref-sec { padding: 6rem 5rem !important; display: flex !important; flex-direction: column !important; gap: 4rem !important; max-width: 1440px !important; margin: 0 auto !important; }
+#munisys-wrapper .ref-top { display: grid !important; grid-template-columns: 1fr 2fr !important; gap: 4rem !important; }
+#munisys-wrapper .ref-title { font-size: 2.8rem !important; font-weight: 300 !important; color: var(--blue-dark) !important; }
+#munisys-wrapper .ref-desc { color: var(--text-gray) !important; line-height: 1.9 !important; font-size: 0.95rem !important; }
+#munisys-wrapper .ref-grid { display: grid !important; grid-template-columns: repeat(5, 1fr) !important; gap: 4rem !important; align-items: center !important; justify-items: center !important; }
+#munisys-wrapper .ref-logo { max-width: 130px !important; filter: grayscale(100%) !important; opacity: 0.5 !important; transition: all 0.3s !important; color: var(--blue-dark) !important; font-weight: 800 !important; font-size: 1.2rem !important; text-align: center !important; }
+#munisys-wrapper .ref-logo:hover { filter: grayscale(0%) !important; opacity: 1 !important; }
+#munisys-wrapper .ref-seeall { font-weight: 800 !important; color: var(--bordeaux) !important; text-decoration: underline !important; cursor: pointer !important; font-size: 1.1rem !important; }
+
+/* ── FOOTER ── */
+#munisys-wrapper .ft-wrapper { background: #1a1a1a !important; width: 100% !important; }
+#munisys-wrapper .ft { background: #1a1a1a !important; color: rgba(255,255,255,0.6) !important; max-width: 1440px !important; margin: 0 auto !important; }
+#munisys-wrapper .ft-top { display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 2.5rem 5rem !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
+#munisys-wrapper .ft-brand { font-size: 1.4rem !important; font-weight: 900 !important; color: #fff !important; letter-spacing: 1px !important; }
+#munisys-wrapper .ft-linkedin { border: 1px solid rgba(255,255,255,0.3) !important; color: rgba(255,255,255,0.7) !important; font-size: 0.82rem !important; font-weight: 600 !important; padding: 0.5rem 1.2rem !important; border-radius: 3px !important; transition: color 0.18s, border-color 0.18s !important; }
+#munisys-wrapper .ft-linkedin:hover { color: #fff !important; border-color: #fff !important; }
+#munisys-wrapper .ft-main { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 2rem !important; padding: 3rem 5rem !important; }
+#munisys-wrapper .ft-col h4 { color: #fff !important; font-size: 0.68rem !important; font-weight: 700 !important; text-transform: uppercase !important; letter-spacing: 2px !important; margin-bottom: 1rem !important; }
+#munisys-wrapper .ft-col ul { display: flex !important; flex-direction: column !important; gap: 0.6rem !important; }
+#munisys-wrapper .ft-col a { font-size: 0.83rem !important; color: rgba(255,255,255,0.45) !important; }
+#munisys-wrapper .ft-bottom { padding: 1.5rem 5rem !important; display: flex !important; justify-content: space-between !important; font-size: 0.75rem !important; color: rgba(255,255,255,0.25) !important; border-top: 1px solid rgba(255,255,255,0.06) !important; }
+
+@media(max-width:1024px) {
+  #munisys-wrapper .hero-text { width: 100% !important; padding: 3rem !important; }
+  #munisys-wrapper .hero-visual { display: none !important; }
+  #munisys-wrapper .sol-grid { grid-template-columns: 1fr !important; }
+  #munisys-wrapper .off-flow { grid-template-columns: 1fr !important; }
+  #munisys-wrapper .off-label-vert { writing-mode: horizontal-tb !important; transform: none !important; }
+  #munisys-wrapper .srv-sec { grid-template-columns: 1fr !important; }
+  #munisys-wrapper .ins-sec { flex-direction: column !important; }
+  #munisys-wrapper .ins-title { writing-mode: horizontal-tb !important; transform: none !important; }
+  #munisys-wrapper .ins-grid { grid-template-columns: 1fr !important; }
+  #munisys-wrapper .ref-top { grid-template-columns: 1fr !important; }
+  #munisys-wrapper .ref-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  #munisys-wrapper .ft-main { grid-template-columns: 1fr 1fr !important; }
+}
+</style>

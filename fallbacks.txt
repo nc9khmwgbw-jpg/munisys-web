@@ -1,0 +1,68 @@
+src/app/insights/page.js:                                <InlineEditor as="span" className="ins-learn-more" dbPath={['insights', 'learnMore']} fallback="Learn more &rarr;" />
+src/app/contact/page.js:                    <InlineEditor as="span" dbPath={['contact', 'eyebrow']} fallback={data.eyebrow || 'Contact'} />
+src/app/contact/page.js:                    <InlineEditor as="span" dbPath={['contact', 'subline']} fallback={data.subline || 'Ready to accelerate your digital transformation? Our experts are here, available, and eager to help you shape the future.'} />
+src/app/contact/page.js:                            <h4><InlineEditor as="span" dbPath={['contact', 'hqTitle']} fallback={data.hqTitle || 'Headquarters'} /></h4>
+src/app/contact/page.js:                            <p><InlineEditor as="span" dbPath={['contact', 'hqText']} fallback={data.hqText || '123 Innovation Drive, Tech District, Casablanca'} /></p>
+src/app/contact/page.js:                            <h4><InlineEditor as="span" dbPath={['contact', 'emailTitle']} fallback={data.emailTitle || 'Email Us'} /></h4>
+src/app/contact/page.js:                            <p><InlineEditor as="span" dbPath={['contact', 'emailText']} fallback={data.emailText || 'contact@munisys.com'} /></p>
+src/app/contact/page.js:                            <h4><InlineEditor as="span" dbPath={['contact', 'callTitle']} fallback={data.callTitle || 'Call Us'} /></h4>
+src/app/contact/page.js:                            <p><InlineEditor as="span" dbPath={['contact', 'callText']} fallback={data.callText || '+212 5 22 00 00 00'} /></p>
+src/app/about-us/page.js:                        <InlineEditor as="span" dbPath={['aboutUs', 'subtitle']} fallback={data.subtitle || 'Our Heritage'} />
+src/app/about-us/page.js:                        <InlineEditor as="span" dbPath={['aboutUs', 'heroMainTitle']} fallback={data.heroMainTitle || 'Empowering Digital Transformation'} />
+src/app/about-us/page.js:                        <InlineEditor as="span" dbPath={['aboutUs', 'storyTitle']} fallback={data.storyTitle || 'Who We Are'} />
+src/app/about-us/page.js:                        <InlineEditor as="span" dbPath={['aboutUs', 'storyP1']} fallback={data.storyP1 || 'Since our inception, Munisys has been at the forefront of technological innovation. We believe that technology is the ultimate equalizer, enabling businesses to scale, secure their assets, and streamline operations in ways never before possible.'} />
+src/app/about-us/page.js:                        <InlineEditor as="span" dbPath={['aboutUs', 'storyP2']} fallback={data.storyP2 || 'Our team of certified experts works relentlessly to architect and deploy IT solutions that are not just robust, but future-proof. By combining deep industry expertise with cutting-edge tools, we transform complex challenges into seamless digital experiences.'} />
+src/app/about-us/page.js:                    <InlineEditor as="span" dbPath={['aboutUs', 'timelineTitle']} fallback={data.timelineTitle || 'Our Journey'} />
+src/app/about-us/page.js:                                <InlineEditor as="span" dbPath={['aboutUs', 'timeline', idx, 'year']} fallback={item.year} />
+src/app/about-us/page.js:                                <InlineEditor as="span" dbPath={['aboutUs', 'timeline', idx, 'text']} fallback={item.text} />
+src/app/page.js:        <InlineEditor as="span" dbPath={['homepage', 'figures', idx, 'prefix']} fallback={defaultPrefix || ''} />
+src/app/page.js:          <InlineEditor as="span" dbPath={['homepage', 'figures', idx, 'num']} fallback={defaultNum.toString()} />
+src/app/page.js:      <InlineEditor as="p" dbPath={['homepage', 'figures', idx, 'label']} fallback={defaultLabel} />
+src/app/page.js:                <InlineEditor as="div" className="meta" dbPath={['homepage', 'slides', i, 'meta']} fallback={slide.meta} />
+src/app/page.js:                <InlineEditor as="h1" className="title" dbPath={['homepage', 'slides', i, 'h1']} fallback={slide.h1 || slide.title} />
+src/app/page.js:                <InlineEditor as="p" className="desc" dbPath={['homepage', 'slides', i, 'desc']} fallback={slide.desc} />
+src/app/page.js:                    <InlineEditor as="span" dbPath={['homepage', 'slides', i, 'btnText']} fallback={slide.btnText || 'Our solutions'} />
+src/app/page.js:                  <InlineEditor as="h3" dbPath={['homepage', 'solutions', i, 'title']} fallback={sol.title} />
+src/app/page.js:                  <InlineEditor as="p" dbPath={['homepage', 'solutions', i, 'desc']} fallback={sol.desc} />
+src/app/page.js:                      <InlineEditor as="span" dbPath={['homepage', 'solutions', i, 'btn']} fallback={sol.btn} />
+src/app/page.js:          <InlineEditor as="h2" className="off-title" dbPath={['homepage', 'sections', 'offeringsTitle']} fallback="Offerings" />
+src/app/page.js:          <InlineEditor as="p" className="off-desc" dbPath={['homepage', 'sections', 'offeringsDesc']} fallback="An end-to-end &amp; coherent offer of solutions &amp; services for secure digital infrastructures" />
+src/app/page.js:                  <InlineEditor as="h3" className="srv-title" dbPath={['homepage', 'services', i, 'title']} fallback={s.title} />
+src/app/page.js:                  <InlineEditor as="p" dbPath={['homepage', 'services', i, 'body']} fallback={s.body || s.desc} />
+src/app/page.js:          <InlineEditor as="span" dbPath={['homepage', 'sections', 'figuresTitle']} fallback={'SOME<br />FIGURES'} />
+src/app/page.js:        <InlineEditor as="div" className="ins-title" dbPath={['homepage', 'sections', 'insightsTitle']} fallback="Insights" />
+src/app/page.js:              <InlineEditor as="span" dbPath={['homepage', 'insights', 0, 'logoText']} fallback="MUNISYS" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#1d4e79', letterSpacing: '2px' }} />
+src/app/page.js:            <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'insights', 0, 'text']} fallback="A new visual identity for Munisys" />
+src/app/page.js:            <InlineImageEditor dbPath={['homepage', 'insights', 1, 'img']} fallback="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop">
+src/app/page.js:            <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'insights', 1, 'text']} fallback="New headquarters" />
+src/app/page.js:                <InlineEditor as="span" dbPath={['homepage', 'insights', 2, 'topText']} fallback="HELIOS" /> <br />
+src/app/page.js:                <InlineEditor as="span" dbPath={['homepage', 'insights', 2, 'midText']} fallback="Investment Partners" style={{ color: '#f97316' }} />
+src/app/page.js:              <InlineEditor as="h1" dbPath={['homepage', 'insights', 2, 'botText']} fallback="FIPAR" style={{ fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 900, color: '#1d4e79', margin: 0 }} />
+src/app/page.js:            <InlineEditor as="div" className="ins-text" style={{ textTransform: 'uppercase' }} dbPath={['homepage', 'insights', 2, 'text']} fallback="PRESS RELEASE" />
+src/app/page.js:          <InlineEditor as="h2" dbPath={['homepage', 'sections', 'partnersTitle']} fallback="Technology partners" />
+src/app/page.js:          <InlineEditor as="p" dbPath={['homepage', 'sections', 'partnersDesc']} fallback="The IT infrastructures we design and deploy for our clients are at the heart of their business and determine their capacity to innovate and stand out. We build solid ties with our technology partners and acquire in-house expertise to ensure true resilience and agility." />
+src/app/page.js:            <InlineEditor as="span" dbPath={['homepage', 'sections', 'partnersLinkText']} fallback="Read more" /> <ArrowIcon />
+src/app/page.js:          <InlineEditor as="h2" className="ref-title" dbPath={['homepage', 'sections', 'referencesTitle']} fallback="They trust us" />
+src/app/page.js:          <InlineEditor as="p" className="ref-desc" dbPath={['homepage', 'sections', 'referencesDesc']} fallback="As a trusted advisor, our contribution to the design, deployment and support of technological solutions is delivered in the best interests of our clients, prioritizing integrity and long-term partnerships." />
+src/app/page.js:            <InlineEditor as="span" dbPath={['homepage', 'sections', 'referencesLinkText']} fallback="See all references" />
+src/app/solutions/page.js:                <InlineEditor as="span" className="sol-hero-label" style={{ color: '#922b55' }} dbPath={['solutions', 'heroLabel']} fallback={data.heroLabel || 'OUR SOLUTIONS'} />
+src/app/solutions/page.js:                    <InlineEditor as="span" dbPath={['solutions', 'heroTitle']} fallback={data.heroTitle || 'Empowering your digital journey.'} />
+src/app/solutions/page.js:                <InlineEditor as="p" style={{ color: '#4b5563' }} dbPath={['solutions', 'heroDesc']} fallback={data.heroDesc || 'Discover our comprehensive portfolio of IT solutions.'} />
+src/app/solutions/page.js:                            <InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'title']} fallback={cat.title} />
+src/app/solutions/page.js:                                <h2><InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'title']} fallback={cat.title} /></h2>
+src/app/solutions/page.js:                                <p><InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'desc']} fallback={cat.desc} /></p>
+src/app/solutions/page.js:                                        <h3><InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'items', iIdx, 'title']} fallback={item.title} /></h3>
+src/app/solutions/page.js:                                        <p><InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'items', iIdx, 'desc']} fallback={item.desc} /></p>
+src/app/solutions/page.js:                                                <span className="meta-val"><InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'items', iIdx, 'exp']} fallback={item.exp} /></span>
+src/app/solutions/page.js:                                                <span className="meta-val"><InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'items', iIdx, 'part']} fallback={item.part} /></span>
+src/app/page.js.recovered:          <InlineEditor as="h2" className="off-title" dbPath={['homepage', 'sections', 'offeringsTitle']} fallback="Offerings" />
+src/app/page.js.recovered:          <InlineEditor as="p" className="off-desc" dbPath={['homepage', 'sections', 'offeringsDesc']} fallback="An end-to-end &amp; coherent offer of solutions &amp; services for secure digital infrastructures" />
+src/app/customer-references/page.js:                <InlineEditor as="span" className="cr-hero-label" dbPath={['customerReferences', 'heroLabel']} fallback={data.heroLabel || 'Client References'} />
+src/app/customer-references/page.js:                <InlineEditor as="p" dbPath={['customerReferences', 'heroDesc']} fallback={data.heroDesc || 'Our commitment to excellence has earned us lasting and fruitful collaborations with the largest economic actors and state entities in Morocco.'} />
+src/app/customer-references/page.js:                                <InlineEditor as="span" dbPath={['customerReferences', 'references', idx, 'name']} fallback={ref.name} />
+src/app/customer-references/page.js:                                <InlineEditor as="span" dbPath={['customerReferences', 'references', idx, 'sector']} fallback={ref.sector} />
+src/app/services/page.js:                <InlineEditor as="span" dbPath={['services', 'sections', 0, 'items', idx, 'title']} fallback={item.title} />
+src/app/services/page.js:                <InlineEditor as="span" dbPath={['services', 'sections', 0, 'items', idx, 'desc']} fallback={item.desc} />
+src/app/services/page.js:                    <InlineEditor as="span" dbPath={['services', 'sections', 0, 'items', idx, 'features', fIdx]} fallback={feat} />
+src/app/technology-partners/page.js:                        <InlineEditor as="span" dbPath={['technologyPartners', 'heroTitle']} fallback={data.heroTitle || 'Technology Partners'} />
+src/app/technology-partners/page.js:                    <InlineEditor as="p" dbPath={['technologyPartners', 'heroDesc']} fallback={data.heroDesc || "We build solid ties with the world's leading technology providers to ensure true resilience, performance, and agility for your digital infrastructure."} />

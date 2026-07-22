@@ -1,0 +1,806 @@
+<!-- PAGE SOLUTIONS MUNISYS -->
+<!-- Copiez TOUT ce code et collez-le dans le bloc "Shortcode" de Breakdance sur la page Solutions -->
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+#munisys-solutions-wrapper {
+  --bordeaux: #922b55;
+  --blue-dark: #1d4e79;
+  --blue-light: #83a5c2;
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --bg-gray: #fcfcfc;
+  font-family: 'Montserrat', sans-serif !important;
+  background: #ffffff;
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+  width: 100vw !important;
+  position: relative;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
+  text-align: left;
+}
+
+#munisys-solutions-wrapper *, #munisys-solutions-wrapper *::before, #munisys-solutions-wrapper *::after { 
+  box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif !important;
+}
+
+/* ── HERO ── */
+#munisys-solutions-wrapper .page-hero {
+  background: var(--blue-dark) !important;
+  color: #fff !important;
+  padding: 8rem 5rem 6rem 5rem !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+#munisys-solutions-wrapper .page-hero::before {
+  content: ''; position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important;
+  background: radial-gradient(circle at right top, rgba(146, 43, 85, 0.2), transparent 50%) !important;
+}
+#munisys-solutions-wrapper .page-hero h1 {
+  font-size: 3.5rem !important; font-weight: 300 !important; margin-bottom: 1.5rem !important; position: relative !important; z-index: 2 !important;
+}
+#munisys-solutions-wrapper .page-hero h1 strong { font-weight: 800 !important; }
+#munisys-solutions-wrapper .page-hero p {
+  font-size: 1.2rem !important; color: rgba(255,255,255,0.8) !important; max-width: 800px !important; margin: 0 auto !important; position: relative !important; z-index: 2 !important; line-height: 1.6 !important;
+}
+
+/* ── MAIN LAYOUT ── */
+#munisys-solutions-wrapper .sol-container {
+  max-width: 1440px !important; margin: 0 auto !important; padding: 5rem !important;
+  display: grid !important; grid-template-columns: 350px 1fr !important; gap: 5rem !important;
+}
+
+/* ── SIDEBAR ── */
+#munisys-solutions-wrapper .sol-sidebar {
+  display: flex !important; flex-direction: column !important; gap: 0.5rem !important;
+  position: sticky !important; top: 100px !important; height: fit-content !important;
+}
+#munisys-solutions-wrapper .sol-cat-btn {
+  background: #f4f7f9 !important; border: none !important; padding: 1.2rem 1.5rem !important;
+  text-align: left !important; font-size: 1.05rem !important; font-weight: 600 !important; color: var(--blue-dark) !important;
+  cursor: pointer !important; transition: all 0.2s !important; border-left: 4px solid transparent !important;
+}
+#munisys-solutions-wrapper .sol-cat-btn:hover {
+  background: #e9eff4 !important;
+}
+#munisys-solutions-wrapper .sol-cat-btn.active {
+  background: #fff !important; border-left: 4px solid var(--bordeaux) !important; color: var(--bordeaux) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+}
+
+/* ── CONTENT ── */
+#munisys-solutions-wrapper .sol-cat-content {
+  display: none !important; animation: fadeIn 0.4s ease-in-out !important;
+}
+#munisys-solutions-wrapper .sol-cat-content.active {
+  display: block !important;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+#munisys-solutions-wrapper .cat-header { margin-bottom: 4rem !important; border-bottom: 2px solid #e9eff4 !important; padding-bottom: 2rem !important; }
+#munisys-solutions-wrapper .cat-header h2 { font-size: 2.8rem !important; font-weight: 800 !important; color: var(--blue-dark) !important; margin-bottom: 1rem !important; }
+#munisys-solutions-wrapper .cat-header p { font-size: 1.15rem !important; color: var(--text-gray) !important; line-height: 1.8 !important; }
+
+#munisys-solutions-wrapper .sub-sol-grid {
+  display: flex !important; flex-direction: column !important; gap: 5rem !important;
+}
+#munisys-solutions-wrapper .sub-sol-card {
+  display: flex !important; flex-direction: column !important; gap: 1.5rem !important;
+}
+#munisys-solutions-wrapper .sub-sol-card h3 { font-size: 2rem !important; font-weight: 700 !important; color: var(--bordeaux) !important; }
+#munisys-solutions-wrapper .sub-sol-card p.overview { font-size: 1.05rem !important; color: var(--text-dark) !important; line-height: 1.8 !important; white-space: pre-line !important; }
+
+#munisys-solutions-wrapper .sub-sol-meta { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 3rem !important; background: #f4f7f9 !important; padding: 2.5rem !important; border-radius: 8px !important; }
+#munisys-solutions-wrapper .sub-sol-meta h4 { font-size: 1.1rem !important; color: var(--blue-dark) !important; font-weight: 800 !important; margin-bottom: 1.5rem !important; text-transform: uppercase !important; letter-spacing: 1px !important; }
+#munisys-solutions-wrapper .meta-list { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: column !important; gap: 0.8rem !important; }
+#munisys-solutions-wrapper .meta-list li { display: flex !important; align-items: flex-start !important; gap: 0.8rem !important; font-size: 1rem !important; color: var(--text-gray) !important; line-height: 1.5 !important; font-weight: 500 !important;}
+#munisys-solutions-wrapper .meta-list li::before { content: '■' !important; color: var(--bordeaux) !important; font-size: 0.8em !important; transform: translateY(3px) !important;}
+#munisys-solutions-wrapper .partners-tags { display: flex !important; flex-wrap: wrap !important; gap: 0.8rem !important; }
+#munisys-solutions-wrapper .partner-tag { background: #fff !important; border: 1px solid #d4dfe8 !important; color: var(--blue-dark) !important; padding: 0.5rem 1rem !important; font-size: 0.95rem !important; font-weight: 700 !important; border-radius: 4px !important; }
+
+@media(max-width:1024px) {
+  #munisys-solutions-wrapper .sol-container { grid-template-columns: 1fr !important; padding: 3rem !important; }
+  #munisys-solutions-wrapper .sol-sidebar { position: static !important; flex-direction: row !important; overflow-x: auto !important; padding-bottom: 1rem !important; }
+  #munisys-solutions-wrapper .sol-cat-btn { white-space: nowrap !important; border-left: none !important; border-bottom: 4px solid transparent !important; }
+  #munisys-solutions-wrapper .sol-cat-btn.active { border-left: none !important; border-bottom: 4px solid var(--bordeaux) !important; }
+  #munisys-solutions-wrapper .sub-sol-meta { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<div id="munisys-solutions-wrapper">
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <h1>Our <strong>Solutions</strong></h1>
+    <p>Discover our comprehensive suite of digital infrastructure technologies tailored to empower your business operations and drive innovation.</p>
+  </section>
+
+  <!-- MAIN -->
+  <section class="sol-container">
+    
+    <!-- SIDEBAR -->
+    <div class="sol-sidebar">
+      <button class="sol-cat-btn active" data-target="core-infra">Core Infrastructure Technologies</button>
+      <button class="sol-cat-btn " data-target="cybersecurity">Cybersecurity Solutions</button>
+      <button class="sol-cat-btn " data-target="infra-software">Infrastructure Software</button>
+      <button class="sol-cat-btn " data-target="managed-cloud">Managed & Cloud Services</button>
+      <button class="sol-cat-btn " data-target="endpoint-sol">Endpoint Solutions</button>
+    </div>
+
+    <!-- CONTENT AREA -->
+    <div class="sol-content-area">
+      <div class="sol-cat-content active" id="core-infra">
+        <div class="cat-header">
+          <h2>Core Infrastructure Technologies</h2>
+          <p>Setting up, managing, and securing consistent compute, storage, networking and backup infrastructure across data centers and public clouds.</p>
+        </div>
+        <div class="sub-sol-grid">
+          <div class="sub-sol-card">
+            <h3>Compute & Storage</h3>
+            <p class="overview">We use proven methodologies to design and build modern compute and storage infrastructures, designed to work in edge, data center or hybrid cloud environments. Our cutting-edge solutions include powerful rack servers, composable bladed infrastructure, object, block and file storage arrays,… In order to offer consistency and meet specific needs for any workload, we select a combination of most secure mission-critical, cost sensitive or extensively scalable solutions.
+High availability and resilience are primary criteria in the design of these infrastructure components. The use of right level of redundancy as well as the best fitting replication and automated failover technologies allow us to meet ever-increasing customer’s demands for business continuity and fast disaster recovery.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Standalone, Rack, and bladed Compute Servers</li>
+                  <li>High Performance Computing</li>
+                  <li>Converged IT/OT Systems</li>
+                  <li>Entry, Midrange and Mission Critical All-flash storage arrays</li>
+                  <li>File, block, object storage solutions</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">DELL</span>
+                  <span class="partner-tag">HPE</span>
+                  <span class="partner-tag">IBM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Hyper-converged Infrastructures</h3>
+            <p class="overview">Modern Hyper-converged Infrastructures (HCI) simplify datacenter operations, reduce dependency on proprietary hardware and provide scalability by tightly integrating individual compute servers, storage arrays and networks to yield a flexible, agile, and easily manageable software-defined datacenter.
+Our systems architects and delivery experts harness the full power of HCI underlying virtualization technologies enabling our customers to benefit from an innovative as-a-service resources consumption model.
+Thanks to the breadth of our partner’s HCI portfolios, we leverage many options to deploy the best fitting physical and software-defined resources, allowing our customers for choice based on their current infrastructure architecture and their in-house adopted operational processes.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>HCI appliances</li>
+                  <li>HCI Ready-Nodes</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">DELL</span>
+                  <span class="partner-tag">HPE</span>
+                  <span class="partner-tag">Nutanix</span>
+                  <span class="partner-tag">VMware</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Data Resilience</h3>
+            <p class="overview">Ensuring business continuity through availability, integrity, and accessibility of data across IT infrastructure is vital for today’s organizations. No unexpected disruption, accidental deletion or unauthorized entities should be able to alter operational capabilities or business applications environments stability.
+Our Data resilience solutions leverages a comprehensive set of in-house and cloud services as well as an automated approach that standardizes data protection through backups, encryption and object storage while providing centralized visibility and resources monitoring across all workloads and locations.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Data Protection Appliances and Software</li>
+                  <li>Cloud Data Security</li>
+                  <li>Air gapped Immutable Storage</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">DELL</span>
+                  <span class="partner-tag">HPE</span>
+                  <span class="partner-tag">Veeam</span>
+                  <span class="partner-tag">Veritas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Networking</h3>
+            <p class="overview">Conducting a successful digital transformation strategy requires seamless connectivity and access to data for both users and applications. Setting up secure and highly scalable wired, wireless, and SD-WAN networking platforms is vital to address business critical use cases.
+Our partners’ networking portfolio spans from the edge layer to the cloud and creates a scalable, automated, service-centric and intelligent foundation for a secure connectivity of the unified infrastructure.
+Our solutions help gaining visibility and control over the actual performance delivered by the network whilst simplifying operations and mitigating risks, all supported by AI driven management and policies enforcement capabilities.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Data Center Core LAN</li>
+                  <li>Edge Networks</li>
+                  <li>Wireless LAN</li>
+                  <li>SD-WAN</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">HPE Aruba</span>
+                  <span class="partner-tag">Cisco</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Cabling & Data Center Environment</h3>
+            <p class="overview">At the most foundational level, an IT infrastructure starts with the environment that will host its most critical components and will allow them to operate in optimal and secure conditions.
+Our cabling and data center environment team brings a proven expertise and a sound portfolio of solutions helping our customers to be totally confident that the physical IT technologies their operations rely upon will benefit from dependable, manageable and secure cabling, rack, power and monitoring systems.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Intelligent racks</li>
+                  <li>Power security and distribution</li>
+                  <li>High density cabling systems</li>
+                  <li>RFID Asset inventory and location</li>
+                  <li>Data center environment monitoring</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Corning</span>
+                  <span class="partner-tag">Eaton</span>
+                  <span class="partner-tag">Legrand</span>
+                  <span class="partner-tag">R&M</span>
+                  <span class="partner-tag">RFCode</span>
+                  <span class="partner-tag">Schneider Electric</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sol-cat-content " id="cybersecurity">
+        <div class="cat-header">
+          <h2>Cybersecurity Solutions</h2>
+          <p>Comprehensive protection for your enterprise. We secure your network, endpoints, and data against evolving digital threats.</p>
+        </div>
+        <div class="sub-sol-grid">
+          <div class="sub-sol-card">
+            <h3>Endpoint Security</h3>
+            <p class="overview">Cyber adversaries’ efforts to bypass corporate defenses start usually by targeting endpoints as they have always been company’s most vulnerable assets to attacks, regardless of where they are located inside or outside the corporate network, exploiting multiple factors such as human errors, device misconfigurations, software breaches, weak passwords, missing patches, and many more.
+Munisys’ Endpoint Security solutions offer comprehensive monitoring and protection features to desktops, laptops, smartphones, printers, and other connected user devices. This includes detecting, preventing and responding to threats like infections by viruses, zero-day attacks, phishing and ransomware. Advanced capabilities are also leveraged to provide higher levels of protection like anomaly behavior analysis, automatic enforcement, and dynamic security controls.
+We value also built-in hardware-based security and advanced self-healing capabilities as integrated features supported by specific endpoint devices being part of our EndPoint Solutions Business Unit’ catalog.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Antivirus & Ransomware protection</li>
+                  <li>Endpoint Detection & Response (EDR)</li>
+                  <li>User and Entity Behavior Analytics</li>
+                  <li>Web and Mail Threat protection</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">HP</span>
+                  <span class="partner-tag">TrendMicro</span>
+                  <span class="partner-tag">Kaspersky</span>
+                  <span class="partner-tag">PaloAlto Networks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Network Security</h3>
+            <p class="overview">Digital assets’ availability and integrity rely greatly on seamless deployment of a highly secure network infrastructure with a scalable, automated, and manageable enforcement of a comprehensive set of rules and policies.
+With the proliferation in the cloud and data center environments of distributed multi-sites resources, application virtualization and containerization, as well as extensive usage of encrypted traffic, IT teams are facing greater challenges to protect the network itself without compromising its performance and to secure application workloads without hampering efforts towards enablement of an outstanding user experience.
+Combining multiple layers of defenses, our Networking Security solutions ensure an effective protection against unauthorized access with Network Access Control technologies, set up preemptive measures intended to thwart any attack coming from either the outside or circulating inside the network with Next Generation Firewalling and IDS/IPS systems, provide isolation of malware codes and objects with Sandbox technologies and responds to detected abnormal system behaviors with NDR solutions.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Next Generation Firewalling</li>
+                  <li>Network Access Control</li>
+                  <li>DDoS Protection</li>
+                  <li>Network Detection & Response (NDR)</li>
+                  <li>Sandboxing</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">F5</span>
+                  <span class="partner-tag">Fortinet</span>
+                  <span class="partner-tag">PaloAlto Networks</span>
+                  <span class="partner-tag">Forcepoint</span>
+                  <span class="partner-tag">Checkpoint</span>
+                  <span class="partner-tag">HPE Aruba</span>
+                  <span class="partner-tag">Gatewatcher</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Cloud & Application Security</h3>
+            <p class="overview">Over the past few years, the world witnessed an unprecedented shift towards remote working and cloud services adoption. Strategies has been put in place to rapidly migrate applications, APIs services and related data to collaborative cloud environments to take benefit from an enhanced agility and new innovation capabilities. However, this also creates a paradigm change in digital operations and assets’ security.
+Resolved to embrace the change, Munisys has expertly enriched his portfolio of security solutions to help extend secure access and high-performance connectivity to users regardless of their geographic locations with SASE technologies and to enable moving applications and API endpoints safely outside the organization’s network perimeter with advanced solutions designed to integrate effective security controls throughout their development lifecycle.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Cloud-native applications & API security</li>
+                  <li>Application vulnerability management (SAST/DAST/IAST)</li>
+                  <li>Secure Access Service Edge (SASE) solutions</li>
+                  <li>Secure File Transfer</li>
+                  <li>DNS Security</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Axway</span>
+                  <span class="partner-tag">Broadcom</span>
+                  <span class="partner-tag">OpenText</span>
+                  <span class="partner-tag">F5</span>
+                  <span class="partner-tag">PaloAlto Networks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Identity and Access Management</h3>
+            <p class="overview">Securing a perimeter around the datacenter network is no longer enough to ensure safe access to data, applications, and business-critical services as they are increasingly spread out across multi-sites or even multi-clouds environments. Today, Organizations must deploy an Identity-centric strategy to protect every user-resource connection, mitigate risk and provide access governance, compliance, and real-time threat detection.
+With our Identity and Access Management (IAM) solutions and services, we help you orchestrate policies across on-premises, remote, and cloud environments to control identities and give privileged access and passwordless authentication to your workforce as well as to your customers.
+Further, Munisys helps you find a right balance between accessibility and security controls so as not to impede your ability to deliver agile, scalable, and efficient business services.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Multi Factor Authentication (MFA)</li>
+                  <li>LDAP Protection</li>
+                  <li>Federated Identity Management</li>
+                  <li>Cloud Access Security Broker (CASB)</li>
+                  <li>Data privilege Management</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Fortinet</span>
+                  <span class="partner-tag">Varonis</span>
+                  <span class="partner-tag">Opentext</span>
+                  <span class="partner-tag">F5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Visibility & Compliance</h3>
+            <p class="overview">A holistic approach to Cybersecurity encompasses rolling out security enforcement systems and controls, gaining deep visibility into valued assets and verifying continuously those assets’ compliance with business policies and regulatory requirements.
+Our solutions drive greater visibility and compliance capabilities by providing scalable event monitoring, automation, SOC analytics, audited remote management, and more.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Security Information & Event Management (SIEM)</li>
+                  <li>Security Orchestration & Automated Response (SOAR)</li>
+                  <li>Threat Intelligence Platforms</li>
+                  <li>Privileged Access Management</li>
+                  <li>Vulnerability & Patch Management</li>
+                  <li>Security Policy Management</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Tenable</span>
+                  <span class="partner-tag">Wallix</span>
+                  <span class="partner-tag">OpenText</span>
+                  <span class="partner-tag">Google-Mandiant</span>
+                  <span class="partner-tag">Rapid7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sol-cat-content " id="infra-software">
+        <div class="cat-header">
+          <h2>Infrastructure Software</h2>
+          <p>Optimize your operations with enterprise-grade software solutions for monitoring, management, and automation.</p>
+        </div>
+        <div class="sub-sol-grid">
+          <div class="sub-sol-card">
+            <h3>Service & Asset Management</h3>
+            <p class="overview">Digital transformation has significantly elevated the customer experience across vertical markets, prompting every organization to strive to adopt internally similar levels of service delivery for an engaging, consumer-like, and self-service end user experience.
+Going beyond IT-centric service delivery enablement, Munisys’ ITIL-aligned and cloud-native solutions encompass a collection of policies and processes for the management and support of business services like human resources, legal, assets, facilities, marketing, and finance.
+Strong with its proven experience on implementing service and asset management processes, native mobile applications, machine learning and AI-powered chatbots, social collaboration, advanced analytics, and orchestration, Munisys is your privileged partner when laying down the foundation for your enterprise’s efficiency improvement strategy.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Enterprise Service Management</li>
+                  <li>IT Asset Management</li>
+                  <li>CMDB and Dynamic Discovery</li>
+                  <li>Software License Management</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">OpenText</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Observability, Automation & Orchestration</h3>
+            <p class="overview">Applying advanced automation and predictive analytics technologies to run, monitor and protect enterprise assets and processes has deeply transformed how IT operations are performed and managed.
+Huge volumes of data are usually generated by continuous discovery and at scale monitoring of applications, services, networks and user experience across cloud and on-premises environments. By implementing automated and intelligent correlation solutions to analyse those big data sets, organizations can easily derive fast and useful insights as well as accurate and timely knowledge of issues impacting their business services’ performance and health levels.
+Automation may also be enhanced with powerful orchestration engines helping IT operators to efficiently run, schedule, and actively monitor processes and workflows at enterprise scale.
+Munisys expertly provides its customers with end-to-end observability, automation, orchestration, and proactive remediation solutions to increase process efficiency, alleviate pressure on IT teams while eliminating manual and repetitive efforts, lower IT operation costs, and minimize business services disruption.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Datacenter Infrastructure Monitoring</li>
+                  <li>Application Performance Monitoring</li>
+                  <li>Enterprise-wide Automation Platforms</li>
+                  <li>Robotic Process Automation</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">OpenText</span>
+                  <span class="partner-tag">Redhat</span>
+                  <span class="partner-tag">Broadcom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Data Management & Analytics</h3>
+            <p class="overview">Turning Data into meaningful and actionable insights is undoubtedly one of the key aspects to make businesses capable of staying competitive and ahead of market expectations. This is even becoming table stakes in some verticals. Indeed, no financial institutions can afford not relying on critical data applications like Frauds detection and Risks simulation. No Telecom provider can ignore the crucial importance of Network analytics and Customer behavior analytics.
+Munisys is partnering with big players in the data platforms ecosystem to provide state-of-the-art distributed data management components to source, structure, protect and analyze data. Whether run on hybrid or mutlicloud environments, our solutions deliver quality enterprise-wide intelligence in a fast and cost-effective way.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Hybrid & Cloud Data platforms</li>
+                  <li>Artificial Intelligence Data Analytics</li>
+                  <li>Enterprise Data Archiving</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">OpenText</span>
+                  <span class="partner-tag">Cohesity</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Application Modernization</h3>
+            <p class="overview">An important feature of a sustainable digital transformation strategy is the modernization of incumbent applications to take advantage of newer virtualized infrastructure and cloud technology advances for better resources optimization, greater developments speed, frequent deployments, and improved resiliency. This approach should, on the other hand, protect older investments, value existing functionalities and minimize service disruptions.
+Thanks to its ability to conduct a thorough application inventory and assessment, Munisys delivers innovative services set up for helping organizations select a right migration pattern towards their newly adopted cloud infrastructures. Those patterns, such as Rehosting, Replatforming and Refactoring imply different effort and complexity levels and are selected based on containerization suitability, business risks, and dependencies across new or legacy applications.
+Munisys is definitely the right partner for businesses intending to execute an effective application modernization plan as this entails a proven expertise on numerous intersecting technologies such as Cloud application platforms, API gateways, Containers, Microservices, Security, Automation, and Orchestration.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Application Modernization Assessment</li>
+                  <li>Kubernetes-based Container Orchestration platforms</li>
+                  <li>Application Rehosting / Replatforming / Refactoring</li>
+                  <li>API Management</li>
+                  <li>Zero Trust Application Security</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Redhat</span>
+                  <span class="partner-tag">GitLab</span>
+                  <span class="partner-tag">Opentext</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sol-cat-content " id="managed-cloud">
+        <div class="cat-header">
+          <h2>Managed & Cloud Services</h2>
+          <p>Seamless cloud integration and managed services to accelerate your digital transformation journey.</p>
+        </div>
+        <div class="sub-sol-grid">
+          <div class="sub-sol-card">
+            <h3>Hosting and Cloud Infrastructure Services</h3>
+            <p class="overview">Building traditional on-premises IT infrastructure enhances agility and competitiveness but comes with significant challenges like hefty upfront capital expenditures, limited scalability, and unremitting upgrade and maintenance tasks. Having difficulties managing multi-site or multi-technology architectures, leads often to inefficiencies and increased operational costs.
+Munisys hosting and cloud infrastructure offering addresses these challenges by providing hardware and software reliability, disaster recovery, increased scalability, cost optimization and enhanced resource management while giving access to an elite infrastructure experts team without the need to build it in-house.
+Based on automated provisioning, unified orchestration, and API-driven infrastructure management, our solutions are delivered as a comprehensive and modular set of services for planning, preparing, and operating traditional systems and modern cloud-native environments, encompassing colocation, dedicated platforms and private, hybrid and public cloud infrastructure.
+Our services are delivered within certified, carrier-neutral and sovereign data centers hosting enterprise-grade infrastructure. Designed and operated by MDC, a sibling company, our data centers meet strict jurisdictional requirements needed by highly regulated sectors like finance, healthcare and public services. Organizations benefit from a securely connected or air-gapped architectures, hardened access control, resilient connectivity and tailored service level agreements (SLAs) for performance, control, reporting, and availability.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Data Center Colocation</li>
+                  <li>Managed dedicated Private infrastructure</li>
+                  <li>Managed private & hybrid cloud Infrastructure</li>
+                  <li>Infrastructure as a Service (Virtual machines, virtual desktops, Virtual Data Centers)</li>
+                  <li>Cloud Object Storage (S3)</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">MDC</span>
+                  <span class="partner-tag">OVH</span>
+                  <span class="partner-tag">OCI</span>
+                  <span class="partner-tag">HPE</span>
+                  <span class="partner-tag">Redhat</span>
+                  <span class="partner-tag">VMware</span>
+                  <span class="partner-tag">Nutanix</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Application and Platforms Services</h3>
+            <p class="overview">Today, continuous innovation and process modernization relies on platforms that provide an automated, API-driven, and scalable environments to build, test and deploy cloud-ready applications, cloud-native workloads, serverless, or AI/ML capabilities.
+At Munisys, we design, implement and manage leading kubernetes platforms and containerized environments. The tools and capabilities delivered as a service, allow organizations to develop and deploy applications without the need to manage the underlying infrastructure.
+Our offer encompasses innovative SaaS and PaaS solutions like IT service management, controlled automation, API Gateways and AI/MLOps platforms. We provide the computational resources, specialized tools and highly skilled experts for a complete visibility, dynamic scalability, and secure operations across cloud infrastructure.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Managed Kubernetes & Container Platforms</li>
+                  <li>Platforms as a Service (API, AI, DEVSECOPS, …)</li>
+                  <li>Managed Application & SaaS Hosting</li>
+                  <li>IT Service Management as a Service</li>
+                  <li>Secrets Vault (VaaS)</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Redhat</span>
+                  <span class="partner-tag">VMware</span>
+                  <span class="partner-tag">Nutanix</span>
+                  <span class="partner-tag">Gitlab</span>
+                  <span class="partner-tag">HashiCorp</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Business Resilience & Data Protection</h3>
+            <p class="overview">As cyberattacks on digital infrastructure and sensitive data flows continues its upward trajectory, ensuring business resilience and data protection play a pivotal role in shaping the future of cloud transition and operation strategies.
+Munisys protects your on-premises and cloud infrastructure by setting up a distributed model, based on active-passive or active-active architectures, that inherently reduce risks by eliminating a single point of failure and improving responsiveness. Site recovery environments are set up in our data centers with adequate RPO and RTO parameters, secure networks, and encrypted datastores. Leveraging advanced observability solutions, we analyze usage trends, detect anomalies, set proactive alerts and accelerate troubleshooting and recovery operations.
+Munisys protects also your production data by providing an enterprise-class cloud backup services for recovering critical workloads and protecting SaaS, cloud-native, and on-premises data sources. To help organizations minimize data loss or ransomware risks, our services enable swift recovery through advanced safeguards, such as secure access controls, regular backup schedules, immutable backups, air-gapped storage, and data encryption.
+Combining core Clean Room capabilities from our data protection solutions partners with cyberattack response and managed services expertise from Munisys security teams, we are able to provide you with a clean room solution intending to establish on-demand, air-gapped response environment, along with integrated forensic analysis and recovery tools and services.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Backup as a Service</li>
+                  <li>Disaster Recovery as a Service (DRaaS)</li>
+                  <li>Clean room service</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Cohesity</span>
+                  <span class="partner-tag">Veeam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Managed Security Services</h3>
+            <p class="overview">As cloud adoption rises, many organizations struggle to transform security across infrastructure, cloud platforms, and applications from a compliance requirement into a strategic advantage.
+Munisys offers cloud-based, integrated, and scalable solutions that provide advanced defensive security capabilities without the need for on-premises hardware, software or expert knowledge, ensuring businesses are consistently well-prepared for any unforeseen disruptions through comprehensive and continuous protection of their digital assets.
+Aiming to safeguard your entire data and application lifecycle, our proactive and holistic approach-based security services, combined with proven methodologies and expert-led capabilities, enable us to monitor your infrastructure 24/7, to focus on preventing incidents before they happen, and to detect and respond as quickly and effectively as possible.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Access Control & Privileged Access management</li>
+                  <li>Patch and Vulnerability Management</li>
+                  <li>Endpoint Detection & Response</li>
+                  <li>Managed Network Security</li>
+                  <li>Managed SOC, XDR (eXtended Detection/Response)</li>
+                  <li>AppSec aaS (Application Security Testing, cloud-native applications security, Managed DevSecOps Tooling)</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Palo Alto</span>
+                  <span class="partner-tag">Fortinet</span>
+                  <span class="partner-tag">Redhat</span>
+                  <span class="partner-tag">OpenText</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Advisory, Professional and Management Services</h3>
+            <p class="overview">Our end-to-end services are designed to support you at every stage of your digital transformation journey, securing transitions and aligning with specific business goals:
+- Assessment & Advisory services to define tailored dedicated infrastructure and cloud architecture strategies,
+- Deployment & Migration services spanning activities from planning, data acquisition/transfer, configuration, automation to platform and application integration,
+- Optimization & Alignment services enhancing performance, efficiency, and scalability of the running environments,
+- Management services ensuring high availability, cost reduction, security, and observability.
+You may entrust your selected services to our experts in full-managed mode or choose between a self-managed mode through cloud-based interface, co-managed mode or even a management mode adapted to your distinctive needs and specific context.
+These services are delivered mainly by our own teams of cloud architects, DevOps engineers, security specialists, infrastructure experts and certified project managers.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Cloud & IT assessment and advisory services</li>
+                  <li>Professional Services (Deployment, Configuration, Automation, Support)</li>
+                  <li>Cloud Migration</li>
+                  <li>Operations and Infrastructure Optimization & Alignment</li>
+                  <li>Comprehensive Management Services</li>
+                </ul>
+              </div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sol-cat-content " id="endpoint-sol">
+        <div class="cat-header">
+          <h2>Endpoint Solutions</h2>
+          <p>Empower your workforce with secure, high-performance computing devices and intelligent endpoint management solutions.</p>
+        </div>
+        <div class="sub-sol-grid">
+          <div class="sub-sol-card">
+            <h3>Digital Workplace</h3>
+            <p class="overview">The digital workplace holds a central role in the ability of users to fully benefit from and embrace modern work and collaboration processes. The place is not what matters most, but the combination of technologies that will allow to efficiently and securely work, share and communicate, with the additional benefit of an improved work/life balance.
+The unique combination of expertise that Munisys brings allows us to design, deploy and support workplace technologies while also answering your needs related to security & data protection, virtualization & automation, monitoring & service management, ubiquitous assistance & support.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Desktop and laptop computers selected based on performance needs, security requirements and environment constraints</li>
+                  <li>Collaboration solutions</li>
+                  <li>VDI solutions</li>
+                  <li>Endpoint protection</li>
+                  <li>Complete services portfolio tailored for the endpoint</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Dell</span>
+                  <span class="partner-tag">HP Inc.</span>
+                  <span class="partner-tag">Jabra</span>
+                  <span class="partner-tag">Lenovo</span>
+                  <span class="partner-tag">Logitech</span>
+                  <span class="partner-tag">Poly</span>
+                  <span class="partner-tag">Samsung</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>Printing Solutions</h3>
+            <p class="overview">Printing is an essential part of business processes whenever paper is the most appropriate or the only possible way of sharing information.
+Based on market leading solutions, we assist you in choosing the right technologies and device range in order to make sure producing physical documents gives an edge to your teams and positively contributes to your customers’ experience.
+We also offer country wide Managed Printing Services, that will provide you with a flexible, scalable, no interruption and cost optimized printing solution.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Enterprise printing solutions</li>
+                  <li>Managed Print Services</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Canon</span>
+                  <span class="partner-tag">Epson</span>
+                  <span class="partner-tag">HP Inc</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sub-sol-card">
+            <h3>End Customer Facing Devices</h3>
+            <p class="overview">Besides computing, printing and workplace related technologies, the Endpoint encompasses a large range of devices and software aiming to offer the end customer the most suitable interface to access the many services that digital has made possible.
+A very efficient way to engage with your customers when offering digitized and digital services is to deploy intelligent kiosks that will promote self-service. We give our customers the possibility to freely design such kiosks and to very closely match their requirements in terms of physical shape and size and to include any functionality to be offered to the end user, ranging from printer to document scanner, from ID card Reader to biometric devices and payment terminals. A well-designed kiosk solution can significantly relief the front office personnel and let them focus on value-added customer face to face interactions.
+In the process of moving growingly toward digital services, some specific categories of devices are needed, among which digital ID acquisition or digital signature capture. In order to assist our clients in implementing these functions in an efficient and reliable way and to offer all the required integration possibilities, we have selected specialized devices from leading vendors. They offer a complete solution, especially in the banking sector, but also in general anywhere a customer ID and/or signature are necessary within a workflow.</p>
+            <div class="sub-sol-meta">
+              <div>
+                <h4>Key Expertises</h4>
+                <ul class="meta-list">
+                  <li>Intelligent kiosks</li>
+                  <li>Scanners / readers</li>
+                  <li>ID card / biometry readers</li>
+                  <li>Digital signature pads</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Technology Partners</h4>
+                <div class="partners-tags">
+                  <span class="partner-tag">Faytech</span>
+                  <span class="partner-tag">Secugen</span>
+                  <span class="partner-tag">Signotec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function initSolutions() {
+  function run() {
+    const btns = document.querySelectorAll('#munisys-solutions-wrapper .sol-cat-btn');
+    const contents = document.querySelectorAll('#munisys-solutions-wrapper .sol-cat-content');
+    
+    if(btns.length === 0) return;
+
+    btns.forEach(btn => {
+      // Pour éviter la duplication d'événements dans Breakdance
+      const newBtn = btn.cloneNode(true);
+      btn.replaceWith(newBtn);
+      
+      newBtn.addEventListener('click', () => {
+        const freshBtns = document.querySelectorAll('#munisys-solutions-wrapper .sol-cat-btn');
+        const freshContents = document.querySelectorAll('#munisys-solutions-wrapper .sol-cat-content');
+        
+        freshBtns.forEach(b => b.classList.remove('active'));
+        freshContents.forEach(c => c.classList.remove('active'));
+        
+        newBtn.classList.add('active');
+        const targetId = newBtn.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        if(targetContent) {
+          targetContent.classList.add('active');
+          // Smooth scroll to top of content on mobile
+          if (window.innerWidth <= 1024) {
+            targetContent.scrollIntoView({behavior: 'smooth', block: 'start'});
+          }
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', run);
+  } else {
+    run();
+  }
+
+  const observer = new MutationObserver((mutations) => {
+    for(let mutation of mutations) {
+      if(mutation.addedNodes.length > 0) {
+        mutation.addedNodes.forEach(node => {
+          if(node.id === 'munisys-solutions-wrapper' || (node.querySelector && node.querySelector('#munisys-solutions-wrapper'))) {
+            setTimeout(run, 100);
+          }
+        });
+      }
+    }
+  });
+  
+  observer.observe(document.body, { childList: true, subtree: true });
+})();
+</script>

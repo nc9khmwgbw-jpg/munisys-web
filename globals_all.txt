@@ -1,0 +1,1233 @@
+=== REPLACE ===
+{"Description":"Replace the glassmorphism hero CSS (hero-container, images-wrapper, text-panel, etc.) with the WordPress-style hero CSS (hero section with fixed height, hero-slide with clip-path images, triangles, arrows, and dots). Also add missing sol-content p margin-bottom and fix the hero height to match WordPress (calc(100vh - 90px)).","Instruction":"Replace the entire hero section CSS (hero-container through global-progress) with the WordPress hero CSS. Keep all other CSS intact.","ReplacementChunks":[{"AllowMultiple":false,"EndLine":414,"ReplacementContent":"/* ── HERO (WordPress style) ── */\n.hero {\n    position: relative;\n    height: calc(100vh - 90px);\n    min-height: 600px;\n    background: #ffffff;\n    overflow: hidden;\n    max-width: 1440px;\n    margin: 0 auto;\n}\n\n.hero-slide {\n    position: absolute;\n    inset: 0;\n    display: flex;\n    flex-direction: row;\n    opacity: 0;\n    pointer-events: none;\n    z-index: 5;\n    transition: opacity 0.7s ease-in-out;\n}\n\n.hero-slide.active {\n    opacity: 1;\n    pointer-events: auto;\n    z-index: 6;\n}\n\n.hero-text {\n    position: relative;\n    z-index: 10;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: flex-start;\n    padding: 0 0 0 5rem;\n    width: 55%;\n}\n\n.hero-h1 {\n    font-size: clamp(2.5rem, 3.8vw, 3.8rem);\n    font-weight: 300;\n    color: var(--text-dark);\n    line-height: 1.25;\n    margin-bottom: 3.5rem;\n    text-align: left;\n}\n\n.hero-h1 strong {\n    font-weight: 700;\n    color: var(--text-dark);\n}\n\n.hero-cta-btn {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    border: 2px solid var(--bordeaux);\n    color: var(--bordeaux);\n    font-size: 1rem;\n    font-weight: 700;\n    padding: 1.2rem 2.5rem;\n    width: fit-content;\n    transition: all 0.2s;\n    background: transparent;\n    text-decoration: none;\n}\n\n.hero-cta-btn:hover {\n    background: var(--bordeaux);\n    color: #fff;\n}\n\n.hero-visual {\n    position: absolute;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    width: 45%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n.hero-img-wrap {\n    position: absolute;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    width: 100%;\n}\n\n.hero-img-clip {\n    position: absolute;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    width: 85%;\n    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);\n}\n\n.hero-img-clip img {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n}\n\n.hero-tri-blue {\n    position: absolute;\n    top: 10%;\n    left: 5%;\n    width: 30%;\n    height: 50%;\n    background: var(--bordeaux);\n    clip-path: polygon(0 100%, 100% 0, 100% 100%);\n    z-index: 2;\n}\n\n.hero-tri-bordeaux {\n    position: absolute;\n    bottom: 0;\n    right: 5%;\n    width: 25%;\n    height: 40%;\n    background: var(--blue-dark);\n    clip-path: polygon(0 0, 100% 0, 0 100%);\n    z-index: 2;\n}\n\n/* ── SLIDER NAVIGATION ── */\n.hero-arrow {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    z-index: 20;\n    background: rgba(255, 255, 255, 0.9);\n    border: none;\n    cursor: pointer;\n    width: 52px;\n    height: 52px;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);\n    transition: all 0.2s;\n    color: var(--blue-dark);\n}\n\n.hero-arrow:hover {\n    background: var(--bordeaux);\n    color: #fff;\n    box-shadow: 0 6px 25px rgba(146, 43, 85, 0.35);\n}\n\n.hero-arrow-prev {\n    left: 1.5rem;\n}\n\n.hero-arrow-next {\n    right: 1.5rem;\n}\n\n.hero-dots {\n    position: absolute;\n    bottom: 2rem;\n    left: 50%;\n    transform: translateX(-50%);\n    z-index: 20;\n    display: flex;\n    gap: 0.75rem;\n    align-items: center;\n}\n\n.hero-dot {\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: rgba(29, 78, 121, 0.25);\n    cursor: pointer;\n    transition: all 0.3s;\n    border: 2px solid var(--blue-dark);\n    padding: 0;\n}\n\n.hero-dot.active {\n    background: var(--bordeaux);\n    border-color: var(--bordeaux);\n    transform: scale(1.3);\n}","StartLine":145,"TargetContent":".hero-container {\n    position: relative;\n    width: 100%;\n    height: 100vh;\n    background: #000;\n    overflow: hidden;\n}\n\n.images-wrapper {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100vh;\n    z-index: 1;\n    background: #111;\n}\n\n.bg-image {\n    position: absolute;\n    inset: 0;\n    width: 100%;\n    height: 100vh;\n    clip-path: inset(0 0 0 100%);\n    transform: scale(1.1);\n    transition: clip-path 1.4s var(--ease-in-out-expo), transform 2s var(--ease-out-expo);\n    z-index: 1;\n}\n\n.bg-image.active {\n    clip-path: inset(0 0 0 0%) !important;\n    transform: scale(1) !important;\n    z-index: 2;\n}\n\n.bg-image.prev {\n    clip-path: inset(0 0 0 0%);\n    transform: scale(1);\n    z-index: 1;\n}\n\n.images-wrapper::after {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: rgba(29, 78, 121, 0.45);\n    z-index: 5;\n    pointer-events: none;\n}\n\n.images-wrapper::before {\n    content: '';\n    position: absolute;\n    inset: 0;\n    background: linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);\n    z-index: 6;\n    pointer-events: none;\n}\n\n.text-panel {\n    position: absolute !important;\n    top: 50% !important;\n    transform: translateY(-50%) !important;\n    left: 4% !important;\n    z-index: 10 !important;\n    width: 44% !important;\n    max-width: 650px !important;\n    background: rgba(248, 250, 252, 0.95) !important;\n    backdrop-filter: blur(25px) !important;\n    -webkit-backdrop-filter: blur(25px) !important;\n    border-radius: 30px !important;\n    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12) !important;\n    border: 1px solid rgba(255, 255, 255, 0.6) !important;\n    padding: 4rem 4rem 3rem 4rem !important;\n    display: flex !important;\n    flex-direction: column !important;\n}\n\n.text-slides-wrapper {\n    position: relative !important;\n    width: 100% !important;\n    height: 420px !important;\n}\n\n.text-slide {\n    display: none;\n    flex-direction: column;\n    justify-content: center;\n    height: 100%;\n}\n\n.text-slide.active {\n    display: flex !important;\n    z-index: 2;\n}\n\n.text-slide>* {\n    opacity: 0;\n    transform: translateY(20px);\n    transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);\n}\n\n.text-slide.active>* {\n    opacity: 1 !important;\n    transform: translateY(0) !important;\n}\n\n.meta {\n    font-size: 0.75rem !important;\n    font-weight: 800 !important;\n    letter-spacing: 0.3em !important;\n    text-transform: uppercase !important;\n    color: var(--bordeaux) !important;\n    margin-bottom: 2rem !important;\n    display: flex !important;\n    align-items: center !important;\n    gap: 1.5rem !important;\n}\n\n.meta::before {\n    content: '' !important;\n    display: block !important;\n    width: 40px !important;\n    height: 2px !important;\n    background: var(--bordeaux) !important;\n}\n\n.title {\n    font-size: clamp(1.8rem, 2.5vw, 3rem) !important;\n    font-weight: 200 !important;\n    line-height: 1.15 !important;\n    color: var(--text-dark) !important;\n    margin: 0 0 1.5rem 0 !important;\n}\n\n.title strong {\n    font-weight: 700 !important;\n}\n\n.desc {\n    font-size: 1.05rem !important;\n    line-height: 1.7 !important;\n    color: #475569 !important;\n    margin: 0 0 3rem 0 !important;\n}\n\n.btn-wrap {\n    margin-top: 1rem !important;\n}\n\n.btn-elegant {\n    display: inline-flex !important;\n    align-items: center !important;\n    justify-content: center !important;\n    gap: 1.2rem !important;\n    background: var(--blue-dark) !important;\n    color: #fff !important;\n    padding: 1.2rem 2.8rem !important;\n    border-radius: 50px !important;\n    font-weight: 700 !important;\n    font-size: 0.9rem !important;\n    text-transform: uppercase !important;\n    letter-spacing: 0.1em !important;\n    transition: all 0.4s var(--ease-out-expo) !important;\n    position: relative !important;\n    overflow: hidden !important;\n    width: max-content !important;\n    min-height: 55px !important;\n    cursor: pointer !important;\n}\n\n.btn-elegant::before {\n    content: '' !important;\n    position: absolute !important;\n    inset: 0 !important;\n    background: var(--bordeaux) !important;\n    transform: scaleX(0) !important;\n    transform-origin: right !important;\n    transition: transform 0.6s var(--ease-in-out-expo) !important;\n    z-index: 1 !important;\n}\n\n.btn-elegant:hover::before {\n    transform: scaleX(1) !important;\n    transform-origin: left !important;\n}\n\n.btn-elegant span,\n.btn-elegant svg {\n    position: relative !important;\n    z-index: 2 !important;\n    color: #fff !important;\n}\n\n.controls-wrapper {\n    position: relative !important;\n    width: 100% !important;\n    display: flex !important;\n    justify-content: space-between !important;\n    align-items: center !important;\n    margin-top: 2rem !important;\n    padding-top: 2rem !important;\n    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;\n}\n\n.slide-numbers {\n    display: flex !important;\n    align-items: center !important;\n    gap: 1rem !important;\n    font-size: 1.5rem !important;\n    font-weight: 300 !important;\n    font-family: monospace !important;\n}\n\n.slide-numbers .current {\n    font-weight: 700 !important;\n    color: var(--bordeaux) !important;\n}\n\n.slide-numbers .separator {\n    font-weight: 200 !important;\n    color: #94a3b8 !important;\n}\n\n.slide-numbers .total {\n    font-size: 1rem !important;\n    color: #94a3b8 !important;\n    font-weight: 500 !important;\n}\n\n.nav-buttons {\n    display: flex !important;\n    gap: 1rem !important;\n}\n\n.nav-btn {\n    width: 55px !important;\n    height: 55px !important;\n    border-radius: 50% !important;\n    background: rgba(29, 78, 121, 0.05) !important;\n    border: 1px solid rgba(29, 78, 121, 0.15) !important;\n    display: flex !important;\n    align-items: center !important;\n    justify-content: center !important;\n    cursor: pointer !important;\n    transition: all 0.4s var(--ease-out-expo) !important;\n    color: var(--blue-dark) !important;\n}\n\n.nav-btn:hover {\n    background: var(--bordeaux) !important;\n    color: #fff !important;\n    border-color: var(--bordeaux) !important;\n    transform: scale(1.1) !important;\n}\n\n.global-progress {\n    position: absolute !important;\n    bottom: 0 !important;\n    left: 0 !important;\n    width: 100% !important;\n    height: 6px !important;\n    background: rgba(0, 0, 0, 0.05) !important;\n    overflow: hidden !important;\n}\n\n.global-progress .fill {\n    height: 100% !important;\n    background: var(--bordeaux) !important;\n    width: 0% !important;\n}"}],"TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Replacing hero CSS with WordPress style","toolSummary":"CSS hero replacement"}
+=== REPLACE ===
+{"Description":"Update the responsive CSS in globals.css to handle the new WordPress-style hero properly: hide the hero-visual on mobile, make hero text full-width, and ensure the sol-grid is flex-direction column.","Instruction":"Update responsive breakpoints for the new WordPress hero CSS in globals.css","ReplacementChunks":[{"AllowMultiple":false,"EndLine":920,"ReplacementContent":"@media(max-width:1024px) {\n    .nav-links { display: none !important; }\n    .hero-text { width: 100% !important; padding: 3rem !important; }\n    .hero-visual { display: none !important; }\n    .hero-h1 { font-size: 2.5rem !important; }\n    .hero-arrow { display: none !important; }\n\n    .sol-grid {\n        flex-direction: column !important;\n    }\n\n    .sol-menu,\n    .sol-img-container,\n    .sol-content {\n        width: 100% !important;\n    }\n\n    .off-flow {\n        grid-template-columns: 1fr !important;\n    }\n\n    .off-label-vert {\n        writing-mode: horizontal-tb !important;\n        transform: none !important;\n    }\n\n    .srv-sec {\n        grid-template-columns: 1fr !important;\n    }\n\n    .ins-sec {\n        flex-direction: column !important;\n    }\n\n    .ins-title {\n        writing-mode: horizontal-tb !important;\n        transform: none !important;\n    }\n\n    .ins-grid {\n        grid-template-columns: 1fr !important;\n    }\n\n    .ref-top {\n        grid-template-columns: 1fr !important;\n    }\n\n    .ref-grid {\n        grid-template-columns: repeat(2, 1fr) !important;\n    }\n\n    .ft-main {\n        grid-template-columns: 1fr 1fr !important;\n    }\n}","StartLine":868,"TargetContent":"@media(max-width:1024px) {\n    .text-panel {\n        width: 70% !important;\n    }\n\n    .sol-grid {\n        flex-direction: column !important;\n    }\n\n    .sol-menu,\n    .sol-img-container,\n    .sol-content {\n        width: 100% !important;\n    }\n\n    .off-flow {\n        grid-template-columns: 1fr !important;\n    }\n\n    .off-label-vert {\n        writing-mode: horizontal-tb !important;\n        transform: none !important;\n    }\n\n    .srv-sec {\n        grid-template-columns: 1fr !important;\n    }\n\n    .ins-sec {\n        flex-direction: column !important;\n    }\n\n    .ins-title {\n        writing-mode: horizontal-tb !important;\n        transform: none !important;\n    }\n\n    .ins-grid {\n        grid-template-columns: 1fr !important;\n    }\n\n    .ref-top {\n        grid-template-columns: 1fr !important;\n    }\n\n    .ref-grid {\n        grid-template-columns: repeat(2, 1fr) !important;\n    }\n\n    .ft-main {\n        grid-template-columns: 1fr 1fr !important;\n    }\n}"}],"TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Updating responsive CSS for hero","toolSummary":"Responsive CSS update"}
+=== REPLACE ===
+{"AllowMultiple":false,"Description":"Replace the obsolete mobile CSS (text-panel and hero-container) with proper mobile CSS for the WordPress-style hero.","EndLine":857,"Instruction":"Replace the 600px breakpoint CSS to handle new WordPress hero on mobile","ReplacementContent":"@media(max-width:600px) {\n    .hero {\n        height: 70vh !important;\n        min-height: 400px !important;\n    }\n    .hero-text {\n        width: 100% !important;\n        padding: 2rem !important;\n    }\n    .hero-h1 {\n        font-size: 1.8rem !important;\n        margin-bottom: 2rem !important;\n    }\n    .ref-grid {\n        grid-template-columns: 1fr 1fr !important;\n        gap: 2rem !important;\n    }\n    .ft-main {\n        grid-template-columns: 1fr !important;\n    }\n    .off-sec,\n    .srv-sec,\n    .ins-sec,\n    .ref-sec {\n        padding: 4rem 2rem !important;\n    }\n    .sol-sec {\n        padding: 4rem 2rem !important;\n    }\n}","StartLine":844,"TargetContent":"@media(max-width:600px) {\n    .text-panel {\n        width: 92% !important;\n        padding: 3rem 2rem !important;\n        top: auto !important;\n        bottom: 2% !important;\n        left: 4% !important;\n    }\n\n    .hero-container {\n        height: auto !important;\n        min-height: 100vh !important;\n    }\n}","TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Updating mobile CSS","toolSummary":"Mobile responsive update"}
+=== REPLACE ===
+{"AllowMultiple":false,"Description":"Add WordPress-style page-hero CSS for inner pages (Careers, Partners, References, Services, etc.) — dark blue background with bordeaux radial gradient, and content sections styling.","EndLine":143,"Instruction":"Add page-hero CSS for inner pages after the button styles","ReplacementContent":"#munisys-wrapper button {\n    font-family: inherit;\n    cursor: pointer;\n    border: none;\n    background: none;\n}\n\n/* ── INNER PAGES HERO (WordPress style) ── */\n.page-hero {\n    background: var(--blue-dark);\n    color: #fff;\n    padding: 8rem 5rem 6rem 5rem;\n    text-align: center;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n}\n\n.page-hero::before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    background: radial-gradient(circle at right top, rgba(146, 43, 85, 0.2), transparent 50%);\n}\n\n.page-hero h1 {\n    font-size: 3.5rem;\n    font-weight: 800;\n    margin-bottom: 1.5rem;\n    position: relative;\n    z-index: 2;\n}\n\n.page-hero p {\n    font-size: 1.2rem;\n    color: rgba(255, 255, 255, 0.8);\n    max-width: 800px;\n    margin: 0 auto;\n    position: relative;\n    z-index: 2;\n    line-height: 1.6;\n}\n\n.page-content {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 5rem 2rem;\n}\n\n.section-title {\n    font-size: 2.5rem;\n    font-weight: 800;\n    color: var(--blue-dark);\n    margin-bottom: 1.5rem;\n    text-align: center;\n}\n\n.section-desc {\n    font-size: 1.1rem;\n    color: var(--text-gray);\n    line-height: 1.8;\n    margin-bottom: 4rem;\n    text-align: center;\n    max-width: 800px;\n    margin-left: auto;\n    margin-right: auto;\n}\n\n/* ── CAREERS PAGE ── */\n.job-list {\n    display: flex;\n    flex-direction: column;\n    gap: 1.5rem;\n    max-width: 800px;\n    margin: 0 auto;\n}\n\n.job-card {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    background: #fff;\n    border: 1px solid #e2e8f0;\n    padding: 2rem;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);\n    transition: all 0.2s;\n}\n\n.job-card:hover {\n    border-color: var(--bordeaux);\n    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);\n}\n\n.job-info h3 {\n    font-size: 1.4rem;\n    font-weight: 700;\n    color: var(--blue-dark);\n    margin-bottom: 0.5rem;\n}\n\n.job-info p {\n    font-size: 0.95rem;\n    color: var(--text-gray);\n    font-weight: 500;\n}\n\n.job-btn {\n    background: var(--bordeaux);\n    color: #fff;\n    padding: 0.8rem 1.5rem;\n    border-radius: 4px;\n    font-weight: 600;\n    text-decoration: none;\n    transition: background 0.2s;\n}\n\n.job-btn:hover {\n    background: #7a2245;\n}\n\n/* ── TECHNOLOGY PARTNERS PAGE ── */\n.part-grid {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 1.5rem;\n    justify-content: center;\n}\n\n.part-card {\n    background: #f4f7f9;\n    padding: 1.5rem 2.5rem;\n    border-radius: 50px;\n    font-weight: 800;\n    font-size: 1.2rem;\n    color: var(--bordeaux);\n    border: 2px solid transparent;\n    transition: all 0.2s;\n    text-decoration: none;\n}\n\n.part-card:hover {\n    background: #fff;\n    border-color: var(--bordeaux);\n    box-shadow: 0 10px 20px rgba(146, 43, 85, 0.1);\n}","StartLine":138,"TargetContent":"#munisys-wrapper button {\n    font-family: inherit;\n    cursor: pointer;\n    border: none;\n    background: none;\n}","TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Adding inner pages CSS","toolSummary":"Inner pages CSS addition"}
+=== REPLACE ===
+{"AllowMultiple":false,"Description":"Add CSS for customer-references page (ref-card grid) and services page (services-grid with service cards) to match WordPress design.","EndLine":287,"Instruction":"Add ref-card and services-grid CSS after part-card hover styles","ReplacementContent":".part-card:hover {\n    background: #fff;\n    border-color: var(--bordeaux);\n    box-shadow: 0 10px 20px rgba(146, 43, 85, 0.1);\n}\n\n/* ── CUSTOMER REFERENCES PAGE ── */\n.ref-cards-grid {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n    gap: 2rem;\n}\n\n.ref-card {\n    background: #fff;\n    border: 1px solid #e2e8f0;\n    padding: 2rem;\n    border-radius: 8px;\n    text-align: center;\n    font-weight: 700;\n    font-size: 1.1rem;\n    color: var(--blue-dark);\n    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);\n    transition: transform 0.2s;\n}\n\n.ref-card:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);\n    border-color: var(--blue-light);\n}\n\n/* ── SERVICES PAGE ── */\n.services-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr;\n    gap: 3rem;\n}\n\n.service-card {\n    background: #f4f7f9;\n    padding: 3rem;\n    border-radius: 8px;\n    border-top: 4px solid var(--bordeaux);\n}\n\n.service-card h3 {\n    font-size: 1.5rem;\n    font-weight: 800;\n    color: var(--blue-dark);\n    margin-bottom: 1.5rem;\n}\n\n.service-card p {\n    font-size: 1.05rem;\n    color: var(--text-gray);\n    line-height: 1.8;\n}\n\n@media(max-width: 768px) {\n    .services-grid {\n        grid-template-columns: 1fr !important;\n    }\n    .job-card {\n        flex-direction: column !important;\n        align-items: flex-start !important;\n        gap: 1.5rem !important;\n    }\n}","StartLine":282,"TargetContent":".part-card:hover {\n    background: #fff;\n    border-color: var(--bordeaux);\n    box-shadow: 0 10px 20px rgba(146, 43, 85, 0.1);\n}","TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Adding ref-card and services CSS","toolSummary":"More CSS additions"}
+=== WRITE ===
+/* WordPress Design - Munisys - Exact copy from functions-snippet-complete.php */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bordeaux: #922b55;
+    --blue-dark: #1d4e79;
+    --blue-light: #83a5c2;
+    --text-dark: #333333;
+    --text-gray: #666666;
+    --bg-gray: #fcfcfc;
+    --white: #ffffff;
+    --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+    --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+* { box-sizing: border-box; }
+
+/* ── NAVIGATION ── */
+#munisys-global-header .nav {
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+    background: #ffffff;
+    height: 90px;
+    display: flex;
+    align-items: stretch;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#munisys-global-header .nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#munisys-global-header .nav-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#munisys-global-header .nav-logo-mark {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #1d4e79;
+    letter-spacing: 1px;
+}
+
+#munisys-global-header .nav-links {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    gap: 1rem;
+}
+
+#munisys-global-header .nav-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #111;
+    transition: color 0.3s;
+    height: 100%;
+}
+
+#munisys-global-header .nav-item:hover,
+#munisys-global-header .nav-item.active-page {
+    color: var(--bordeaux);
+}
+
+#munisys-global-header .nav-item > a {
+    padding: 0 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-search {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1d4e79;
+}
+
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--bordeaux);
+    color: #fff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background 0.25s;
+    text-decoration: none;
+}
+
+.nav-cta:hover {
+    background: #7a2245;
+}
+
+/* ── WRAPPER ── */
+#munisys-wrapper {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    text-align: left;
+}
+
+#munisys-wrapper *,
+#munisys-wrapper *::before,
+#munisys-wrapper *::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#munisys-wrapper section {
+    display: block;
+    width: 100%;
+    text-align: left;
+    clear: both;
+}
+
+#munisys-wrapper a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#munisys-wrapper ul {
+    list-style: none;
+}
+
+#munisys-wrapper button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+#munisys-wrapper img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ── HERO ── */
+#munisys-wrapper .hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    overflow: hidden;
+}
+
+#munisys-wrapper .images-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: #111;
+}
+
+#munisys-wrapper .bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    clip-path: inset(0 0 0 100%);
+    transform: scale(1.1);
+    transition: clip-path 1.4s var(--ease-in-out-expo), transform 2s var(--ease-out-expo);
+    z-index: 1;
+}
+
+#munisys-wrapper .bg-image.active {
+    clip-path: inset(0 0 0 0%) !important;
+    transform: scale(1) !important;
+    z-index: 2;
+}
+
+#munisys-wrapper .bg-image.prev {
+    clip-path: inset(0 0 0 0%);
+    transform: scale(1);
+    z-index: 1;
+}
+
+#munisys-wrapper .images-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(29, 78, 121, 0.45);
+    z-index: 5;
+    pointer-events: none;
+}
+
+#munisys-wrapper .images-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* ── TEXT PANEL ── */
+#munisys-wrapper .text-panel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4%;
+    z-index: 10;
+    width: 44%;
+    max-width: 650px;
+    height: auto;
+    background: rgba(248, 250, 252, 0.95);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 30px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 4rem 4rem 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    transition: left 1.4s var(--ease-in-out-expo);
+}
+
+#munisys-wrapper .text-panel.is-right {
+    left: calc(96% - 44%);
+}
+
+#munisys-wrapper .text-slides-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+}
+
+#munisys-wrapper .text-slide {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#munisys-wrapper .text-slide.active {
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 2;
+}
+
+#munisys-wrapper .text-slide > * {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+#munisys-wrapper .text-slide.active > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#munisys-wrapper .text-slide.active .meta { transition-delay: 0.6s; }
+#munisys-wrapper .text-slide.active .title { transition-delay: 0.7s; }
+#munisys-wrapper .text-slide.active .desc { transition-delay: 0.8s; }
+#munisys-wrapper .text-slide.active .btn-wrap { transition-delay: 0.9s; }
+
+#munisys-wrapper .meta {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--bordeaux);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#munisys-wrapper .meta::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: var(--bordeaux);
+}
+
+#munisys-wrapper .title {
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
+    font-weight: 200;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin: 0 0 1.5rem 0;
+    letter-spacing: -0.02em;
+}
+
+#munisys-wrapper .title strong { font-weight: 700; }
+
+#munisys-wrapper .desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #475569;
+    font-weight: 400;
+    margin: 0 0 3rem 0;
+    max-width: 100%;
+}
+
+#munisys-wrapper .btn-wrap { margin-top: 1rem; }
+
+#munisys-wrapper .btn-elegant {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background: var(--blue-dark);
+    color: var(--white);
+    padding: 1.2rem 2.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    transition: all 0.4s var(--ease-out-expo);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    width: max-content;
+    min-height: 55px;
+    cursor: pointer;
+}
+
+#munisys-wrapper .btn-elegant::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bordeaux);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s var(--ease-in-out-expo);
+    z-index: 1;
+}
+
+#munisys-wrapper .btn-elegant:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+#munisys-wrapper .btn-elegant span {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    margin: 0;
+}
+
+#munisys-wrapper .btn-elegant svg {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin: 0;
+    transition: transform 0.4s;
+}
+
+#munisys-wrapper .btn-elegant:hover svg { transform: translateX(5px); }
+
+/* ── CONTROLS ── */
+#munisys-wrapper .controls-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+#munisys-wrapper .slide-numbers {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: monospace;
+}
+
+#munisys-wrapper .slide-numbers .current { font-weight: 700; color: var(--bordeaux); }
+#munisys-wrapper .slide-numbers .separator { font-weight: 200; color: #94a3b8; }
+#munisys-wrapper .slide-numbers .total { font-size: 1rem; color: #94a3b8; font-weight: 500; }
+
+#munisys-wrapper .nav-buttons { display: flex; gap: 1rem; }
+
+#munisys-wrapper .nav-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: rgba(29, 78, 121, 0.05);
+    border: 1px solid rgba(29, 78, 121, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s var(--ease-out-expo);
+    padding: 0;
+    margin: 0;
+    color: var(--blue-dark);
+}
+
+#munisys-wrapper .nav-btn svg { width: 24px; height: 24px; flex-shrink: 0; margin: 0; }
+
+#munisys-wrapper .nav-btn:hover {
+    background: var(--bordeaux);
+    color: var(--white);
+    border-color: var(--bordeaux);
+    transform: scale(1.1);
+}
+
+#munisys-wrapper .global-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    border-radius: 0 0 30px 30px;
+}
+
+#munisys-wrapper .global-progress .fill {
+    height: 100%;
+    background: var(--bordeaux);
+    width: 0%;
+}
+
+/* ── 1. SOLUTIONS (BENTO GRID) ── */
+#munisys-wrapper .sol-wrapper {
+    background: var(--bg-gray);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: inset 0 15px 30px rgba(0, 0, 0, 0.03);
+    scroll-margin-top: 120px;
+}
+
+#munisys-wrapper .sol-sec {
+    background: transparent;
+    padding: 5rem 5%;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#munisys-wrapper .sol-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1d4e79;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+#munisys-wrapper .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(240px, auto);
+    gap: 1.5rem;
+}
+
+#munisys-wrapper .bento-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--blue-dark);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#munisys-wrapper .bento-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    z-index: 10;
+}
+
+#munisys-wrapper .bento-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#munisys-wrapper .bento-card:hover .bento-bg { transform: scale(1.05); }
+
+#munisys-wrapper .bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(29,78,121,0.95) 0%, rgba(29,78,121,0.3) 60%, transparent 100%);
+    z-index: 2;
+    transition: background 0.4s ease;
+}
+
+#munisys-wrapper .bento-card:hover .bento-overlay {
+    background: linear-gradient(to top, rgba(146,43,85,0.95) 0%, rgba(29,78,121,0.5) 70%, transparent 100%);
+}
+
+#munisys-wrapper .bento-card.glass .bento-overlay {
+    background: rgba(29, 78, 121, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+#munisys-wrapper .bento-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#munisys-wrapper .bento-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#munisys-wrapper .bento-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+#munisys-wrapper .bento-card:hover .bento-content p { opacity: 1; }
+
+#munisys-wrapper .bento-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #83a5c2;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+#munisys-wrapper .bento-card:hover .bento-link { color: #fff; }
+#munisys-wrapper .bento-card:hover .bento-link svg { transform: translateX(5px); transition: transform 0.3s ease; }
+
+/* ── 2. OFFERINGS ── */
+#munisys-wrapper .off-sec {
+    padding: 6rem 5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#munisys-wrapper .off-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    flex-direction: row;
+}
+
+#munisys-wrapper .off-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--bordeaux);
+}
+
+#munisys-wrapper .off-desc {
+    font-size: 0.95rem;
+    color: var(--text-gray);
+    max-width: 500px;
+    padding-top: 1rem;
+    line-height: 1.6;
+}
+
+#munisys-wrapper .off-flow {
+    display: grid;
+    grid-template-columns: auto 1fr auto 1fr;
+    align-items: center;
+    gap: 3rem;
+    border: 1px solid var(--bordeaux);
+    padding: 3rem 4rem;
+    position: relative;
+}
+
+#munisys-wrapper .off-label-vert {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1;
+}
+
+#munisys-wrapper .off-label-through { color: var(--bordeaux); }
+
+#munisys-wrapper .off-col { display: flex; flex-direction: column; gap: 2rem; }
+
+#munisys-wrapper .off-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+#munisys-wrapper .off-check {
+    color: var(--blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── 3. SERVICES (Premium Hover List) ── */
+#munisys-wrapper .srv-wrapper {
+    background: #121c2d;
+    width: 100%;
+    color: #fff;
+}
+
+#munisys-wrapper .srv-sec {
+    scroll-margin-top: 120px;
+    padding: 8rem 5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+#munisys-wrapper .srv-left h2 {
+    font-size: 4.5rem;
+    color: #fff;
+    font-weight: 200;
+    margin-bottom: 4rem;
+    letter-spacing: -2px;
+}
+
+#munisys-wrapper .srv-right {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#munisys-wrapper .srv-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    align-items: center;
+    gap: 4rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    transition: all 0.5s var(--ease-out-expo);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: #fff;
+}
+
+#munisys-wrapper .srv-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(146, 43, 85, 0.15);
+    z-index: 0;
+    transition: width 0.6s var(--ease-out-expo);
+}
+
+#munisys-wrapper .srv-item:hover::before { width: 100%; }
+
+#munisys-wrapper .srv-title-wrap {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: transform 0.5s var(--ease-out-expo);
+}
+
+#munisys-wrapper .srv-item:hover .srv-title-wrap { transform: translateX(30px); }
+
+#munisys-wrapper .srv-num {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--bordeaux);
+    opacity: 0.8;
+}
+
+#munisys-wrapper .srv-title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+}
+
+#munisys-wrapper .srv-desc-wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s var(--ease-out-expo);
+}
+
+#munisys-wrapper .srv-item:hover .srv-desc-wrap { opacity: 1; transform: translateY(0); }
+
+#munisys-wrapper .srv-desc-wrap p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+#munisys-wrapper .srv-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s var(--ease-out-expo);
+    color: #fff;
+}
+
+#munisys-wrapper .srv-item:hover .srv-arrow {
+    background: var(--bordeaux);
+    border-color: var(--bordeaux);
+    transform: rotate(-45deg);
+}
+
+/* ── 3.5 SOME FIGURES ── */
+#munisys-wrapper .figures-sec {
+    scroll-margin-top: 120px;
+    background: var(--bordeaux);
+    color: #fff;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#munisys-wrapper .fig-vertical {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(0,0,0,0.15);
+    line-height: 0.8;
+    margin: 0 4rem;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+#munisys-wrapper .fig-grid {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+#munisys-wrapper .fig-item h3 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+#munisys-wrapper .fig-item p {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    color: #fff;
+}
+
+/* ── 4. INSIGHTS ── */
+#munisys-wrapper .ins-sec {
+    padding: 6rem 5rem;
+    display: flex;
+    gap: 4rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+#munisys-wrapper .ins-title {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--blue-dark);
+}
+
+#munisys-wrapper .ins-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    flex: 1;
+}
+
+#munisys-wrapper .ins-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+#munisys-wrapper .ins-img-wrap {
+    aspect-ratio: 1;
+    border: 1px solid #e2e8f0;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+    padding: 2rem;
+}
+
+#munisys-wrapper .ins-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#munisys-wrapper .ins-img-wrap.contain img { object-fit: contain; }
+
+#munisys-wrapper .ins-text {
+    font-weight: 700;
+    color: var(--text-dark);
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+/* ── 4.5 TECHNOLOGY PARTNERS (Glassmorphism) ── */
+#munisys-wrapper .partners-sec {
+    scroll-margin-top: 120px;
+    background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop') center/cover;
+    padding: 10rem 5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#munisys-wrapper .partners-sec::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(29, 78, 121, 0.85);
+    z-index: 0;
+}
+
+#munisys-wrapper .part-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    text-align: center;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 5rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+}
+
+#munisys-wrapper .part-content h2 {
+    font-size: 4rem;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: 2rem;
+    letter-spacing: -1px;
+}
+
+#munisys-wrapper .part-content p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+#munisys-wrapper .part-link {
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: var(--bordeaux);
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+
+#munisys-wrapper .part-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(146,43,85,0.4);
+}
+
+/* ── 5. CUSTOMER REFERENCES (Marquee) ── */
+#munisys-wrapper .ref-sec {
+    padding: 8rem 0 4rem 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+#munisys-wrapper .ref-top {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+    padding: 0 5%;
+}
+
+#munisys-wrapper .ref-title {
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+}
+
+#munisys-wrapper .ref-desc {
+    color: var(--text-gray);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+#munisys-wrapper .marquee-wrapper {
+    display: flex;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+#munisys-wrapper .marquee-wrapper:hover { animation-play-state: paused; }
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+#munisys-wrapper .ref-logo {
+    display: inline-block;
+    flex-shrink: 0;
+    width: auto;
+    max-width: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #3b4149ff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    cursor: default;
+    letter-spacing: 2px;
+}
+
+#munisys-wrapper .ref-logo:hover {
+    color: var(--blue-dark);
+    -webkit-text-stroke: 0px;
+    transform: scale(1.1);
+    text-shadow: 0 10px 20px rgba(29,78,121,0.2);
+}
+
+/* ── FOOTER ── */
+#munisys-wrapper .ft-wrapper,
+.ft-wrapper {
+    background: #1a1a1a;
+    width: 100%;
+}
+
+.ft {
+    background: #1a1a1a;
+    color: rgba(255,255,255,0.6);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.ft-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ft-brand {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.ft-linkedin {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.7);
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    border-radius: 3px;
+    transition: color 0.18s, border-color 0.18s;
+}
+
+.ft-linkedin:hover { color: #fff; border-color: #fff; }
+
+.ft-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 3rem 5rem;
+}
+
+.ft-col h4 {
+    color: #fff;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.ft-col ul { display: flex; flex-direction: column; gap: 0.6rem; }
+.ft-col a { font-size: 0.83rem; color: rgba(255,255,255,0.45); transition: color 0.18s; }
+.ft-col a:hover { color: #fff; }
+
+.ft-bottom {
+    padding: 1.5rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.25);
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ── INNER PAGES ── */
+.page-hero {
+    background: var(--blue-dark);
+    color: #fff;
+    padding: 8rem 5rem 6rem 5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at right top, rgba(146,43,85,0.2), transparent 50%);
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.8);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
+}
+
+.page-content { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+.section-title { font-size: 2.5rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 1.5rem; text-align: center; }
+.section-desc { font-size: 1.1rem; color: var(--text-gray); line-height: 1.8; margin-bottom: 4rem; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* Careers */
+.job-list { display: flex; flex-direction: column; gap: 1.5rem; max-width: 800px; margin: 0 auto; }
+.job-card { display: flex; justify-content: space-between; align-items: center; background: #fff; border: 1px solid #e2e8f0; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s; }
+.job-card:hover { border-color: var(--bordeaux); box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+.job-info h3 { font-size: 1.4rem; font-weight: 700; color: var(--blue-dark); margin-bottom: 0.5rem; }
+.job-info p { font-size: 0.95rem; color: var(--text-gray); font-weight: 500; }
+.job-btn { background: var(--bordeaux); color: #fff; padding: 0.8rem 1.5rem; border-radius: 4px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+.job-btn:hover { background: #7a2245; }
+
+/* Technology Partners */
+.part-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+.part-card { background: #f4f7f9; padding: 1.5rem 2.5rem; border-radius: 50px; font-weight: 800; font-size: 1.2rem; color: var(--bordeaux); border: 2px solid transparent; transition: all 0.2s; text-decoration: none; }
+.part-card:hover { background: #fff; border-color: var(--bordeaux); box-shadow: 0 10px 20px rgba(146,43,85,0.1); }
+
+/* Customer References Page */
+.ref-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.ref-card { background: #fff; border: 1px solid #e2e8f0; padding: 2rem; border-radius: 8px; text-align: center; font-weight: 700; font-size: 1.1rem; color: var(--blue-dark); box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.2s; }
+.ref-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.05); border-color: var(--blue-light); }
+
+/* Services Page */
+.services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.service-card { background: #f4f7f9; padding: 3rem; border-radius: 8px; border-top: 4px solid var(--bordeaux); }
+.service-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--blue-dark); margin-bottom: 1.5rem; }
+.service-card p { font-size: 1.05rem; color: var(--text-gray); line-height: 1.8; }
+
+/* Admin FAB */
+.admin-fab {
+    position: fixed; bottom: 2rem; right: 2rem;
+    background: var(--blue-dark); color: #fff;
+    font-size: 0.9rem; font-weight: 600; padding: 0.8rem 1.5rem;
+    border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999; display: flex; align-items: center; gap: 0.5rem;
+    text-decoration: none;
+}
+.admin-fab:hover { background: var(--bordeaux); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px) {
+    #munisys-global-header .nav-links { display: none; }
+    #munisys-wrapper .text-panel { width: 70%; padding: 3rem 3rem 2rem 3rem; }
+    #munisys-wrapper .text-panel.is-right { left: calc(96% - 70%); }
+    #munisys-wrapper .bento-grid { grid-template-columns: repeat(2, 1fr); }
+    #munisys-wrapper .srv-sec { grid-template-columns: 1fr; }
+    #munisys-wrapper .off-flow { grid-template-columns: 1fr; }
+    #munisys-wrapper .off-label-vert { writing-mode: initial; transform: none; text-align: left; margin-bottom: 1rem; }
+    #munisys-wrapper .ins-sec { flex-direction: column; padding: 4rem 5%; }
+    #munisys-wrapper .ins-title { writing-mode: horizontal-tb; transform: none; margin-bottom: 2rem; font-size: 3rem; }
+    #munisys-wrapper .ins-grid { grid-template-columns: 1fr 1fr; }
+    .ft-main { grid-template-columns: 1fr 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+}
+
+@media(max-width:600px) {
+    #munisys-wrapper .text-panel {
+        width: 92%;
+        height: auto;
+        padding: 3rem 2rem 2rem 2rem;
+        top: auto;
+        bottom: 2%;
+        transform: translateY(0);
+        left: 4%;
+    }
+    #munisys-wrapper .text-panel.is-right { left: 4%; }
+    #munisys-wrapper .title { font-size: 2.2rem; margin-bottom: 1rem; }
+    #munisys-wrapper .text-slides-wrapper { min-height: 380px; }
+    #munisys-wrapper .bento-grid { grid-template-columns: 1fr; }
+    #munisys-wrapper .off-flow { grid-template-columns: 1fr; }
+    #munisys-wrapper .srv-sec { grid-template-columns: 1fr; }
+    #munisys-wrapper .srv-item { grid-template-columns: 1fr auto; gap: 1.5rem; }
+    #munisys-wrapper .srv-desc-wrap { grid-column: 1 / -1; }
+    #munisys-wrapper .figures-sec { flex-direction: column; padding: 4rem 1rem; }
+    #munisys-wrapper .fig-vertical { writing-mode: horizontal-tb; transform: none; margin: 0 0 2rem 0; font-size: 4rem; text-align: center; }
+    #munisys-wrapper .fig-grid { flex-direction: column; gap: 3rem; }
+    #munisys-wrapper .ins-sec { flex-direction: column; padding: 4rem 5%; }
+    #munisys-wrapper .ins-title { writing-mode: horizontal-tb; transform: none; margin-bottom: 2rem; font-size: 3rem; }
+    #munisys-wrapper .ins-grid { grid-template-columns: 1fr; }
+    .ft-main { grid-template-columns: 1fr; }
+    .job-card { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .page-hero { padding: 6rem 2rem 4rem 2rem; }
+    .page-hero h1 { font-size: 2.5rem; }
+}
+
+=== REPLACE ===
+{"AllowMultiple":false,"Description":"Replace broken navigation CSS with correct Next.js Navigation classes including the Mega Menu that were lost.","EndLine":115,"Instruction":"Replace the NAVIGATION block with the proper .nav classes that match our EditableNavigation.js component.","ReplacementContent":"/* ── NAVIGATION ── */\n.nav {\n  position: sticky; top: 0; z-index: 1000;\n  background: #ffffff; height: 90px;\n  display: flex; align-items: stretch;\n  box-shadow: 0 2px 10px rgba(0,0,0,0.05);\n}\n.nav-inner {\n  display: flex; align-items: stretch; width: 100%; max-width: 1440px; margin: 0 auto;\n}\n.nav-logo {\n  display: flex; align-items: center; gap: 12px;\n  padding: 0 2rem; flex-shrink: 0;\n}\n.nav-logo-mark {\n  font-size: 1.6rem; font-weight: 800; color: var(--blue-dark); letter-spacing: 0px;\n}\n.nav-links {\n  display: flex; align-items: center; flex: 1; padding: 0 1rem;\n}\n.nav-item {\n  position: relative; height: 100%; display: flex; align-items: center;\n}\n.nav-link {\n  font-size: 0.85rem; font-weight: 600; color: #111;\n  padding: 0 1rem; height: 100%; display: flex; align-items: center; gap: 4px;\n  transition: color 0.2s;\n}\n.nav-link:hover, .nav-item:hover .nav-link {\n  color: var(--blue-dark);\n}\n\n/* Mega Menu */\n.mega-menu {\n  position: absolute; top: 90px; left: -100px;\n  background: #fff; width: 1100px;\n  box-shadow: 0 10px 30px rgba(0,0,0,0.1);\n  border-radius: 4px; border-top: 2px solid var(--bg-gray);\n  display: none; opacity: 0; transform: translateY(10px);\n  transition: opacity 0.3s, transform 0.3s;\n  padding: 2.5rem; grid-template-columns: repeat(5, 1fr); gap: 2rem;\n  pointer-events: none;\n}\n.nav-item:hover .mega-menu {\n  display: grid; opacity: 1; transform: translateY(0); pointer-events: auto;\n}\n.mega-col h3 {\n  font-size: 1.05rem; font-weight: 700; color: var(--blue-dark);\n  margin-bottom: 1.5rem; line-height: 1.4;\n}\n.mega-col ul { display: flex; flex-direction: column; gap: 1rem; }\n.mega-col a {\n  font-size: 0.8rem; color: var(--text-gray); font-weight: 500;\n  line-height: 1.4; transition: color 0.2s;\n}\n.mega-col a:hover { color: var(--bordeaux); }\n\n.nav-right {\n  display: flex; align-items: stretch; margin-left: auto;\n}\n.nav-search {\n  padding: 0 1.5rem; color: var(--blue-dark); display: flex; align-items: center;\n}\n.nav-cta {\n  display: flex; align-items: center; gap: 0.75rem;\n  background: var(--bordeaux); color: #fff;\n  font-size: 0.9rem; font-weight: 500;\n  padding: 0 2.5rem; height: 100%;\n  transition: background 0.2s;\n}\n.nav-cta:hover { background: #7a2245; }","StartLine":18,"TargetContent":"/* ── NAVIGATION ── */\n#munisys-global-header .nav {\n    position: sticky;\n    top: 0;\n    z-index: 999999;\n    background: #ffffff;\n    height: 90px;\n    display: flex;\n    align-items: stretch;\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\n}\n\n#munisys-global-header .nav-container {\n    max-width: 1440px;\n    margin: 0 auto;\n    padding: 0 1.5rem;\n    width: 100%;\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n}\n\n#munisys-global-header .nav-logo {\n    flex-shrink: 0;\n    display: flex;\n    align-items: center;\n    gap: 0.5rem;\n}\n\n#munisys-global-header .nav-logo-mark {\n    font-size: 1.5rem;\n    font-weight: 900;\n    color: #1d4e79;\n    letter-spacing: 1px;\n}\n\n#munisys-global-header .nav-links {\n    display: flex;\n    align-items: stretch;\n    height: 100%;\n    gap: 1rem;\n}\n\n#munisys-global-header .nav-item {\n    display: flex;\n    align-items: center;\n    font-size: 0.8rem;\n    font-weight: 600;\n    color: #111;\n    transition: color 0.3s;\n    height: 100%;\n}\n\n#munisys-global-header .nav-item:hover,\n#munisys-global-header .nav-item.active-page {\n    color: var(--bordeaux);\n}\n\n#munisys-global-header .nav-item > a {\n    padding: 0 0.5rem;\n    height: 100%;\n    display: flex;\n    align-items: center;\n}\n\n.nav-right {\n    display: flex;\n    align-items: center;\n    gap: 1rem;\n}\n\n.nav-search {\n    width: 40px;\n    height: 40px;\n    border-radius: 50%;\n    background: transparent;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: #1d4e79;\n}\n\n.nav-cta {\n    display: flex;\n    align-items: center;\n    gap: 0.75rem;\n    background: var(--bordeaux);\n    color: #fff;\n    padding: 0.6rem 1.25rem;\n    border-radius: 50px;\n    font-size: 0.85rem;\n    font-weight: 700;\n    transition: background 0.25s;\n    text-decoration: none;\n}\n\n.nav-cta:hover {\n    background: #7a2245;\n}","TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Fixing nav CSS","toolSummary":"Fix navbar styling"}
+=== REPLACE ===
+{"AllowMultiple":false,"Description":"Add html, body, and basic tag resets that were lost when removing layout.js CSS so they apply outside of the wrapper (like the Navbar).","EndLine":16,"Instruction":"Add global reset rules for html, body, a, ul, button to the top of globals.css.","ReplacementContent":"* { box-sizing: border-box; margin: 0; padding: 0; }\nhtml, body {\n  font-family: 'Montserrat', sans-serif;\n  background: #ffffff;\n  color: var(--text-dark);\n  -webkit-font-smoothing: antialiased;\n  overflow-x: hidden;\n}\na { text-decoration: none; color: inherit; }\nul { list-style: none; }\nbutton { font-family: inherit; cursor: pointer; border: none; background: none; }\nimg { display: block; max-width: 100%; }","StartLine":16,"TargetContent":"* { box-sizing: border-box; }","TargetFile":"/Users/fahamayoub/Desktop/munisys-cms-full/src/app/globals.css","toolAction":"Adding global CSS resets","toolSummary":"Global CSS resets"}

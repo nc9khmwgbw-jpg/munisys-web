@@ -1,0 +1,67 @@
+const fs = require('fs');
+const cssPath = './src/app/globals.css';
+let css = fs.readFileSync(cssPath, 'utf8');
+
+// Remove my previous RTL overrides
+css = css.replace(/\[dir="rtl"\] .abt-tl-item:nth-child\(odd\).*?left: auto !important;\n        }/gs, '');
+
+const newRTLOverrides = `
+/* Fixed RTL Timeline Rules */
+[dir="rtl"] .abt-tl-item:nth-child(odd) {
+    right: 0 !important;
+    left: auto !important;
+    text-align: right !important;
+    padding-right: 60px !important;
+    padding-left: 0 !important;
+}
+
+[dir="rtl"] .abt-tl-item:nth-child(even) {
+    right: 50% !important;
+    left: auto !important;
+    text-align: left !important;
+    padding-left: 60px !important;
+    padding-right: 0 !important;
+}
+
+[dir="rtl"] .abt-tl-item:nth-child(odd) .abt-tl-dot {
+    right: -12px !important;
+    left: auto !important;
+}
+
+[dir="rtl"] .abt-tl-item:nth-child(even) .abt-tl-dot {
+    left: -12px !important;
+    right: auto !important;
+}
+
+@media (max-width: 992px) {
+    [dir="rtl"] .abt-timeline::before {
+        right: 30px !important;
+        left: auto !important;
+    }
+    
+    [dir="rtl"] .abt-tl-item {
+        width: 100% !important;
+        right: 0 !important;
+        left: auto !important;
+        text-align: right !important;
+        padding-right: 80px !important;
+        padding-left: 20px !important;
+    }
+
+    [dir="rtl"] .abt-tl-item:nth-child(odd),
+    [dir="rtl"] .abt-tl-item:nth-child(even) {
+        text-align: right !important;
+        padding-right: 80px !important;
+        padding-left: 20px !important;
+    }
+
+    [dir="rtl"] .abt-tl-item .abt-tl-dot {
+        right: 18px !important;
+        left: auto !important;
+    }
+}
+`;
+
+css += newRTLOverrides;
+fs.writeFileSync(cssPath, css);
+console.log('Fixed RTL CSS');

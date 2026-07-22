@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .hero-slide { opacity: 0; position: absolute; transition: opacity 0.5s; width: 100%; height: 100px; background: #eee; }
+  .hero-slide.active { opacity: 1; z-index: 10; }
+  .hero-dot { display: inline-block; width: 10px; height: 10px; background: #ccc; }
+  .hero-dot.active { background: red; }
+</style>
+</head>
+<body>
+  <section id="munisys-hero" style="position:relative; height: 150px;">
+    <div class="hero-slide active">Slide 1</div>
+    <div class="hero-slide">Slide 2</div>
+    <div class="hero-slide">Slide 3</div>
+    <button class="hero-arrow-prev" style="position:absolute; top: 110px; left:0;">Prev</button>
+    <button class="hero-arrow-next" style="position:absolute; top: 110px; left:50px;">Next</button>
+    <div class="hero-dots" style="position:absolute; top: 110px; left:100px;">
+      <button class="hero-dot active"></button>
+      <button class="hero-dot"></button>
+      <button class="hero-dot"></button>
+    </div>
+  </section>
+  <script>
+    (function initMunisysScript() {
+      if (window.munisysScriptLoaded) return;
+      window.munisysScriptLoaded = true;
+
+      let sliderAutoTimer = null;
+
+      function runSliderNext() {
+        const hero = document.querySelector('#munisys-hero');
+        if (!hero) return;
+        const slides = Array.from(hero.querySelectorAll('.hero-slide'));
+        const dots = Array.from(hero.querySelectorAll('.hero-dot'));
+        if (!slides.length) return;
+
+        let current = slides.findIndex(s => s.classList.contains('active'));
+        if (current === -1) current = 0;
+        
+        let nextIndex = (current + 1) % slides.length;
+        
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        
+        if (slides[nextIndex]) slides[nextIndex].classList.add('active');
+        if (dots[nextIndex]) dots[nextIndex].classList.add('active');
+      }
+
+      function startAutoSlider() {
+        clearInterval(sliderAutoTimer);
+        sliderAutoTimer = setInterval(runSliderNext, 5000);
+      }
+
+      startAutoSlider();
+
+      document.addEventListener('click', function(e) {
+        const prevBtn = e.target.closest('.hero-arrow-prev');
+        const nextBtn = e.target.closest('.hero-arrow-next');
+        const dotBtn = e.target.closest('.hero-dot');
+
+        if (prevBtn || nextBtn || dotBtn) {
+          console.log('Clicked!');
+          const hero = document.querySelector('#munisys-hero');
+          if (!hero) return;
+          const slides = Array.from(hero.querySelectorAll('.hero-slide'));
+          const dots = Array.from(hero.querySelectorAll('.hero-dot'));
+          if (!slides.length) return;
+
+          let current = slides.findIndex(s => s.classList.contains('active'));
+          if (current === -1) current = 0;
+          
+          let targetIndex = current;
+          if (prevBtn) targetIndex = current - 1;
+          if (nextBtn) targetIndex = current + 1;
+          if (dotBtn) targetIndex = dots.indexOf(dotBtn);
+
+          targetIndex = ((targetIndex % slides.length) + slides.length) % slides.length;
+
+          slides.forEach(s => s.classList.remove('active'));
+          dots.forEach(d => d.classList.remove('active'));
+          
+          if (slides[targetIndex]) slides[targetIndex].classList.add('active');
+          if (dots[targetIndex]) dots[targetIndex].classList.add('active');
+
+          startAutoSlider(); // Reset timer
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

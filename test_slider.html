@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .hero-slide { opacity: 0; position: absolute; transition: opacity 0.5s; width: 100%; height: 100px; background: #eee; }
+  .hero-slide.active { opacity: 1; z-index: 10; }
+  .hero-dot { display: inline-block; width: 10px; height: 10px; background: #ccc; }
+  .hero-dot.active { background: red; }
+</style>
+</head>
+<body>
+  <section id="munisys-hero" style="position:relative; height: 150px;">
+    <div class="hero-slide active">Slide 1</div>
+    <div class="hero-slide">Slide 2</div>
+    <div class="hero-slide">Slide 3</div>
+    <button class="hero-arrow-prev" style="position:absolute; top: 110px; left:0;">Prev</button>
+    <button class="hero-arrow-next" style="position:absolute; top: 110px; left:50px;">Next</button>
+    <div class="hero-dots" style="position:absolute; top: 110px; left:100px;">
+      <button class="hero-dot active"></button>
+      <button class="hero-dot"></button>
+      <button class="hero-dot"></button>
+    </div>
+  </section>
+  <script>
+    const heroSection = document.querySelector('#munisys-hero');
+    if(heroSection && !heroSection.dataset.sliderReady) {
+      heroSection.dataset.sliderReady = '1';
+
+      let current = 0;
+      let autoTimer = null;
+
+      function getSlides() { return heroSection.querySelectorAll('.hero-slide'); }
+      function getDots()   { return heroSection.querySelectorAll('.hero-dot'); }
+
+      function goTo(index) {
+        const sl = getSlides();
+        const dt = getDots();
+        sl.forEach(s => s.classList.remove('active'));
+        dt.forEach(d => d.classList.remove('active'));
+        current = ((index % sl.length) + sl.length) % sl.length;
+        if(sl[current]) sl[current].classList.add('active');
+        if(dt[current]) dt[current].classList.add('active');
+        console.log('Went to slide', current);
+      }
+
+      function startAuto() {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => goTo(current + 1), 1000);
+      }
+
+      const prevBtn = heroSection.querySelector('.hero-arrow-prev');
+      const nextBtn = heroSection.querySelector('.hero-arrow-next');
+
+      if(prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); startAuto(); });
+      if(nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); startAuto(); });
+
+      getDots().forEach((dot, i) => {
+        dot.addEventListener('click', () => { goTo(i); startAuto(); });
+      });
+
+      startAuto();
+    }
+  </script>
+</body>
+</html>

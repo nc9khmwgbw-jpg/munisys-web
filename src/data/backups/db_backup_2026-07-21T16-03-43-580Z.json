@@ -1,0 +1,4274 @@
+{
+  "en": {
+    "theme": {
+      "bordeaux": "#922b55",
+      "blueDark": "#1d4e79",
+      "blueLight": "#83a5c2",
+      "bgGray": "#f8fafc",
+      "textGray": "#475569"
+    },
+    "homepage": {
+      "slides": {
+        "0": {
+          "h1": "We orchestrate <strong>digital infrastructure</strong> technologies for a unique <strong>customer experience</strong>",
+          "meta": "Core Infrastructure",
+          "desc": "Setup, manage, and secure your compute, storage, and networking across data centres and public clouds with our leading data-centric solutions",
+          "btnText": "Our solutions"
+        },
+        "1": {
+          "h1": "We design <strong>architectures &amp; integrations</strong> with your future <strong>IT</strong> in mind",
+          "meta": "Cybersecurity",
+          "desc": "Secure your network, endpoints, and data against evolving digital threats with zero-trust architectures and proactive monitoring.",
+          "btnText": "Discover security"
+        },
+        "2": {
+          "h1": "We take care <strong>of your digital infrastructure</strong> so you can deliver innovative <strong>services to your customers</strong>",
+          "meta": "Managed Services",
+          "desc": "Seamless cloud integration and managed services to accelerate your digital transformation journey while ensuring high availability.",
+          "btnText": "Cloud services"
+        }
+      },
+      "services": [
+        {
+          "title": "IT integration services",
+          "body": "At every stage in the lifecycle of your IT Infrastructures, our professional and operational services will help you make the right technology choices, design the soundest architectures and deploy them according to best practices, all under the supervision and control of our project managers."
+        },
+        {
+          "title": "IT support services",
+          "body": "Our reactive and proactive support services ensure your infrastructure remains healthy, minimizing downtime and optimizing performance."
+        },
+        {
+          "title": "Managed services",
+          "body": "Offload your daily IT operations to our certified experts, allowing your internal teams to focus on strategic business initiatives."
+        }
+      ],
+      "customers": [
+        "Attijariwafa bank",
+        "Autoroutes du Maroc",
+        "Bank Al-Maghrib",
+        "BANK OF AFRICA",
+        "BANQUE POPULAIRE",
+        "CDG",
+        "EURAFRIC",
+        "Maroc Telecom",
+        "inwi",
+        "LafargeHolcim",
+        "MARBIO",
+        "OCP",
+        "ONCF"
+      ],
+      "sections": {
+        "servicesTitle": "Our services",
+        "servicesDesc": "A comprehensive catalog of IT Services to cover the entire lifecycle of your IT infrastructure",
+        "whyTitle": "Why choose Munisys",
+        "customersTitle": "They trust us",
+        "solutionsTitle": "Solutions",
+        "solutionContentTitle": "Core Infrastructure Technologies",
+        "solutionContentDesc": "Munisys leverages its unique and extensive experience to help IT organizations to setup, manage, secure and seamlessly run consistent compute, storage, networking and backup infrastructure across data centers and public clouds, through either traditional or software-defined approaches.<br><br>We focus on a range of leading data-centric, adaptable and efficient solutions that offer cloud-native operating experience, AI driven management, enhanced security and optimized performance.",
+        "offeringsTitle": "Offerings",
+        "offeringsDesc": "An end-to-end & coherent offer of solutions & services for secure digital infrastructures",
+        "insightsTitle": "Insights",
+        "insightsCard1": "A new visual identity for Munisys",
+        "insightsCard2": "New headquarters",
+        "insightsCard3": "PRESS RELEASE",
+        "customersDesc": "As a trusted advisor, we make sure that our contribution to the design, deployment and support of technological solutions within the organizations we serve is delivered in their best interests, giving the highest priority to integrity, fulfillment of our commitments and long-term partnerships. This has earned us a leading position within the Moroccan IT industry based on lasting and fruitful collaborations with a great many of large and mid-sized economic actors and state entities.",
+        "solutionReadMoreLabel": "Read more",
+        "customersSeeAllLabel": "See all",
+        "partnersTitle": "Technology partners",
+        "partnersDesc": "The IT infrastructures we design and deploy for our clients are at the heart of their business and determine their capacity to innovate and stand out. We build solid ties with our technology partners and acquire in-house expertise to ensure true resilience and agility.",
+        "partnersLinkText": "Read more",
+        "insightsCard1Title": "MUNISYS",
+        "insightsCard3Top": "HELIOS",
+        "insightsCard3Mid": "Investment Partners",
+        "insightsCard3Bot": "FIPAR",
+        "referencesTitle": "They trust us",
+        "referencesDesc": "As a trusted advisor, our contribution to the design, deployment and support of technological solutions is delivered in the best interests of our clients, prioritizing integrity and long-term partnerships.",
+        "referencesLinkText": "See all references",
+        "figuresTitle": "SOME<br />FIGURES"
+      },
+      "images": {
+        "slide1": "/slide1.png",
+        "slide2": "/slide2.png",
+        "slide3": "/slide3.png",
+        "solutionsDC": "/datacenter.png",
+        "insightsHQ": "/datacenter.png"
+      },
+      "offeringsThrough": [
+        "Best of breed technologies",
+        "Skillful integrations",
+        "Sound architectures",
+        "Automation and orchestration",
+        "Qualified end-to-end services"
+      ],
+      "offeringsAchieve": [
+        "Efficient use of converging technologies",
+        "Control over complexity",
+        "Simplified IT Operations",
+        "Agile infrastructure resources",
+        "Optimal performance and true resilience",
+        "Deep and broad support capabilities"
+      ],
+      "solutionMenuItems": [
+        "Core Infrastructure Technologies",
+        "Cybersecurity Solutions",
+        "Infrastructure Software",
+        "Managed & Cloud Services",
+        "Endpoint solutions"
+      ],
+      "heroCTALabel": "Our solutions",
+      "figures": [
+        {
+          "num": "34",
+          "label": "years<br/>in business",
+          "prefix": "+"
+        },
+        {
+          "num": "330",
+          "label": "employees",
+          "prefix": ""
+        },
+        {
+          "num": "700",
+          "label": "MMAD Revenue",
+          "prefix": ""
+        },
+        {
+          "num": "18",
+          "label": "Support<br/>centers",
+          "prefix": ""
+        }
+      ],
+      "bentoSolutions": [
+        {
+          "title": "Core Infrastructure<br/>Technologies",
+          "desc": "Compute, storage, networking and backup infrastructure across data centers and public clouds with leading data-centric solutions.",
+          "btn": "Read more"
+        },
+        {
+          "title": "Cybersecurity<br/>Solutions",
+          "desc": "End-to-end security architectures to protect your digital assets from evolving threats.",
+          "btn": "Discover"
+        },
+        {
+          "title": "Infrastructure<br/>Software",
+          "desc": "Software-defined approaches and robust integrations for modern IT operations.",
+          "btn": ""
+        },
+        {
+          "title": "Managed &<br/>Cloud Services",
+          "desc": "Seamless operations across public, private, and hybrid cloud environments.",
+          "btn": ""
+        },
+        {
+          "title": "Endpoint Solutions",
+          "desc": "Empowering your workforce with secure and efficient computing devices.",
+          "btn": "View Offerings"
+        }
+      ],
+      "offeringsThroughTitle": "Through",
+      "offeringsAchieveTitle": "We achieve",
+      "offeringsListThrough": [
+        "Best of breed technologies",
+        "Skillful integrations",
+        "Sound architectures",
+        "Automation and orchestration",
+        "Qualified end-to-end services"
+      ],
+      "offeringsListAchieve": [
+        "Efficient use of converging technologies",
+        "Control over complexity",
+        "Simplified IT Operations",
+        "Agile infrastructure resources",
+        "Optimal performance and true resilience",
+        "Deep and broad support capabilities"
+      ]
+    },
+    "solutions": {
+      "expertiseLabel": "Expertise",
+      "partnersLabel": "Partners",
+      "heroLabel": "OUR SOLUTIONS",
+      "heroTitle": "Empowering your digital journey.",
+      "heroDesc": "Discover our comprehensive portfolio of IT solutions."
+    },
+    "services": {
+      "heroLabel": "PROFESSIONAL SERVICES",
+      "heroMainTitle": "Our",
+      "heroMainTitleBold": "Services.",
+      "heroDesc": "Professional and operational services to help you make the right technology choices, design sound architectures, and deploy them according to best practices.",
+      "introDesc": "At Munisys, we cover the entire lifecycle of your IT infrastructure with a comprehensive catalog of professional services designed to ensure performance, security, and continuous business operations.",
+      "learnMoreLabel": "Learn More",
+      "sections": [
+        {
+          "title": "IT Integration & Support",
+          "items": [
+            {
+              "title": "Integration Services",
+              "desc": "At every stage in the lifecycle of your IT Infrastructures, our professional and operational services will help you make the right technology choices, design the soundest architectures and deploy them according to the rules of the art.",
+              "features": [
+                "Architecture Design & Validation",
+                "Technology Deployment",
+                "System Migration & Upgrades"
+              ]
+            },
+            {
+              "title": "IT Support Services",
+              "desc": "Our reactive and proactive support services ensure maximum availability and continuity of your technological assets. We mitigate risks through strict SLAs and dedicated technical expertise.",
+              "features": [
+                "24/7 Incident Management",
+                "Proactive Health Checks",
+                "Hardware Replacement (RMA)"
+              ]
+            },
+            {
+              "title": "Managed Services",
+              "desc": "Offload your daily IT operations to our certified experts, allowing your internal teams to focus on strategic business initiatives. We provide 24/7 monitoring and proactive maintenance.",
+              "features": [
+                "Infrastructure Monitoring",
+                "Security Operations Center (SOC)",
+                "Cloud & Backup Management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "careers": {
+      "applyLabel": "Apply",
+      "heroTitle": "Shape<br />the <strong>Future.</strong>",
+      "heroDesc": "Join a team of passionate experts dedicated to orchestrating digital transformation.",
+      "whyTitle": "Why Munisys?",
+      "whyDesc": "We believe in empowering our people, fostering continuous learning, and building a culture of excellence and innovation.",
+      "reasons": [
+        {
+          "title": "Continuous Growth",
+          "desc": "Access to ongoing training, certifications, and clear career progression paths in cutting-edge technologies."
+        },
+        {
+          "title": "Impactful Work",
+          "desc": "Work on large-scale, mission-critical projects that shape the digital landscape of major enterprises."
+        },
+        {
+          "title": "Collaborative Culture",
+          "desc": "Join a diverse, inclusive, and supportive environment where every voice matters and teamwork thrives."
+        }
+      ],
+      "jobsTitle": "Open Positions",
+      "jobs": [
+        {
+          "title": "Senior Network Security Engineer",
+          "meta": "Full-time • Casablanca • IT Integration"
+        },
+        {
+          "title": "Cloud Solutions Architect",
+          "meta": "Full-time • Casablanca • Cloud Services"
+        },
+        {
+          "title": "SOC Analyst Level 2",
+          "meta": "Full-time • Remote/Hybrid • Managed Services"
+        },
+        {
+          "title": "IT Project Manager",
+          "meta": "Full-time • Casablanca • Management"
+        }
+      ]
+    },
+    "customerReferences": {
+      "heroLabel": "Client References",
+      "heroDesc": "Our commitment to excellence has earned us lasting and fruitful collaborations with the largest economic actors and state entities in Morocco.",
+      "references": [
+        {
+          "name": "Banque Populaire",
+          "logo": "/images/logos/bp.svg"
+        },
+        {
+          "name": "Bank Of Africa",
+          "logo": "/images/logos/boa.png"
+        },
+        {
+          "name": "Bank Al-Maghrib",
+          "logo": "/images/logos/bam.png"
+        },
+        {
+          "name": "Attijariwafa Bank",
+          "logo": "/images/logos/awb.svg"
+        },
+        {
+          "name": "CDG",
+          "logo": "/images/logos/cdg.svg"
+        },
+        {
+          "name": "ONCF",
+          "logo": "/images/logos/oncf.png"
+        },
+        {
+          "name": "OCP",
+          "logo": "/images/logos/ocp.svg"
+        },
+        {
+          "name": "Marbio",
+          "logo": "/images/logos/marbio.svg"
+        },
+        {
+          "name": "LafargeHolcim",
+          "logo": "/images/logos/lafarge.svg"
+        },
+        {
+          "name": "Inwi",
+          "logo": "/images/logos/inwi.svg"
+        }
+      ],
+      "heroMainTitle": "Trusted by",
+      "heroMainTitleBold": "Leaders."
+    },
+    "insights": {
+      "noImageLabel": "No image",
+      "heroTitle": "Insights",
+      "posts": [
+        {
+          "title": "The Future of Cybersecurity in Morocco",
+          "category": "Whitepaper",
+          "desc": "An in-depth analysis of emerging threats and the zero-trust architecture necessary for modern enterprises.",
+          "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Cloud Migration Strategies",
+          "category": "Blog",
+          "desc": "Best practices for seamlessly migrating your core infrastructure to hybrid cloud environments without downtime.",
+          "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Munisys Wins Partner of the Year",
+          "category": "News",
+          "desc": "Recognized for outstanding delivery and innovation in IT integration services for the third consecutive year.",
+          "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Optimizing IT Operations with AI",
+          "category": "Webinar",
+          "desc": "Join our experts as they discuss the integration of AI-driven tools in Managed Services and SOC operations.",
+          "img": "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+        }
+      ]
+    },
+    "technologyPartners": {
+      "heroTitle": "Technology Partners",
+      "heroDesc": "We build solid ties with the world's leading technology providers to ensure true resilience, performance, and agility for your digital infrastructure.",
+      "partners": [
+        {
+          "name": "Cisco",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisco_logo_blue_2016.svg",
+          "category": "Networking"
+        },
+        {
+          "name": "Dell Technologies",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dell_logo_2016.svg",
+          "category": "Infrastructure"
+        },
+        {
+          "name": "VMware",
+          "logo": "/images/logos/vmware.svg",
+          "category": "Virtualization"
+        },
+        {
+          "name": "Fortinet",
+          "logo": "/images/logos/fortinet.svg",
+          "category": "Security"
+        },
+        {
+          "name": "Microsoft",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg",
+          "category": "Cloud & Software"
+        },
+        {
+          "name": "IBM",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM_logo.svg",
+          "category": "Enterprise Solutions"
+        }
+      ],
+      "allSpecialtiesLabel": "All Specialties"
+    },
+    "solutionsIndex": {
+      "heroTitle": "Our Solutions",
+      "heroDesc": "We design resilient, future-proof IT architectures aligned with your strategic objectives. From core infrastructure to endpoint security, our solutions scale with your business.",
+      "title": "Core Infrastructure & Cybersecurity",
+      "desc": "Munisys leverages its unique and extensive experience to help IT organizations to setup, manage, secure and seamlessly run consistent compute, storage, networking and backup infrastructure across data centers and public clouds, through either traditional or software-defined approaches.\n\nOur focus covers a wide range of technologies, ensuring robust performance, compliance, and end-to-end visibility across all your digital assets."
+    },
+    "aboutUs": {
+      "heroTitle": "About Us",
+      "heroDesc": "Learn more about Munisys, our history, our values, and our commitment to digital excellence.",
+      "subtitle": "Our Heritage",
+      "heroMainTitle": "Empowering Digital Transformation",
+      "storyTitle": "Who We Are",
+      "storyP1": "Since our inception, Munisys has been at the forefront of technological innovation. We believe that technology is the ultimate equalizer, enabling businesses to scale, secure their assets, and streamline operations in ways never before possible.",
+      "storyP2": "Our team of certified experts works relentlessly to architect and deploy IT solutions that are not just robust, but future-proof. By combining deep industry expertise with cutting-edge tools, we transform complex challenges into seamless digital experiences.",
+      "timelineTitle": "Our Journey",
+      "timeline": [
+        {
+          "year": "1993",
+          "text": "Founded with a vision to provide exceptional IT infrastructure services to local enterprises."
+        },
+        {
+          "year": "2005",
+          "text": "Expanded our portfolio to include advanced Cybersecurity and Network Integration."
+        },
+        {
+          "year": "2015",
+          "text": "Launched our Managed Services division, providing 24/7 proactive monitoring and SOC."
+        },
+        {
+          "year": "2024",
+          "text": "Leading the Cloud-Native transformation era, partnering with global tech giants."
+        }
+      ]
+    },
+    "test": {
+      "description1": "Ceci est une image de test. En mode admin, cliquez dessus pour la changer.",
+      "image1": "/slide1.png",
+      "gridImage1": "/slide1.png",
+      "gridImage2": "/slide2.png",
+      "gridImage3": "/slide3.png",
+      "circularImage": "/slide2.png",
+      "heroImage": "/hero.png",
+      "heroTitle": "Titre Hero Éditable",
+      "heroSubtitle": "Sous-titre également éditable en mode admin"
+    },
+    "navigation": {
+      "brandName": "MUNISYS",
+      "ctaLabel": "Contact",
+      "links": {
+        "solutions": "Solutions"
+      },
+      "mainLinks": [
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Customer references",
+          "href": "/customer-references"
+        },
+        {
+          "label": "Technology partners",
+          "href": "/technology-partners"
+        },
+        {
+          "label": "Insights",
+          "href": "/insights"
+        },
+        {
+          "label": "Careers",
+          "href": "/careers"
+        },
+        {
+          "label": "About us",
+          "href": "/about-us"
+        }
+      ],
+      "megaMenu": [
+        {
+          "title": "Core Infrastructure Technologies",
+          "href": "/solutions#core-infra",
+          "items": [
+            {
+              "label": "Compute & storage",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Hyper converged infrastructures",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Data resilience",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Networking",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Cabling & data center environment",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#core-infra"
+            }
+          ]
+        },
+        {
+          "title": "Cybersecurity",
+          "href": "/solutions#cybersecurity",
+          "items": [
+            {
+              "label": "Endpoint Security",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Network Security",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Cloud & Application Security",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Identity and Access Management",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Visibility & Compliance",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#cybersecurity"
+            }
+          ]
+        },
+        {
+          "title": "Infrastructure software",
+          "href": "/solutions#infra-software",
+          "items": [
+            {
+              "label": "Service & Asset Management",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Observability, Automation & Orchestration",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Data Management & Analytics",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Application modernization",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Data resilience",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#infra-software"
+            }
+          ]
+        },
+        {
+          "title": "Managed & Cloud Services",
+          "href": "/solutions#managed-cloud",
+          "items": [
+            {
+              "label": "Hosting and Cloud Infrastructure Services",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Application and Platforms Services",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Business Resilience & Data Protection",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Managed Security Services",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Advisory, Professional and Management Services",
+              "href": "/solutions#managed-cloud"
+            }
+          ]
+        },
+        {
+          "title": "Endpoint solutions",
+          "href": "/solutions#endpoint",
+          "items": [
+            {
+              "label": "Digital workplace",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Printing solutions",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "End customer facing devices",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#endpoint"
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "brandName": "MUNISYS",
+      "linkedinLabel": "Follow us on LinkedIn",
+      "linkedinUrl": "#",
+      "copyright": "© 2026 Munisys. All rights reserved.",
+      "legal": "Privacy Policy · Legal Notice",
+      "columns": [
+        {
+          "title": "Solutions",
+          "links": [
+            {
+              "label": "Core Infrastructure",
+              "href": "/solutions/core-infrastructure"
+            },
+            {
+              "label": "System Integration",
+              "href": "/solutions/infrastructure-software/system-integration"
+            },
+            {
+              "label": "Cybersecurity",
+              "href": "/solutions/cybersecurity"
+            },
+            {
+              "label": "Cloud Services",
+              "href": "/solutions/managed-and-cloud-services"
+            }
+          ]
+        },
+        {
+          "title": "About",
+          "links": [
+            {
+              "label": "About us",
+              "href": "/about-us"
+            },
+            {
+              "label": "Careers",
+              "href": "/careers"
+            },
+            {
+              "label": "Insights",
+              "href": "/insights"
+            },
+            {
+              "label": "Customer references",
+              "href": "/customer-references"
+            }
+          ]
+        },
+        {
+          "title": "Partners",
+          "links": [
+            {
+              "label": "Technology partners",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "Become a partner",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "Certifications",
+              "href": "/technology-partners"
+            }
+          ]
+        },
+        {
+          "title": "Contact",
+          "links": [
+            {
+              "label": "contact@munisys.ma",
+              "href": "#"
+            },
+            {
+              "label": "Casablanca, Morocco",
+              "href": "#"
+            },
+            {
+              "label": "+212 5XX XXX XXX",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "subline": "Ready to accelerate your digital transformation? Our experts are here, available, and eager to help you shape the future.",
+      "hqTitle": "Headquarters",
+      "hqText": "123 Innovation Drive, Tech District, Casablanca",
+      "emailTitle": "Email Us",
+      "emailText": "contact@munisys.com",
+      "callTitle": "Call Us",
+      "callText": "+212 5 22 00 00 00",
+      "heroMainTitle": "Let's Build",
+      "heroMainTitleBold": "Together.",
+      "formTitle": "Send a Message",
+      "formSub": "Fill in the form below and we'll get back to you within 24 hours.",
+      "formSuccess": "✅ Message sent! We'll be in touch shortly.",
+      "labelName": "Full Name",
+      "labelEmail": "Email Address",
+      "labelCompany": "Company",
+      "labelPhone": "Phone Number",
+      "labelMessage": "How can we help you?",
+      "formNote": "🔒 Your data is 100% secure & never shared.",
+      "btnSubmit": "Send Message"
+    }
+  },
+  "fr": {
+    "theme": {
+      "bordeaux": "#922b55",
+      "blueDark": "#1d4e79",
+      "blueLight": "#83a5c2",
+      "bgGray": "#f8fafc",
+      "textGray": "#475569"
+    },
+    "homepage": {
+      "slides": [
+        {
+          "h1": "Nous orchestrons l'<strong>infrastructure numérique</strong> pour une <strong>expérience unique</strong>",
+          "meta": "INFRASTRUCTURE CENTRALE",
+          "desc": "Configurez, gérez et sécurisez vos calculs, votre stockage et vos réseaux...",
+          "btnText": "NOS SOLUTIONS"
+        },
+        {
+          "h1": "Nous concevons des <strong>architectures et intégrations</strong> pour votre <strong>informatique future</strong>",
+          "meta": "CYBERSÉCURITÉ",
+          "desc": "Protégez votre réseau, vos terminaux et vos données contre les menaces numériques évolutives...",
+          "btnText": "DÉCOUVRIR LA SÉCURITÉ"
+        },
+        {
+          "h1": "Nous gérons <strong>votre infrastructure numérique</strong> pour que vous puissiez innover",
+          "meta": "SERVICES GÉRÉS",
+          "desc": "Intégration cloud transparente et services gérés pour accélérer votre parcours de transformation numérique...",
+          "btnText": "SERVICES CLOUD"
+        }
+      ],
+      "services": [
+        {
+          "title": "Services d'intégration IT",
+          "body": "À chaque étape du cycle de vie de vos infrastructures, nous vous accompagnons."
+        },
+        {
+          "title": "Services gérés et Cloud",
+          "body": "Déléguez la gestion de votre IT pour vous concentrer sur l'essentiel."
+        },
+        {
+          "title": "Réseaux et Sécurité",
+          "body": "Protégez vos données et connectez vos équipes en toute sécurité."
+        }
+      ],
+      "customers": [
+        "Attijariwafa bank",
+        "Autoroutes du Maroc",
+        "Bank Al-Maghrib",
+        "BANK OF AFRICA",
+        "BANQUE POPULAIRE",
+        "CDG",
+        "EURAFRIC",
+        "Maroc Telecom",
+        "inwi",
+        "LafargeHolcim",
+        "MARBIO",
+        "OCP",
+        "ONCF"
+      ],
+      "sections": {
+        "servicesTitle": "Our services",
+        "servicesDesc": "A comprehensive catalog of IT Services to cover the entire lifecycle of your IT infrastructure",
+        "whyTitle": "Why choose Munisys",
+        "customersTitle": "They trust us",
+        "solutionsTitle": "Solutions",
+        "solutionContentTitle": "Core Infrastructure Technologies",
+        "solutionContentDesc": "Munisys leverages its unique and extensive experience to help IT organizations to setup, manage, secure and seamlessly run consistent compute, storage, networking and backup infrastructure across data centers and public clouds, through either traditional or software-defined approaches.<br><br>We focus on a range of leading data-centric, adaptable and efficient solutions that offer cloud-native operating experience, AI driven management, enhanced security and optimized performance.",
+        "offeringsTitle": "Offerings",
+        "offeringsDesc": "An end-to-end & coherent offer of solutions & services for secure digital infrastructures",
+        "insightsTitle": "Insights",
+        "insightsCard1": "A new visual identity for Munisys",
+        "insightsCard2": "New headquarters",
+        "insightsCard3": "PRESS RELEASE",
+        "customersDesc": "As a trusted advisor, we make sure that our contribution to the design, deployment and support of technological solutions within the organizations we serve is delivered in their best interests, giving the highest priority to integrity, fulfillment of our commitments and long-term partnerships. This has earned us a leading position within the Moroccan IT industry based on lasting and fruitful collaborations with a great many of large and mid-sized economic actors and state entities.",
+        "solutionReadMoreLabel": "Read more",
+        "customersSeeAllLabel": "See all"
+      },
+      "images": {
+        "slide1": "/slide1.png",
+        "slide2": "/slide2.png",
+        "slide3": "/slide3.png",
+        "solutionsDC": "/datacenter.png",
+        "insightsHQ": "/datacenter.png"
+      },
+      "offeringsThrough": [
+        "Best of breed technologies",
+        "Skillful integrations",
+        "Sound architectures",
+        "Automation and orchestration",
+        "Qualified end-to-end services"
+      ],
+      "offeringsAchieve": [
+        "Efficient use of converging technologies",
+        "Control over complexity",
+        "Simplified IT Operations",
+        "Agile infrastructure resources",
+        "Optimal performance and true resilience",
+        "Deep and broad support capabilities"
+      ],
+      "solutionMenuItems": [
+        "Core Infrastructure Technologies",
+        "Cybersecurity Solutions",
+        "Infrastructure Software",
+        "Managed & Cloud Services",
+        "Endpoint solutions"
+      ],
+      "heroCTALabel": "Nos solutions",
+      "heroLabel": "VOTRE PARTENAIRE DE CONFIANCE",
+      "servicesTitle": "Services Informatiques",
+      "servicesSubtitle": "NOTRE EXPERTISE",
+      "aboutTitle": "À propos de Munisys",
+      "aboutBody": "Munisys est un leader dans l'intégration de solutions informatiques.",
+      "stats": [
+        {
+          "val": "30+",
+          "label": "Années d'expérience"
+        },
+        {
+          "val": "500+",
+          "label": "Clients satisfaits"
+        },
+        {
+          "val": "50+",
+          "label": "Partenaires technologiques"
+        }
+      ],
+      "solutions": [
+        {
+          "title": "Technologies<br/>d'infrastructure",
+          "desc": "Infrastructures de calcul, stockage, réseaux et sauvegarde sur centres de données et clouds publics.",
+          "btn": "Lire la suite",
+          "span": "span-2x3"
+        },
+        {
+          "title": "Solutions de<br/>Cybersécurité",
+          "desc": "Architectures de sécurité de bout en bout pour protéger vos actifs numériques contre les menaces.",
+          "btn": "Découvrir",
+          "span": "span-2x1"
+        },
+        {
+          "title": "Logiciels<br/>d'infrastructure",
+          "desc": "Approches définies par logiciel et intégrations robustes pour les opérations informatiques modernes.",
+          "btn": "",
+          "span": "glass"
+        },
+        {
+          "title": "Services Cloud<br/>& Gérés",
+          "desc": "Opérations transparentes sur des environnements cloud publics, privés et hybrides.",
+          "btn": "",
+          "span": "glass"
+        },
+        {
+          "title": "Solutions<br/>de terminaux",
+          "desc": "Dotant votre personnel d'appareils informatiques sécurisés et efficaces.",
+          "btn": "Voir les offres",
+          "span": "span-2x1"
+        }
+      ]
+    },
+    "solutions": {
+      "compute-storage": {
+        "title": "Compute & Storage",
+        "overview": "We use proven methodologies to design and build modern compute and storage infrastructures, designed to work in edge, data center or hybrid cloud environments. Our cutting-edge solutions include powerful rack servers, composable bladed infrastructure, object, block and file storage arrays,… In order to offer consistency and meet specific needs for any workload, we select a combination of most secure mission-critical, cost sensitive or extensively scalable solutions.\nHigh availability and resilience are primary criteria in the design of these infrastructure components. The use of right level of redundancy as well as the best fitting replication and automated failover technologies allow us to meet ever-increasing customer’s demands for business continuity and fast disaster recovery.",
+        "expertises": [
+          "Standalone, Rack, and bladed Compute Servers",
+          "High Performance Computing",
+          "Converged IT/OT Systems",
+          "Entry, Midrange and Mission Critical All-flash storage arrays",
+          "File, block, object storage solutions"
+        ],
+        "partners": [
+          "DELL",
+          "HPE",
+          "IBM"
+        ]
+      },
+      "hyper-converged-infrastructures": {
+        "title": "Hyper-converged Infrastructures",
+        "overview": "Modern Hyper-converged Infrastructures (HCI) simplify datacenter operations, reduce dependency on proprietary hardware and provide scalability by tightly integrating individual compute servers, storage arrays and networks to yield a flexible, agile, and easily manageable software-defined datacenter.\nOur systems architects and delivery experts harness the full power of HCI underlying virtualization technologies enabling our customers to benefit from an innovative as-a-service resources consumption model.\nThanks to the breadth of our partner’s HCI portfolios, we leverage many options to deploy the best fitting physical and software-defined resources, allowing our customers for choice based on their current infrastructure architecture and their in-house adopted operational processes.",
+        "expertises": [
+          "HCI appliances",
+          "HCI Ready-Nodes"
+        ],
+        "partners": [
+          "DELL",
+          "HPE",
+          "Nutanix",
+          "VMware"
+        ]
+      },
+      "data-resilience": {
+        "title": "Data Resilience",
+        "overview": "Ensuring business continuity through availability, integrity, and accessibility of data across IT infrastructure is vital for today’s organizations. No unexpected disruption, accidental deletion or unauthorized entities should be able to alter operational capabilities or business applications environments stability.\nOur Data resilience solutions leverages a comprehensive set of in-house and cloud services as well as an automated approach that standardizes data protection through backups, encryption and object storage while providing centralized visibility and resources monitoring across all workloads and locations.",
+        "expertises": [
+          "Data Protection Appliances and Software",
+          "Cloud Data Security",
+          "Air gapped Immutable Storage"
+        ],
+        "partners": [
+          "DELL",
+          "HPE",
+          "Veeam",
+          "Veritas"
+        ]
+      },
+      "networking": {
+        "title": "Networking",
+        "overview": "Conducting a successful digital transformation strategy requires seamless connectivity and access to data for both users and applications. Setting up secure and highly scalable wired, wireless, and SD-WAN networking platforms is vital to address business critical use cases.\nOur partners’ networking portfolio spans from the edge layer to the cloud and creates a scalable, automated, service-centric and intelligent foundation for a secure connectivity of the unified infrastructure.\nOur solutions help gaining visibility and control over the actual performance delivered by the network whilst simplifying operations and mitigating risks, all supported by AI driven management and policies enforcement capabilities.",
+        "expertises": [
+          "Data Center Core LAN",
+          "Edge Networks",
+          "Wireless LAN",
+          "SD-WAN"
+        ],
+        "partners": [
+          "HPE Aruba",
+          "Cisco"
+        ]
+      },
+      "cabling-data-center-environment": {
+        "title": "Cabling & Data Center Environment",
+        "overview": "At the most foundational level, an IT infrastructure starts with the environment that will host its most critical components and will allow them to operate in optimal and secure conditions.\nOur cabling and data center environment team brings a proven expertise and a sound portfolio of solutions helping our customers to be totally confident that the physical IT technologies their operations rely upon will benefit from dependable, manageable and secure cabling, rack, power and monitoring systems.",
+        "expertises": [
+          "Intelligent racks",
+          "Power security and distribution",
+          "High density cabling systems",
+          "RFID Asset inventory and location",
+          "Data center environment monitoring"
+        ],
+        "partners": [
+          "Corning",
+          "Eaton",
+          "Legrand",
+          "R&M",
+          "RFCode",
+          "Schneider Electric"
+        ]
+      },
+      "endpoint-security": {
+        "title": "Endpoint Security",
+        "overview": "Cyber adversaries’ efforts to bypass corporate defenses start usually by targeting endpoints as they have always been company’s most vulnerable assets to attacks, regardless of where they are located inside or outside the corporate network, exploiting multiple factors such as human errors, device misconfigurations, software breaches, weak passwords, missing patches, and many more.\nMunisys’ Endpoint Security solutions offer comprehensive monitoring and protection features to desktops, laptops, smartphones, printers, and other connected user devices. This includes detecting, preventing and responding to threats like infections by viruses, zero-day attacks, phishing and ransomware. Advanced capabilities are also leveraged to provide higher levels of protection like anomaly behavior analysis, automatic enforcement, and dynamic security controls.\nWe value also built-in hardware-based security and advanced self-healing capabilities as integrated features supported by specific endpoint devices being part of our EndPoint Solutions Business Unit’ catalog.",
+        "expertises": [
+          "Antivirus & Ransomware protection",
+          "Endpoint Detection & Response (EDR)",
+          "User and Entity Behavior Analytics",
+          "Web and Mail Threat protection"
+        ],
+        "partners": [
+          "HP",
+          "TrendMicro",
+          "Kaspersky",
+          "PaloAlto Networks"
+        ]
+      },
+      "network-security": {
+        "title": "Network Security",
+        "overview": "Digital assets’ availability and integrity rely greatly on seamless deployment of a highly secure network infrastructure with a scalable, automated, and manageable enforcement of a comprehensive set of rules and policies.\nWith the proliferation in the cloud and data center environments of distributed multi-sites resources, application virtualization and containerization, as well as extensive usage of encrypted traffic, IT teams are facing greater challenges to protect the network itself without compromising its performance and to secure application workloads without hampering efforts towards enablement of an outstanding user experience.\nCombining multiple layers of defenses, our Networking Security solutions ensure an effective protection against unauthorized access with Network Access Control technologies, set up preemptive measures intended to thwart any attack coming from either the outside or circulating inside the network with Next Generation Firewalling and IDS/IPS systems, provide isolation of malware codes and objects with Sandbox technologies and responds to detected abnormal system behaviors with NDR solutions.",
+        "expertises": [
+          "Next Generation Firewalling",
+          "Network Access Control",
+          "DDoS Protection",
+          "Network Detection & Response (NDR)",
+          "Sandboxing"
+        ],
+        "partners": [
+          "F5",
+          "Fortinet",
+          "PaloAlto Networks",
+          "Forcepoint",
+          "Checkpoint",
+          "HPE Aruba",
+          "Gatewatcher"
+        ]
+      },
+      "cloud-application-security": {
+        "title": "Cloud & Application Security",
+        "overview": "Over the past few years, the world witnessed an unprecedented shift towards remote working and cloud services adoption. Strategies has been put in place to rapidly migrate applications, APIs services and related data to collaborative cloud environments to take benefit from an enhanced agility and new innovation capabilities. However, this also creates a paradigm change in digital operations and assets’ security.\nResolved to embrace the change, Munisys has expertly enriched his portfolio of security solutions to help extend secure access and high-performance connectivity to users regardless of their geographic locations with SASE technologies and to enable moving applications and API endpoints safely outside the organization’s network perimeter with advanced solutions designed to integrate effective security controls throughout their development lifecycle.",
+        "expertises": [
+          "Cloud-native applications & API security",
+          "Application vulnerability management (SAST/DAST/IAST)",
+          "Secure Access Service Edge (SASE) solutions",
+          "Secure File Transfer",
+          "DNS Security"
+        ],
+        "partners": [
+          "Axway",
+          "Broadcom",
+          "OpenText",
+          "F5",
+          "PaloAlto Networks"
+        ]
+      },
+      "identity-and-access-management": {
+        "title": "Identity and Access Management",
+        "overview": "Securing a perimeter around the datacenter network is no longer enough to ensure safe access to data, applications, and business-critical services as they are increasingly spread out across multi-sites or even multi-clouds environments. Today, Organizations must deploy an Identity-centric strategy to protect every user-resource connection, mitigate risk and provide access governance, compliance, and real-time threat detection.\nWith our Identity and Access Management (IAM) solutions and services, we help you orchestrate policies across on-premises, remote, and cloud environments to control identities and give privileged access and passwordless authentication to your workforce as well as to your customers.\nFurther, Munisys helps you find a right balance between accessibility and security controls so as not to impede your ability to deliver agile, scalable, and efficient business services.",
+        "expertises": [
+          "Multi Factor Authentication (MFA)",
+          "LDAP Protection",
+          "Federated Identity Management",
+          "Cloud Access Security Broker (CASB)",
+          "Data privilege Management"
+        ],
+        "partners": [
+          "Fortinet",
+          "Varonis",
+          "Opentext",
+          "F5"
+        ]
+      },
+      "visibility-compliance": {
+        "title": "Visibility & Compliance",
+        "overview": "A holistic approach to Cybersecurity encompasses rolling out security enforcement systems and controls, gaining deep visibility into valued assets and verifying continuously those assets’ compliance with business policies and regulatory requirements.\nOur solutions drive greater visibility and compliance capabilities by providing scalable event monitoring, automation, SOC analytics, audited remote management, and more.",
+        "expertises": [
+          "Security Information & Event Management (SIEM)",
+          "Security Orchestration & Automated Response (SOAR)",
+          "Threat Intelligence Platforms",
+          "Privileged Access Management",
+          "Vulnerability & Patch Management",
+          "Security Policy Management"
+        ],
+        "partners": [
+          "Tenable",
+          "Wallix",
+          "OpenText",
+          "Google-Mandiant",
+          "Rapid7"
+        ]
+      },
+      "service-asset-management": {
+        "title": "Service & Asset Management",
+        "overview": "Digital transformation has significantly elevated the customer experience across vertical markets, prompting every organization to strive to adopt internally similar levels of service delivery for an engaging, consumer-like, and self-service end user experience.\nGoing beyond IT-centric service delivery enablement, Munisys’ ITIL-aligned and cloud-native solutions encompass a collection of policies and processes for the management and support of business services like human resources, legal, assets, facilities, marketing, and finance.\nStrong with its proven experience on implementing service and asset management processes, native mobile applications, machine learning and AI-powered chatbots, social collaboration, advanced analytics, and orchestration, Munisys is your privileged partner when laying down the foundation for your enterprise’s efficiency improvement strategy.",
+        "expertises": [
+          "Enterprise Service Management",
+          "IT Asset Management",
+          "CMDB and Dynamic Discovery",
+          "Software License Management"
+        ],
+        "partners": [
+          "OpenText"
+        ]
+      },
+      "observability-automation-orchestration": {
+        "title": "Observability, Automation & Orchestration",
+        "overview": "Applying advanced automation and predictive analytics technologies to run, monitor and protect enterprise assets and processes has deeply transformed how IT operations are performed and managed.\nHuge volumes of data are usually generated by continuous discovery and at scale monitoring of applications, services, networks and user experience across cloud and on-premises environments. By implementing automated and intelligent correlation solutions to analyse those big data sets, organizations can easily derive fast and useful insights as well as accurate and timely knowledge of issues impacting their business services’ performance and health levels.\nAutomation may also be enhanced with powerful orchestration engines helping IT operators to efficiently run, schedule, and actively monitor processes and workflows at enterprise scale.\nMunisys expertly provides its customers with end-to-end observability, automation, orchestration, and proactive remediation solutions to increase process efficiency, alleviate pressure on IT teams while eliminating manual and repetitive efforts, lower IT operation costs, and minimize business services disruption.",
+        "expertises": [
+          "Datacenter Infrastructure Monitoring",
+          "Application Performance Monitoring",
+          "Enterprise-wide Automation Platforms",
+          "Robotic Process Automation"
+        ],
+        "partners": [
+          "OpenText",
+          "Redhat",
+          "Broadcom"
+        ]
+      },
+      "data-management-analytics": {
+        "title": "Data Management & Analytics",
+        "overview": "Turning Data into meaningful and actionable insights is undoubtedly one of the key aspects to make businesses capable of staying competitive and ahead of market expectations. This is even becoming table stakes in some verticals. Indeed, no financial institutions can afford not relying on critical data applications like Frauds detection and Risks simulation. No Telecom provider can ignore the crucial importance of Network analytics and Customer behavior analytics.\nMunisys is partnering with big players in the data platforms ecosystem to provide state-of-the-art distributed data management components to source, structure, protect and analyze data. Whether run on hybrid or mutlicloud environments, our solutions deliver quality enterprise-wide intelligence in a fast and cost-effective way.",
+        "expertises": [
+          "Hybrid & Cloud Data platforms",
+          "Artificial Intelligence Data Analytics",
+          "Enterprise Data Archiving"
+        ],
+        "partners": [
+          "OpenText",
+          "Cohesity"
+        ]
+      },
+      "application-modernization": {
+        "title": "Application Modernization",
+        "overview": "An important feature of a sustainable digital transformation strategy is the modernization of incumbent applications to take advantage of newer virtualized infrastructure and cloud technology advances for better resources optimization, greater developments speed, frequent deployments, and improved resiliency. This approach should, on the other hand, protect older investments, value existing functionalities and minimize service disruptions.\nThanks to its ability to conduct a thorough application inventory and assessment, Munisys delivers innovative services set up for helping organizations select a right migration pattern towards their newly adopted cloud infrastructures. Those patterns, such as Rehosting, Replatforming and Refactoring imply different effort and complexity levels and are selected based on containerization suitability, business risks, and dependencies across new or legacy applications.\nMunisys is definitely the right partner for businesses intending to execute an effective application modernization plan as this entails a proven expertise on numerous intersecting technologies such as Cloud application platforms, API gateways, Containers, Microservices, Security, Automation, and Orchestration.",
+        "expertises": [
+          "Application Modernization Assessment",
+          "Kubernetes-based Container Orchestration platforms",
+          "Application Rehosting / Replatforming / Refactoring",
+          "API Management",
+          "Zero Trust Application Security"
+        ],
+        "partners": [
+          "Redhat",
+          "GitLab",
+          "Opentext"
+        ]
+      },
+      "hosting-and-cloud-infrastructure-services": {
+        "title": "Hosting and Cloud Infrastructure Services",
+        "overview": "Building traditional on-premises IT infrastructure enhances agility and competitiveness but comes with significant challenges like hefty upfront capital expenditures, limited scalability, and unremitting upgrade and maintenance tasks. Having difficulties managing multi-site or multi-technology architectures, leads often to inefficiencies and increased operational costs.\nMunisys hosting and cloud infrastructure offering addresses these challenges by providing hardware and software reliability, disaster recovery, increased scalability, cost optimization and enhanced resource management while giving access to an elite infrastructure experts team without the need to build it in-house.\nBased on automated provisioning, unified orchestration, and API-driven infrastructure management, our solutions are delivered as a comprehensive and modular set of services for planning, preparing, and operating traditional systems and modern cloud-native environments, encompassing colocation, dedicated platforms and private, hybrid and public cloud infrastructure.\nOur services are delivered within certified, carrier-neutral and sovereign data centers hosting enterprise-grade infrastructure. Designed and operated by MDC, a sibling company, our data centers meet strict jurisdictional requirements needed by highly regulated sectors like finance, healthcare and public services. Organizations benefit from a securely connected or air-gapped architectures, hardened access control, resilient connectivity and tailored service level agreements (SLAs) for performance, control, reporting, and availability.",
+        "expertises": [
+          "Data Center Colocation",
+          "Managed dedicated Private infrastructure",
+          "Managed private & hybrid cloud Infrastructure",
+          "Infrastructure as a Service (Virtual machines, virtual desktops, Virtual Data Centers)",
+          "Cloud Object Storage (S3)"
+        ],
+        "partners": [
+          "MDC",
+          "OVH",
+          "OCI",
+          "HPE",
+          "Redhat",
+          "VMware",
+          "Nutanix"
+        ]
+      },
+      "application-and-platforms-services": {
+        "title": "Application and Platforms Services",
+        "overview": "Today, continuous innovation and process modernization relies on platforms that provide an automated, API-driven, and scalable environments to build, test and deploy cloud-ready applications, cloud-native workloads, serverless, or AI/ML capabilities.\nAt Munisys, we design, implement and manage leading kubernetes platforms and containerized environments. The tools and capabilities delivered as a service, allow organizations to develop and deploy applications without the need to manage the underlying infrastructure.\nOur offer encompasses innovative SaaS and PaaS solutions like IT service management, controlled automation, API Gateways and AI/MLOps platforms. We provide the computational resources, specialized tools and highly skilled experts for a complete visibility, dynamic scalability, and secure operations across cloud infrastructure.",
+        "expertises": [
+          "Managed Kubernetes & Container Platforms",
+          "Platforms as a Service (API, AI, DEVSECOPS, …)",
+          "Managed Application & SaaS Hosting",
+          "IT Service Management as a Service",
+          "Secrets Vault (VaaS)"
+        ],
+        "partners": [
+          "Redhat",
+          "VMware",
+          "Nutanix",
+          "Gitlab",
+          "HashiCorp"
+        ]
+      },
+      "business-resilience-data-protection": {
+        "title": "Business Resilience & Data Protection",
+        "overview": "As cyberattacks on digital infrastructure and sensitive data flows continues its upward trajectory, ensuring business resilience and data protection play a pivotal role in shaping the future of cloud transition and operation strategies.\nMunisys protects your on-premises and cloud infrastructure by setting up a distributed model, based on active-passive or active-active architectures, that inherently reduce risks by eliminating a single point of failure and improving responsiveness. Site recovery environments are set up in our data centers with adequate RPO and RTO parameters, secure networks, and encrypted datastores. Leveraging advanced observability solutions, we analyze usage trends, detect anomalies, set proactive alerts and accelerate troubleshooting and recovery operations.\nMunisys protects also your production data by providing an enterprise-class cloud backup services for recovering critical workloads and protecting SaaS, cloud-native, and on-premises data sources. To help organizations minimize data loss or ransomware risks, our services enable swift recovery through advanced safeguards, such as secure access controls, regular backup schedules, immutable backups, air-gapped storage, and data encryption.\nCombining core Clean Room capabilities from our data protection solutions partners with cyberattack response and managed services expertise from Munisys security teams, we are able to provide you with a clean room solution intending to establish on-demand, air-gapped response environment, along with integrated forensic analysis and recovery tools and services.",
+        "expertises": [
+          "Backup as a Service",
+          "Disaster Recovery as a Service (DRaaS)",
+          "Clean room service"
+        ],
+        "partners": [
+          "Cohesity",
+          "Veeam"
+        ]
+      },
+      "managed-security-services": {
+        "title": "Managed Security Services",
+        "overview": "As cloud adoption rises, many organizations struggle to transform security across infrastructure, cloud platforms, and applications from a compliance requirement into a strategic advantage.\nMunisys offers cloud-based, integrated, and scalable solutions that provide advanced defensive security capabilities without the need for on-premises hardware, software or expert knowledge, ensuring businesses are consistently well-prepared for any unforeseen disruptions through comprehensive and continuous protection of their digital assets.\nAiming to safeguard your entire data and application lifecycle, our proactive and holistic approach-based security services, combined with proven methodologies and expert-led capabilities, enable us to monitor your infrastructure 24/7, to focus on preventing incidents before they happen, and to detect and respond as quickly and effectively as possible.",
+        "expertises": [
+          "Access Control & Privileged Access management",
+          "Patch and Vulnerability Management",
+          "Endpoint Detection & Response",
+          "Managed Network Security",
+          "Managed SOC, XDR (eXtended Detection/Response)",
+          "AppSec aaS (Application Security Testing, cloud-native applications security, Managed DevSecOps Tooling)"
+        ],
+        "partners": [
+          "Palo Alto",
+          "Fortinet",
+          "Redhat",
+          "OpenText"
+        ]
+      },
+      "advisory-professional-management-services": {
+        "title": "Advisory, Professional and Management Services",
+        "overview": "Our end-to-end services are designed to support you at every stage of your digital transformation journey, securing transitions and aligning with specific business goals:\n- Assessment & Advisory services to define tailored dedicated infrastructure and cloud architecture strategies,\n- Deployment & Migration services spanning activities from planning, data acquisition/transfer, configuration, automation to platform and application integration,\n- Optimization & Alignment services enhancing performance, efficiency, and scalability of the running environments,\n- Management services ensuring high availability, cost reduction, security, and observability.\nYou may entrust your selected services to our experts in full-managed mode or choose between a self-managed mode through cloud-based interface, co-managed mode or even a management mode adapted to your distinctive needs and specific context.\nThese services are delivered mainly by our own teams of cloud architects, DevOps engineers, security specialists, infrastructure experts and certified project managers.",
+        "expertises": [
+          "Cloud & IT assessment and advisory services",
+          "Professional Services (Deployment, Configuration, Automation, Support)",
+          "Cloud Migration",
+          "Operations and Infrastructure Optimization & Alignment",
+          "Comprehensive Management Services"
+        ],
+        "partners": []
+      },
+      "digital-workplace": {
+        "title": "Digital Workplace",
+        "overview": "The digital workplace holds a central role in the ability of users to fully benefit from and embrace modern work and collaboration processes. The place is not what matters most, but the combination of technologies that will allow to efficiently and securely work, share and communicate, with the additional benefit of an improved work/life balance.\nThe unique combination of expertise that Munisys brings allows us to design, deploy and support workplace technologies while also answering your needs related to security & data protection, virtualization & automation, monitoring & service management, ubiquitous assistance & support.",
+        "expertises": [
+          "Desktop and laptop computers selected based on performance needs, security requirements and environment constraints",
+          "Collaboration solutions",
+          "VDI solutions",
+          "Endpoint protection",
+          "Complete services portfolio tailored for the endpoint"
+        ],
+        "partners": [
+          "Dell",
+          "HP Inc.",
+          "Jabra",
+          "Lenovo",
+          "Logitech",
+          "Poly",
+          "Samsung"
+        ]
+      },
+      "printing-solutions": {
+        "title": "Printing Solutions",
+        "overview": "Printing is an essential part of business processes whenever paper is the most appropriate or the only possible way of sharing information.\nBased on market leading solutions, we assist you in choosing the right technologies and device range in order to make sure producing physical documents gives an edge to your teams and positively contributes to your customers’ experience.\nWe also offer country wide Managed Printing Services, that will provide you with a flexible, scalable, no interruption and cost optimized printing solution.",
+        "expertises": [
+          "Enterprise printing solutions",
+          "Managed Print Services"
+        ],
+        "partners": [
+          "Canon",
+          "Epson",
+          "HP Inc"
+        ]
+      },
+      "end-customer-facing-devices": {
+        "title": "End Customer Facing Devices",
+        "overview": "Besides computing, printing and workplace related technologies, the Endpoint encompasses a large range of devices and software aiming to offer the end customer the most suitable interface to access the many services that digital has made possible.\nA very efficient way to engage with your customers when offering digitized and digital services is to deploy intelligent kiosks that will promote self-service. We give our customers the possibility to freely design such kiosks and to very closely match their requirements in terms of physical shape and size and to include any functionality to be offered to the end user, ranging from printer to document scanner, from ID card Reader to biometric devices and payment terminals. A well-designed kiosk solution can significantly relief the front office personnel and let them focus on value-added customer face to face interactions.\nIn the process of moving growingly toward digital services, some specific categories of devices are needed, among which digital ID acquisition or digital signature capture. In order to assist our clients in implementing these functions in an efficient and reliable way and to offer all the required integration possibilities, we have selected specialized devices from leading vendors. They offer a complete solution, especially in the banking sector, but also in general anywhere a customer ID and/or signature are necessary within a workflow.",
+        "expertises": [
+          "Intelligent kiosks",
+          "Scanners / readers",
+          "ID card / biometry readers",
+          "Digital signature pads"
+        ],
+        "partners": [
+          "Faytech",
+          "Secugen",
+          "Signotec"
+        ]
+      }
+    },
+    "services": {
+      "heroTitle": "Services",
+      "heroDesc": "Des services professionnels et opérationnels pour vous aider à faire les bons choix technologiques, concevoir des architectures solides et les déployer selon les meilleures pratiques.",
+      "sections": [
+        {
+          "title": "Intégration Informatique & Support",
+          "items": [
+            {
+              "title": "Services d'intégration",
+              "desc": "À chaque étape du cycle de vie de vos infrastructures informatiques, nos services professionnels et opérationnels vous aideront à faire les bons choix technologiques, à concevoir les architectures les plus solides et à les déployer selon les règles de l'art.",
+              "features": [
+                "Conception et validation d'architecture",
+                "Déploiement technologique",
+                "Migration de systèmes et mises à niveau"
+              ]
+            },
+            {
+              "title": "Services de support informatique",
+              "desc": "Nos services de support réactifs et proactifs garantissent une disponibilité et une continuité maximales de vos actifs technologiques. Nous atténuons les risques grâce à des SLA stricts et une expertise technique dédiée.",
+              "features": [
+                "Gestion des incidents 24/7",
+                "Bilans de santé proactifs",
+                "Remplacement matériel (RMA)"
+              ]
+            },
+            {
+              "title": "Services Gérés",
+              "desc": "Déléguez vos opérations informatiques quotidiennes à nos experts certifiés, permettant à vos équipes internes de se concentrer sur les initiatives stratégiques. Nous assurons une surveillance 24/7 et une maintenance proactive.",
+              "features": [
+                "Surveillance des infrastructures",
+                "Centre des opérations de sécurité (SOC)",
+                "Gestion du cloud et des sauvegardes"
+              ]
+            }
+          ]
+        }
+      ],
+      "heroLabel": "SERVICES PROFESSIONNELS"
+    },
+    "careers": {
+      "heroTitle": "Façonnez<br>l'avenir",
+      "heroDesc": "Rejoignez Munisys et travaillez avec des technologies d'infrastructure de pointe pour accélérer la transformation numérique des grandes entreprises.",
+      "whyTitle": "Pourquoi Munisys ?",
+      "whyDesc": "Nous offrons un environnement où l'excellence rencontre l'innovation. Développez votre carrière avec les leaders du secteur.",
+      "reasons": [
+        {
+          "title": "Innovation",
+          "desc": "Travaillez avec des technologies de pointe et façonnez la transformation numérique des grandes entreprises au Maroc et au-delà."
+        },
+        {
+          "title": "Excellence",
+          "desc": "Rejoignez une équipe d'experts hautement certifiés et évoluez dans une culture d'apprentissage continu et de haute performance."
+        },
+        {
+          "title": "Impact",
+          "desc": "Votre travail sécurisera et optimisera directement l'infrastructure de base des plus grandes institutions de la région."
+        }
+      ],
+      "jobsTitle": "Postes Ouverts",
+      "jobs": [
+        {
+          "title": "Architecte Cloud Senior",
+          "meta": "Rabat • Temps Plein"
+        },
+        {
+          "title": "Ingénieur Sécurité Réseau",
+          "meta": "Casablanca • Temps Plein"
+        }
+      ]
+    },
+    "customerReferences": {
+      "heroTitle": "Références Clients",
+      "heroDesc": "Un conseiller de confiance au service d'un grand nombre d'acteurs économiques et d'entités publiques de premier plan au Maroc.",
+      "title": "Trusted by Industry Leaders",
+      "desc": "We give the highest priority to integrity, fulfillment of our commitments and long-term partnerships. This has earned us a leading position within the Moroccan IT industry.",
+      "customers": [
+        "Attijariwafa bank",
+        "Autoroutes du Maroc",
+        "Bank Al-Maghrib",
+        "BANK OF AFRICA",
+        "BANQUE POPULAIRE",
+        "CDG",
+        "EURAFRIC",
+        "Maroc Telecom",
+        "inwi",
+        "LafargeHolcim",
+        "MARBIO",
+        "OCP",
+        "ONCF",
+        "Redal"
+      ],
+      "references": [
+        {
+          "name": "Banque Populaire",
+          "logo": "/images/logos/bp.svg"
+        },
+        {
+          "name": "Bank Of Africa",
+          "logo": "/images/logos/boa.png"
+        },
+        {
+          "name": "Bank Al-Maghrib",
+          "logo": "/images/logos/bam.png"
+        },
+        {
+          "name": "Attijariwafa Bank",
+          "logo": "/images/logos/awb.svg"
+        },
+        {
+          "name": "CDG",
+          "logo": "/images/logos/cdg.svg"
+        },
+        {
+          "name": "ONCF",
+          "logo": "/images/logos/oncf.png"
+        },
+        {
+          "name": "OCP",
+          "logo": "/images/logos/ocp.svg"
+        },
+        {
+          "name": "Marbio",
+          "logo": "/images/logos/marbio.svg"
+        },
+        {
+          "name": "LafargeHolcim",
+          "logo": "/images/logos/lafarge.svg"
+        },
+        {
+          "name": "Inwi",
+          "logo": "/images/logos/inwi.svg"
+        }
+      ],
+      "heroLabel": "Références Clients"
+    },
+    "insights": {
+      "heroTitle": "ACTUALITÉS",
+      "heroDesc": "Stay updated with the latest news, press releases, and technological insights from Munisys.",
+      "posts": [
+        {
+          "title": "UNE NOUVELLE IDENTITÉ VISUELLE POUR MUNISYS",
+          "category": "ACTUALITÉS"
+        },
+        {
+          "title": "OUVERTURE DU NOUVEAU SIÈGE SOCIAL",
+          "category": "ENTREPRISE"
+        },
+        {
+          "title": "PARTENARIAT D'INVESTISSEMENT HELIOS - FIPAR",
+          "category": "COMMUNIQUÉ"
+        },
+        {
+          "title": "MUNISYS LANCE LA NOUVELLE SOLUTION CLOUD",
+          "category": "ÉVÉNEMENT"
+        },
+        {
+          "title": "Securing the Hybrid Workplace",
+          "category": "Whitepaper"
+        },
+        {
+          "title": "Munisys wins Top Integrator Award 2026",
+          "category": "News"
+        }
+      ],
+      "learnMore": "En savoir plus &rarr;"
+    },
+    "technologyPartners": {
+      "heroTitle": "Technology Partners",
+      "heroDesc": "We partner with the world's leading technology vendors to provide best-of-breed solutions for your enterprise infrastructure.",
+      "title": "Our Ecosystem",
+      "desc": "Munisys maintains the highest level of certifications and partnerships with global IT leaders. This ensures we can design and deploy solutions using the most advanced and reliable technologies available.",
+      "partners": [
+        {
+          "name": "Cisco",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisco_logo_blue_2016.svg",
+          "category": "Réseaux"
+        },
+        {
+          "name": "Dell Technologies",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dell_logo_2016.svg",
+          "category": "Infrastructure"
+        },
+        {
+          "name": "VMware",
+          "logo": "/images/logos/vmware.svg",
+          "category": "Virtualisation"
+        },
+        {
+          "name": "Fortinet",
+          "logo": "/images/logos/fortinet.svg",
+          "category": "Sécurité"
+        },
+        {
+          "name": "Microsoft",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg",
+          "category": "Cloud & Logiciel"
+        },
+        {
+          "name": "IBM",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM_logo.svg",
+          "category": "Solutions d'Entreprise"
+        }
+      ]
+    },
+    "solutionsIndex": {
+      "heroTitle": "Our Solutions",
+      "heroDesc": "We design resilient, future-proof IT architectures aligned with your strategic objectives. From core infrastructure to endpoint security, our solutions scale with your business.",
+      "title": "Core Infrastructure & Cybersecurity",
+      "desc": "Munisys leverages its unique and extensive experience to help IT organizations to setup, manage, secure and seamlessly run consistent compute, storage, networking and backup infrastructure across data centers and public clouds, through either traditional or software-defined approaches.\n\nOur focus covers a wide range of technologies, ensuring robust performance, compliance, and end-to-end visibility across all your digital assets."
+    },
+    "aboutUs": {
+      "heroTitle": "About Us",
+      "heroDesc": "Learn more about Munisys, our history, our values, and our commitment to digital excellence.",
+      "desc": "Munisys is a leading IT integration company in Morocco...",
+      "subtitle": "NOTRE HÉRITAGE",
+      "storyTitle": "Qui Nous Sommes",
+      "storyP1": "Depuis notre création, Munisys est à la pointe de l'innovation technologique. Nous pensons que la technologie est le grand égalisateur, permettant aux entreprises de se développer, de sécuriser leurs actifs et de rationaliser leurs opérations comme jamais auparavant.",
+      "storyP2": "Notre équipe d'experts certifiés travaille sans relâche pour concevoir et déployer des solutions informatiques qui ne sont pas seulement robustes, mais aussi prêtes pour l'avenir. En combinant une expertise sectorielle approfondie avec des outils de pointe, nous transformons des défis complexes en expériences numériques fluides.",
+      "timelineTitle": "Notre Parcours",
+      "timeline": [
+        {
+          "year": "1993",
+          "text": "Fondation avec la vision de fournir des services d'infrastructure informatique exceptionnels aux entreprises locales."
+        },
+        {
+          "year": "2005",
+          "text": "Élargissement de notre portefeuille pour inclure la cybersécurité avancée et l'intégration réseau."
+        },
+        {
+          "year": "2015",
+          "text": "Lancement de notre division de services gérés, offrant une surveillance proactive 24/7 et un SOC."
+        },
+        {
+          "year": "2024",
+          "text": "Leader de l'ère de la transformation Cloud-Native, en partenariat avec les géants mondiaux de la technologie."
+        }
+      ],
+      "heroMainTitle": "Stimuler la Transformation Numérique"
+    },
+    "test": {
+      "description1": "Ceci est une image de test. En mode admin, cliquez dessus pour la changer.",
+      "image1": "/slide1.png",
+      "gridImage1": "/slide1.png",
+      "gridImage2": "/slide2.png",
+      "gridImage3": "/slide3.png",
+      "circularImage": "/slide2.png",
+      "heroImage": "/hero.png",
+      "heroTitle": "Titre Hero Éditable",
+      "heroSubtitle": "Sous-titre également éditable en mode admin"
+    },
+    "navigation": {
+      "brandName": "MUNISYS",
+      "ctaLabel": "Contact",
+      "links": {
+        "solutions": "Solutions (FR)",
+        "contact": "Contactez-nous"
+      },
+      "mainLinks": [
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "Références clients",
+          "href": "/customer-references"
+        },
+        {
+          "label": "Partenaires technologiques",
+          "href": "/technology-partners"
+        },
+        {
+          "label": "Actualités",
+          "href": "/insights"
+        },
+        {
+          "label": "Carrières",
+          "href": "/careers"
+        },
+        {
+          "label": "À propos",
+          "href": "/about-us"
+        }
+      ],
+      "megaMenu": [
+        {
+          "title": "Core Infrastructure Technologies",
+          "href": "/solutions#core-infra",
+          "items": [
+            {
+              "label": "Compute & storage",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Hyper converged infrastructures",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Data resilience",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Networking",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Cabling & data center environment",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#core-infra"
+            }
+          ]
+        },
+        {
+          "title": "Cybersecurity",
+          "href": "/solutions#cybersecurity",
+          "items": [
+            {
+              "label": "Endpoint Security",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Network Security",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Cloud & Application Security",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Identity and Access Management",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Visibility & Compliance",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#cybersecurity"
+            }
+          ]
+        },
+        {
+          "title": "Infrastructure software",
+          "href": "/solutions#infra-software",
+          "items": [
+            {
+              "label": "Service & Asset Management",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Observability, Automation & Orchestration",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Data Management & Analytics",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Application modernization",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Data resilience",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#infra-software"
+            }
+          ]
+        },
+        {
+          "title": "Managed & Cloud Services",
+          "href": "/solutions#managed-cloud",
+          "items": [
+            {
+              "label": "Hosting and Cloud Infrastructure Services",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Application and Platforms Services",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Business Resilience & Data Protection",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Managed Security Services",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Advisory, Professional and Management Services",
+              "href": "/solutions#managed-cloud"
+            }
+          ]
+        },
+        {
+          "title": "Endpoint solutions",
+          "href": "/solutions#endpoint",
+          "items": [
+            {
+              "label": "Digital workplace",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Printing solutions",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "End customer facing devices",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Technology partners",
+              "href": "/solutions#endpoint"
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "brandName": "MUNISYS",
+      "linkedinLabel": "Follow us on LinkedIn",
+      "linkedinUrl": "#",
+      "copyright": "© 2026 Munisys. All rights reserved.",
+      "legal": "Privacy Policy · Legal Notice",
+      "columns": [
+        {
+          "title": "Solutions",
+          "links": [
+            {
+              "label": "Core Infrastructure",
+              "href": "/solutions/core-infrastructure"
+            },
+            {
+              "label": "System Integration",
+              "href": "/solutions/infrastructure-software/system-integration"
+            },
+            {
+              "label": "Cybersecurity",
+              "href": "/solutions/cybersecurity"
+            },
+            {
+              "label": "Cloud Services",
+              "href": "/solutions/managed-and-cloud-services"
+            }
+          ]
+        },
+        {
+          "title": "About",
+          "links": [
+            {
+              "label": "About us",
+              "href": "/about-us"
+            },
+            {
+              "label": "Careers",
+              "href": "/careers"
+            },
+            {
+              "label": "Insights",
+              "href": "/insights"
+            },
+            {
+              "label": "Customer references",
+              "href": "/customer-references"
+            }
+          ]
+        },
+        {
+          "title": "Partners",
+          "links": [
+            {
+              "label": "Technology partners",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "Become a partner",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "Certifications",
+              "href": "/technology-partners"
+            }
+          ]
+        },
+        {
+          "title": "Contact",
+          "links": [
+            {
+              "label": "contact@munisys.ma",
+              "href": "#"
+            },
+            {
+              "label": "Casablanca, Morocco",
+              "href": "#"
+            },
+            {
+              "label": "+212 5XX XXX XXX",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "ar": {
+    "theme": {
+      "bordeaux": "#922b55",
+      "blueDark": "#1d4e79",
+      "blueLight": "#83a5c2",
+      "bgGray": "#f8fafc",
+      "textGray": "#475569"
+    },
+    "homepage": {
+      "slides": [
+        {
+          "h1": "نقوم بتنسيق تقنيات <strong>البنية التحتية الرقمية</strong> <strong>لتجربة عملاء</strong> فريدة",
+          "meta": "البنية التحتية الأساسية",
+          "desc": "قم بإعداد وإدارة وتأمين الحوسبة والتخزين والشبكات عبر مراكز البيانات والسحابات العامة من خلال حلولنا الرائدة التي تركز على البيانات.",
+          "btnText": "الحلول التي نقدمها"
+        },
+        {
+          "h1": "نقوم بتصميم <strong>البنى والتكاملات</strong> مع وضع <strong>تكنولوجيا المعلومات</strong> المستقبلية الخاصة بك في الاعتبار",
+          "meta": "الأمن السيبراني",
+          "desc": "قم بتأمين شبكتك ونقاطك النهائية وبياناتك ضد التهديدات الرقمية المتطورة من خلال البنى الخالية من الثقة والمراقبة الاستباقية.",
+          "btnText": "اكتشف الأمان"
+        },
+        {
+          "h1": "نحن نهتم <strong>بالبنية التحتية الرقمية الخاصة بك</strong> حتى تتمكن من <strong>تقديم خدمات مبتكرة لعملائك</strong>",
+          "meta": "الخدمات المدارة",
+          "desc": "التكامل السحابي السلس والخدمات المدارة لتسريع رحلة التحول الرقمي مع ضمان التوافر العالي.",
+          "btnText": "خدمات الحوسبة السحابية"
+        }
+      ],
+      "services": [
+        {
+          "title": "خدمات التكامل (الربط التقني)",
+          "body": "في كل مرحلة من مراحل دورة حياة البنية التحتية لتكنولوجيا المعلومات الخاصة بك، ستساعدك خدماتنا الاحترافية والتشغيلية على اتخاذ الخيارات التكنولوجية الصحيحة وتصميم البنى السليمة ونشرها وفقًا لأفضل الممارسات، وكل ذلك تحت إشراف ومراقبة مديري المشاريع لدينا."
+        },
+        {
+          "title": "خدمات دعم تكنولوجيا المعلومات",
+          "body": "تضمن خدمات الدعم التفاعلية والاستباقية التي نقدمها أن تظل بنيتك التحتية صحية، مما يقلل من وقت التوقف عن العمل ويحسن الأداء."
+        },
+        {
+          "title": "الخدمات المدارة:",
+          "body": "قم بتفريغ عمليات تكنولوجيا المعلومات اليومية لخبرائنا المعتمدين، مما يسمح لفرقك الداخلية بالتركيز على مبادرات الأعمال الاستراتيجية."
+        }
+      ],
+      "customers": [
+        "بنك التجاري وفا",
+        "أوتوروتس دو ماروك",
+        "بنك المغرب",
+        "مصرف أفريقيا  \"Bank of Africa`` - أوغندا",
+        "1 - مصرف برد بنك بوبيلير",
+        "باريس",
+        "يوروافريك",
+        "اتصالات المغرب",
+        "إينوي",
+        "لافارج هولسيم",
+        "ماربيو",
+        "OCP",
+        "ONCF"
+      ],
+      "sections": {
+        "servicesTitle": "خدماتنا",
+        "servicesDesc": "كتالوج شامل لخدمات تكنولوجيا المعلومات لتغطية دورة الحياة الكاملة للبنية التحتية لتكنولوجيا المعلومات الخاصة بك",
+        "whyTitle": "لماذا تختار مونيسس",
+        "customersTitle": "هؤلاء يثقون بنا",
+        "solutionsTitle": "الحلول",
+        "solutionContentTitle": "البنية التحتية والتقنيات",
+        "solutionContentDesc": "تستفيد Munisys من خبرتها الفريدة والواسعة لمساعدة مؤسسات تكنولوجيا المعلومات على إعداد وإدارة وتأمين وتشغيل بنية تحتية متسقة للحوسبة والتخزين والشبكات والنسخ الاحتياطي عبر مراكز البيانات والسحابات العامة بسلاسة، من خلال الأساليب التقليدية أو المحددة بالبرمجيات.<br><br>نحن نركز على مجموعة من الحلول الرائدة والقابلة للتكيف والفعالة التي تركز على البيانات والتي توفر تجربة تشغيل سحابية أصلية وإدارة قائمة على الذكاء الاصطناعي وأمانًا محسنًا وأداءً محسنًا.",
+        "offeringsTitle": "مقدمو الخدمات",
+        "offeringsDesc": "عرض شامل ومتماسك للحلول والخدمات للبنى التحتية الرقمية الآمنة",
+        "insightsTitle": "الاستنتاجات",
+        "insightsCard1": "هوية بصرية جديدة لمونيسس",
+        "insightsCard2": "المقر الجديد",
+        "insightsCard3": "بيان صحفي",
+        "customersDesc": "بصفتنا مستشارًا موثوقًا به، نتأكد من أن مساهمتنا في تصميم الحلول التكنولوجية ونشرها ودعمها داخل المؤسسات التي نخدمها يتم تقديمها في مصلحتها الفضلى، مع إعطاء الأولوية القصوى للنزاهة والوفاء بالتزاماتنا والشراكات طويلة الأجل. وقد أكسبنا هذا مكانة رائدة في صناعة تكنولوجيا المعلومات المغربية على أساس التعاون الدائم والمثمر مع عدد كبير من الجهات الفاعلة الاقتصادية الكبيرة والمتوسطة الحجم وكيانات الدولة.",
+        "solutionReadMoreLabel": "اقرا المزيد",
+        "customersSeeAllLabel": "عرض الكل",
+        "partnersTitle": "شركاء التكنولوجيا",
+        "partnersDesc": "تقع البنى التحتية لتكنولوجيا المعلومات التي نقوم بتصميمها ونشرها لعملائنا في صميم أعمالهم وتحدد قدرتهم على الابتكار والتميز. نحن نبني علاقات قوية مع شركائنا في التكنولوجيا ونكتسب الخبرة الداخلية لضمان المرونة الحقيقية وخفة الحركة.",
+        "partnersLinkText": "اقرا المزيد",
+        "insightsCard1Title": "مونيسيس",
+        "insightsCard3Top": "هيليوس",
+        "insightsCard3Mid": "شركاء الاستثمار",
+        "insightsCard3Bot": "فيبار",
+        "referencesTitle": "هم يثقون بنا",
+        "referencesDesc": "بصفتنا مستشارًا موثوقًا به، يتم تقديم مساهمتنا في تصميم ونشر ودعم الحلول التكنولوجية بما يخدم أفضل مصالح عملائنا، مع إعطاء الأولوية للنزاهة والشراكات طويلة الأجل.",
+        "referencesLinkText": "عرض جميع المراجع",
+        "figuresTitle": "بعض<br />الأرقام"
+      },
+      "images": {
+        "slide1": "/slide1.png",
+        "slide2": "/slide2.png",
+        "slide3": "/slide3.png",
+        "solutionsDC": "/datacenter.png",
+        "insightsHQ": "/datacenter.png"
+      },
+      "offeringsThrough": [
+        "أفضل تقنيات السلالة",
+        "التكاملات الماهرة",
+        "بنيات الصوت",
+        "الأتمتة والتنسيق",
+        "خدمات شاملة مؤهلة"
+      ],
+      "offeringsAchieve": [
+        "الاستخدام الفعال للتقنيات المتقاربة",
+        "السيطرة على التعقيد",
+        "عمليات تكنولوجيا المعلومات المبسطة",
+        "موارد البنية التحتية الرشيقة",
+        "الأداء الأمثل والمرونة الحقيقية",
+        "قدرات دعم عميقة وواسعة"
+      ],
+      "solutionMenuItems": [
+        "البنية التحتية والتقنيات",
+        "حلول الأمن السيبراني",
+        "برنامج البنية التحتية",
+        "الخدمات السحابية المُدارة",
+        "حلول نقطة النهاية"
+      ],
+      "heroCTALabel": "الحلول التي نقدمها",
+      "figures": [
+        {
+          "num": "34",
+          "label": "عدد سنوات الخبرة في العمل",
+          "prefix": "+"
+        },
+        {
+          "num": "330",
+          "label": "الموظفين",
+          "prefix": ""
+        },
+        {
+          "num": "700",
+          "label": "إيرادات MMAD",
+          "prefix": ""
+        },
+        {
+          "num": "18",
+          "label": "مراكز الدعم<br/>",
+          "prefix": ""
+        }
+      ],
+      "bentoSolutions": [
+        {
+          "title": "تقنيات البنية التحتية الأساسية<br/>",
+          "desc": "البنية التحتية للحوسبة والتخزين والشبكات والنسخ الاحتياطي عبر مراكز البيانات والسحابات العامة باستخدام حلول رائدة تركز على البيانات.",
+          "btn": "اقرا المزيد"
+        },
+        {
+          "title": "حلول الأمن السيبراني<br/>",
+          "desc": "هياكل أمنية شاملة لحماية أصولك الرقمية من التهديدات المتطورة.",
+          "btn": "استكشف"
+        },
+        {
+          "title": "برامج البنية التحتية<br/>",
+          "desc": "مناهج محددة بالبرمجيات وتكاملات قوية لعمليات تكنولوجيا المعلومات الحديثة.",
+          "btn": ""
+        },
+        {
+          "title": "الخدمات السحابية المُدارة",
+          "desc": "عمليات سلسة عبر البيئات السحابية العامة والخاصة والهجينة.",
+          "btn": ""
+        },
+        {
+          "title": "حلول نقطة النهاية",
+          "desc": "تمكين القوى العاملة لديك بأجهزة حوسبة آمنة وفعالة.",
+          "btn": "عرض العروض"
+        }
+      ],
+      "offeringsThroughTitle": "من خلال",
+      "offeringsAchieveTitle": "نحقق",
+      "offeringsListThrough": [
+        "أفضل تقنيات السلالة",
+        "التكاملات الماهرة",
+        "بنيات الصوت",
+        "الأتمتة والتنسيق",
+        "خدمات شاملة مؤهلة"
+      ],
+      "offeringsListAchieve": [
+        "الاستخدام الفعال للتقنيات المتقاربة",
+        "السيطرة على التعقيد",
+        "عمليات تكنولوجيا المعلومات المبسطة",
+        "موارد البنية التحتية الرشيقة",
+        "الأداء الأمثل والمرونة الحقيقية",
+        "قدرات دعم عميقة وواسعة"
+      ]
+    },
+    "solutions": {
+      "compute-storage": {
+        "title": "الحوسبة والتخزين",
+        "overview": "نستخدم منهجيات مجربة لتصميم وبناء بنى تحتية حديثة للحوسبة والتخزين، مصممة للعمل في بيئات EDGE أو مركز البيانات أو البيئات السحابية الهجينة. تشمل حلولنا المتطورة خوادم رفوف قوية، وبنية تحتية ذات شفرات قابلة للتركيب، ومصفوفات تخزين الأشياء والكتل والملفات،... من أجل توفير الاتساق وتلبية الاحتياجات المحددة لأي عبء عمل، نختار مزيجًا من الحلول الأكثر أمانًا للمهام الحرجة أو الحساسة من حيث التكلفة أو القابلة للتوسع على نطاق واسع.\nيعد التوافر العالي والمرونة من المعايير الأساسية في تصميم مكونات البنية التحتية هذه. يتيح لنا استخدام المستوى المناسب من التكرار بالإضافة إلى أفضل تقنيات النسخ المتماثل المناسبة وتجاوز الأعطال التلقائي تلبية طلبات العملاء المتزايدة باستمرار لاستمرارية الأعمال والتعافي السريع من الكوارث.",
+        "expertises": [
+          "خوادم الحوسبة المستقلة والرفوف والشفرات",
+          "الحوسبة عالية الأداء",
+          "أنظمة تكنولوجيا المعلومات/التكنولوجيا التشغيلية المتقاربة",
+          "مصفوفات تخزين فلاش بالكامل للمبتدئين ومتوسطي المدى والمهام الحرجة",
+          "حلول تخزين الملفات والكتل والكائنات"
+        ],
+        "partners": [
+          "ديل",
+          "مؤسسة هيوليت باكارد",
+          "IBM"
+        ]
+      },
+      "hyper-converged-infrastructures": {
+        "title": "البنى التحتية فائقة التقارب",
+        "overview": "تعمل البنى التحتية الحديثة فائقة التقارب (HCI) على تبسيط عمليات مراكز البيانات، وتقليل الاعتماد على الأجهزة الخاصة وتوفير قابلية التوسع من خلال الدمج المحكم لخوادم الحوسبة الفردية ومصفوفات التخزين والشبكات لإنتاج مركز بيانات مرن ورشيق ويمكن إدارته بسهولة.\nيقوم مهندسو أنظمتنا وخبراء التسليم لدينا بتسخير القوة الكاملة لتقنيات المحاكاة الافتراضية الأساسية لـ HCI التي تمكن عملائنا من الاستفادة من نموذج استهلاك موارد مبتكر كخدمة.\nبفضل اتساع محافظ البنية التحتية عالية الكفاءة لشركائنا، فإننا نستفيد من العديد من الخيارات لنشر أفضل الموارد المادية والمحددة بالبرمجيات، مما يسمح لعملائنا بالاختيار بناءً على بنية بنيتهم التحتية الحالية وعملياتهم التشغيلية المعتمدة داخليًا.",
+        "expertises": [
+          "أجهزة HCI",
+          "HCI Ready - Nodes"
+        ],
+        "partners": [
+          "ديل",
+          "مؤسسة هيوليت باكارد",
+          "نوتانيكس",
+          "في إم وير"
+        ]
+      },
+      "data-resilience": {
+        "title": "مرونة البيانات",
+        "overview": "يعد ضمان استمرارية الأعمال من خلال توافر البيانات وسلامتها وإمكانية الوصول إليها عبر البنية التحتية لتكنولوجيا المعلومات أمرًا حيويًا لمؤسسات اليوم. يجب ألا يكون أي انقطاع غير متوقع أو حذف عرضي أو كيانات غير مصرح بها قادرة على تغيير القدرات التشغيلية أو استقرار بيئات تطبيقات الأعمال.\nتستفيد حلول مرونة البيانات الخاصة بنا من مجموعة شاملة من الخدمات الداخلية والسحابية بالإضافة إلى نهج آلي يوحد حماية البيانات من خلال النسخ الاحتياطي والتشفير وتخزين الكائنات مع توفير رؤية مركزية ومراقبة الموارد عبر جميع أعباء العمل والمواقع.",
+        "expertises": [
+          "أجهزة وبرامج حماية البيانات",
+          "أمن البيانات السحابية",
+          "تخزين غير قابل للتغيير بفجوات هوائية"
+        ],
+        "partners": [
+          "ديل",
+          "مؤسسة هيوليت باكارد",
+          "Veeam",
+          "فيريتاس"
+        ]
+      },
+      "networking": {
+        "title": "التعارف والتواصل",
+        "overview": "يتطلب إجراء استراتيجية تحول رقمي ناجحة اتصالًا سلسًا ووصولًا إلى البيانات لكل من المستخدمين والتطبيقات. يعد إعداد منصات شبكات سلكية ولاسلكية وشبكة SD - WAN آمنة وقابلة للتطوير أمرًا حيويًا لمعالجة حالات الاستخدام الحرجة للأعمال.\nتمتد محفظة شبكات شركائنا من طبقة الحافة إلى السحابة وتخلق أساسًا قابلاً للتطوير وآليًا ومتمحورًا حول الخدمة وذكيًا لاتصال آمن للبنية التحتية الموحدة.\nتساعد حلولنا في اكتساب الرؤية والتحكم في الأداء الفعلي الذي تقدمه الشبكة مع تبسيط العمليات والتخفيف من المخاطر، وكلها مدعومة بالإدارة القائمة على الذكاء الاصطناعي وقدرات إنفاذ السياسات.",
+        "expertises": [
+          "الشبكة المحلية الأساسية لمركز البيانات",
+          "إيدج نتوركس",
+          "الشبكة المحلية اللاسلكية",
+          "SD-WAN (شبكة واسعة النطاق معرّفة بالبرمجيات)"
+        ],
+        "partners": [
+          "HPE/Aruba",
+          "سيسكو"
+        ]
+      },
+      "cabling-data-center-environment": {
+        "title": "بيئة الكابلات ومراكز البيانات",
+        "overview": "على المستوى الأساسي، تبدأ البنية التحتية لتكنولوجيا المعلومات بالبيئة التي ستستضيف مكوناتها الأكثر أهمية وستسمح لها بالعمل في ظروف مثالية وآمنة.\nيقدم فريق بيئة الكابلات ومراكز البيانات لدينا خبرة مثبتة ومجموعة سليمة من الحلول التي تساعد عملائنا على أن يكونوا واثقين تمامًا من أن تقنيات تكنولوجيا المعلومات المادية التي تعتمد عليها عملياتهم ستستفيد من أنظمة الكابلات والحامل والطاقة والمراقبة الموثوقة والقابلة للإدارة والآمنة.",
+        "expertises": [
+          "رفوف ذكية",
+          "أمن الطاقة وتوزيعها",
+          "أنظمة كابلات عالية الكثافة",
+          "جرد الأصول والموقع",
+          "مراقبة بيئة مركز البيانات"
+        ],
+        "partners": [
+          "Corning",
+          "ايتون",
+          "ليجراند",
+          "R(بالمتر)",
+          "رمز RFCode",
+          "شنايدر إلكتريك"
+        ]
+      },
+      "endpoint-security": {
+        "title": "أمان نقطة النهاية",
+        "overview": "تبدأ جهود الخصوم السيبرانيين لتجاوز دفاعات الشركات عادةً باستهداف نقاط النهاية لأنها كانت دائمًا أكثر أصول الشركة عرضة للهجمات، بغض النظر عن مكان وجودها داخل شبكة الشركة أو خارجها، واستغلال عوامل متعددة مثل الأخطاء البشرية، والتكوينات الخاطئة للجهاز، وخروقات البرامج، وكلمات المرور الضعيفة، والتصحيحات المفقودة، وغيرها الكثير.\nتوفر حلول Munisys’s Endpoint Security ميزات مراقبة وحماية شاملة لأجهزة الكمبيوتر المكتبية وأجهزة الكمبيوتر المحمولة والهواتف الذكية والطابعات وغيرها من أجهزة المستخدم المتصلة. ويشمل ذلك اكتشاف التهديدات ومنعها والاستجابة لها مثل العدوى بالفيروسات وهجمات يوم الصفر والتصيد الاحتيالي وبرامج الفدية. كما يتم الاستفادة من القدرات المتقدمة لتوفير مستويات أعلى من الحماية مثل تحليل السلوك الشاذ، والإنفاذ التلقائي، وضوابط الأمان الديناميكية.\nنحن نقدر أيضًا الأمان المدمج القائم على الأجهزة وقدرات الشفاء الذاتي المتقدمة كميزات متكاملة مدعومة بأجهزة نقطة نهاية محددة كجزء من كتالوج وحدة أعمال حلول EndPoint الخاصة بنا.",
+        "expertises": [
+          "الحماية من الفيروسات وبرامج الفدية",
+          "الكشف عن تهديدات نقاط النهاية والرد عليها",
+          "تحليلات استخدامات المستخدمين والكيانات",
+          "الحماية من تهديدات الويب والبريد"
+        ],
+        "partners": [
+          "إتش بي",
+          "TrendMicro",
+          "Kaspersky",
+          "PaloAlto Networks"
+        ]
+      },
+      "network-security": {
+        "title": "أمن الشبكات",
+        "overview": "يعتمد توافر الأصول الرقمية وسلامتها إلى حد كبير على النشر السلس للبنية التحتية للشبكة الآمنة للغاية مع تطبيق قابل للتطوير وآلي وقابل للإدارة لمجموعة شاملة من القواعد والسياسات.\nمع الانتشار في بيئات السحابة ومراكز البيانات للموارد الموزعة متعددة المواقع، والمحاكاة الافتراضية للتطبيقات والحاويات، بالإضافة إلى الاستخدام المكثف لحركة المرور المشفرة، تواجه فرق تكنولوجيا المعلومات تحديات أكبر لحماية الشبكة نفسها دون المساس بأدائها وتأمين أحمال عمل التطبيقات دون إعاقة الجهود المبذولة نحو تمكين تجربة مستخدم متميزة.\nمن خلال الجمع بين طبقات متعددة من الدفاعات، تضمن حلول أمن الشبكات الخاصة بنا حماية فعالة ضد الوصول غير المصرح به باستخدام تقنيات التحكم في الوصول إلى الشبكة، وإعداد تدابير وقائية تهدف إلى إحباط أي هجوم قادم من الخارج أو متداول داخل الشبكة باستخدام الجيل التالي من جدران الحماية وأنظمة IDS/IPS، وتوفير عزل رموز البرامج الضارة والكائنات باستخدام تقنيات Sandbox والاستجابة لسلوكيات النظام غير الطبيعية المكتشفة باستخدام حلول NDR.",
+        "expertises": [
+          "جدار حماية من الجيل التالي",
+          "التحكم في الوصول إلى الشبكة",
+          "حماية ضد هجمات حجب الخدمة الموزعة",
+          "كشف الشبكة والاستجابة لها (NDR)",
+          "آلية تحديد الوصول"
+        ],
+        "partners": [
+          "F5",
+          "فورتينت",
+          "PaloAlto Networks",
+          "Forcepoint",
+          "معيار التحقق",
+          "HPE/Aruba",
+          "مراقب البوابة"
+        ]
+      },
+      "cloud-application-security": {
+        "title": "أمن السحابة والتطبيقات",
+        "overview": "على مدى السنوات القليلة الماضية، شهد العالم تحولًا غير مسبوق نحو العمل عن بعد واعتماد الخدمات السحابية. تم وضع استراتيجيات لترحيل التطبيقات وخدمات واجهات برمجة التطبيقات والبيانات ذات الصلة بسرعة إلى البيئات السحابية التعاونية للاستفادة من المرونة المعززة وقدرات الابتكار الجديدة. ومع ذلك، فإن هذا يخلق أيضًا تغييرًا في النموذج في العمليات الرقمية وأمن الأصول.\nعزمًا منه على تبني التغيير، قام Munisys بإثراء محفظته من الحلول الأمنية بخبرة للمساعدة في توسيع نطاق الوصول الآمن والاتصال عالي الأداء للمستخدمين بغض النظر عن مواقعهم الجغرافية باستخدام تقنيات SASE وتمكين نقل التطبيقات ونقاط نهاية واجهة برمجة التطبيقات بأمان خارج محيط شبكة المؤسسة مع حلول متقدمة مصممة لدمج الضوابط الأمنية الفعالة طوال دورة حياتها التنموية.",
+        "expertises": [
+          "التطبيقات السحابية الأصلية وأمان واجهة برمجة التطبيقات",
+          "إدارة ثغرات التطبيق (SAST/DAST/IAST)",
+          "حلول حافة خدمة الوصول الآمن (SASE)",
+          "واجهة برمجة التطبيق/ النقل الآمن للملفات",
+          "أمان DNS"
+        ],
+        "partners": [
+          "أكسواي",
+          "Broadcom",
+          "Opentext",
+          "F5",
+          "PaloAlto Networks"
+        ]
+      },
+      "identity-and-access-management": {
+        "title": "إدارة الهوية وصلاحيات الوصول",
+        "overview": "لم يعد تأمين محيط حول شبكة مراكز البيانات كافياً لضمان الوصول الآمن إلى البيانات والتطبيقات والخدمات الحيوية للأعمال حيث تنتشر بشكل متزايد عبر مواقع متعددة أو حتى بيئات متعددة السحابات. اليوم، يجب على المنظمات نشر استراتيجية تتمحور حول الهوية لحماية كل اتصال بموارد المستخدم والتخفيف من المخاطر وتوفير حوكمة الوصول والامتثال واكتشاف التهديدات في الوقت الفعلي.\nمن خلال حلول وخدمات إدارة الهوية والوصول (IAM)، نساعدك على تنسيق السياسات عبر البيئات المحلية والبعيدة والسحابية للتحكم في الهويات ومنح الوصول المميز والمصادقة بدون كلمة مرور للقوى العاملة لديك وكذلك لعملائك.\nعلاوة على ذلك، تساعدك Munisys في إيجاد توازن صحيح بين إمكانية الوصول وضوابط الأمان حتى لا تعيق قدرتك على تقديم خدمات أعمال مرنة وقابلة للتطوير وفعالة.",
+        "expertises": [
+          "المصادقة متعددة العوامل (MFA)",
+          "حماية LDAP",
+          "إدارة الهوية الموحدة",
+          "وسيط أمن الوصول السحابي&#10;أو CASB.",
+          "إدارة الامتيازات"
+        ],
+        "partners": [
+          "فورتينت",
+          "فارونيس",
+          "Opentext",
+          "F5"
+        ]
+      },
+      "visibility-compliance": {
+        "title": "الرؤية والامتثال",
+        "overview": "يشمل النهج الشامل للأمن السيبراني نشر أنظمة وضوابط إنفاذ الأمن، واكتساب رؤية عميقة للأصول القيمة والتحقق باستمرار من امتثال تلك الأصول لسياسات الأعمال والمتطلبات التنظيمية.\nتعمل حلولنا على زيادة إمكانات الرؤية والامتثال من خلال توفير مراقبة الأحداث القابلة للتطوير، والأتمتة، وتحليلات مخزون الكربون العضوي في التربة، والإدارة عن بُعد المدققة، والمزيد.",
+        "expertises": [
+          "المعلومات الأمنية وإدارة الأحداث (SIEM)",
+          "Security Orchestration Automated Response (SOAR)",
+          "منصات استخبارات التهديدات.",
+          "إدارة الوصول المتميز",
+          "إدارة الثغرات الأمنية والتصحيحات",
+          "إدارة السياسات الأمنية"
+        ],
+        "partners": [
+          "شركة (Tenable)",
+          "واليكس",
+          "Opentext",
+          "Google - Mandiant",
+          "Rapid7"
+        ]
+      },
+      "service-asset-management": {
+        "title": "إدارة الخدمات والأصول",
+        "overview": "أدى التحول الرقمي إلى رفع تجربة العملاء بشكل كبير عبر الأسواق الرأسية، مما دفع كل مؤسسة إلى السعي لتبني مستويات مماثلة داخليًا من تقديم الخدمات لتجربة مستخدم نهائي جذابة وشبيهة بالمستهلك وذاتية الخدمة.\nتجاوز تمكين تقديم الخدمات المتمحورة حول تكنولوجيا المعلومات، تشمل حلول ميونيسيز المتوافقة مع تكنولوجيا المعلومات والسحابة مجموعة من السياسات والعمليات لإدارة ودعم خدمات الأعمال مثل الموارد البشرية والقانونية والأصول والمرافق والتسويق والتمويل.\nبفضل خبرتها المثبتة في تنفيذ عمليات إدارة الخدمات والأصول، وتطبيقات الهاتف المحمول الأصلية، والتعلم الآلي، وروبوتات الدردشة التي تعمل بالذكاء الاصطناعي، والتعاون الاجتماعي، والتحليلات المتقدمة، والتنسيق، فإن Munisys هي شريكك المتميز عند وضع الأساس لاستراتيجية تحسين الكفاءة في مؤسستك.",
+        "expertises": [
+          "إدارة خدمات المؤسسة",
+          "إدارة أصول تقنية المعلومات",
+          "CMDB والاكتشاف الديناميكي",
+          "\n          إدارة تراخيص برنامج "
+        ],
+        "partners": [
+          "Opentext"
+        ]
+      },
+      "observability-automation-orchestration": {
+        "title": "القابلية للملاحظة والأتمتة والتنسيق",
+        "overview": "أدى تطبيق تقنيات الأتمتة والتحليلات التنبؤية المتقدمة لتشغيل أصول وعمليات المؤسسة ومراقبتها وحمايتها إلى إحداث تغيير عميق في كيفية أداء عمليات تكنولوجيا المعلومات وإدارتها.\nعادة ما يتم إنشاء كميات هائلة من البيانات من خلال الاكتشاف المستمر والمراقبة على نطاق واسع للتطبيقات والخدمات والشبكات وتجربة المستخدم عبر البيئات السحابية والداخلية. من خلال تنفيذ حلول ارتباط آلية وذكية لتحليل مجموعات البيانات الضخمة هذه، يمكن للمؤسسات بسهولة استخلاص رؤى سريعة ومفيدة بالإضافة إلى معرفة دقيقة وفي الوقت المناسب بالقضايا التي تؤثر على أداء خدمات الأعمال ومستوياتها الصحية.\nيمكن أيضًا تعزيز الأتمتة بمحركات تنسيق قوية تساعد مشغلي تكنولوجيا المعلومات على تشغيل العمليات وسير العمل وجدولتها ومراقبتها بنشاط على نطاق المؤسسة.\nتوفر Munisys بخبرة لعملائها إمكانية الملاحظة الشاملة، والأتمتة، والتنسيق، وحلول المعالجة الاستباقية لزيادة كفاءة العملية، وتخفيف الضغط على فرق تكنولوجيا المعلومات مع القضاء على الجهود اليدوية والمتكررة، وخفض تكاليف تشغيل تكنولوجيا المعلومات، وتقليل انقطاع خدمات الأعمال.",
+        "expertises": [
+          "مراقبة البنية التحتية لمركز البيانات",
+          "مراقبة أداء التطبيق",
+          "منصات الأتمتة على مستوى المؤسسة",
+          "أتمتة عمليات الروبوتات"
+        ],
+        "partners": [
+          "Opentext",
+          "ريد هات",
+          "Broadcom"
+        ]
+      },
+      "data-management-analytics": {
+        "title": "إدارة البيانات والتحليلات",
+        "overview": "إن تحويل البيانات إلى رؤى ذات مغزى وقابلة للتنفيذ هو بلا شك أحد الجوانب الرئيسية لجعل الشركات قادرة على الحفاظ على قدرتها التنافسية وتجاوز توقعات السوق. حتى أن هذا أصبح رهانات على الطاولة في بعض القطاعات. في الواقع، لا يمكن لأي مؤسسات مالية تحمل عدم الاعتماد على تطبيقات البيانات الهامة مثل الكشف عن الاحتيال ومحاكاة المخاطر. لا يمكن لأي مزود اتصالات أن يتجاهل الأهمية الحاسمة لتحليلات الشبكة وتحليلات سلوك العملاء.\nتتعاون Munisys مع كبار اللاعبين في النظام البيئي لمنصات البيانات لتوفير أحدث مكونات إدارة البيانات الموزعة لمصدر البيانات وهيكلتها وحمايتها وتحليلها. سواء كانت تعمل على بيئات هجينة أو متعددة السحابة، فإن حلولنا تقدم معلومات استخباراتية عالية الجودة على مستوى المؤسسة بطريقة سريعة وفعالة من حيث التكلفة.",
+        "expertises": [
+          "منصات سحابية هجينة",
+          "تحليلات بيانات الذكاء الاصطناعي",
+          "أرشفة بيانات المؤسسة"
+        ],
+        "partners": [
+          "Opentext",
+          "التماسك"
+        ]
+      },
+      "application-modernization": {
+        "title": "تحديث التطبيق",
+        "overview": "تتمثل إحدى السمات المهمة لاستراتيجية التحول الرقمي المستدام في تحديث التطبيقات الحالية للاستفادة من البنية التحتية الافتراضية الأحدث والتقدم التكنولوجي السحابي لتحسين تحسين الموارد، وزيادة سرعة التطوير، وعمليات النشر المتكررة، وتحسين المرونة. من ناحية أخرى، يجب أن يحمي هذا النهج الاستثمارات القديمة، ويقدر الوظائف الحالية ويقلل من انقطاع الخدمة.\nبفضل قدرتها على إجراء جرد وتقييم شاملين للتطبيقات، تقدم Munisys خدمات مبتكرة تم إعدادها لمساعدة المنظمات على اختيار نمط هجرة صحيح نحو البنى التحتية السحابية المعتمدة حديثًا. تنطوي هذه الأنماط، مثل إعادة الاستضافة وإعادة التنظيم وإعادة الهيكلة، على مستويات مختلفة من الجهد والتعقيد ويتم اختيارها بناءً على ملاءمة الحاويات ومخاطر الأعمال والتبعيات عبر التطبيقات الجديدة أو القديمة.\nتعد Munisys بالتأكيد الشريك المناسب للشركات التي تعتزم تنفيذ خطة فعالة لتحديث التطبيقات لأن هذا يستلزم خبرة مثبتة في العديد من التقنيات المتقاطعة مثل منصات التطبيقات السحابية وبوابات واجهة برمجة التطبيقات والحاويات والخدمات المصغرة والأمن والأتمتة والتنسيق.",
+        "expertises": [
+          "تقييم تحديث التطبيق",
+          "منصات تنسيق الحاويات القائمة على Kubernetes",
+          "إعادة استضافة التطبيقات /إعادة بناء المنصات / إعادة الهيكلة",
+          "إدارة واجهة برمجة التطبيقات ",
+          "أمان تطبيق انعدام الثقة"
+        ],
+        "partners": [
+          "ريد هات",
+          "GitLab",
+          "Opentext"
+        ]
+      },
+      "hosting-and-cloud-infrastructure-services": {
+        "title": "خدمات الاستضافة والبنية التحتية السحابية",
+        "overview": "يعزز بناء البنية التحتية التقليدية لتكنولوجيا المعلومات في أماكن العمل المرونة والقدرة التنافسية ولكنه يأتي مع تحديات كبيرة مثل النفقات الرأسمالية الضخمة مقدماً، وقابلية التوسع المحدودة، ومهام الترقية والصيانة المستمرة. تؤدي مواجهة صعوبات في إدارة البنى متعددة المواقع أو متعددة التقنيات في كثير من الأحيان إلى عدم الكفاءة وزيادة التكاليف التشغيلية.\nتتصدى استضافة Munisys والبنية التحتية السحابية لهذه التحديات من خلال توفير موثوقية الأجهزة والبرامج، والتعافي من الكوارث، وزيادة قابلية التوسع، وتحسين التكلفة، وتعزيز إدارة الموارد مع إتاحة الوصول إلى فريق خبراء البنية التحتية النخبة دون الحاجة إلى بنائها داخليًا.\nاستنادًا إلى التزويد الآلي والتنسيق الموحد وإدارة البنية التحتية القائمة على واجهة برمجة التطبيقات، يتم تقديم حلولنا كمجموعة شاملة ومعيارية من الخدمات لتخطيط وإعداد وتشغيل الأنظمة التقليدية والبيئات السحابية الحديثة، بما في ذلك المواقع المشتركة والمنصات المخصصة والبنية التحتية السحابية الخاصة والهجينة والعامة.\nيتم تقديم خدماتنا ضمن مراكز بيانات معتمدة ومحايدة للناقلين وسيادية تستضيف بنية تحتية على مستوى المؤسسات. تلبي مراكز البيانات لدينا، التي تم تصميمها وتشغيلها من قبل شركة التطوير والتنمية البلدية، وهي شركة شقيقة، المتطلبات القضائية الصارمة التي تحتاجها القطاعات عالية التنظيم مثل التمويل والرعاية الصحية والخدمات العامة. تستفيد المؤسسات من هياكل متصلة بشكل آمن أو ذات فجوات هوائية، وتحكم محكم في الوصول، واتصال مرن",
+        "expertises": [
+          "تحديد موقع مركز البيانات",
+          "البنية التحتية الخاصة المدارة",
+          "البنية التحتية السحابية الخاصة والهجينة المدارة",
+          "البنية التحتية كخدمة (الأجهزة الافتراضية، أجهزة الكمبيوتر المكتبية الافتراضية، مراكز البيانات الافتراضية)",
+          "التخزين السحابي للكائنات (S3)"
+        ],
+        "partners": [
+          "شركة أم دي سي ",
+          "OVH",
+          "الدخل الشامل الآخر",
+          "مؤسسة هيوليت باكارد",
+          "ريد هات",
+          "في إم وير",
+          "نوتانيكس"
+        ]
+      },
+      "application-and-platforms-services": {
+        "title": "خدمات التطبيقات والمنصات",
+        "overview": "اليوم، يعتمد الابتكار المستمر وتحديث العمليات على المنصات التي توفر بيئات آلية ومدفوعة بواجهة برمجة التطبيقات وقابلة للتطوير لبناء واختبار ونشر التطبيقات الجاهزة للسحابة أو أعباء العمل السحابية الأصلية أو بدون خادم أو قدرات الذكاء الاصطناعي/تعلم الآلة.\nفي Munisys، نقوم بتصميم وتنفيذ وإدارة منصات kubernetes الرائدة والبيئات المعبأة في حاويات. تسمح الأدوات والقدرات المقدمة كخدمة للمؤسسات بتطوير التطبيقات ونشرها دون الحاجة إلى إدارة البنية التحتية الأساسية.\nيشمل عرضنا حلول SaaS و PaaS المبتكرة مثل إدارة خدمات تكنولوجيا المعلومات والأتمتة المتحكم فيها وبوابات API ومنصات AI/MLOps. نحن نقدم الموارد الحسابية والأدوات المتخصصة والخبراء ذوي المهارات العالية من أجل رؤية كاملة وقابلية ديناميكية للتوسع وعمليات آمنة عبر البنية التحتية السحابية.",
+        "expertises": [
+          "Kubernetes المدارة ومنصات الحاويات",
+          "المنصات كخدمة (API، AI، DEVSECOPS،...)",
+          "التطبيقات المدارة واستضافة SaaS",
+          "إدارة خدمات تكنولوجيا المعلومات كخدمة",
+          "قبو الأسرار (VaaS)"
+        ],
+        "partners": [
+          "ريد هات",
+          "في إم وير",
+          "نوتانيكس",
+          "GitLab",
+          "هاشي كورب"
+        ]
+      },
+      "business-resilience-data-protection": {
+        "title": "مرونة الأعمال وحماية البيانات",
+        "overview": "مع استمرار الهجمات الإلكترونية على البنية التحتية الرقمية وتدفقات البيانات الحساسة في مسارها التصاعدي، فإن ضمان مرونة الأعمال وحماية البيانات يلعبان دورًا محوريًا في تشكيل مستقبل استراتيجيات الانتقال والتشغيل السحابي.\nتحمي Munisys البنية التحتية المحلية والسحابية من خلال إنشاء نموذج موزع، يعتمد على البنى النشطة السلبية أو النشطة النشطة، والتي تقلل بطبيعتها من المخاطر من خلال القضاء على نقطة واحدة من الفشل وتحسين الاستجابة. يتم إعداد بيئات استعادة الموقع في مراكز البيانات الخاصة بنا مع معلمات RPO و RTO كافية، وشبكات آمنة، ومخازن بيانات مشفرة. بالاستفادة من حلول المراقبة المتقدمة، نقوم بتحليل اتجاهات الاستخدام واكتشاف الحالات الشاذة وتعيين تنبيهات استباقية وتسريع عمليات استكشاف الأخطاء وإصلاحها والتعافي.\nتحمي Munisys أيضًا بيانات الإنتاج الخاصة بك من خلال توفير خدمات النسخ الاحتياطي السحابية على مستوى المؤسسات لاستعادة أعباء العمل الحرجة وحماية SaaS ومصادر البيانات السحابية الأصلية والمحلية. لمساعدة المؤسسات على تقليل مخاطر فقدان البيانات أو برامج الفدية، تمكن خدماتنا الاسترداد السريع من خلال ضمانات متقدمة، مثل عناصر التحكم في الوصول الآمن، وجداول النسخ الاحتياطي المنتظمة، والنسخ الاحتياطية غير القابلة للتغيير، والتخزين الهوائي، وتشفير البيانات.\nمن خلال الجمع بين قدرات الغرفة النظيفة الأساسية من شركاء حلول حماية البيانات لدينا مع الاستجابة للهجمات الإلكترونية وخبرة الخدمات المدارة من فرق الأمن في Munisys، نحن قادرون على تزويدك بحل غرفة نظيفة يهدف إلى إنشاء فجوات هوائية عند الطلب",
+        "expertises": [
+          "النسخ الاحتياطي كخدمة",
+          "التعافي من الكوارث كخدمة (DRaaS) (متوقع)",
+          "تنظيف خدمة الغرف"
+        ],
+        "partners": [
+          "التماسك",
+          "Veeam"
+        ]
+      },
+      "managed-security-services": {
+        "title": "خدمات الأمن المدارة",
+        "overview": "مع ارتفاع الاعتماد على السحابة، تكافح العديد من المؤسسات لتحويل الأمن عبر البنية التحتية والمنصات السحابية والتطبيقات من متطلبات الامتثال إلى ميزة استراتيجية.\nتقدم Munisys حلولًا قائمة على السحابة ومتكاملة وقابلة للتطوير توفر قدرات أمنية دفاعية متقدمة دون الحاجة إلى أجهزة أو برامج أو معرفة متخصصة في مكان العمل، مما يضمن استعداد الشركات جيدًا باستمرار لأي اضطرابات غير متوقعة من خلال الحماية الشاملة والمستمرة لأصولها الرقمية.\nبهدف حماية دورة حياة البيانات والتطبيقات بأكملها، فإن خدماتنا الأمنية الاستباقية والشاملة القائمة على النهج، جنبًا إلى جنب مع المنهجيات التي أثبتت جدواها والقدرات التي يقودها الخبراء، تمكننا من مراقبة بنيتك التحتية على مدار الساعة طوال أيام الأسبوع، والتركيز على منع الحوادث قبل وقوعها، والكشف والاستجابة بأسرع وقت ممكن وبفعالية.",
+        "expertises": [
+          "التحكم في الوصول وإدارة الوصول المميز",
+          "إدارة نقاط الضعف ورقم التشغيلة",
+          "الكشف عن تهديدات نقاط النهاية والرد عليها",
+          "إدارة أمن الشبكات",
+          "إدارة SOC، XDR (الكشف/الاستجابة الموسعة)",
+          "AppSec aaS (اختبار أمان التطبيقات، أمان التطبيقات السحابية الأصلية، أدوات DevSecOps المدارة)"
+        ],
+        "partners": [
+          "Palo Alto",
+          "فورتينت",
+          "ريد هات",
+          "Opentext"
+        ]
+      },
+      "advisory-professional-management-services": {
+        "title": "أحيلت إلى مكتب الموارد البشرية",
+        "overview": "تم تصميم خدماتنا الشاملة لدعمك في كل مرحلة من مراحل رحلة التحول الرقمي الخاصة بك، وتأمين التحولات والمواءمة مع أهداف العمل المحددة:\n- التقييم والخدمات الاستشارية لتحديد البنية التحتية المخصصة واستراتيجيات البنية السحابية،\n- خدمات النشر والترحيل التي تغطي الأنشطة من التخطيط، والحصول على البيانات/نقلها، والتكوين، والأتمتة إلى تكامل المنصة والتطبيق،\n- خدمات التحسين والمواءمة التي تعزز الأداء والكفاءة وقابلية التوسع في بيئات التشغيل،\n- خدمات الإدارة التي تضمن التوافر العالي وخفض التكاليف والأمان وقابلية الملاحظة.\nيمكنك تكليف خبرائنا بالخدمات التي اخترتها في الوضع المدار بالكامل أو الاختيار بين الوضع المدار ذاتيًا من خلال الواجهة المستندة إلى السحابة أو الوضع المدار بشكل مشترك أو حتى وضع الإدارة الذي يتكيف مع احتياجاتك المميزة وسياقك المحدد.\nيتم تقديم هذه الخدمات بشكل أساسي من قبل فرقنا الخاصة من المهندسين المعماريين السحابيين ومهندسي DevOps والمتخصصين في الأمن وخبراء البنية التحتية ومديري المشاريع المعتمدين.",
+        "expertises": [
+          "التقييم السحابي وتكنولوجيا المعلومات والخدمات الاستشارية",
+          "الخدمات المهنية (النشر والتكوين والأتمتة والدعم)",
+          "الترحيل السحابي:",
+          "تحسين ومواءمة العمليات والبنية التحتية",
+          "خدمات الإدارة الشاملة"
+        ],
+        "partners": []
+      },
+      "digital-workplace": {
+        "title": "مكان العمل الرقمي ",
+        "overview": "يلعب مكان العمل الرقمي دورًا محوريًا في قدرة المستخدمين على الاستفادة الكاملة من عمليات العمل والتعاون الحديثة وتبنيها. المكان ليس ما يهم أكثر، بل هو مزيج من التقنيات التي ستسمح بالعمل والمشاركة والتواصل بكفاءة وأمان، مع فائدة إضافية تتمثل في تحسين التوازن بين العمل والحياة.\nيتيح لنا المزيج الفريد من الخبرة التي توفرها Munisys تصميم تقنيات مكان العمل ونشرها ودعمها مع تلبية احتياجاتك المتعلقة بالأمن وحماية البيانات والمحاكاة الافتراضية والأتمتة والمراقبة وإدارة الخدمات والمساعدة والدعم في كل مكان.",
+        "expertises": [
+          "تم اختيار أجهزة الكمبيوتر المكتبية والمحمولة بناءً على احتياجات الأداء ومتطلبات الأمان والقيود البيئية",
+          "حلول التعاون",
+          "حلول VDI",
+          "حماية نقطة النهاية",
+          "محفظة خدمات كاملة مصممة خصيصًا لنقطة النهاية"
+        ],
+        "partners": [
+          "ديل",
+          "شركة إتش بي",
+          "جابرا",
+          "شركة لينوفو",
+          "Logitech",
+          "بولينيفريتيس",
+          "مصدر الصورة: سامسونج"
+        ]
+      },
+      "printing-solutions": {
+        "title": "حلول الطباعة",
+        "overview": "تعد الطباعة جزءًا أساسيًا من العمليات التجارية عندما يكون الورق هو الطريقة الأنسب أو الطريقة الوحيدة الممكنة لمشاركة المعلومات.\nاستنادًا إلى الحلول الرائدة في السوق، نساعدك في اختيار التقنيات المناسبة ومجموعة الأجهزة من أجل التأكد من أن إنتاج المستندات المادية يعطي ميزة لفرقك ويساهم بشكل إيجابي في تجربة عملائك.\nكما نقدم خدمات الطباعة المدارة على مستوى الدولة، والتي ستوفر لك حل طباعة مرن وقابل للتطوير وبدون انقطاع ومحسّن من حيث التكلفة.",
+        "expertises": [
+          "حلول الطباعة المؤسسية",
+          "خدمات طباعة مدارة بالكامل "
+        ],
+        "partners": [
+          "كانون",
+          "ابسون",
+          "شركة إتش بي"
+        ]
+      },
+      "end-customer-facing-devices": {
+        "title": "الأجهزة التي تواجه العميل النهائي",
+        "overview": "إلى جانب الحوسبة والطباعة والتقنيات المتعلقة بمكان العمل، تشمل نقطة النهاية مجموعة كبيرة من الأجهزة والبرامج التي تهدف إلى تزويد العميل النهائي بالواجهة الأكثر ملاءمة للوصول إلى العديد من الخدمات التي جعلتها الرقمية ممكنة.\nتتمثل إحدى الطرق الفعالة للغاية للتفاعل مع عملائك عند تقديم الخدمات الرقمية والرقمية في نشر الأكشاك الذكية التي ستعزز الخدمة الذاتية. نوفر لعملائنا إمكانية تصميم هذه الأكشاك بحرية ومطابقة متطلباتهم عن كثب من حيث الشكل والحجم الفعليين وتضمين أي وظيفة يتم تقديمها للمستخدم النهائي، بدءًا من الطابعة إلى الماسح الضوئي للمستندات، ومن قارئ بطاقات الهوية إلى الأجهزة البيومترية ومحطات الدفع. يمكن أن يخفف حل الأكشاك المصمم جيدًا بشكل كبير من موظفي المكتب الأمامي ويسمح لهم بالتركيز على التفاعلات وجهاً لوجه مع العملاء ذات القيمة المضافة.\nفي عملية الانتقال بشكل متزايد نحو الخدمات الرقمية، هناك حاجة إلى بعض الفئات المحددة من الأجهزة، من بينها الحصول على الهوية الرقمية أو التقاط التوقيع الرقمي. من أجل مساعدة عملائنا في تنفيذ هذه الوظائف بطريقة فعالة وموثوقة وتقديم جميع إمكانيات التكامل المطلوبة، اخترنا أجهزة متخصصة من كبار البائعين. وهي توفر حلاً كاملاً، خاصة في القطاع المصرفي، ولكن أيضًا بشكل عام في أي مكان يكون فيه معرف العميل و/أو التوقيع ضروريين ضمن سير العمل.",
+        "expertises": [
+          "الأكشاك الذكية",
+          "الماسحات الضوئية / أجهزة القراءة",
+          "قارئات بطاقة الهوية/ القياسات الحيوية",
+          "التوقيع الرقمي"
+        ],
+        "partners": [
+          "فاي تيك",
+          "Secugen",
+          "Signotec"
+        ]
+      },
+      "expertiseLabel": "خبرة",
+      "partnersLabel": "الشركاء",
+      "heroLabel": "حلولنا",
+      "heroTitle": "تمكين رحلتك الرقمية.",
+      "heroDesc": "اكتشف مجموعتنا الشاملة من حلول تكنولوجيا المعلومات."
+    },
+    "services": {
+      "heroTitle": "الخدمات",
+      "heroDesc": "الخدمات الاحترافية والتشغيلية لمساعدتك على اتخاذ الخيارات التكنولوجية الصحيحة، وتصميم البنى السليمة، ونشرها وفقًا لأفضل الممارسات.",
+      "sections": [
+        {
+          "title": "دعم التكامل",
+          "items": [
+            {
+              "title": "خدمات التكامل",
+              "desc": "في كل مرحلة من مراحل دورة حياة البنية التحتية لتكنولوجيا المعلومات الخاصة بك، ستساعدك خدماتنا الاحترافية والتشغيلية على اتخاذ الخيارات التكنولوجية الصحيحة وتصميم البنى السليمة ونشرها وفقًا لأفضل الممارسات، وكل ذلك تحت إشراف ومراقبة مديري المشاريع لدينا.",
+              "features": [
+                "التصميم المعماري والتحقق من الصحة",
+                "نشر التكنولوجيا",
+                "ترحيل النظام وترقياته"
+              ]
+            },
+            {
+              "title": "الخدمات المدارة",
+              "desc": "قم بتفريغ عمليات تكنولوجيا المعلومات اليومية لخبرائنا المعتمدين، مما يسمح لفرقك الداخلية بالتركيز على مبادرات الأعمال الاستراتيجية. نحن نقدم المراقبة والصيانة الاستباقية على مدار الساعة طوال أيام الأسبوع.",
+              "features": [
+                "إدارة الحوادث على مدار الساعة طوال أيام الأسبوع",
+                "الفحوصات الصحية الاستباقية",
+                "استبدال الأجهزة (RMA)"
+              ]
+            },
+            {
+              "title": "الخدمات المدارة",
+              "desc": "قم بتفريغ عمليات تكنولوجيا المعلومات اليومية الخاصة بك لخبرائنا المعتمدين، مما يسمح لفرقك الداخلية بالتركيز على مبادرات الأعمال الإستراتيجية. نحن نقدم المراقبة والصيانة الاستباقية على مدار الساعة طوال أيام الأسبوع.",
+              "features": [
+                "مراقبة البنية التحتية",
+                "مركز العمليات الأمنية (SOC)",
+                "إدارة السحابة والنسخ الاحتياطي"
+              ]
+            }
+          ]
+        }
+      ],
+      "heroLabel": "الخدمات المهنية",
+      "heroMainTitle": "ملكنا",
+      "heroMainTitleBold": "خدمات.",
+      "introDesc": "في Munisys، نغطي دورة الحياة الكاملة للبنية التحتية لتكنولوجيا المعلومات لديك من خلال كتالوج شامل من الخدمات الاحترافية المصممة لضمان الأداء والأمان والعمليات التجارية المستمرة.",
+      "learnMoreLabel": "يتعلم أكثر"
+    },
+    "careers": {
+      "applyLabel": "تطبيق",
+      "heroTitle": "تشكيل<br /><strong>المستقبل.</strong>",
+      "heroDesc": "انضم إلى فريق من الخبراء المتحمسين المخصصين لتنظيم التحول الرقمي.",
+      "whyTitle": "لماذا مونيسيس؟",
+      "whyDesc": "نحن نؤمن بأهمية تمكين موظفينا، وتعزيز التعلم المستمر، وبناء ثقافة التميز والابتكار.",
+      "reasons": [
+        {
+          "title": "النمو المستمر",
+          "desc": "الوصول إلى التدريب المستمر والشهادات ومسارات التقدم الوظيفي الواضحة في التقنيات المتطورة."
+        },
+        {
+          "title": "العمل المؤثر",
+          "desc": "العمل على مشاريع واسعة النطاق وذات مهام حاسمة تشكل المشهد الرقمي للمؤسسات الكبرى."
+        },
+        {
+          "title": "الثقافة التعاونية",
+          "desc": "انضم إلى بيئة متنوعة وشاملة وداعمة حيث كل صوت مهم ويزدهر العمل الجماعي."
+        }
+      ],
+      "jobsTitle": "المراكز المفتوحة",
+      "jobs": [
+        {
+          "title": "مهندس أول لأمن الشبكات",
+          "meta": "دوام كامل • الدار البيضاء • تكامل تكنولوجيا المعلومات"
+        },
+        {
+          "title": "مهندس الحلول السحابية",
+          "meta": "دوام كامل • الدار البيضاء • الخدمات السحابية"
+        },
+        {
+          "title": "محلل SOC المستوى 2",
+          "meta": "دوام كامل • بعيد/هجين • الخدمات المدارة"
+        },
+        {
+          "title": "مدير مشروع تكنولوجيا المعلومات",
+          "meta": "دوام كامل • الدار البيضاء • الإدارة"
+        }
+      ]
+    },
+    "customerReferences": {
+      "heroTitle": "مراجع العميل",
+      "heroDesc": "مستشار موثوق به يخدم عددًا كبيرًا من الجهات الفاعلة الاقتصادية الكبيرة والمتوسطة الحجم وكيانات الدولة في المغرب.",
+      "title": "موثوق بنا من قِبل روّاد الصناعة",
+      "desc": "نعطي الأولوية القصوى للنزاهة والوفاء بالتزاماتنا والشراكات طويلة الأجل. وقد أكسبنا هذا مكانة رائدة في صناعة تكنولوجيا المعلومات المغربية.",
+      "customers": [
+        "بنك التجاري وفا",
+        "أوتوروتس دو ماروك",
+        "بنك المغرب",
+        "مصرف أفريقيا  \"Bank of Africa`` - أوغندا",
+        "1 - مصرف برد بنك بوبيلير",
+        "باريس",
+        "EURAFRIC",
+        "اتصالات المغرب",
+        "إينوي",
+        "لافارج هولسيم",
+        "ماربيو",
+        "OCP",
+        "ONCF",
+        "ريدال"
+      ],
+      "heroLabel": "مراجع العملاء",
+      "references": [
+        {
+          "name": "البنك الشعبي",
+          "logo": "/images/logos/bp.svg"
+        },
+        {
+          "name": "بنك أفريقيا",
+          "logo": "/images/logos/boa.png"
+        },
+        {
+          "name": "بنك المغرب",
+          "logo": "/images/logos/bam.png"
+        },
+        {
+          "name": "التجاري وفا بنك",
+          "logo": "/images/logos/awb.svg"
+        },
+        {
+          "name": "صندوق الإيداع والتدبير",
+          "logo": "/images/logos/cdg.svg"
+        },
+        {
+          "name": "المكتب الوطني للسكك الحديدية",
+          "logo": "/images/logos/oncf.png"
+        },
+        {
+          "name": "المكتب الشريف للفوسفاط",
+          "logo": "/images/logos/ocp.svg"
+        },
+        {
+          "name": "ماربيو",
+          "logo": "/images/logos/marbio.svg"
+        },
+        {
+          "name": "لافارج هولسيم",
+          "logo": "/images/logos/lafarge.svg"
+        },
+        {
+          "name": "إنوي",
+          "logo": "/images/logos/inwi.svg"
+        }
+      ],
+      "heroMainTitle": "موثوق به",
+      "heroMainTitleBold": "القادة."
+    },
+    "insights": {
+      "heroTitle": "الرؤى والأخبار",
+      "heroDesc": "ابق على اطلاع بأحدث الأخبار والبيانات الصحفية والرؤى التكنولوجية من Munisys.",
+      "posts": [
+        {
+          "title": "هوية بصرية جديدة لمونيسس",
+          "category": "الأخبار",
+          "desc": "تحليل متعمق للتهديدات الناشئة وبنية الثقة المعدومة اللازمة للمؤسسات الحديثة.",
+          "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "افتتاح مقر جديد",
+          "category": "الشركة",
+          "desc": "أفضل الممارسات لترحيل البنية الأساسية الأساسية لديك بسلاسة إلى البيئات السحابية المختلطة دون توقف.",
+          "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "هيليوس إنفستمنت بارتنرز - فيبار",
+          "category": "البيان الصحفي",
+          "desc": "معترف به للتسليم المتميز والابتكار في خدمات تكامل تكنولوجيا المعلومات للسنة الثالثة على التوالي.",
+          "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "مستقبل مرونة السحابة",
+          "category": "المدونة الرسمية للمبادرة",
+          "desc": "انضم إلى خبرائنا وهم يناقشون تكامل الأدوات المعتمدة على الذكاء الاصطناعي في الخدمات المُدارة وعمليات مركز عمليات الأمان (SOC).",
+          "img": "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "تأمين مكان العمل الهجين",
+          "category": "المستند الفني"
+        },
+        {
+          "title": "مونيسس تفوز بجائزة أفضل تكامل 2026",
+          "category": "الأخبار"
+        }
+      ],
+      "noImageLabel": "لا توجد صورة"
+    },
+    "technologyPartners": {
+      "heroTitle": "شركاء التقنية",
+      "heroDesc": "نحن نتشارك مع موردي التكنولوجيا الرائدين في العالم لتوفير أفضل الحلول للبنية التحتية لمؤسستك.",
+      "title": "نظامنا البيئي",
+      "desc": "تحافظ Munisys على أعلى مستوى من الشهادات والشراكات مع قادة تكنولوجيا المعلومات العالميين. ويضمن ذلك قدرتنا على تصميم الحلول ونشرها باستخدام التقنيات الأكثر تقدمًا وموثوقية المتاحة.",
+      "partners": [
+        {
+          "name": "سيسكو",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisco_logo_blue_2016.svg",
+          "category": "الشبكات"
+        },
+        {
+          "name": "شركة ديل للتكنولوجيا",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dell_logo_2016.svg",
+          "category": "البنية التحتية"
+        },
+        {
+          "name": "في إم وير",
+          "logo": "/images/logos/vmware.svg",
+          "category": "المحاكاة الافتراضية"
+        },
+        {
+          "name": "فورتينت",
+          "logo": "/images/logos/fortinet.svg",
+          "category": "أمن المعلومات"
+        },
+        {
+          "name": "مايكروسوفت",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg",
+          "category": "الحوسبة السحابية والبرمجيات"
+        },
+        {
+          "name": "آي بي إم",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM_logo.svg",
+          "category": "حلول الشركات"
+        }
+      ],
+      "allSpecialtiesLabel": "جميع التخصصات"
+    },
+    "solutionsIndex": {
+      "heroTitle": "الحلول التي نقدمها",
+      "heroDesc": "نقوم بتصميم هياكل تكنولوجيا معلومات مرنة ومقاومة للمستقبل تتماشى مع أهدافك الاستراتيجية. من البنية التحتية الأساسية إلى أمن نقطة النهاية، تتوسع حلولنا مع عملك.",
+      "title": "البنية التحتية الأساسية والأمن السيبراني",
+      "desc": "تستفيد Munisys من خبرتها الفريدة والواسعة لمساعدة مؤسسات تكنولوجيا المعلومات على إعداد وإدارة وتأمين وتشغيل بنية تحتية متسقة للحوسبة والتخزين والشبكات والنسخ الاحتياطي عبر مراكز البيانات والسحابات العامة بسلاسة، من خلال الأساليب التقليدية أو المحددة بالبرمجيات.\n\nيغطي تركيزنا مجموعة واسعة من التقنيات، مما يضمن الأداء القوي والامتثال والرؤية الشاملة لجميع أصولك الرقمية."
+    },
+    "aboutUs": {
+      "heroTitle": "من نحن",
+      "heroDesc": "تعرف على المزيد حول Munisys وتاريخنا وقيمنا والتزامنا بالتميز الرقمي.",
+      "title": "من نحن",
+      "desc": "مونيسس هي شركة رائدة في مجال تكامل تكنولوجيا المعلومات في المغرب...",
+      "storyTitle": "من نحن",
+      "subtitle": "تراثنا",
+      "heroMainTitle": "تمكين التحول الرقمي",
+      "storyP1": "منذ نشأتنا، كانت Munisys في طليعة الابتكار التكنولوجي. نحن نؤمن بأن التكنولوجيا هي المعادل النهائي، حيث تمكن الشركات من التوسع وتأمين أصولها وتبسيط العمليات بطرق لم تكن ممكنة من قبل.",
+      "storyP2": "يعمل فريقنا من الخبراء المعتمدين بلا هوادة لتصميم ونشر حلول تكنولوجيا المعلومات التي ليست قوية فحسب، ولكنها أيضًا مقاومة للمستقبل. ومن خلال الجمع بين الخبرة الصناعية العميقة والأدوات المتطورة، نقوم بتحويل التحديات المعقدة إلى تجارب رقمية سلسة.",
+      "timelineTitle": "رحلتنا",
+      "timeline": [
+        {
+          "year": "1993",
+          "text": "تأسست برؤية تهدف إلى تقديم خدمات استثنائية للبنية التحتية لتكنولوجيا المعلومات للمؤسسات المحلية."
+        },
+        {
+          "year": "2005",
+          "text": "قمنا بتوسيع محفظتنا لتشمل الأمن السيبراني المتقدم وتكامل الشبكات."
+        },
+        {
+          "year": "2015",
+          "text": "أطلقنا قسم الخدمات المُدارة لدينا، والذي يوفر مراقبة استباقية وSOC على مدار الساعة طوال أيام الأسبوع."
+        },
+        {
+          "year": "2024",
+          "text": "قيادة عصر التحول السحابي الأصلي، والشراكة مع عمالقة التكنولوجيا العالميين."
+        }
+      ]
+    },
+    "test": {
+      "description1": "Ceci est une image de test. في الوضع الإداري، مجموعة من الحلوى من أجل التغيير.",
+      "image1": "/slide1.png",
+      "gridImage1": "/slide1.png",
+      "gridImage2": "/slide2.png",
+      "gridImage3": "/slide3.png",
+      "circularImage": "/slide2.png",
+      "heroImage": "/hero.png",
+      "heroTitle": "عنوان البطل قابل للتحرير",
+      "heroSubtitle": "Sous - titre également éditable en mode admin"
+    },
+    "navigation": {
+      "brandName": "مونيسيس",
+      "ctaLabel": "الاتصال",
+      "links": {
+        "solutions": "الحلول"
+      },
+      "mainLinks": [
+        {
+          "label": "الخدمات",
+          "href": "/services"
+        },
+        {
+          "label": "مراجع العميل",
+          "href": "/customer-references"
+        },
+        {
+          "label": "شركاء التكنولوجيا",
+          "href": "/technology-partners"
+        },
+        {
+          "label": "الاستنتاجات",
+          "href": "/insights"
+        },
+        {
+          "label": "فرص العمل",
+          "href": "/careers"
+        },
+        {
+          "label": "<g id=\"Bold\">من نحن</g>",
+          "href": "/about-us"
+        }
+      ],
+      "megaMenu": [
+        {
+          "title": "البنية التحتية والتقنيات",
+          "href": "/solutions#core-infra",
+          "items": [
+            {
+              "label": "الحوسبة والتخزين",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "البنى التحتية فائقة التقارب",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "مرونة البيانات",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "التعارف والتواصل",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "بيئة الكابلات ومراكز البيانات",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "شركاء التكنولوجيا",
+              "href": "/solutions#core-infra"
+            }
+          ]
+        },
+        {
+          "title": "الأمن السيبراني",
+          "href": "/solutions#cybersecurity",
+          "items": [
+            {
+              "label": "أمان نقطة النهاية",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "أمن الشبكات",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "أمن السحابة والتطبيقات",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "إدارة الهوية وصلاحيات الوصول",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "الرؤية والامتثال",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "شركاء التكنولوجيا",
+              "href": "/solutions#cybersecurity"
+            }
+          ]
+        },
+        {
+          "title": "برنامج البنية التحتية",
+          "href": "/solutions#infra-software",
+          "items": [
+            {
+              "label": "إدارة الخدمات والأصول",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "القابلية للملاحظة والأتمتة والتنسيق",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "إدارة البيانات والتحليلات",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "تحديث التطبيق",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "مرونة البيانات",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "شركاء التكنولوجيا",
+              "href": "/solutions#infra-software"
+            }
+          ]
+        },
+        {
+          "title": "الخدمات السحابية المُدارة",
+          "href": "/solutions#managed-cloud",
+          "items": [
+            {
+              "label": "خدمات الاستضافة والبنية التحتية السحابية",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "خدمات التطبيقات والمنصات",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "مرونة الأعمال وحماية البيانات",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "خدمات الأمن المدارة",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "أحيلت إلى مكتب الموارد البشرية",
+              "href": "/solutions#managed-cloud"
+            }
+          ]
+        },
+        {
+          "title": "حلول نقطة النهاية",
+          "href": "/solutions#endpoint",
+          "items": [
+            {
+              "label": "مكان العمل الرقمي",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "حلول الطباعة",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "الأجهزة التي تواجه العميل النهائي",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "شركاء التكنولوجيا",
+              "href": "/solutions#endpoint"
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "brandName": "مونيسيس",
+      "linkedinLabel": "تابعنا علي LinkedIn",
+      "linkedinUrl": "#",
+      "copyright": "© 2026 Munisys. جميع الحقوق محفوظة.",
+      "legal": "سياسة الخصوصية · إشعار قانوني",
+      "columns": [
+        {
+          "title": "الحلول",
+          "links": [
+            {
+              "label": "البنية التحتية الأساسية",
+              "href": "/solutions/core-infrastructure"
+            },
+            {
+              "label": "تكامل الأنظمة",
+              "href": "/solutions/infrastructure-software/system-integration"
+            },
+            {
+              "label": "الأمن السيبراني",
+              "href": "/solutions/cybersecurity"
+            },
+            {
+              "label": "خدمات الحوسبة السحابية",
+              "href": "/solutions/managed-and-cloud-services"
+            }
+          ]
+        },
+        {
+          "title": "من نحن",
+          "links": [
+            {
+              "label": "من نحن",
+              "href": "/about-us"
+            },
+            {
+              "label": "فرص العمل",
+              "href": "/careers"
+            },
+            {
+              "label": "الاستنتاجات",
+              "href": "/insights"
+            },
+            {
+              "label": "مراجع العميل",
+              "href": "/customer-references"
+            }
+          ]
+        },
+        {
+          "title": "الشركاء",
+          "links": [
+            {
+              "label": "شركاء التكنولوجيا",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "كن شريكاً ",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "الشهادات",
+              "href": "/technology-partners"
+            }
+          ]
+        },
+        {
+          "title": "الاتصال",
+          "links": [
+            {
+              "label": "contact@munisys.ma",
+              "href": "#"
+            },
+            {
+              "label": "الدار البيضاء، المغرب",
+              "href": "#"
+            },
+            {
+              "label": "+212 5XX XXX XXX",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "اتصال",
+      "subline": "هل أنت مستعد لتسريع عملية التحول الرقمي لديك؟ خبراؤنا موجودون هنا، ومتاحون، ومتشوقون لمساعدتك في تشكيل المستقبل.",
+      "hqTitle": "المقر الرئيسي",
+      "hqText": "123 طريق الابتكار، الحي التكنولوجي، الدار البيضاء",
+      "emailTitle": "راسلنا عبر البريد الإلكتروني",
+      "emailText": "contact@munisys.com",
+      "callTitle": "اتصل بنا",
+      "callText": "+212 5 22 00 00 00",
+      "heroMainTitle": "دعونا نبني",
+      "heroMainTitleBold": "معاً.",
+      "formTitle": "أرسل رسالة",
+      "formSub": "املأ النموذج أدناه وسنقوم بالرد عليك خلال 24 ساعة.",
+      "formSuccess": "✅ تم إرسال الرسالة! سنكون على اتصال قريبا.",
+      "labelName": "الاسم الكامل",
+      "labelEmail": "عنوان البريد الإلكتروني",
+      "labelCompany": "شركة",
+      "labelPhone": "رقم التليفون",
+      "labelMessage": "كيف يمكننا مساعدتك؟",
+      "formNote": "🔒 بياناتك آمنة بنسبة 100% ولا تتم مشاركتها أبدًا.",
+      "btnSubmit": "أرسل رسالة"
+    }
+  },
+  "es": {
+    "theme": {
+      "bordeaux": "#922b55",
+      "blueDark": "#1d4e79",
+      "blueLight": "#83a5c2",
+      "bgGray": "#f8fafc",
+      "textGray": "#475569"
+    },
+    "homepage": {
+      "slides": [
+        {
+          "h1": "Orquestamos tecnologías de <strong>infraestructura digital</strong> para una <strong>experiencia del cliente</strong> única",
+          "meta": "Infraestructura básica",
+          "desc": "Configure, administre y proteja su computación, almacenamiento y redes en centros de datos y nubes públicas con nuestras soluciones líderes centradas en datos.",
+          "btnText": "Nuestras soluciones"
+        },
+        {
+          "h1": "Diseñamos <strong>arquitecturas e integraciones</strong> pensando en su futura <strong>TI</strong>",
+          "meta": "Ciberseguridad",
+          "desc": "Proteja su red, puntos finales y datos contra las amenazas digitales en evolución con arquitecturas de confianza cero y monitoreo proactivo.",
+          "btnText": "Descubra la seguridad"
+        },
+        {
+          "h1": "Nos encargamos <strong>de su infraestructura digital</strong> para que pueda ofrecer <strong>servicios innovadores a sus clientes</strong>",
+          "meta": "Servicios Gestionados",
+          "desc": "Integración perfecta en la nube y servicios administrados para acelerar su viaje de transformación digital y al mismo tiempo garantizar una alta disponibilidad.",
+          "btnText": "Servicios en la nube"
+        }
+      ],
+      "services": [
+        {
+          "title": "Servicios de integración de TI",
+          "body": "En cada etapa del ciclo de vida de sus infraestructuras de TI, nuestros servicios profesionales y operativos lo ayudarán a tomar las decisiones tecnológicas correctas, diseñar las arquitecturas más sólidas e implementarlas de acuerdo con las mejores prácticas, todo bajo la supervisión y control de nuestros gerentes de proyectos."
+        },
+        {
+          "title": "Servicios de soporte informático",
+          "body": "Nuestros servicios de soporte reactivo y proactivo garantizan que su infraestructura se mantenga saludable, minimizando el tiempo de inactividad y optimizando el rendimiento."
+        },
+        {
+          "title": "Servicios gestionados",
+          "body": "Delegue sus operaciones diarias de TI a nuestros expertos certificados, permitiendo que sus equipos internos se concentren en iniciativas comerciales estratégicas."
+        }
+      ],
+      "customers": [
+        "Banco Attijariwafa",
+        "Autorutas de Marruecos",
+        "Banco Al-Maghrib",
+        "BANCO DE ÁFRICA",
+        "BANCOS POBLARIOS",
+        "CDG",
+        "EURÁFRICA",
+        "Marruecos Telecom",
+        "inwi",
+        "LafargeHolcim",
+        "MARBIO",
+        "OCP",
+        "ONF"
+      ],
+      "sections": {
+        "servicesTitle": "Nuestros servicios",
+        "servicesDesc": "Un catálogo completo de servicios TI para cubrir todo el ciclo de vida de su infraestructura TI",
+        "whyTitle": "Por qué elegir Munisys",
+        "customersTitle": "Confían en nosotros",
+        "solutionsTitle": "Soluciones",
+        "solutionContentTitle": "Tecnologías de infraestructura básica",
+        "solutionContentDesc": "Munisys aprovecha su experiencia única y extensa para ayudar a las organizaciones de TI a configurar, administrar, proteger y ejecutar sin problemas una infraestructura consistente de computación, almacenamiento, redes y respaldo en centros de datos y nubes públicas, ya sea a través de enfoques tradicionales o definidos por software.<br><br>Nos enfocamos en una gama de soluciones líderes centradas en datos, adaptables y eficientes que ofrecen experiencia operativa nativa de la nube, administración impulsada por IA, seguridad mejorada y rendimiento optimizado.",
+        "offeringsTitle": "Ofrendas",
+        "offeringsDesc": "Una oferta integral y coherente de soluciones y servicios para infraestructuras digitales seguras",
+        "insightsTitle": "Perspectivas",
+        "insightsCard1": "Una nueva identidad visual para Munisys",
+        "insightsCard2": "Nueva sede",
+        "insightsCard3": "COMUNICADO DE PRENSA",
+        "customersDesc": "Como asesor confiable, nos aseguramos de que nuestra contribución al diseño, implementación y soporte de soluciones tecnológicas dentro de las organizaciones a las que servimos se entregue en su mejor interés, dando la más alta prioridad a la integridad, el cumplimiento de nuestros compromisos y las asociaciones a largo plazo. Esto nos ha otorgado una posición de liderazgo dentro de la industria de TI marroquí basada en colaboraciones duraderas y fructíferas con un gran número de actores económicos y entidades estatales grandes y medianos.",
+        "solutionReadMoreLabel": "Leer más",
+        "customersSeeAllLabel": "Ver todo",
+        "partnersTitle": "Socios tecnológicos",
+        "partnersDesc": "Las infraestructuras de TI que diseñamos e implementamos para nuestros clientes están en el corazón de su negocio y determinan su capacidad para innovar y destacar. Construimos vínculos sólidos con nuestros socios tecnológicos y adquirimos experiencia interna para garantizar una verdadera resiliencia y agilidad.",
+        "partnersLinkText": "Leer más",
+        "insightsCard1Title": "MUNISIS",
+        "insightsCard3Top": "HELIOS",
+        "insightsCard3Mid": "Socios de inversión",
+        "insightsCard3Bot": "FIPAR",
+        "referencesTitle": "Confían en nosotros",
+        "referencesDesc": "Como asesor confiable, nuestra contribución al diseño, implementación y soporte de soluciones tecnológicas se realiza en el mejor interés de nuestros clientes, priorizando la integridad y las asociaciones a largo plazo.",
+        "referencesLinkText": "Ver todas las referencias",
+        "figuresTitle": "ALGUNAS<br />CIFRAS"
+      },
+      "images": {
+        "slide1": "/slide1.png",
+        "slide2": "/slide2.png",
+        "slide3": "/slide3.png",
+        "solutionsDC": "/datacenter.png",
+        "insightsHQ": "/datacenter.png"
+      },
+      "offeringsThrough": [
+        "Las mejores tecnologías de su clase",
+        "Integraciones hábiles",
+        "Arquitecturas sonoras",
+        "Automatización y orquestación",
+        "Servicios cualificados de extremo a extremo"
+      ],
+      "offeringsAchieve": [
+        "Uso eficiente de tecnologías convergentes",
+        "Control sobre la complejidad",
+        "Operaciones de TI simplificadas",
+        "Recursos de infraestructura ágil",
+        "Rendimiento óptimo y verdadera resiliencia",
+        "Capacidades de soporte amplias y profundas"
+      ],
+      "solutionMenuItems": [
+        "Tecnologías de infraestructura básica",
+        "Soluciones de ciberseguridad",
+        "Software de infraestructura",
+        "Servicios gestionados y en la nube",
+        "Soluciones para terminales"
+      ],
+      "heroCTALabel": "Nuestras soluciones",
+      "figures": [
+        {
+          "num": "34",
+          "label": "años<br/>en el negocio",
+          "prefix": "+"
+        },
+        {
+          "num": "330",
+          "label": "empleados",
+          "prefix": ""
+        },
+        {
+          "num": "700",
+          "label": "Ingresos MMAD",
+          "prefix": ""
+        },
+        {
+          "num": "18",
+          "label": "Centros<br/>de apoyo",
+          "prefix": ""
+        }
+      ],
+      "bentoSolutions": [
+        {
+          "title": "Infraestructura básica<br/>Tecnologías",
+          "desc": "Infraestructura de computación, almacenamiento, redes y respaldo en centros de datos y nubes públicas con soluciones líderes centradas en datos.",
+          "btn": "Leer más"
+        },
+        {
+          "title": "Soluciones<br/>de ciberseguridad",
+          "desc": "Arquitecturas de seguridad de extremo a extremo para proteger sus activos digitales de amenazas en evolución.",
+          "btn": "Descubrir"
+        },
+        {
+          "title": "Infraestructura<br/>Software",
+          "desc": "Enfoques definidos por software e integraciones sólidas para operaciones de TI modernas.",
+          "btn": ""
+        },
+        {
+          "title": "Servicios gestionados y<br/>en la nube",
+          "desc": "Operaciones fluidas en entornos de nube pública, privada e híbrida.",
+          "btn": ""
+        },
+        {
+          "title": "Soluciones para terminales",
+          "desc": "Empoderar a su fuerza laboral con dispositivos informáticos seguros y eficientes.",
+          "btn": "Ver ofertas"
+        }
+      ],
+      "offeringsThroughTitle": "A través de",
+      "offeringsAchieveTitle": "Lo logramos",
+      "offeringsListThrough": [
+        "Las mejores tecnologías de su clase",
+        "Integraciones hábiles",
+        "Arquitecturas sonoras",
+        "Automatización y orquestación",
+        "Servicios cualificados de extremo a extremo"
+      ],
+      "offeringsListAchieve": [
+        "Uso eficiente de tecnologías convergentes",
+        "Control sobre la complejidad",
+        "Operaciones de TI simplificadas",
+        "Recursos de infraestructura ágil",
+        "Rendimiento óptimo y verdadera resiliencia",
+        "Capacidades de soporte amplias y profundas"
+      ]
+    },
+    "solutions": {
+      "expertiseLabel": "Experiencia",
+      "partnersLabel": "Socios",
+      "heroLabel": "NUESTRAS SOLUCIONES",
+      "heroTitle": "Potenciando su viaje digital.",
+      "heroDesc": "Descubra nuestro completo portafolio de soluciones TI."
+    },
+    "services": {
+      "heroLabel": "SERVICIOS PROFESIONALES",
+      "heroMainTitle": "Nuestro",
+      "heroMainTitleBold": "Servicios.",
+      "heroDesc": "Servicios profesionales y operativos para ayudarle a tomar las decisiones tecnológicas correctas, diseñar arquitecturas sólidas e implementarlas de acuerdo con las mejores prácticas.",
+      "introDesc": "En Munisys cubrimos todo el ciclo de vida de su infraestructura TI con un catálogo integral de servicios profesionales diseñados para garantizar el rendimiento, la seguridad y las operaciones comerciales continuas.",
+      "learnMoreLabel": "Más información",
+      "sections": [
+        {
+          "title": "Integración y soporte de TI",
+          "items": [
+            {
+              "title": "Servicios de integración",
+              "desc": "En cada etapa del ciclo de vida de sus infraestructuras de TI, nuestros servicios profesionales y operativos lo ayudarán a tomar las decisiones tecnológicas correctas, diseñar las arquitecturas más sólidas e implementarlas de acuerdo con las reglas del arte.",
+              "features": [
+                "Diseño y validación de arquitectura",
+                "Despliegue de tecnología",
+                "Migración y actualizaciones del sistema"
+              ]
+            },
+            {
+              "title": "Servicios de soporte de TI",
+              "desc": "Nuestros servicios de soporte reactivo y proactivo garantizan la máxima disponibilidad y continuidad de sus activos tecnológicos. Mitigamos los riesgos a través de estrictos SLA y experiencia técnica dedicada.",
+              "features": [
+                "Gestión de Incidentes 24 horas al día, 7 días a la semana",
+                "Controles de salud proactivos",
+                "Reemplazo de hardware (RMA)"
+              ]
+            },
+            {
+              "title": "Servicios Gestionados",
+              "desc": "Delegue sus operaciones diarias de TI a nuestros expertos certificados, permitiendo que sus equipos internos se concentren en iniciativas comerciales estratégicas. Brindamos monitoreo y mantenimiento proactivo 24 horas al día, 7 días a la semana.",
+              "features": [
+                "Monitoreo de infraestructura",
+                "Centro de operaciones de seguridad (SOC)",
+                "Gestión de la nube y de copias de seguridad"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "careers": {
+      "applyLabel": "Aplicar",
+      "heroTitle": "Da forma<br />al <strong>futuro.</strong>",
+      "heroDesc": "Únase a un equipo de expertos apasionados dedicados a orquestar la transformación digital.",
+      "whyTitle": "¿Por qué Munisys?",
+      "whyDesc": "Creemos en empoderar a nuestra gente, fomentar el aprendizaje continuo y construir una cultura de excelencia e innovación.",
+      "reasons": [
+        {
+          "title": "Crecimiento continuo",
+          "desc": "Acceso a capacitación continua, certificaciones y rutas claras de progresión profesional en tecnologías de vanguardia."
+        },
+        {
+          "title": "Trabajo impactante",
+          "desc": "Trabaje en proyectos de misión crítica a gran escala que dan forma al panorama digital de las principales empresas."
+        },
+        {
+          "title": "Cultura colaborativa",
+          "desc": "Únase a un entorno diverso, inclusivo y de apoyo donde cada voz importa y el trabajo en equipo prospera."
+        }
+      ],
+      "jobsTitle": "Posiciones abiertas",
+      "jobs": [
+        {
+          "title": "Ingeniero sénior de seguridad de redes",
+          "meta": "Tiempo completo • Casablanca • Integración TI"
+        },
+        {
+          "title": "Arquitecto de soluciones en la nube",
+          "meta": "Tiempo completo • Casablanca • Servicios en la nube"
+        },
+        {
+          "title": "Analista SOC Nivel 2",
+          "meta": "Tiempo completo • Remoto/Híbrido • Servicios Gestionados"
+        },
+        {
+          "title": "Gerente de Proyectos TI",
+          "meta": "Tiempo completo • Casablanca • Gestión"
+        }
+      ]
+    },
+    "customerReferences": {
+      "heroLabel": "Referencias de clientes",
+      "heroDesc": "Nuestro compromiso con la excelencia nos ha valido colaboraciones duraderas y fructíferas con los mayores actores económicos y entidades estatales de Marruecos.",
+      "references": [
+        {
+          "name": "Banco Popular",
+          "logo": "/images/logos/bp.svg"
+        },
+        {
+          "name": "Banco de África",
+          "logo": "/images/logos/boa.png"
+        },
+        {
+          "name": "Banco Al-Maghrib",
+          "logo": "/images/logos/bam.png"
+        },
+        {
+          "name": "Banco Attijariwafa",
+          "logo": "/images/logos/awb.svg"
+        },
+        {
+          "name": "CDG",
+          "logo": "/images/logos/cdg.svg"
+        },
+        {
+          "name": "ONF",
+          "logo": "/images/logos/oncf.png"
+        },
+        {
+          "name": "OCP",
+          "logo": "/images/logos/ocp.svg"
+        },
+        {
+          "name": "Marbio",
+          "logo": "/images/logos/marbio.svg"
+        },
+        {
+          "name": "LafargeHolcim",
+          "logo": "/images/logos/lafarge.svg"
+        },
+        {
+          "name": "Inwi",
+          "logo": "/images/logos/inwi.svg"
+        }
+      ],
+      "heroMainTitle": "Confiado por",
+      "heroMainTitleBold": "Líderes."
+    },
+    "insights": {
+      "noImageLabel": "Sin imagen",
+      "heroTitle": "Perspectivas",
+      "posts": [
+        {
+          "title": "El futuro de la ciberseguridad en Marruecos",
+          "category": "Documento técnico",
+          "desc": "Un análisis en profundidad de las amenazas emergentes y la arquitectura de confianza cero necesaria para las empresas modernas.",
+          "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Estrategias de migración a la nube",
+          "category": "Blog",
+          "desc": "Mejores prácticas para migrar sin problemas su infraestructura central a entornos de nube híbrida sin tiempo de inactividad.",
+          "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Munisys gana el premio Socio del Año",
+          "category": "Noticias",
+          "desc": "Reconocido por su destacada entrega e innovación en servicios de integración de TI por tercer año consecutivo.",
+          "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Optimización de las operaciones de TI con IA",
+          "category": "Seminario web",
+          "desc": "Únase a nuestros expertos mientras analizan la integración de herramientas basadas en IA en servicios gestionados y operaciones de SOC.",
+          "img": "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+        }
+      ]
+    },
+    "technologyPartners": {
+      "heroTitle": "Socios tecnológicos",
+      "heroDesc": "Construimos vínculos sólidos con los principales proveedores de tecnología del mundo para garantizar una verdadera resiliencia, rendimiento y agilidad para su infraestructura digital.",
+      "partners": [
+        {
+          "name": "Cisco",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisco_logo_blue_2016.svg",
+          "category": "Redes"
+        },
+        {
+          "name": "Tecnologías Dell",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dell_logo_2016.svg",
+          "category": "Infraestructura"
+        },
+        {
+          "name": "VMware",
+          "logo": "/images/logos/vmware.svg",
+          "category": "Virtualización"
+        },
+        {
+          "name": "Fortinet",
+          "logo": "/images/logos/fortinet.svg",
+          "category": "Seguridad"
+        },
+        {
+          "name": "microsoft",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg",
+          "category": "Nube y software"
+        },
+        {
+          "name": "IBM",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM_logo.svg",
+          "category": "Soluciones empresariales"
+        }
+      ],
+      "allSpecialtiesLabel": "Todas las especialidades"
+    },
+    "solutionsIndex": {
+      "heroTitle": "Nuestras soluciones",
+      "heroDesc": "Diseñamos arquitecturas de TI resilientes y preparadas para el futuro alineadas con sus objetivos estratégicos. Desde la infraestructura central hasta la seguridad de los terminales, nuestras soluciones se adaptan a su negocio.",
+      "title": "Infraestructura básica y ciberseguridad",
+      "desc": "Munisys aprovecha su experiencia única y extensa para ayudar a las organizaciones de TI a configurar, administrar, proteger y ejecutar sin problemas una infraestructura consistente de computación, almacenamiento, redes y respaldo en centros de datos y nubes públicas, a través de enfoques tradicionales o definidos por software.\n\nNuestro enfoque cubre una amplia gama de tecnologías, lo que garantiza un rendimiento sólido, cumplimiento y visibilidad de extremo a extremo en todos sus activos digitales."
+    },
+    "aboutUs": {
+      "heroTitle": "Sobre nosotros",
+      "heroDesc": "Conozca más sobre Munisys, nuestra historia, nuestros valores y nuestro compromiso con la excelencia digital.",
+      "subtitle": "Nuestro Patrimonio",
+      "heroMainTitle": "Potenciando la transformación digital",
+      "storyTitle": "Quiénes somos",
+      "storyP1": "Desde nuestros inicios, Munisys ha estado a la vanguardia de la innovación tecnológica. Creemos que la tecnología es el ecualizador definitivo, que permite a las empresas escalar, proteger sus activos y optimizar las operaciones de maneras nunca antes posibles.",
+      "storyP2": "Nuestro equipo de expertos certificados trabaja incansablemente para diseñar e implementar soluciones de TI que no sólo sean sólidas, sino que también estén preparadas para el futuro. Al combinar una profunda experiencia en la industria con herramientas de vanguardia, transformamos desafíos complejos en experiencias digitales perfectas.",
+      "timelineTitle": "Nuestro viaje",
+      "timeline": [
+        {
+          "year": "1993",
+          "text": "Fundada con la visión de brindar servicios excepcionales de infraestructura de TI a empresas locales."
+        },
+        {
+          "year": "2005",
+          "text": "Ampliamos nuestro portafolio para incluir ciberseguridad avanzada e integración de redes."
+        },
+        {
+          "year": "2015",
+          "text": "Lanzamos nuestra división de Servicios Administrados, que brinda monitoreo proactivo y SOC las 24 horas, los 7 días de la semana."
+        },
+        {
+          "year": "2024",
+          "text": "Liderando la era de la transformación nativa de la nube, asociándonos con gigantes tecnológicos globales."
+        }
+      ]
+    },
+    "test": {
+      "description1": "Ceci est una imagen de prueba. En modo administrador, haga clic aquí para cambiar.",
+      "image1": "/slide1.png",
+      "gridImage1": "/slide1.png",
+      "gridImage2": "/slide2.png",
+      "gridImage3": "/slide3.png",
+      "circularImage": "/slide2.png",
+      "heroImage": "/hero.png",
+      "heroTitle": "Título Héroe Editable",
+      "heroSubtitle": "Subtítulos también editables en modo administrador"
+    },
+    "navigation": {
+      "brandName": "MUNISIS",
+      "ctaLabel": "Contacto",
+      "links": {
+        "solutions": "Soluciones"
+      },
+      "mainLinks": [
+        {
+          "label": "Servicios",
+          "href": "/services"
+        },
+        {
+          "label": "Referencias de clientes",
+          "href": "/customer-references"
+        },
+        {
+          "label": "Socios tecnológicos",
+          "href": "/technology-partners"
+        },
+        {
+          "label": "Perspectivas",
+          "href": "/insights"
+        },
+        {
+          "label": "Carreras",
+          "href": "/careers"
+        },
+        {
+          "label": "Sobre nosotros",
+          "href": "/about-us"
+        }
+      ],
+      "megaMenu": [
+        {
+          "title": "Tecnologías de infraestructura básica",
+          "href": "/solutions#core-infra",
+          "items": [
+            {
+              "label": "Computación y almacenamiento",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Infraestructuras hiperconvergentes",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Resiliencia de datos",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Redes",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Entorno de cableado y centro de datos",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "Socios tecnológicos",
+              "href": "/solutions#core-infra"
+            }
+          ]
+        },
+        {
+          "title": "Ciberseguridad",
+          "href": "/solutions#cybersecurity",
+          "items": [
+            {
+              "label": "Seguridad de terminales",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Seguridad de la red",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Seguridad de aplicaciones y nube",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Gestión de identidades y accesos",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Visibilidad y cumplimiento",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "Socios tecnológicos",
+              "href": "/solutions#cybersecurity"
+            }
+          ]
+        },
+        {
+          "title": "Software de infraestructura",
+          "href": "/solutions#infra-software",
+          "items": [
+            {
+              "label": "Gestión de activos y servicios",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Observabilidad, automatización y orquestación",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Gestión y análisis de datos",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Modernización de aplicaciones",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Resiliencia de datos",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "Socios tecnológicos",
+              "href": "/solutions#infra-software"
+            }
+          ]
+        },
+        {
+          "title": "Servicios gestionados y en la nube",
+          "href": "/solutions#managed-cloud",
+          "items": [
+            {
+              "label": "Servicios de hosting e infraestructura en la nube",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Servicios de aplicaciones y plataformas",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Resiliencia empresarial y protección de datos",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Servicios de seguridad gestionados",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "Servicios de asesoramiento, profesionales y de gestión",
+              "href": "/solutions#managed-cloud"
+            }
+          ]
+        },
+        {
+          "title": "Soluciones para terminales",
+          "href": "/solutions#endpoint",
+          "items": [
+            {
+              "label": "Lugar de trabajo digital",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Soluciones de impresión",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Dispositivos orientados al cliente final",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "Socios tecnológicos",
+              "href": "/solutions#endpoint"
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "brandName": "MUNICIPIO",
+      "linkedinLabel": "Síguenos en LinkedIn",
+      "linkedinUrl": "#",
+      "copyright": "© 2026 Munisys. Reservados todos los derechos.",
+      "legal": "Política de Privacidad · Aviso Legal",
+      "columns": [
+        {
+          "title": "Soluciones",
+          "links": [
+            {
+              "label": "Infraestructura básica",
+              "href": "/solutions/core-infrastructure"
+            },
+            {
+              "label": "Integración del sistema",
+              "href": "/solutions/infrastructure-software/system-integration"
+            },
+            {
+              "label": "Ciberseguridad",
+              "href": "/solutions/cybersecurity"
+            },
+            {
+              "label": "Servicios en la nube",
+              "href": "/solutions/managed-and-cloud-services"
+            }
+          ]
+        },
+        {
+          "title": "Acerca de",
+          "links": [
+            {
+              "label": "Sobre nosotros",
+              "href": "/about-us"
+            },
+            {
+              "label": "Carreras",
+              "href": "/careers"
+            },
+            {
+              "label": "Perspectivas",
+              "href": "/insights"
+            },
+            {
+              "label": "Referencias de clientes",
+              "href": "/customer-references"
+            }
+          ]
+        },
+        {
+          "title": "Socios",
+          "links": [
+            {
+              "label": "Socios tecnológicos",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "Conviértase en socio",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "Certificaciones",
+              "href": "/technology-partners"
+            }
+          ]
+        },
+        {
+          "title": "Contacto",
+          "links": [
+            {
+              "label": "contact@munisys.ma",
+              "href": "#"
+            },
+            {
+              "label": "Casablanca, Marruecos",
+              "href": "#"
+            },
+            {
+              "label": "+212 5XX XXXXXX",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contacto",
+      "subline": "¿Listo para acelerar su transformación digital? Nuestros expertos están aquí, disponibles y deseosos de ayudarle a dar forma al futuro.",
+      "hqTitle": "Sede",
+      "hqText": "123 Campaña de Innovación, Distrito Tecnológico, Casablanca",
+      "emailTitle": "Envíenos un correo electrónico",
+      "emailText": "contacto@munisys.com",
+      "callTitle": "Llámanos",
+      "callText": "+212 5 22 00 00 00",
+      "heroMainTitle": "Construyamos",
+      "heroMainTitleBold": "Juntos.",
+      "formTitle": "Enviar un mensaje",
+      "formSub": "Complete el siguiente formulario y nos comunicaremos con usted dentro de las 24 horas.",
+      "formSuccess": "✅ ¡Mensaje enviado! Estaremos en contacto en breve.",
+      "labelName": "Nombre completo",
+      "labelEmail": "Dirección de correo electrónico",
+      "labelCompany": "Empresa",
+      "labelPhone": "Número de teléfono",
+      "labelMessage": "¿Cómo podemos ayudarte?",
+      "formNote": "🔒 Tus datos son 100% seguros y nunca se comparten.",
+      "btnSubmit": "Enviar mensaje"
+    }
+  },
+  "theme": {
+    "fontFamily": "Montserrat",
+    "buttonRadius": "30px",
+    "bordeaux": "#711a70"
+  },
+  "zh": {
+    "theme": {
+      "bordeaux": "#922b55",
+      "blueDark": "#1d4e79",
+      "blueLight": "#83a5c2",
+      "bgGray": "#f8fafc",
+      "textGray": "#475569"
+    },
+    "homepage": {
+      "slides": [
+        {
+          "h1": "我们精心策划<strong>数字基础设施</strong>技术，打造独特的<strong>客户体验</strong>",
+          "meta": "核心基础设施",
+          "desc": "使用我们领先的以数据为中心的解决方案，跨数据中心和公共云设置、管理和保护您的计算、存储和网络。",
+          "btnText": "我们的解决方案"
+        },
+        {
+          "h1": "我们在设计<strong>架构和集成</strong>时会考虑到您未来的<strong>IT</strong>",
+          "meta": "网络安全",
+          "desc": "通过零信任架构和主动监控，保护您的网络、端点和数据免受不断演变的数字威胁。",
+          "btnText": "发现安全"
+        },
+        {
+          "h1": "我们负责<strong>您的数字基础设施</strong>，以便您<strong>为您的客户提供创新服务</strong>",
+          "meta": "托管服务",
+          "desc": "无缝云集成和托管服务可加速您的数字化转型之旅，同时确保高可用性。",
+          "btnText": "云服务"
+        }
+      ],
+      "services": [
+        {
+          "title": "IT集成服务",
+          "body": "在您的 IT 基础设施生命周期的每个阶段，我们的专业和运营服务将帮助您做出正确的技术选择、设计最完善的架构并根据最佳实践进行部署，所有这些都在我们的项目经理的监督和控制下。"
+        },
+        {
+          "title": "IT支持服务",
+          "body": "我们的被动和主动支持服务可确保您的基础设施保持健康，最大限度地减少停机时间并优化性能。"
+        },
+        {
+          "title": "托管服务",
+          "body": "将您的日常 IT 运营工作交给我们的认证专家，让您的内部团队能够专注于战略业务计划。"
+        }
+      ],
+      "customers": [
+        "Attijariwafa 银行",
+        "摩洛哥高速公路",
+        "玛格里布银行",
+        "非洲银行",
+        "人民银行",
+        "戴高乐",
+        "欧洲非洲",
+        "摩洛哥电信",
+        "因威",
+        "拉法基豪瑞",
+        "马比奥",
+        "过流保护",
+        "ONCF"
+      ],
+      "sections": {
+        "servicesTitle": "我们的服务",
+        "servicesDesc": "全面的 IT 服务目录，涵盖 IT 基础设施的整个生命周期",
+        "whyTitle": "为什么选择Munisys",
+        "customersTitle": "他们信任我们",
+        "solutionsTitle": "解决方案",
+        "solutionContentTitle": "核心基础设施技术",
+        "solutionContentDesc": "Munisys 利用其独特而丰富的经验，帮助 IT 组织通过传统或软件定义的方法跨数据中心和公共云设置、管理、保护和无缝运行一致的计算、存储、网络和备份基础设施。<br><br>我们专注于一系列领先的以数据为中心、适应性强且高效的解决方案，这些解决方案提供云原生操作体验、人工智能驱动的管理、增强的安全性和优化的性能。",
+        "offeringsTitle": "奉献",
+        "offeringsDesc": "为安全数字基础设施提供端到端且一致的解决方案和服务",
+        "insightsTitle": "见解",
+        "insightsCard1": "Munisys 的新视觉形象",
+        "insightsCard2": "新总部",
+        "insightsCard3": "新闻稿",
+        "customersDesc": "作为值得信赖的顾问，我们确保我们对所服务组织内技术解决方案的设计、部署和支持的贡献符合他们的最佳利益，并高度重视诚信、履行我们的承诺和长期合作伙伴关系。凭借与众多大中型经济参与者和国家实体的持久和富有成效的合作，我们在摩洛哥 IT 行业中赢得了领先地位。",
+        "solutionReadMoreLabel": "阅读更多",
+        "customersSeeAllLabel": "查看全部",
+        "partnersTitle": "技术合作伙伴",
+        "partnersDesc": "我们为客户设计和部署的 IT 基础设施是他们业务的核心，决定了他们的创新和脱颖而出的能力。我们与技术合作伙伴建立牢固的联系，并获得内部专业知识，以确保真正的弹性和敏捷性。",
+        "partnersLinkText": "阅读更多",
+        "insightsCard1Title": "MUNISYS",
+        "insightsCard3Top": "赫利俄斯",
+        "insightsCard3Mid": "投资伙伴",
+        "insightsCard3Bot": "FIPAR",
+        "referencesTitle": "他们信任我们",
+        "referencesDesc": "作为值得信赖的顾问，我们对技术解决方案的设计、部署和支持的贡献是为了客户的最大利益，优先考虑诚信和长期合作伙伴关系。",
+        "referencesLinkText": "查看所有参考文献",
+        "figuresTitle": "一些<br />数字"
+      },
+      "images": {
+        "slide1": "/slide1.png",
+        "slide2": "/slide2.png",
+        "slide3": "/slide3.png",
+        "solutionsDC": "/datacenter.png",
+        "insightsHQ": "/datacenter.png"
+      },
+      "offeringsThrough": [
+        "最佳技术",
+        "巧妙的集成",
+        "声音架构",
+        "自动化和编排",
+        "合格的端到端服务"
+      ],
+      "offeringsAchieve": [
+        "高效利用融合技术",
+        "控制复杂性",
+        "简化 IT 运营",
+        "敏捷基础设施资源",
+        "最佳性能和真正的弹性",
+        "深入而广泛的支持能力"
+      ],
+      "solutionMenuItems": [
+        "核心基础设施技术",
+        "网络安全解决方案",
+        "基础设施软件",
+        "托管和云服务",
+        "端点解决方案"
+      ],
+      "heroCTALabel": "我们的解决方案",
+      "figures": [
+        {
+          "num": "34",
+          "label": "<br/>从业年数",
+          "prefix": "+"
+        },
+        {
+          "num": "330",
+          "label": "员工",
+          "prefix": ""
+        },
+        {
+          "num": "700",
+          "label": "MMAD 收入",
+          "prefix": ""
+        },
+        {
+          "num": "18",
+          "label": "支持<br/>中心",
+          "prefix": ""
+        }
+      ],
+      "bentoSolutions": [
+        {
+          "title": "核心基础设施<br/>技术",
+          "desc": "跨数据中心和公共云的计算、存储、网络和备份基础设施，提供领先的以数据为中心的解决方案。",
+          "btn": "阅读更多"
+        },
+        {
+          "title": "网络安全<br/>解决方案",
+          "desc": "端到端安全架构可保护您的数字资产免受不断变化的威胁。",
+          "btn": "发现"
+        },
+        {
+          "title": "基础设施<br/>软件",
+          "desc": "适用于现代 IT 运营的软件定义方法和强大集成。",
+          "btn": ""
+        },
+        {
+          "title": "托管和<br/>云服务",
+          "desc": "跨公共、私有和混合云环境的无缝操作。",
+          "btn": ""
+        },
+        {
+          "title": "端点解决方案",
+          "desc": "为您的员工提供安全高效的计算设备。",
+          "btn": "查看产品"
+        }
+      ],
+      "offeringsThroughTitle": "通过",
+      "offeringsAchieveTitle": "我们实现",
+      "offeringsListThrough": [
+        "最佳技术",
+        "巧妙的集成",
+        "声音架构",
+        "自动化和编排",
+        "合格的端到端服务"
+      ],
+      "offeringsListAchieve": [
+        "高效利用融合技术",
+        "控制复杂性",
+        "简化 IT 运营",
+        "敏捷基础设施资源",
+        "最佳性能和真正的弹性",
+        "深入而广泛的支持能力"
+      ]
+    },
+    "solutions": {
+      "expertiseLabel": "专业知识",
+      "partnersLabel": "合作伙伴",
+      "heroLabel": "我们的解决方案",
+      "heroTitle": "赋能您的数字化旅程。",
+      "heroDesc": "了解我们全面的 IT 解决方案组合。"
+    },
+    "services": {
+      "heroLabel": "专业服务",
+      "heroMainTitle": "我们的",
+      "heroMainTitleBold": "服务。",
+      "heroDesc": "专业和运营服务可帮助您做出正确的技术选择、设计完善的架构并根据最佳实践进行部署。",
+      "introDesc": "在 Munisys，我们通过全面的专业服务目录覆盖您的 IT 基础设施的整个生命周期，旨在确保性能、安全性和持续的业务运营。",
+      "learnMoreLabel": "了解更多",
+      "sections": [
+        {
+          "title": "IT 集成与支持",
+          "items": [
+            {
+              "title": "集成服务",
+              "desc": "在您的 IT 基础设施生命周期的每个阶段，我们的专业和运营服务将帮助您做出正确的技术选择、设计最完善的架构并根据现有规则进行部署。",
+              "features": [
+                "架构设计与验证",
+                "技术部署",
+                "系统迁移和升级"
+              ]
+            },
+            {
+              "title": "IT 支持服务",
+              "desc": "我们的反应式和主动式支持服务可确保您的技术资产的最大可用性和连续性。我们通过严格的 SLA 和专门的技术专业知识来降低风险。",
+              "features": [
+                "24/7 事件管理",
+                "主动健康检查",
+                "硬件更换 (RMA)"
+              ]
+            },
+            {
+              "title": "托管服务",
+              "desc": "将您的日常 IT 运营工作交给我们的认证专家，让您的内部团队能够专注于战略业务计划。我们提供 24/7 监控和主动维护。",
+              "features": [
+                "基础设施监控",
+                "安全运营中心 (SOC)",
+                "云和备份管理"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "careers": {
+      "applyLabel": "申请",
+      "heroTitle": "塑造<br /><strong>未来。</strong>",
+      "heroDesc": "加入充满热情的专家团队，致力于协调数字化转型。",
+      "whyTitle": "为什么选择穆尼系统？",
+      "whyDesc": "我们坚信赋予员工权力、促进持续学习并建立卓越和创新的文化。",
+      "reasons": [
+        {
+          "title": "持续增长",
+          "desc": "获得尖端技术方面的持续培训、认证和清晰的职业发展路径。"
+        },
+        {
+          "title": "有影响力的工作",
+          "desc": "致力于塑造大型企业数字化格局的大型关键任务项目。"
+        },
+        {
+          "title": "协作文化",
+          "desc": "加入一个多元化、包容性和支持性的环境，在这里每个声音都很重要，团队合作蓬勃发展。"
+        }
+      ],
+      "jobsTitle": "未平仓头寸",
+      "jobs": [
+        {
+          "title": "高级网络安全工程师",
+          "meta": "全职•卡萨布兰卡•IT 集成"
+        },
+        {
+          "title": "云解决方案架构师",
+          "meta": "全职•卡萨布兰卡•云服务"
+        },
+        {
+          "title": "SOC 分析师 2 级",
+          "meta": "全职•远程/混合•托管服务"
+        },
+        {
+          "title": "IT 项目经理",
+          "meta": "全职•卡萨布兰卡•管理"
+        }
+      ]
+    },
+    "customerReferences": {
+      "heroLabel": "客户参考",
+      "heroDesc": "我们对卓越的承诺使我们与摩洛哥最大的经济参与者和国家实体建立了持久而富有成效的合作。",
+      "references": [
+        {
+          "name": "人民银行",
+          "logo": "/images/logos/bp.svg"
+        },
+        {
+          "name": "非洲银行",
+          "logo": "/images/logos/boa.png"
+        },
+        {
+          "name": "玛格里布银行",
+          "logo": "/images/logos/bam.png"
+        },
+        {
+          "name": "Attijariwafa 银行",
+          "logo": "/images/logos/awb.svg"
+        },
+        {
+          "name": "戴高乐",
+          "logo": "/images/logos/cdg.svg"
+        },
+        {
+          "name": "ONCF",
+          "logo": "/images/logos/oncf.png"
+        },
+        {
+          "name": "过流保护",
+          "logo": "/images/logos/ocp.svg"
+        },
+        {
+          "name": "马比奥",
+          "logo": "/images/logos/marbio.svg"
+        },
+        {
+          "name": "拉法基豪瑞",
+          "logo": "/images/logos/lafarge.svg"
+        },
+        {
+          "name": "因威",
+          "logo": "/images/logos/inwi.svg"
+        }
+      ],
+      "heroMainTitle": "深受",
+      "heroMainTitleBold": "信赖领导们。"
+    },
+    "insights": {
+      "noImageLabel": "没有图像",
+      "heroTitle": "见解",
+      "posts": [
+        {
+          "title": "摩洛哥网络安全的未来",
+          "category": "白皮书",
+          "desc": "深入分析新兴威胁和现代企业所需的零信任架构。",
+          "img": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "云迁移策略",
+          "category": "博客",
+          "desc": "将核心基础设施无缝迁移到混合云环境而无需停机的最佳实践。",
+          "img": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "Munisys 荣获年度合作伙伴",
+          "category": "新闻",
+          "desc": "连续第三年因 IT 集成服务领域的杰出交付和创新而获得认可。",
+          "img": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
+        },
+        {
+          "title": "利用 AI 优化 IT 运营",
+          "category": "网络研讨会",
+          "desc": "与我们的专家一起讨论托管服务和 SOC 运营中人工智能驱动工具的集成。",
+          "img": "https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop"
+        }
+      ]
+    },
+    "technologyPartners": {
+      "heroTitle": "技术合作伙伴",
+      "heroDesc": "我们与世界领先的技术提供商建立了牢固的联系，以确保您的数字基础设施具有真正的弹性、性能和敏捷性。",
+      "partners": [
+        {
+          "name": "思科",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisco_logo_blue_2016.svg",
+          "category": "网络"
+        },
+        {
+          "name": "戴尔科技",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Dell_logo_2016.svg",
+          "category": "基础设施"
+        },
+        {
+          "name": "虚拟机",
+          "logo": "/images/logos/vmware.svg",
+          "category": "虚拟化"
+        },
+        {
+          "name": "飞塔",
+          "logo": "/images/logos/fortinet.svg",
+          "category": "安全"
+        },
+        {
+          "name": "微软",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Microsoft_logo_(2012).svg",
+          "category": "云与软件"
+        },
+        {
+          "name": "IBM",
+          "logo": "https://commons.wikimedia.org/wiki/Special:FilePath/IBM_logo.svg",
+          "category": "企业解决方案"
+        }
+      ],
+      "allSpecialtiesLabel": "所有专业"
+    },
+    "solutionsIndex": {
+      "heroTitle": "我们的解决方案",
+      "heroDesc": "我们设计符合您战略目标的弹性、面向未来的 IT 架构。从核心基础设施到端点安全，我们的解决方案可随着您的业务而扩展。",
+      "title": "核心基础设施和网络安全",
+      "desc": "Munisys 利用其独特而丰富的经验，帮助 IT 组织通过传统或软件定义的方法跨数据中心和公共云设置、管理、保护和无缝运行一致的计算、存储、网络和备份基础设施。\n\n我们的重点涵盖广泛的技术，确保您所有数字资产的稳健性能、合规性和端到端可见性。"
+    },
+    "aboutUs": {
+      "heroTitle": "关于我们",
+      "heroDesc": "了解有关 Munisys、我们的历史、我们的价值观以及我们对卓越数字化的承诺的更多信息。",
+      "subtitle": "我们的传统",
+      "heroMainTitle": "赋能数字化转型",
+      "storyTitle": "我们是谁",
+      "storyP1": "自成立以来，Munisys 一直走在技术创新的前沿。我们相信技术是最终的均衡器，使企业能够以前所未有的方式扩展规模、保护资产并简化运营。",
+      "storyP2": "我们的认证专家团队不懈努力，构建和部署不仅强大而且面向未来的 IT 解决方案。通过将深厚的行业专业知识与尖端工具相结合，我们将复杂的挑战转化为无缝的数字体验。",
+      "timelineTitle": "我们的旅程",
+      "timeline": [
+        {
+          "year": "1993",
+          "text": "成立的愿景是为本地企业提供卓越的 IT 基础设施服务。"
+        },
+        {
+          "year": "2005",
+          "text": "扩展了我们的产品组合，包括先进的网络安全和网络集成。"
+        },
+        {
+          "year": "2015",
+          "text": "推出了托管服务部门，提供 24/7 主动监控和 SOC。"
+        },
+        {
+          "year": "2024",
+          "text": "引领云原生转型时代，与全球科技巨头合作。"
+        }
+      ]
+    },
+    "test": {
+      "description1": "Ceci 是测试图像。在管理模式下，我们将进行变革。",
+      "image1": "/slide1.png",
+      "gridImage1": "/slide1.png",
+      "gridImage2": "/slide2.png",
+      "gridImage3": "/slide3.png",
+      "circularImage": "/slide2.png",
+      "heroImage": "/hero.png",
+      "heroTitle": "称号英雄可编辑",
+      "heroSubtitle": "副标题可在管理员模式下编辑"
+    },
+    "navigation": {
+      "brandName": "MUNISYS",
+      "ctaLabel": "联系方式",
+      "links": {
+        "solutions": "解决方案"
+      },
+      "mainLinks": [
+        {
+          "label": "服务",
+          "href": "/services"
+        },
+        {
+          "label": "客户参考",
+          "href": "/customer-references"
+        },
+        {
+          "label": "技术合作伙伴",
+          "href": "/technology-partners"
+        },
+        {
+          "label": "见解",
+          "href": "/insights"
+        },
+        {
+          "label": "职业生涯",
+          "href": "/careers"
+        },
+        {
+          "label": "关于我们",
+          "href": "/about-us"
+        }
+      ],
+      "megaMenu": [
+        {
+          "title": "核心基础设施技术",
+          "href": "/solutions#core-infra",
+          "items": [
+            {
+              "label": "计算与存储",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "超融合基础设施",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "数据弹性",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "网络",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "布线和数据中心环境",
+              "href": "/solutions#core-infra"
+            },
+            {
+              "label": "技术合作伙伴",
+              "href": "/solutions#core-infra"
+            }
+          ]
+        },
+        {
+          "title": "网络安全",
+          "href": "/solutions#cybersecurity",
+          "items": [
+            {
+              "label": "端点安全",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "网络安全",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "云和应用程序安全",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "身份和访问管理",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "可见性与合规性",
+              "href": "/solutions#cybersecurity"
+            },
+            {
+              "label": "技术合作伙伴",
+              "href": "/solutions#cybersecurity"
+            }
+          ]
+        },
+        {
+          "title": "基础设施软件",
+          "href": "/solutions#infra-software",
+          "items": [
+            {
+              "label": "服务与资产管理",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "可观察性、自动化和编排",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "数据管理与分析",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "应用程序现代化",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "数据弹性",
+              "href": "/solutions#infra-software"
+            },
+            {
+              "label": "技术合作伙伴",
+              "href": "/solutions#infra-software"
+            }
+          ]
+        },
+        {
+          "title": "托管和云服务",
+          "href": "/solutions#managed-cloud",
+          "items": [
+            {
+              "label": "托管和云基础设施服务",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "应用程序和平台服务",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "业务弹性和数据保护",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "托管安全服务",
+              "href": "/solutions#managed-cloud"
+            },
+            {
+              "label": "咨询、专业和管理服务",
+              "href": "/solutions#managed-cloud"
+            }
+          ]
+        },
+        {
+          "title": "端点解决方案",
+          "href": "/solutions#endpoint",
+          "items": [
+            {
+              "label": "数字化工作场所",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "打印解决方案",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "面向最终客户的设备",
+              "href": "/solutions#endpoint"
+            },
+            {
+              "label": "技术合作伙伴",
+              "href": "/solutions#endpoint"
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "brandName": "穆尼西斯",
+      "linkedinLabel": "在 LinkedIn 上关注我们",
+      "linkedinUrl": "#",
+      "copyright": "© 2026 穆尼系统。版权所有。",
+      "legal": "隐私政策 · 法律声明",
+      "columns": [
+        {
+          "title": "解决方案",
+          "links": [
+            {
+              "label": "核心基础设施",
+              "href": "/solutions/core-infrastructure"
+            },
+            {
+              "label": "系统集成",
+              "href": "/solutions/infrastructure-software/system-integration"
+            },
+            {
+              "label": "网络安全",
+              "href": "/solutions/cybersecurity"
+            },
+            {
+              "label": "云服务",
+              "href": "/solutions/managed-and-cloud-services"
+            }
+          ]
+        },
+        {
+          "title": "关于",
+          "links": [
+            {
+              "label": "关于我们",
+              "href": "/about-us"
+            },
+            {
+              "label": "职业生涯",
+              "href": "/careers"
+            },
+            {
+              "label": "见解",
+              "href": "/insights"
+            },
+            {
+              "label": "客户参考",
+              "href": "/customer-references"
+            }
+          ]
+        },
+        {
+          "title": "合作伙伴",
+          "links": [
+            {
+              "label": "技术合作伙伴",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "成为合作伙伴",
+              "href": "/technology-partners"
+            },
+            {
+              "label": "认证",
+              "href": "/technology-partners"
+            }
+          ]
+        },
+        {
+          "title": "联系方式",
+          "links": [
+            {
+              "label": "联系@munisys.ma",
+              "href": "#"
+            },
+            {
+              "label": "摩洛哥卡萨布兰卡",
+              "href": "#"
+            },
+            {
+              "label": "+212 5XX XXX XXX",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "联系方式",
+      "subline": "准备好加速您的数字化转型了吗？我们的专家随时待命，并渴望帮助您塑造未来。",
+      "hqTitle": "总部",
+      "hqText": "123 创新大道，科技区，卡萨布兰卡",
+      "emailTitle": "给我们发电子邮件",
+      "emailText": "contact@munisys.com",
+      "callTitle": "致电我们",
+      "callText": "+212 5 22 00 00 00",
+      "heroMainTitle": "让我们构建",
+      "heroMainTitleBold": "一起。",
+      "formTitle": "发送消息",
+      "formSub": "填写下面的表格，我们将在 24 小时内回复您。",
+      "formSuccess": "✅ 消息已发送！我们很快就会联系您。",
+      "labelName": "全名",
+      "labelEmail": "电子邮件地址",
+      "labelCompany": "公司",
+      "labelPhone": "电话号码",
+      "labelMessage": "我们能为您提供什么帮助？",
+      "formNote": "🔒 您的数据 100% 安全并且从未共享。",
+      "btnSubmit": "发送消息"
+    }
+  }
+}

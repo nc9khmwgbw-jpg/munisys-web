@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+#munisys-wrapper {
+  --bordeaux: #922b55; --blue-dark: #1d4e79; --text-gray: #666666;
+  font-family: 'Montserrat', sans-serif !important;
+  background: #ffffff; width: 100vw !important; text-align: left;
+}
+#munisys-wrapper .sol-wrapper { background: var(--blue-dark) !important; width: 100% !important; }
+#munisys-wrapper .sol-sec { 
+  background: var(--blue-dark) !important; color: #fff !important; padding: 5rem !important; position: relative !important;
+  max-width: 1440px !important; margin: 0 auto !important; overflow: hidden !important;
+}
+#munisys-wrapper .sol-sec::before {
+  content: ''; position: absolute !important; top: 0 !important; right: 0 !important; width: 15% !important; height: 25% !important;
+  background: var(--bordeaux) !important; clip-path: polygon(100% 0, 100% 100%, 0 0) !important;
+}
+#munisys-wrapper .sol-grid { 
+  display: grid !important; grid-template-columns: 350px 350px 1fr !important; gap: 4rem !important; align-items: center !important; position: relative !important; z-index: 2 !important;
+}
+#munisys-wrapper .sol-title { font-size: 2.2rem !important; font-weight: 300 !important; margin-bottom: 3rem !important; color: #fff !important; }
+#munisys-wrapper .sol-menu { display: flex !important; flex-direction: column !important; align-items: flex-start !important; }
+#munisys-wrapper .sol-menu-item { padding: 1.5rem 0 !important; border-bottom: 1px solid rgba(255,255,255,0.2) !important; width: 100% !important; text-align: left !important; }
+#munisys-wrapper .sol-img-container { width: 100% !important; aspect-ratio: 3/4 !important; overflow: hidden !important; border: 1px solid white; }
+#munisys-wrapper .sol-content h3 { font-size: 1.8rem !important; margin-bottom: 1.5rem !important; font-weight: 700 !important; color: #fff !important; }
+#munisys-wrapper .sol-content p { color: rgba(255,255,255,0.8) !important; }
+
+@media(max-width:1024px) {
+  #munisys-wrapper .sol-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body>
+<div id="munisys-wrapper">
+  <div class="sol-wrapper">
+    <section class="sol-sec">
+      <h2 class="sol-title">Solutions</h2>
+      <div class="sol-grid">
+        <div class="sol-menu">
+          <div class="sol-menu-item active">Core Infrastructure Technologies</div>
+          <div class="sol-menu-item">Cybersecurity Solutions</div>
+          <div class="sol-menu-item">Infrastructure Software</div>
+          <div class="sol-menu-item">Managed &amp; Cloud Services</div>
+          <div class="sol-menu-item" style="border-bottom:none">Endpoint solutions</div>
+        </div>
+        <div class="sol-img-container">
+          <img src="broken.png" alt="Datacenter" />
+        </div>
+        <div class="sol-content">
+          <h3>Core Infrastructure Technologies</h3>
+          <p>Munisys leverages its unique and extensive experience...</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>

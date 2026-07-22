@@ -1,0 +1,119 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // 1. GESTION DES ONGLETS "SOLUTIONS"
+  const tabsData = [
+    {
+      title: "Core Infrastructure Technologies",
+      desc: "<p>Munisys leverages its unique and extensive experience to help IT organizations to setup, manage, secure and seamlessly run consistent compute, storage, networking and backup infrastructure across data centers and public clouds, through either traditional or software-defined approaches.</p><p>We focus on a range of leading data-centric, adaptable and efficient solutions that offer cloud-native operating experience, AI driven management, enhanced security and optimized performance.</p>"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      desc: "<p>Comprehensive protection for your enterprise. We secure your network, endpoints, and data against evolving digital threats with zero-trust architectures and proactive monitoring.</p>"
+    },
+    {
+      title: "Infrastructure Software",
+      desc: "<p>Optimize your operations with enterprise-grade software solutions for monitoring, management, and automation across your entire IT stack.</p>"
+    },
+    {
+      title: "Managed & Cloud Services",
+      desc: "<p>Seamless cloud integration and managed services to accelerate your digital transformation journey while controlling costs and ensuring high availability.</p>"
+    },
+    {
+      title: "Endpoint solutions",
+      desc: "<p>Empower your workforce with secure, high-performance computing devices and intelligent endpoint management solutions designed for the modern hybrid workplace.</p>"
+    }
+  ];
+
+  const menuItems = document.querySelectorAll('.sol-menu-item');
+  const solContent = document.querySelector('.sol-content');
+
+  if(menuItems.length > 0 && solContent) {
+    solContent.style.transition = 'opacity 0.25s ease-in-out';
+    
+    menuItems.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        // Remove active
+        menuItems.forEach(i => i.classList.remove('active'));
+        // Add active
+        item.classList.add('active');
+        
+        // Fade out
+        solContent.style.opacity = '0';
+        
+        setTimeout(() => {
+          const data = tabsData[index];
+          solContent.innerHTML = `
+            <h3>${data.title}</h3>
+            ${data.desc}
+            <a href="#" class="sol-link">Read more <span style="margin-left:5px">→</span></a>
+          `;
+          solContent.style.opacity = '1';
+          attachTempLinks(); // Re-attacher l'événement au nouveau bouton
+        }, 250);
+      });
+    });
+  }
+
+  // 2. GESTION DE L'ACCORDÉON "SERVICES"
+  const srvAccs = document.querySelectorAll('.srv-acc');
+  
+  srvAccs.forEach(acc => {
+    const head = acc.querySelector('.srv-acc-head');
+    const body = acc.querySelector('.srv-acc-body');
+    const icon = acc.querySelector('.acc-x');
+    
+    if(head) {
+      head.addEventListener('click', () => {
+        const isAlreadyOpen = acc.classList.contains('open');
+        
+        // Close all
+        srvAccs.forEach(c => {
+          c.classList.remove('open');
+          const b = c.querySelector('.srv-acc-body');
+          const i = c.querySelector('.acc-x');
+          if(b) b.style.display = 'none';
+          if(i) i.textContent = '+';
+        });
+        
+        // Open clicked if it was closed
+        if(!isAlreadyOpen) {
+          acc.classList.add('open');
+          if(body) body.style.display = 'block';
+          if(icon) icon.textContent = '−';
+        }
+      });
+    }
+  });
+
+  // 3. BOUTON "OUR SOLUTIONS" (DE LA PREMIÈRE SECTION)
+  // Il va scroller doucement jusqu'à la section bleue
+  const heroBtn = document.querySelector('.hero-cta-btn');
+  const solSection = document.querySelector('.sol-wrapper');
+  if(heroBtn && solSection) {
+    heroBtn.addEventListener('click', (e) => {
+      e.preventDefault(); // Empêche l'erreur 404
+      solSection.scrollIntoView({ behavior: 'smooth' }); // Défilement fluide vers le bas
+    });
+  }
+
+  // 4. TOUS LES AUTRES BOUTONS (READ MORE, SEE ALL, INSIGHTS...)
+  // Affiche un petit message pop-up en attendant que vous créiez ces pages sur WordPress
+  function attachTempLinks() {
+    const tempLinks = document.querySelectorAll('.sol-link, .srv-readmore, .ref-seeall, .ins-card, .ft-col a, .ft-linkedin');
+    tempLinks.forEach(link => {
+      // Pour éviter d'attacher le clic plusieurs fois, on clone le bouton
+      const clone = link.cloneNode(true);
+      link.replaceWith(clone);
+      
+      clone.addEventListener('click', (e) => {
+        e.preventDefault(); // Empêche l'erreur 404
+        alert("Action réussie ! 🚀\nCe bouton fonctionne bien, mais la page de destination n'a pas encore été créée sur WordPress. Vous pourrez ajouter le vrai lien plus tard dans le HTML.");
+      });
+    });
+  }
+  
+  attachTempLinks();
+
+});
+</script>
