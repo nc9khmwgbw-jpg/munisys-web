@@ -2,6 +2,7 @@
 import Link from 'next/link';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
+import { useInView, animate } from 'framer-motion';
 import InlineEditor, { InlineImageEditor } from '@/components/InlineEditor';
 import { useCMS } from '@/components/CMSProvider';
 import FadeIn from '@/components/FadeIn';
@@ -183,30 +184,21 @@ const marqueeRow2 = ['CDG', 'EURAFRIC', 'Maroc Telecom', 'inwi', 'LafargeHolcim'
 // ── COUNTER HOOK ──────────────────────────────────────
 function useCounter(target, duration = 2000) {
   const [count, setCount] = useState(0);
-  const [started, setStarted] = useState(false);
   const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !started) {
-        setStarted(true);
-      }
-    }, { threshold: 0.5 });
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [started]);
-
-  useEffect(() => {
-    if (!started) return;
-    let start = 0;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) { setCount(target); clearInterval(timer); }
-      else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
-  }, [started, target, duration]);
+    if (isInView) {
+      const controls = animate(0, target, {
+        duration: duration / 1000,
+        ease: "easeOut",
+        onUpdate(value) {
+          setCount(Math.floor(value));
+        }
+      });
+      return () => controls.stop();
+    }
+  }, [isInView, target, duration]);
 
   return [count, ref];
 }
