@@ -3,6 +3,7 @@ import path from 'path';
 import { NextResponse } from 'next/server';
 import DOMPurify from 'isomorphic-dompurify';
 import { createBackup } from '../backups/route';
+import defaultDb from '@/data/db.json';
 
 export const dynamic = 'force-dynamic';
 
@@ -35,8 +36,8 @@ export async function GET() {
     const data = JSON.parse(fileContents);
     return NextResponse.json(data);
   } catch (error) {
-    console.error('Error reading DB:', error);
-    return NextResponse.json({ error: 'Failed to read database' }, { status: 500 });
+    console.error('Error reading DB, falling back to bundled JSON:', error);
+    return NextResponse.json(defaultDb);
   }
 }
 
