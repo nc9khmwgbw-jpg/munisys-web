@@ -2,7 +2,6 @@ import { NextResponse } from 'next/server';
 import DOMPurify from 'isomorphic-dompurify';
 import dbConnect from '@/lib/mongodb';
 import MunisysState from '@/models/MunisysState';
-import { createBackup } from '../backups/route';
 import defaultDb from '@/data/db.json';
 
 export const dynamic = 'force-dynamic';
@@ -62,8 +61,6 @@ export async function POST(request) {
     
     let mergedData;
     if (stateDoc) {
-      // Create backup before modifying
-      await createBackup(); // Optional: might need refactoring if it relies on files
       mergedData = { ...stateDoc.data, ...newData };
       stateDoc.data = mergedData;
       // Tell mongoose that a Mixed type has changed
