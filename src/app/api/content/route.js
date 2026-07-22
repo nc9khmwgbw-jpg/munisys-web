@@ -1,31 +1,9 @@
 import { NextResponse } from 'next/server';
-import DOMPurify from 'isomorphic-dompurify';
 import dbConnect from '@/lib/mongodb';
 import MunisysState from '@/models/MunisysState';
 import defaultDb from '@/data/db.json';
 
 export const dynamic = 'force-dynamic';
-
-// Recursive function to sanitize all strings in an object/array
-const sanitizeData = (data) => {
-  if (typeof data === 'string') {
-    return DOMPurify.sanitize(data, { 
-      ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'li', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'div', 'blockquote', 'img'],
-      ALLOWED_ATTR: ['href', 'target', 'class', 'style', 'src', 'alt']
-    });
-  }
-  if (Array.isArray(data)) {
-    return data.map(item => sanitizeData(item));
-  }
-  if (typeof data === 'object' && data !== null) {
-    const sanitizedObj = {};
-    for (const [key, value] of Object.entries(data)) {
-      sanitizedObj[key] = sanitizeData(value);
-    }
-    return sanitizedObj;
-  }
-  return data;
-};
 
 export async function GET() {
   try {
@@ -52,6 +30,29 @@ export async function POST(request) {
     if (typeof rawData !== 'object' || rawData === null) {
       return NextResponse.json({ error: 'Invalid data format' }, { status: 400 });
     }
+
+    // Load DOMPurify dynamically to avoid Vercel edge/node initialization crash
+    const DOMPurify = (await import('isomorphic-dompurify')).default;
+    
+    const sanitizeData = (data) => {
+      if (typeof data === 'string') {
+        return DOMPurify.sanitize(data, { 
+          ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'li', 'ol', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'div', 'blockquote', 'img'],
+          ALLOWED_ATTR: ['href', 'target', 'class', 'style', 'src', 'alt']
+        });
+      }
+      if (Array.isArray(data)) {
+        return data.map(item => sanitizeData(item));
+      }
+      if (typeof data === 'object' && data !== null) {
+        const sanitizedObj = {};
+        for (const [key, value] of Object.entries(data)) {
+          sanitizedObj[key] = sanitizeData(value);
+        }
+        return sanitizedObj;
+      }
+      return data;
+    };
 
     const newData = sanitizeData(rawData);
 
