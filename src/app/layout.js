@@ -1,5 +1,3 @@
-import fs from 'fs/promises';
-import path from 'path';
 import "./globals.css";
 import { CMSProvider } from '@/components/CMSProvider';
 import AdminToolbar from '@/components/AdminToolbar';
@@ -7,6 +5,9 @@ import EditableNavigation from '@/components/EditableNavigation';
 import EditableFooter from '@/components/EditableFooter';
 import CustomCursor from '@/components/CustomCursor';
 import CookieBanner from '@/components/CookieBanner';
+import dbConnect from '@/lib/mongodb';
+import MunisysState from '@/models/MunisysState';
+import defaultDb from '@/data/db.json';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,9 +17,11 @@ export async function generateMetadata() {
   try {
     const cookieStore = await cookies();
     const lang = cookieStore.get('munisys_lang')?.value || 'en';
-    const dbPath = path.join(process.cwd(), 'src/data/db.json');
-    const dbContent = await fs.readFile(dbPath, 'utf8');
-    const data = JSON.parse(dbContent);
+    
+    await dbConnect();
+    const stateDoc = await MunisysState.findOne().lean();
+    const data = (stateDoc && stateDoc.data) ? stateDoc.data : defaultDb;
+    
     const seo = data[lang]?.seo || data.en?.seo || {};
     
     return {
@@ -75,11 +78,13 @@ const CSS = `
 export default async function RootLayout({ children }) {
   let theme = { bordeaux: '#922b55', blueDark: '#1d4e79', blueLight: '#83a5c2', bgGray: '#f8fafc', textGray: '#475569' };
   try {
-    const dbPath = path.join(process.cwd(), 'src/data/db.json');
-    const dbContent = await fs.readFile(dbPath, 'utf8');
-    const db = JSON.parse(dbContent);
+    await dbConnect();
+    const stateDoc = await MunisysState.findOne().lean();
+    const db = (stateDoc && stateDoc.data) ? stateDoc.data : defaultDb;
+    
     const cookieStore = await cookies();
     const lang = cookieStore.get('munisys_lang')?.value || 'en';
+    
     if (db.theme) theme = { ...theme, ...db.theme };
     if (db[lang]?.theme) theme = { ...theme, ...db[lang].theme };
   } catch (e) {}
@@ -95,7 +100,8 @@ export default async function RootLayout({ children }) {
       --font-primary: ${
         theme.fontFamily === 'Inter' ? "'Inter', sans-serif" 
         : theme.fontFamily === 'Playfair Display' ? "'Playfair Display', serif" 
-        : "'Montserrat', sans-serif"
+        : theme.fontFamily === 'Montserrat' ? "'Montserrat', sans-serif"
+        : "'Outfit', sans-serif"
       };
     }
   `;
