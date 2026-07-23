@@ -53,7 +53,7 @@ export default function InsightArticlePage({ params }) {
                         as="h1" 
                         style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 900, color: '#1d4e79', lineHeight: 1.1, marginBottom: '1.5rem' }}
                         dbPath={['insights', 'posts', idx, 'title']} 
-                        fallback={post.title || 'Titre de l\\'article'} 
+                        fallback={post.title || "Titre de l'article"} 
                     />
                     <InlineEditor 
                         as="p" 
@@ -74,7 +74,7 @@ export default function InsightArticlePage({ params }) {
                         as="div" 
                         style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-primary, sans-serif)' }}
                         dbPath={['insights', 'posts', idx, 'content']} 
-                        fallback={post.content || 'Contenu de l\\'article...'} 
+                        fallback={post.content || "Contenu de l'article..."} 
                     />
                 </div>
 
