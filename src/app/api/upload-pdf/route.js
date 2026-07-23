@@ -110,12 +110,21 @@ export async function POST(request) {
     // Return the public URL and extracted data
     const publicUrl = `/uploads/pdf/${uniqueName}`;
     
+    const slug = extractedTitle
+      .toLowerCase()
+      .trim()
+      .replace(/[\s_]+/g, '-')
+      .replace(/[^\w-]/g, '')
+      .replace(/^-+|-+$/g, '') + '-' + Math.floor(Math.random() * 1000);
+
     return NextResponse.json({ 
       success: true, 
       url: publicUrl,
       title: extractedTitle,
       desc: extractedDesc,
-      category: 'ACTUALITÉS'
+      category: 'ACTUALITÉS',
+      slug: slug,
+      content: cleanText
     });
   } catch (error) {
     console.error('PDF Upload error:', error);

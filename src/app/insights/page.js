@@ -90,6 +90,8 @@ export default function InsightsPage() {
             desc: parsedData.desc,
             category: parsedData.category,
             pdfUrl: parsedData.url,
+            slug: parsedData.slug,
+            content: parsedData.content,
             img: ''
         };
         const updatedPosts = [newPost, ...(data.posts || [])];
@@ -119,9 +121,9 @@ export default function InsightsPage() {
                     {(data.posts || []).map((post, idx) => (
                         <a 
                             key={idx} 
-                            href={post.pdfUrl || post.link || "#"} 
-                            target={(post.pdfUrl || post.link) ? "_blank" : undefined} 
-                            rel={(post.pdfUrl || post.link) ? "noopener noreferrer" : undefined} 
+                            href={post.slug ? `/insights/${post.slug}` : (post.link || post.pdfUrl || "#")} 
+                            target={(!post.slug && (post.pdfUrl || post.link)) ? "_blank" : undefined} 
+                            rel={(!post.slug && (post.pdfUrl || post.link)) ? "noopener noreferrer" : undefined} 
                             className="ins-card"
                         >
                             <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>

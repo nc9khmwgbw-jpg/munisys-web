@@ -1,0 +1,173 @@
+{
+  "brandName": "MUNISYS",
+  "ctaLabel": "Contact",
+  "links": {
+    "solutions": "Solutions"
+  },
+  "mainLinks": [
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Customer references",
+      "href": "/customer-references"
+    },
+    {
+      "label": "Technology partners",
+      "href": "/technology-partners"
+    },
+    {
+      "label": "Insights",
+      "href": "/insights"
+    },
+    {
+      "label": "Careers",
+      "href": "/careers"
+    },
+    {
+      "label": "About us",
+      "href": "/about-us"
+    }
+  ],
+  "megaMenu": [
+    {
+      "title": "Core Infrastructure Technologies",
+      "href": "/solutions#core-infra",
+      "items": [
+        {
+          "label": "Compute & storage",
+          "href": "/solutions#core-infra"
+        },
+        {
+          "label": "Hyper converged infrastructures",
+          "href": "/solutions#core-infra"
+        },
+        {
+          "label": "Data resilience",
+          "href": "/solutions#core-infra"
+        },
+        {
+          "label": "Networking",
+          "href": "/solutions#core-infra"
+        },
+        {
+          "label": "Cabling & data center environment",
+          "href": "/solutions#core-infra"
+        },
+        {
+          "label": "Technology partners",
+          "href": "/solutions#core-infra"
+        }
+      ]
+    },
+    {
+      "title": "Cybersecurity",
+      "href": "/solutions#cybersecurity",
+      "items": [
+        {
+          "label": "Endpoint Security",
+          "href": "/solutions#cybersecurity"
+        },
+        {
+          "label": "Network Security",
+          "href": "/solutions#cybersecurity"
+        },
+        {
+          "label": "Cloud & Application Security",
+          "href": "/solutions#cybersecurity"
+        },
+        {
+          "label": "Identity and Access Management",
+          "href": "/solutions#cybersecurity"
+        },
+        {
+          "label": "Visibility & Compliance",
+          "href": "/solutions#cybersecurity"
+        },
+        {
+          "label": "Technology partners",
+          "href": "/solutions#cybersecurity"
+        }
+      ]
+    },
+    {
+      "title": "Infrastructure software",
+      "href": "/solutions#infra-software",
+      "items": [
+        {
+          "label": "Service & Asset Management",
+          "href": "/solutions#infra-software"
+        },
+        {
+          "label": "Observability, Automation & Orchestration",
+          "href": "/solutions#infra-software"
+        },
+        {
+          "label": "Data Management & Analytics",
+          "href": "/solutions#infra-software"
+        },
+        {
+          "label": "Application modernization",
+          "href": "/solutions#infra-software"
+        },
+        {
+          "label": "Data resilience",
+          "href": "/solutions#infra-software"
+        },
+        {
+          "label": "Technology partners",
+          "href": "/solutions#infra-software"
+        }
+      ]
+    },
+    {
+      "title": "Managed & Cloud Services",
+      "href": "/solutions#managed-cloud",
+      "items": [
+        {
+          "label": "Hosting and Cloud Infrastructure Services",
+          "href": "/solutions#managed-cloud"
+        },
+        {
+          "label": "Application and Platforms Services",
+          "href": "/solutions#managed-cloud"
+        },
+        {
+          "label": "Business Resilience & Data Protection",
+          "href": "/solutions#managed-cloud"
+        },
+        {
+          "label": "Managed Security Services",
+          "href": "/solutions#managed-cloud"
+        },
+        {
+          "label": "Advisory, Professional and Management Services",
+          "href": "/solutions#managed-cloud"
+        }
+      ]
+    },
+    {
+      "title": "Endpoint solutions",
+      "href": "/solutions#endpoint",
+      "items": [
+        {
+          "label": "Digital workplace",
+          "href": "/solutions#endpoint"
+        },
+        {
+          "label": "Printing solutions",
+          "href": "/solutions#endpoint"
+        },
+        {
+          "label": "End customer facing devices",
+          "href": "/solutions#endpoint"
+        },
+        {
+          "label": "Technology partners",
+          "href": "/solutions#endpoint"
+        }
+      ]
+    }
+  ]
+}
