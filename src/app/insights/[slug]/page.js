@@ -4,19 +4,50 @@ import { useCMS } from '@/components/CMSProvider';
 import InlineEditor from '@/components/InlineEditor';
 import ReadingProgressBar from '@/components/ReadingProgressBar';
 import Link from 'next/link';
-import { useParams, useRouter } from 'next/navigation';
-import React from 'react';
+import { useParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
 export default function InsightArticlePage() {
     const params = useParams();
     const slug = params?.slug;
-    const { dbData, isEditMode, isPreviewMode } = useCMS();
+    const { dbData } = useCMS();
+    const [localData, setLocalData] = useState(null);
+    const [loading, setLoading] = useState(false);
 
-    if (!dbData) return null;
+    // Try to find in CMSProvider context first; if not found, fetch directly from API
+    const cmsPost = dbData?.insights?.posts?.find(p => p.slug === slug);
+    const cmsPosts = dbData?.insights?.posts || [];
+    const cmsIdx = cmsPosts.findIndex(p => p.slug === slug);
 
-    const posts = dbData?.insights?.posts || [];
-    const idx = posts.findIndex(p => p.slug === slug);
-    const post = posts[idx];
+    useEffect(() => {
+        if (!cmsPost) {
+            // Article not in context - fetch fresh from API
+            setLoading(true);
+            fetch('/api/content')
+                .then(r => r.json())
+                .then(data => {
+                    const insightsPosts = data?.insights?.posts || [];
+                    const found = insightsPosts.find(p => p.slug === slug);
+                    if (found) {
+                        setLocalData({ post: found, idx: insightsPosts.findIndex(p => p.slug === slug), posts: insightsPosts });
+                    }
+                    setLoading(false);
+                })
+                .catch(() => setLoading(false));
+        }
+    }, [slug, cmsPost]);
+
+    const post = cmsPost || localData?.post;
+    const idx = cmsPost ? cmsIdx : (localData?.idx ?? -1);
+
+    if (loading) {
+        return (
+            <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ width: 40, height: 40, border: '3px solid #e2e8f0', borderTop: '3px solid #922b55', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
+                <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+            </div>
+        );
+    }
 
     if (!post) {
         return (
@@ -28,6 +59,7 @@ export default function InsightArticlePage() {
             </div>
         );
     }
+
 
     return (
         <article style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '6rem' }}>

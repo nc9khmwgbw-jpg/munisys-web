@@ -82,10 +82,10 @@ function PdfUploader({ onUploadComplete }) {
 }
 
 export default function InsightsPage() {
-    const { dbData, isEditMode, isPreviewMode, updateData } = useCMS();
+    const { dbData, isEditMode, isPreviewMode, updateData, fullDb } = useCMS();
     const data = dbData?.insights || { heroTitle: '', posts: [] };
 
-    const handlePdfUploaded = (parsedData) => {
+    const handlePdfUploaded = async (parsedData) => {
         const newPost = {
             title: parsedData.title,
             desc: parsedData.desc,
@@ -96,7 +96,29 @@ export default function InsightsPage() {
             img: ''
         };
         const updatedPosts = [newPost, ...(data.posts || [])];
+        
+        // 1. Update local state
         updateData(['insights', 'posts'], updatedPosts);
+        
+        // 2. Immediately persist to DB/JSON so the article page can read it
+        try {
+            const currentData = fullDb || dbData || {};
+            const insightsSection = currentData.insights || {};
+            const updatedDb = {
+                ...currentData,
+                insights: {
+                    ...insightsSection,
+                    posts: updatedPosts
+                }
+            };
+            await fetch('/api/content', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(updatedDb)
+            });
+        } catch (err) {
+            console.error('Auto-save after PDF upload failed:', err);
+        }
     };
 
     return (
