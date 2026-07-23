@@ -100,12 +100,6 @@ export default function InsightsPage() {
         <div id="munisys-insights-wrapper">
             <ReadingProgressBar />
             
-            {isEditMode && !isPreviewMode && (
-                <div style={{ maxWidth: '900px', margin: '3rem auto 0 auto', padding: '0 5%' }}>
-                    <PdfUploader onUploadComplete={handlePdfUploaded} />
-                </div>
-            )}
-
             <section className="ins-sec" id="insights">
                 <div className="ins-title-col">
                     <InlineEditor 
@@ -117,6 +111,11 @@ export default function InsightsPage() {
                 </div>
 
                 <div className="ins-grid">
+                    {isEditMode && !isPreviewMode && (
+                        <div style={{ gridColumn: '1 / -1', marginBottom: '1rem' }}>
+                            <PdfUploader onUploadComplete={handlePdfUploaded} />
+                        </div>
+                    )}
                     {(data.posts || []).map((post, idx) => (
                         <a 
                             key={idx} 
