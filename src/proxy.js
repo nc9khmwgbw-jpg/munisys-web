@@ -33,5 +33,5 @@ export default async function proxy(request) {
 }
 
 export const config = {
-  matcher: ['/api/:path*'],
+  matcher: ['/((?!api/upload-pdf)api/.*)'],
 };

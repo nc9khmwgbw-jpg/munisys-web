@@ -2,8 +2,14 @@ import fs from 'fs/promises';
 import path from 'path';
 import { NextResponse } from 'next/server';
 import PDFParser from 'pdf2json';
+import { jwtVerify } from 'jose';
 
 export const dynamic = 'force-dynamic';
+
+const getJwtSecretKey = () => {
+  const secret = process.env.JWT_SECRET || 'fallback_secret_key_change_in_production_!';
+  return new TextEncoder().encode(secret);
+};
 
 function parsePdfBuffer(buffer) {
   return new Promise((resolve, reject) => {
@@ -20,6 +26,16 @@ function parsePdfBuffer(buffer) {
 
 export async function POST(request) {
   try {
+    const token = request.cookies.get('munisys_auth_token')?.value;
+    if (!token) {
+      return NextResponse.json({ error: 'Unauthorized: No token provided' }, { status: 401 });
+    }
+    try {
+      await jwtVerify(token, getJwtSecretKey());
+    } catch (error) {
+      return NextResponse.json({ error: 'Unauthorized: Invalid token' }, { status: 401 });
+    }
+
     const formData = await request.formData();
     const file = formData.get('file');
 
@@ -94,6 +110,6 @@ export async function POST(request) {
     });
   } catch (error) {
     console.error('PDF Upload error:', error);
-    return NextResponse.json({ error: 'Échec de l\'upload du fichier' }, { status: 500 });
+    return NextResponse.json({ error: 'Échec de l\'upload du fichier', details: error.message, stack: error.stack }, { status: 500 });
   }
 }
