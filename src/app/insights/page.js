@@ -81,7 +81,7 @@ function PdfUploader({ onUploadComplete }) {
 }
 
 export default function InsightsPage() {
-    const { dbData, isEditMode, updateData } = useCMS();
+    const { dbData, isEditMode, isPreviewMode, updateData } = useCMS();
     const data = dbData?.insights || { heroTitle: '', posts: [] };
 
     const handlePdfUploaded = (parsedData) => {
@@ -109,7 +109,7 @@ export default function InsightsPage() {
                     />
                 </div>
 
-                {isEditMode && (
+                {isEditMode && !isPreviewMode && (
                     <div style={{ maxWidth: '900px', margin: '0 auto' }}>
                         <PdfUploader onUploadComplete={handlePdfUploaded} />
                     </div>
