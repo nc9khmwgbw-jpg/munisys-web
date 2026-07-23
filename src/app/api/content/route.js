@@ -18,8 +18,16 @@ export async function GET() {
     
     return NextResponse.json(stateDoc.data);
   } catch (error) {
-    console.error('Error reading MongoDB, falling back to bundled JSON:', error);
-    return NextResponse.json(defaultDb);
+    console.error('Error reading MongoDB, falling back to bundled JSON:', error.message);
+    try {
+      const fs = (await import('fs/promises')).default;
+      const path = (await import('path')).default;
+      const dbPath = path.join(process.cwd(), 'src/data/db.json');
+      const fileData = await fs.readFile(dbPath, 'utf8');
+      return NextResponse.json(JSON.parse(fileData));
+    } catch (fsError) {
+      return NextResponse.json(defaultDb);
+    }
   }
 }
 
@@ -56,27 +64,36 @@ export async function POST(request) {
 
     const newData = sanitizeData(rawData);
 
-    await dbConnect();
-    
-    let stateDoc = await MunisysState.findOne();
-    
-    let mergedData;
-    if (stateDoc) {
-      mergedData = { ...stateDoc.data, ...newData };
-      stateDoc.data = mergedData;
-      // Tell mongoose that a Mixed type has changed
-      stateDoc.markModified('data');
-      await stateDoc.save();
-    } else {
-      // First time saving
-      mergedData = { ...defaultDb, ...newData };
-      stateDoc = new MunisysState({ data: mergedData });
-      await stateDoc.save();
+    let mergedData = { ...defaultDb, ...newData };
+    try {
+      await dbConnect();
+      
+      let stateDoc = await MunisysState.findOne();
+      if (stateDoc) {
+        mergedData = { ...stateDoc.data, ...newData };
+        stateDoc.data = mergedData;
+        stateDoc.markModified('data');
+        await stateDoc.save();
+      } else {
+        stateDoc = new MunisysState({ data: mergedData });
+        await stateDoc.save();
+      }
+      
+      return NextResponse.json({ success: true, message: 'Database updated successfully' });
+    } catch (dbError) {
+      console.warn('Error writing to MongoDB, falling back to writing to db.json:', dbError.message);
+      
+      // Fallback: write to local file system db.json
+      const fs = (await import('fs/promises')).default;
+      const path = (await import('path')).default;
+      const dbPath = path.join(process.cwd(), 'src/data/db.json');
+      
+      await fs.writeFile(dbPath, JSON.stringify(mergedData, null, 2), 'utf8');
+      
+      return NextResponse.json({ success: true, message: 'Saved to local JSON fallback' });
     }
-    
-    return NextResponse.json({ success: true, message: 'Database updated successfully' });
   } catch (error) {
-    console.error('Error writing to MongoDB:', error);
+    console.error('API Error:', error);
     return NextResponse.json({ error: 'Failed to update database' }, { status: 500 });
   }
 }
