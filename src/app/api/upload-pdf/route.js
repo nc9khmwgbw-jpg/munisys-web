@@ -64,24 +64,33 @@ export async function POST(request) {
       console.warn('Erreur lors du parsing PDF avec pdf2json:', parseErr);
     }
 
-    // Clean up text format from pdf2json (remove crazy spaces and line breaks)
-    const cleanText = parsedText.replace(/\r\n/g, '\n').replace(/----------------Page \(0\)[a-zA-Z0-9\s-]+/g, '');
+    // Clean up text format from pdf2json
+    let cleanText = parsedText
+      .replace(/\r\n/g, '\n')
+      .replace(/-+Page\s*\(\d+\)\s*Break-+/gi, '')
+      .replace(/----------------Page \(\d+\)[a-zA-Z0-9\s-]+/gi, '')
+      .replace(/-+/g, ' ') // Remove multiple dashes
+      .replace(/\s{2,}/g, ' ') // Remove extra spaces
+      .trim();
+      
     const lines = cleanText.split('\n').map(l => l.trim()).filter(l => l.length > 3);
     
     let extractedTitle = 'Communiqué de Presse';
     let extractedDesc = 'Consultez notre dernier communiqué de presse pour plus d\'informations.';
 
     if (lines.length > 0) {
-      extractedTitle = lines[0];
-      if (extractedTitle.length > 120) {
-        extractedTitle = extractedTitle.substring(0, 120) + '...';
-      }
+      // Find the first line that looks like a real title (not just numbers or short text)
+      const validTitleLine = lines.find(l => l.length > 10 && !/^\d+$/.test(l)) || lines[0];
+      extractedTitle = validTitleLine.substring(0, 120);
+      if (validTitleLine.length > 120) extractedTitle += '...';
     }
 
     if (lines.length > 1) {
-      extractedDesc = lines.slice(1, 4).join(' ');
-      if (extractedDesc.length > 250) {
-        extractedDesc = extractedDesc.substring(0, 250) + '...';
+      // Find subsequent lines for description
+      const descLines = lines.filter(l => l !== extractedTitle && l.length > 20);
+      if (descLines.length > 0) {
+        extractedDesc = descLines.slice(0, 3).join(' ').substring(0, 250);
+        if (descLines.join(' ').length > 250) extractedDesc += '...';
       }
     }
 
