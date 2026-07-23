@@ -145,62 +145,10 @@ export default function InsightsPage() {
                         const isExternal = !post.slug && (post.pdfUrl || post.link);
                         const href = post.slug ? `/insights/${post.slug}` : (post.link || post.pdfUrl || "#");
                         
-                        if (isExternal) {
-                            return (
-                                <a 
-                                    key={idx} 
-                                    href={href}
-                                    target="_blank" 
-                                    rel="noopener noreferrer" 
-                                    className="ins-card"
-                                >
-                                    <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>
-                                        {post.img ? (
-                                            <img src={post.img} alt={post.title} className="ins-img" />
-                                        ) : (
-                                            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8' }}>
-                                                Aucune image
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className="ins-content">
-                                        <InlineEditor 
-                                            as="div" 
-                                            className="ins-cat" 
-                                            dbPath={['insights', 'posts', idx, 'category']} 
-                                            fallback={post.category || 'Article'} 
-                                        />
-                                        <InlineEditor 
-                                            as="p" 
-                                            className="ins-text" 
-                                            style={{ textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '1px' }}
-                                            dbPath={['insights', 'posts', idx, 'title']} 
-                                            fallback={post.title || 'Nouvelle publication'} 
-                                        />
-                                        <InlineEditor 
-                                            as="p" 
-                                            className="ins-desc" 
-                                            dbPath={['insights', 'posts', idx, 'desc']} 
-                                            fallback={post.desc || 'Description...'} 
-                                        />
-                                        <span className="ins-learn-more">
-                                            <InlineEditor 
-                                                as="span" 
-                                                dbPath={['insights', 'posts', idx, 'ctaLabel']} 
-                                                fallback="EN SAVOIR PLUS →" 
-                                            />
-                                        </span>
-                                    </div>
-                                </a>
-                            );
-                        }
-                        
-                        return (
-                            <Link 
-                                key={idx} 
-                                href={href} 
-                                className="ins-card"
-                            >
+                        // Card content — NO InlineEditor here, as contentEditable blocks link clicks.
+                        // Edit title/desc/content on the article page itself.
+                        const cardContent = (
+                            <>
                                 <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>
                                     {post.img ? (
                                         <img src={post.img} alt={post.title} className="ins-img" />
@@ -211,33 +159,27 @@ export default function InsightsPage() {
                                     )}
                                 </div>
                                 <div className="ins-content">
-                                    <InlineEditor 
-                                        as="div" 
-                                        className="ins-cat" 
-                                        dbPath={['insights', 'posts', idx, 'category']} 
-                                        fallback={post.category || 'Article'} 
-                                    />
-                                    <InlineEditor 
-                                        as="p" 
-                                        className="ins-text" 
-                                        style={{ textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '1px' }}
-                                        dbPath={['insights', 'posts', idx, 'title']} 
-                                        fallback={post.title || 'Nouvelle publication'} 
-                                    />
-                                    <InlineEditor 
-                                        as="p" 
-                                        className="ins-desc" 
-                                        dbPath={['insights', 'posts', idx, 'desc']} 
-                                        fallback={post.desc || 'Description...'} 
-                                    />
-                                    <span className="ins-learn-more">
-                                        <InlineEditor 
-                                            as="span" 
-                                            dbPath={['insights', 'posts', idx, 'ctaLabel']} 
-                                            fallback="EN SAVOIR PLUS →" 
-                                        />
-                                    </span>
+                                    <div className="ins-cat">{post.category || 'Article'}</div>
+                                    <p className="ins-text" style={{ textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '1px' }}>
+                                        {post.title || 'Nouvelle publication'}
+                                    </p>
+                                    <p className="ins-desc">{post.desc || ''}</p>
+                                    <span className="ins-learn-more">EN SAVOIR PLUS →</span>
                                 </div>
+                            </>
+                        );
+                        
+                        if (isExternal) {
+                            return (
+                                <a key={idx} href={href} target="_blank" rel="noopener noreferrer" className="ins-card">
+                                    {cardContent}
+                                </a>
+                            );
+                        }
+                        
+                        return (
+                            <Link key={idx} href={href} className="ins-card">
+                                {cardContent}
                             </Link>
                         );
                     })}
