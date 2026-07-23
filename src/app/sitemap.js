@@ -10,6 +10,7 @@ export default async function sitemap() {
     '/about-us',
     '/solutions',
     '/services',
+    '/insights',
     '/contact',
   ].map((route) => ({
     url: `${baseUrl}${route}`,
@@ -19,20 +20,35 @@ export default async function sitemap() {
   }));
 
   try {
-    // Attempt to read db.json for dynamic routes (like specific solutions)
+    // Attempt to read db.json for dynamic routes
     const dbPath = path.join(process.cwd(), 'src/data/db.json');
     const fileContents = await fs.readFile(dbPath, 'utf8');
     const dbData = JSON.parse(fileContents);
 
-    if (dbData && dbData.solutions) {
-      const dynamicRoutes = Object.keys(dbData.solutions).map((slug) => ({
+    // Add /solutions/[slug] routes
+    const dbLang = dbData.en || dbData;
+    if (dbLang && dbLang.solutions) {
+      const solutionRoutes = Object.keys(dbLang.solutions).map((slug) => ({
         url: `${baseUrl}/solutions/${slug}`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.6,
       }));
-      routes.push(...dynamicRoutes);
+      routes.push(...solutionRoutes);
     }
+
+    // Add /insights/[slug] article routes
+    const insightsPosts = dbLang?.insights?.posts || dbData?.insights?.posts || [];
+    const articleRoutes = insightsPosts
+      .filter(post => post.slug)
+      .map(post => ({
+        url: `${baseUrl}/insights/${post.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      }));
+    routes.push(...articleRoutes);
+
   } catch (error) {
     console.error("Erreur lors de la génération du sitemap dynamique:", error);
   }

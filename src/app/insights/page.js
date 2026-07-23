@@ -97,17 +97,20 @@ export default function InsightsPage() {
         };
         const updatedPosts = [newPost, ...(data.posts || [])];
         
-        // 1. Update local state
+        // 1. Update local state immediately for UI
         updateData(['insights', 'posts'], updatedPosts);
         
-        // 2. Immediately persist to DB/JSON so the article page can read it
+        // 2. Immediately persist to DB/JSON by fetching latest server state and merging
         try {
-            const currentData = fullDb || dbData || {};
-            const insightsSection = currentData.insights || {};
+            // Fetch the current saved state from server (avoids stale/language mismatch)
+            const serverRes = await fetch('/api/content');
+            const serverData = await serverRes.json();
+            
+            // Merge new posts into the authoritative server state
             const updatedDb = {
-                ...currentData,
+                ...serverData,
                 insights: {
-                    ...insightsSection,
+                    ...(serverData.insights || {}),
                     posts: updatedPosts
                 }
             };

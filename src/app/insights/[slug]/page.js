@@ -10,35 +10,36 @@ import { useEffect, useState } from 'react';
 export default function InsightArticlePage() {
     const params = useParams();
     const slug = params?.slug;
-    const { dbData } = useCMS();
-    const [localData, setLocalData] = useState(null);
+    const { dbData, isEditMode } = useCMS();
+    const [localPost, setLocalPost] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    // Try to find in CMSProvider context first; if not found, fetch directly from API
-    const cmsPost = dbData?.insights?.posts?.find(p => p.slug === slug);
+    // Try to find in CMSProvider context first (available when navigating via Link)
     const cmsPosts = dbData?.insights?.posts || [];
     const cmsIdx = cmsPosts.findIndex(p => p.slug === slug);
+    const cmsPost = cmsIdx >= 0 ? cmsPosts[cmsIdx] : null;
 
+    // If not in context (e.g. hard refresh), fetch from API
     useEffect(() => {
-        if (!cmsPost) {
-            // Article not in context - fetch fresh from API
+        if (!cmsPost && slug) {
             setLoading(true);
             fetch('/api/content')
                 .then(r => r.json())
                 .then(data => {
-                    const insightsPosts = data?.insights?.posts || [];
-                    const found = insightsPosts.find(p => p.slug === slug);
-                    if (found) {
-                        setLocalData({ post: found, idx: insightsPosts.findIndex(p => p.slug === slug), posts: insightsPosts });
-                    }
+                    const posts = data?.insights?.posts || [];
+                    const found = posts.find(p => p.slug === slug);
+                    setLocalPost(found || null);
                     setLoading(false);
                 })
                 .catch(() => setLoading(false));
         }
     }, [slug, cmsPost]);
 
-    const post = cmsPost || localData?.post;
-    const idx = cmsPost ? cmsIdx : (localData?.idx ?? -1);
+    // Which post and source to use
+    const post = cmsPost || localPost;
+    // idx is only meaningful for InlineEditor when post is from CMS context
+    const editIdx = cmsIdx >= 0 ? cmsIdx : null;
+    const canEdit = isEditMode && editIdx !== null;
 
     if (loading) {
         return (
@@ -60,7 +61,6 @@ export default function InsightArticlePage() {
         );
     }
 
-
     return (
         <article style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '6rem' }}>
             <ReadingProgressBar />
@@ -75,24 +75,21 @@ export default function InsightArticlePage() {
                 </Link>
 
                 <header style={{ marginBottom: '3rem' }}>
-                    <InlineEditor 
-                        as="div" 
-                        style={{ fontSize: '0.9rem', color: '#922b55', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }} 
-                        dbPath={['insights', 'posts', idx, 'category']} 
-                        fallback={post.category || 'Article'} 
-                    />
-                    <InlineEditor 
-                        as="h1" 
-                        style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 900, color: '#1d4e79', lineHeight: 1.1, marginBottom: '1.5rem' }}
-                        dbPath={['insights', 'posts', idx, 'title']} 
-                        fallback={post.title || "Titre de l'article"} 
-                    />
-                    <InlineEditor 
-                        as="p" 
-                        style={{ fontSize: '1.2rem', color: '#64748b', lineHeight: 1.6, borderLeft: '4px solid #922b55', paddingLeft: '1.5rem' }}
-                        dbPath={['insights', 'posts', idx, 'desc']} 
-                        fallback={post.desc || 'Résumé...'} 
-                    />
+                    {canEdit ? (
+                        <InlineEditor as="div" style={{ fontSize: '0.9rem', color: '#922b55', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }} dbPath={['insights', 'posts', editIdx, 'category']} fallback={post.category || 'Article'} />
+                    ) : (
+                        <div style={{ fontSize: '0.9rem', color: '#922b55', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '1rem' }}>{post.category || 'Article'}</div>
+                    )}
+                    {canEdit ? (
+                        <InlineEditor as="h1" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 900, color: '#1d4e79', lineHeight: 1.1, marginBottom: '1.5rem' }} dbPath={['insights', 'posts', editIdx, 'title']} fallback={post.title || "Titre de l'article"} />
+                    ) : (
+                        <h1 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 900, color: '#1d4e79', lineHeight: 1.1, marginBottom: '1.5rem' }}>{post.title || "Titre de l'article"}</h1>
+                    )}
+                    {canEdit ? (
+                        <InlineEditor as="p" style={{ fontSize: '1.2rem', color: '#64748b', lineHeight: 1.6, borderLeft: '4px solid #922b55', paddingLeft: '1.5rem' }} dbPath={['insights', 'posts', editIdx, 'desc']} fallback={post.desc || 'Résumé...'} />
+                    ) : (
+                        <p style={{ fontSize: '1.2rem', color: '#64748b', lineHeight: 1.6, borderLeft: '4px solid #922b55', paddingLeft: '1.5rem' }}>{post.desc || ''}</p>
+                    )}
                 </header>
 
                 {post.img && (
@@ -102,12 +99,11 @@ export default function InsightArticlePage() {
                 )}
 
                 <div style={{ fontSize: '1.1rem', color: '#334155', lineHeight: 1.8, marginBottom: '4rem' }}>
-                    <InlineEditor 
-                        as="div" 
-                        style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-primary, sans-serif)' }}
-                        dbPath={['insights', 'posts', idx, 'content']} 
-                        fallback={post.content || "Contenu de l'article..."} 
-                    />
+                    {canEdit ? (
+                        <InlineEditor as="div" style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-primary, sans-serif)' }} dbPath={['insights', 'posts', editIdx, 'content']} fallback={post.content || "Contenu de l'article..."} />
+                    ) : (
+                        <div style={{ whiteSpace: 'pre-wrap', fontFamily: 'var(--font-primary, sans-serif)' }}>{post.content || ''}</div>
+                    )}
                 </div>
 
                 {post.pdfUrl && (
@@ -129,9 +125,7 @@ export default function InsightArticlePage() {
                             href={post.pdfUrl} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            style={{ padding: '0.8rem 1.5rem', background: '#922b55', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', transition: 'background 0.2s' }}
-                            onMouseOver={(e) => e.target.style.background = '#7a2245'}
-                            onMouseOut={(e) => e.target.style.background = '#922b55'}
+                            style={{ padding: '0.8rem 1.5rem', background: '#922b55', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}
                         >
                             Ouvrir le PDF
                         </a>
@@ -141,3 +135,4 @@ export default function InsightArticlePage() {
         </article>
     );
 }
+
