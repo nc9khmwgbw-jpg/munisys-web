@@ -115,7 +115,7 @@ export async function POST(request) {
       url: publicUrl,
       title: extractedTitle,
       desc: extractedDesc,
-      category: 'PRESS RELEASE'
+      category: 'ACTUALITÉS'
     });
   } catch (error) {
     console.error('PDF Upload error:', error);

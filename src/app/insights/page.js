@@ -124,26 +124,11 @@ export default function InsightsPage() {
                             rel={(post.pdfUrl || post.link) ? "noopener noreferrer" : undefined} 
                             className="ins-card"
                         >
-                            <div className="ins-img-wrap" style={{ background: post.pdfUrl ? '#fff1f2' : '#f8f9fa' }}>
+                            <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>
                                 {post.img ? (
-                                    <img src={post.img} alt={post.title} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+                                    <img src={post.img} alt={post.title} className="ins-img" />
                                 ) : (
-                                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '100%', height: '100%' }}>
-                                        {post.pdfUrl ? (
-                                            <>
-                                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e11d48" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{marginBottom: '12px'}}>
-                                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                                    <polyline points="14 2 14 8 20 8"></polyline>
-                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                                                    <polyline points="10 9 9 9 8 9"></polyline>
-                                                </svg>
-                                                <span style={{ color: '#e11d48', fontSize: '0.95rem', fontWeight: 600 }}>Document PDF</span>
-                                            </>
-                                        ) : (
-                                            <InlineEditor as="span" style={{ color: '#a0aec0', fontSize: '0.9rem', fontStyle: 'italic' }} dbPath={['insights', 'posts', idx, 'noImageLabel']} fallback="Aucune image" />
-                                        )}
-                                    </div>
+                                    <span className="ins-img-ph">Aucune image</span>
                                 )}
                             </div>
                             <div>
@@ -166,10 +151,12 @@ export default function InsightsPage() {
                                     dbPath={['insights', 'posts', idx, 'desc']} 
                                     fallback={post.desc || 'Description...'} 
                                 />
-                                <span className="ins-learn-more" style={{ color: post.pdfUrl ? '#e11d48' : undefined }}>
-                                    {post.pdfUrl ? "Ouvrir le document" : (
-                                        <InlineEditor as="span" dbPath={['insights', 'learnMore']} fallback="Learn more &rarr;" />
-                                    )}
+                                <span className="ins-learn-more">
+                                    <InlineEditor 
+                                        as="span" 
+                                        dbPath={['insights', 'posts', idx, 'ctaLabel']} 
+                                        fallback="EN SAVOIR PLUS →" 
+                                    />
                                 </span>
                             </div>
                         </a>
