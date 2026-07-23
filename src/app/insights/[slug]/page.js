@@ -4,13 +4,13 @@ import { useCMS } from '@/components/CMSProvider';
 import InlineEditor from '@/components/InlineEditor';
 import ReadingProgressBar from '@/components/ReadingProgressBar';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import React from 'react';
 
-export default function InsightArticlePage({ params }) {
+export default function InsightArticlePage() {
+    const params = useParams();
+    const slug = params?.slug;
     const { dbData, isEditMode, isPreviewMode } = useCMS();
-    // Unwrap params in Next.js 14/15
-    const slug = React.use(params).slug;
 
     if (!dbData) return null;
 
