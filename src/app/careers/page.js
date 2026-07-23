@@ -5,7 +5,7 @@ import InlineEditor from '@/components/InlineEditor';
 import { useEffect } from 'react';
 
 export default function CareersPage() {
-    const { dbData } = useCMS();
+    const { dbData, isEditMode } = useCMS();
 
     useEffect(() => {
         const observerOptions = {
@@ -105,7 +105,13 @@ export default function CareersPage() {
                     </div>
 
                     <div className="m-job-list">
-                        {(data.jobs || []).map((job, idx) => (
+                        {(data.jobs || []).length === 0 ? (
+                            <div style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8', fontSize: '1.1rem' }}>
+                                {isEditMode 
+                                    ? '➕ Aucun poste pour l\'instant — ajoutez-en depuis le panneau d\'administration.'
+                                    : 'Aucun poste ouvert en ce moment. Revenez bientôt !'}
+                            </div>
+                        ) : (data.jobs || []).map((job, idx) => (
                             <div key={idx} className={`m-job-line m-reveal m-delay-${Math.min(idx + 1, 5)}`}>
                                 <div className="m-job-title">
                                     <InlineEditor 

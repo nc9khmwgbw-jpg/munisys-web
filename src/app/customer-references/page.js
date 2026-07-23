@@ -21,7 +21,13 @@ export default function CustomerReferencesPage() {
 
             <section className="cr-grid-sec">
                 <div className="cr-bento">
-                    {references.map((ref, idx) => (
+                    {references.length === 0 ? (
+                        <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '4rem', color: '#94a3b8', fontSize: '1.1rem' }}>
+                            {isEditMode 
+                                ? '➕ Aucune référence client — ajoutez-en via l\'admin.'
+                                : 'Aucune référence client à afficher pour le moment.'}
+                        </div>
+                    ) : references.map((ref, idx) => (
                         <div key={idx} className="cr-card">
                             {(ref.logo || isEditMode) ? (
                                 <InlineImageEditor 

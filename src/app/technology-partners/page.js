@@ -43,7 +43,13 @@ export default function TechnologyPartnersPage() {
                 </div>
 
                 <div className="tp-grid">
-                    {filteredPartners.map((partner) => {
+                    {filteredPartners.length === 0 ? (
+                        <div style={{ gridColumn: '1/-1', textAlign: 'center', padding: '4rem', color: '#94a3b8', fontSize: '1.1rem' }}>
+                            {partners.length === 0
+                                ? (isEditMode ? '➕ Aucun partenaire — ajoutez-en via l\'admin.' : 'Aucun partenaire à afficher pour le moment.')
+                                : 'Aucun partenaire dans cette catégorie.'}
+                        </div>
+                    ) : filteredPartners.map((partner) => {
                         // Find the true index in the original DB array to ensure InlineImageEditor updates the correct path
                         const originalIdx = partners.findIndex(p => p.name === partner.name);
                         return (

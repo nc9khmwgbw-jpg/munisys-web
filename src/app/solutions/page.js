@@ -81,9 +81,13 @@ export default function SolutionsPage() {
                             <div 
                                 key={idx} 
                                 className={`sol-cat-btn ${activeTab === idx ? 'active' : ''}`}
-                                onClick={() => setActiveTab(idx)}
+                                onMouseDown={(e) => {
+                                    // Use onMouseDown so the tab switches even if InlineEditor captures the click
+                                    e.preventDefault();
+                                    setActiveTab(idx);
+                                }}
                             >
-                                <InlineEditor as="span" dbPath={['solutions', 'categories', idx, 'title']} fallback={cat.title} />
+                                <span style={{ pointerEvents: 'none' }}>{cat.title}</span>
                             </div>
                         ))}
                     </FadeIn>
