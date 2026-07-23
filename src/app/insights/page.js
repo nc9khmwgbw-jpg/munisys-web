@@ -3,6 +3,7 @@ import { useState, useRef } from 'react';
 import { useCMS } from '@/components/CMSProvider';
 import InlineEditor from '@/components/InlineEditor';
 import ReadingProgressBar from '@/components/ReadingProgressBar';
+import Link from 'next/link';
 
 function PdfUploader({ onUploadComplete }) {
     const fileInputRef = useRef(null);
@@ -118,51 +119,106 @@ export default function InsightsPage() {
                             <PdfUploader onUploadComplete={handlePdfUploaded} />
                         </div>
                     )}
-                    {(data.posts || []).map((post, idx) => (
-                        <a 
-                            key={idx} 
-                            href={post.slug ? `/insights/${post.slug}` : (post.link || post.pdfUrl || "#")} 
-                            target={(!post.slug && (post.pdfUrl || post.link)) ? "_blank" : undefined} 
-                            rel={(!post.slug && (post.pdfUrl || post.link)) ? "noopener noreferrer" : undefined} 
-                            className="ins-card"
-                        >
-                            <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>
-                                {post.img ? (
-                                    <img src={post.img} alt={post.title} className="ins-img" />
-                                ) : (
-                                    <span className="ins-img-ph">Aucune image</span>
-                                )}
-                            </div>
-                            <div>
-                                <InlineEditor 
-                                    as="div" 
-                                    style={{ fontSize: '0.8rem', color: '#922b55', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.5rem' }} 
-                                    dbPath={['insights', 'posts', idx, 'category']} 
-                                    fallback={post.category || 'Article'} 
-                                />
-                                <InlineEditor 
-                                    as="p" 
-                                    className="ins-text" 
-                                    style={{ textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '1px' }}
-                                    dbPath={['insights', 'posts', idx, 'title']} 
-                                    fallback={post.title || 'Nouvelle publication'} 
-                                />
-                                <InlineEditor 
-                                    as="p" 
-                                    className="ins-desc" 
-                                    dbPath={['insights', 'posts', idx, 'desc']} 
-                                    fallback={post.desc || 'Description...'} 
-                                />
-                                <span className="ins-learn-more">
+                    {(data.posts || []).map((post, idx) => {
+                        const isExternal = !post.slug && (post.pdfUrl || post.link);
+                        const href = post.slug ? `/insights/${post.slug}` : (post.link || post.pdfUrl || "#");
+                        
+                        if (isExternal) {
+                            return (
+                                <a 
+                                    key={idx} 
+                                    href={href}
+                                    target="_blank" 
+                                    rel="noopener noreferrer" 
+                                    className="ins-card"
+                                >
+                                    <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>
+                                        {post.img ? (
+                                            <img src={post.img} alt={post.title} className="ins-img" />
+                                        ) : (
+                                            <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8' }}>
+                                                Aucune image
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className="ins-content">
+                                        <InlineEditor 
+                                            as="div" 
+                                            className="ins-cat" 
+                                            dbPath={['insights', 'posts', idx, 'category']} 
+                                            fallback={post.category || 'Article'} 
+                                        />
+                                        <InlineEditor 
+                                            as="p" 
+                                            className="ins-text" 
+                                            style={{ textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '1px' }}
+                                            dbPath={['insights', 'posts', idx, 'title']} 
+                                            fallback={post.title || 'Nouvelle publication'} 
+                                        />
+                                        <InlineEditor 
+                                            as="p" 
+                                            className="ins-desc" 
+                                            dbPath={['insights', 'posts', idx, 'desc']} 
+                                            fallback={post.desc || 'Description...'} 
+                                        />
+                                        <span className="ins-learn-more">
+                                            <InlineEditor 
+                                                as="span" 
+                                                dbPath={['insights', 'posts', idx, 'ctaLabel']} 
+                                                fallback="EN SAVOIR PLUS →" 
+                                            />
+                                        </span>
+                                    </div>
+                                </a>
+                            );
+                        }
+                        
+                        return (
+                            <Link 
+                                key={idx} 
+                                href={href} 
+                                className="ins-card"
+                            >
+                                <div className="ins-img-wrap" style={{ background: '#f8f9fa' }}>
+                                    {post.img ? (
+                                        <img src={post.img} alt={post.title} className="ins-img" />
+                                    ) : (
+                                        <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#94a3b8' }}>
+                                            Aucune image
+                                        </div>
+                                    )}
+                                </div>
+                                <div className="ins-content">
                                     <InlineEditor 
-                                        as="span" 
-                                        dbPath={['insights', 'posts', idx, 'ctaLabel']} 
-                                        fallback="EN SAVOIR PLUS →" 
+                                        as="div" 
+                                        className="ins-cat" 
+                                        dbPath={['insights', 'posts', idx, 'category']} 
+                                        fallback={post.category || 'Article'} 
                                     />
-                                </span>
-                            </div>
-                        </a>
-                    ))}
+                                    <InlineEditor 
+                                        as="p" 
+                                        className="ins-text" 
+                                        style={{ textTransform: 'uppercase', fontSize: '1.1rem', letterSpacing: '1px' }}
+                                        dbPath={['insights', 'posts', idx, 'title']} 
+                                        fallback={post.title || 'Nouvelle publication'} 
+                                    />
+                                    <InlineEditor 
+                                        as="p" 
+                                        className="ins-desc" 
+                                        dbPath={['insights', 'posts', idx, 'desc']} 
+                                        fallback={post.desc || 'Description...'} 
+                                    />
+                                    <span className="ins-learn-more">
+                                        <InlineEditor 
+                                            as="span" 
+                                            dbPath={['insights', 'posts', idx, 'ctaLabel']} 
+                                            fallback="EN SAVOIR PLUS →" 
+                                        />
+                                    </span>
+                                </div>
+                            </Link>
+                        );
+                    })}
                 </div>
             </section>
         </div>
