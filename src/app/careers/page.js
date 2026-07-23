@@ -38,7 +38,8 @@ export default function CareersPage() {
         heroTitle: '', heroDesc: '', whyTitle: '', whyDesc: '', reasons: [], jobsTitle: '', jobs: [] 
     };
 
-    console.log("CAREERS DATA:", data);
+
+
 
     return (
         <div className="m-car-page">

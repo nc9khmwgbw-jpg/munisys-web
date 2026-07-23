@@ -94,7 +94,18 @@ export async function POST(req) {
     }
 
     db[targetLang] = newLangDb;
-    fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
+
+    // Persist via the content API so both MongoDB and local fallback are updated
+    const saveRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/content`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(db)
+    });
+
+    if (!saveRes.ok) {
+      // Fallback: write to local file if API save fails
+      fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
+    }
 
     return NextResponse.json({ success: true, db: db });
 

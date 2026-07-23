@@ -45,16 +45,17 @@ export default function SearchOverlay({ isOpen, onClose }) {
       });
     }
 
-    // Search Insights
-    if (dbData.insights?.articles) {
-      dbData.insights.articles.forEach(article => {
-        if ((article.title && article.title.toLowerCase().includes(q)) || 
-            (article.excerpt && article.excerpt.toLowerCase().includes(q))) {
+    // Search Insights (posts)
+    if (dbData.insights?.posts) {
+      dbData.insights.posts.forEach(post => {
+        if ((post.title && post.title.toLowerCase().includes(q)) || 
+            (post.desc && post.desc.toLowerCase().includes(q)) ||
+            (post.content && post.content.toLowerCase().includes(q))) {
           newResults.push({
-            type: 'Insight',
-            title: article.title,
-            desc: article.excerpt || '',
-            link: `/insights` // Ideally link to specific insight if pagination/slugs existed
+            type: 'Actualité',
+            title: post.title || 'Article',
+            desc: post.desc || '',
+            link: post.slug ? `/insights/${post.slug}` : `/insights`
           });
         }
       });
