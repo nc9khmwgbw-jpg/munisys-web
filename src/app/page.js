@@ -518,7 +518,7 @@ export default function Home() {
               </InlineImageEditor>
               <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'sections', 'insightsCard2']} fallback="New headquarters" />
             </Link>
-            <Link href="/press-release" className="ins-card" style={{ textDecoration: 'none' }}>
+            <Link href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
               <div className="ins-img-wrap contain" style={{ flexDirection: 'column', gap: '1rem', textAlign: 'center' }}>
                 <h2 style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', fontWeight: 300, color: '#111', margin: 0, lineHeight: 1.2 }}>
                   <InlineEditor as="span" dbPath={['homepage', 'sections', 'insightsCard3Top']} fallback="HELIOS" /> <br />
@@ -540,7 +540,6 @@ export default function Home() {
         </section>
       </FadeIn>
 
-      {/* ── 4.5 TECHNOLOGY PARTNERS (Glassmorphism) ── */}
       {/* ── 4.5 TECHNOLOGY PARTNERS (Glassmorphism) ── */}
       <FadeIn>
         <section className="partners-sec" id="technology-partners">

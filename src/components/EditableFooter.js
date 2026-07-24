@@ -18,13 +18,13 @@ export default function EditableFooter() {
             dbPath={['footer', 'brandName']} 
             fallback={footer.brandName || 'MUNISYS'} 
           />
-          <Link href={footer.linkedinUrl || '#'} className="ft-linkedin">
+          <a href={footer.linkedinUrl || 'https://www.linkedin.com/company/munisys'} target="_blank" rel="noopener noreferrer" className="ft-linkedin">
             <InlineEditor 
               as="span" 
               dbPath={['footer', 'linkedinLabel']} 
               fallback={footer.linkedinLabel || 'Follow us on LinkedIn'} 
             />
-          </Link>
+          </a>
         </div>
         
         <div className="ft-main">
