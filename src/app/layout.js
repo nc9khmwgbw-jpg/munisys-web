@@ -4,6 +4,7 @@ import AdminToolbar from '@/components/AdminToolbar';
 import EditableNavigation from '@/components/EditableNavigation';
 import EditableFooter from '@/components/EditableFooter';
 import CustomCursor from '@/components/CustomCursor';
+import SmoothScroll from '@/components/SmoothScroll';
 import CookieBanner from '@/components/CookieBanner';
 import dbConnect from '@/lib/mongodb';
 import MunisysState from '@/models/MunisysState';
@@ -115,21 +116,23 @@ export default async function RootLayout({ children }) {
         <style dangerouslySetInnerHTML={{ __html: dynamicCSS }} />
       </head>
       <body>
-        <CMSProvider>
-        <CustomCursor />
-        <header id="munisys-global-header">
-          <EditableNavigation />
-        </header>
+        <SmoothScroll>
+          <CMSProvider>
+          <CustomCursor />
+          <header id="munisys-global-header">
+            <EditableNavigation />
+          </header>
 
-        {children}
+          {children}
 
-        <div id="munisys-wrapper">
-          <EditableFooter />
-        </div>
-        
-        <AdminToolbar />
-        <CookieBanner />
-        </CMSProvider>
+          <div id="munisys-wrapper">
+            <EditableFooter />
+          </div>
+          
+          <AdminToolbar />
+          <CookieBanner />
+          </CMSProvider>
+        </SmoothScroll>
       </body>
     </html>
   );
