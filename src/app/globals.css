@@ -1088,63 +1088,120 @@ html[dir="rtl"] #munisys-wrapper .cnt-info-panel {
 
         /* ── 4. INSIGHTS SECTION ── */
         #munisys-wrapper .ins-sec {
-            padding: 6rem 5rem !important;
-            display: flex !important;
-            gap: 4rem !important;
+            padding: 8rem 5rem !important;
             max-width: 1440px !important;
             margin: 0 auto !important;
-            flex-direction: row !important;
+        }
+
+        #munisys-wrapper .ins-header {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: flex-end !important;
+            margin-bottom: 4rem !important;
         }
 
         #munisys-wrapper .ins-title {
-            writing-mode: vertical-lr !important;
-            transform: rotate(180deg) !important;
-            font-size: 4.5rem !important;
-            font-weight: 800 !important;
+            font-size: 3.5rem !important;
+            font-weight: 300 !important;
+            color: var(--bordeaux) !important;
+            margin: 0 !important;
+            line-height: 1 !important;
+        }
 
+        #munisys-wrapper .ins-more-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 0.5rem !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            font-size: 0.9rem !important;
+            letter-spacing: 1px !important;
+            color: var(--blue-dark) !important;
+            transition: gap 0.3s ease !important;
+            padding-bottom: 0.5rem !important;
+            border-bottom: 1px solid var(--blue-dark) !important;
+        }
+
+        #munisys-wrapper .ins-more-link:hover {
+            gap: 1rem !important;
         }
 
         #munisys-wrapper .ins-grid {
             display: grid !important;
             grid-template-columns: repeat(3, 1fr) !important;
-            gap: 3rem !important;
-            flex: 1 !important;
+            gap: 2.5rem !important;
         }
 
         #munisys-wrapper .ins-card {
             display: flex !important;
             flex-direction: column !important;
-            gap: 1.5rem !important;
+            border-radius: 20px !important;
+            overflow: hidden !important;
+            background: var(--wrapper-bg) !important;
+            border: 1px solid rgba(131, 165, 194, 0.2) !important; /* soft border */
             cursor: pointer !important;
+            transition: all 0.4s var(--ease-out-expo) !important;
+            height: 100% !important;
+        }
+
+        #munisys-wrapper .ins-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+            border-color: rgba(131, 165, 194, 0.4) !important;
+        }
+        
+        [data-theme="dark"] #munisys-wrapper .ins-card:hover {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4) !important;
         }
 
         #munisys-wrapper .ins-img-wrap {
-            aspect-ratio: 1 !important;
-            border: 1px solid #e2e8f0 !important;
-            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 15%) !important;
+            aspect-ratio: 4/3 !important;
+            width: 100% !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
             overflow: hidden !important;
-            background: #fff !important;
-            padding: 2rem !important;
+            position: relative !important;
+            background: #f1f5f9 !important; /* fallback */
+        }
+        
+        #munisys-wrapper .ins-img-wrap.grad-bg {
+            background: linear-gradient(135deg, var(--blue-dark), var(--bordeaux)) !important;
         }
 
         #munisys-wrapper .ins-img-wrap img {
             width: 100% !important;
             height: 100% !important;
             object-fit: cover !important;
+            transition: transform 0.6s var(--ease-out-expo) !important;
         }
 
-        #munisys-wrapper .ins-img-wrap.contain img {
-            object-fit: contain !important;
+        #munisys-wrapper .ins-card:hover .ins-img-wrap img {
+            transform: scale(1.05) !important;
         }
 
         #munisys-wrapper .ins-text {
+            padding: 2rem !important;
+            display: flex !important;
+            flex-direction: column !important;
+            flex: 1 !important;
+        }
+        
+        #munisys-wrapper .ins-meta {
+            font-size: 0.75rem !important;
             font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1.5px !important;
+            color: var(--blue-light) !important;
+            margin-bottom: 1rem !important;
+        }
+
+        #munisys-wrapper .ins-title-text {
+            font-weight: 600 !important;
             color: var(--text-dark) !important;
-            font-size: 1.15rem !important;
+            font-size: 1.3rem !important;
             line-height: 1.4 !important;
+            margin: 0 !important;
         }
 
         /* ── 4.5 TECHNOLOGY PARTNERS SECTION (Glassmorphism) ── */

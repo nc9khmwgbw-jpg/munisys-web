@@ -500,14 +500,27 @@ export default function Home() {
       {/* ── 4. INSIGHTS ── */}
       <FadeIn>
         <section className="ins-sec">
-          <InlineEditor as="div" className="ins-title" dbPath={['homepage', 'sections', 'insightsTitle']} fallback="Insights" />
-          <div className="ins-grid">
-            <Link href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
-              <div className="ins-img-wrap contain" style={{ background: '#f8f9fa', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <InlineEditor as="span" dbPath={['homepage', 'sections', 'insightsCard1Title']} fallback="MUNISYS" style={{ fontSize: '2.5rem', fontWeight: 800, color: '#1d4e79', letterSpacing: '2px' }} />
-              </div>
-              <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'sections', 'insightsCard1']} fallback="A new visual identity for Munisys" />
+          <div className="ins-header">
+            <InlineEditor as="h2" className="ins-title" dbPath={['homepage', 'sections', 'insightsTitle']} fallback="Insights" />
+            <Link href="/insights" className="ins-more-link">
+              <InlineEditor as="span" dbPath={['homepage', 'sections', 'insightsCardMore']} fallback="More insights" /> 
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
+          </div>
+          
+          <div className="ins-grid">
+            {/* Card 1 - Gradient Background Text Card */}
+            <Link href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
+              <div className="ins-img-wrap grad-bg">
+                <InlineEditor as="span" dbPath={['homepage', 'sections', 'insightsCard1Title']} fallback="MUNISYS" style={{ fontSize: '3rem', fontWeight: 800, color: '#fff', letterSpacing: '4px' }} />
+              </div>
+              <div className="ins-text">
+                <span className="ins-meta">News</span>
+                <InlineEditor as="h3" className="ins-title-text" dbPath={['homepage', 'sections', 'insightsCard1']} fallback="A new visual identity for Munisys" />
+              </div>
+            </Link>
+            
+            {/* Card 2 - Image Card */}
             <Link href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
               <InlineImageEditor dbPath={['homepage', 'insights', 1, 'img']} fallback="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop">
                 {(src) => (
@@ -516,25 +529,25 @@ export default function Home() {
                   </div>
                 )}
               </InlineImageEditor>
-              <InlineEditor as="div" className="ins-text" dbPath={['homepage', 'sections', 'insightsCard2']} fallback="New headquarters" />
+              <div className="ins-text">
+                <span className="ins-meta">Company</span>
+                <InlineEditor as="h3" className="ins-title-text" dbPath={['homepage', 'sections', 'insightsCard2']} fallback="New headquarters" />
+              </div>
             </Link>
+            
+            {/* Card 3 - Minimal Text Card */}
             <Link href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
-              <div className="ins-img-wrap contain" style={{ flexDirection: 'column', gap: '1rem', textAlign: 'center' }}>
-                <h2 style={{ fontSize: 'clamp(1.2rem,2vw,1.8rem)', fontWeight: 300, color: '#111', margin: 0, lineHeight: 1.2 }}>
+              <div className="ins-img-wrap" style={{ flexDirection: 'column', gap: '0.5rem' }}>
+                <h2 style={{ fontSize: 'clamp(1rem,2vw,1.4rem)', fontWeight: 300, color: '#475569', margin: 0, lineHeight: 1.2, textAlign: 'center' }}>
                   <InlineEditor as="span" dbPath={['homepage', 'sections', 'insightsCard3Top']} fallback="HELIOS" /> <br />
                   <InlineEditor as="span" dbPath={['homepage', 'sections', 'insightsCard3Mid']} fallback="Investment Partners" style={{ color: '#f97316' }} />
                 </h2>
-                <InlineEditor as="h1" dbPath={['homepage', 'sections', 'insightsCard3Bot']} fallback="FIPAR" style={{ fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 900, color: '#1d4e79', margin: 0 }} />
+                <InlineEditor as="h1" dbPath={['homepage', 'sections', 'insightsCard3Bot']} fallback="FIPAR" style={{ fontSize: 'clamp(2rem,3vw,2.5rem)', fontWeight: 900, color: 'var(--blue-dark)', margin: 0, textAlign: 'center' }} />
               </div>
-              <InlineEditor as="div" className="ins-text" style={{ textTransform: 'uppercase' }} dbPath={['homepage', 'sections', 'insightsCard3']} fallback="PRESS RELEASE" />
-            </Link>
-            <Link href="/insights" className="ins-card ins-card-more">
-              <div className="ins-more-circle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+              <div className="ins-text">
+                <span className="ins-meta">Press Release</span>
+                <InlineEditor as="h3" className="ins-title-text" dbPath={['homepage', 'sections', 'insightsCard3']} fallback="Official announcement regarding new partnerships" />
               </div>
-              <InlineEditor as="div" className="ins-more-text" dbPath={['homepage', 'sections', 'insightsCardMore']} fallback="More" />
             </Link>
           </div>
         </section>
