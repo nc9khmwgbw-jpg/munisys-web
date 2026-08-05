@@ -155,7 +155,7 @@ export default function DataCore({ isTextRight }) {
         <directionalLight position={[10, 10, 10]} intensity={3.5} color="#ffffff" />
         <directionalLight position={[-10, -5, 5]} intensity={6} color="#922b55" />
         <directionalLight position={[0, -10, -5]} intensity={5} color="#83a5c2" />
-        <Environment preset="studio" />
+        <Environment preset="city" />
         
         <InfinityIntegrationLoop isTextRight={isTextRight} />
       </Canvas>
