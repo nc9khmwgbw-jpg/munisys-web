@@ -171,6 +171,18 @@ html[dir="rtl"] #munisys-wrapper .cnt-info-panel {
             background: #111;
         }
 
+        /* Hero background image layer — light mode: very faint watermark effect */
+        #munisys-wrapper .hero-bg-layer {
+            opacity: 0.08 !important;
+            mix-blend-mode: multiply !important;
+        }
+
+        /* Dark mode: hide images entirely — background is already dark */
+        [data-theme="dark"] #munisys-wrapper .hero-bg-layer {
+            opacity: 0 !important;
+            mix-blend-mode: normal !important;
+        }
+
         #munisys-wrapper .bg-image {
             position: absolute !important;
             top: 0 !important;
@@ -192,12 +204,6 @@ html[dir="rtl"] #munisys-wrapper .cnt-info-panel {
             opacity: 0.6 !important;
             z-index: 2 !important;
             transform: none !important;
-        }
-
-        /* Dark mode: hide background photos — only keep the 3D sphere */
-        [data-theme="dark"] #munisys-wrapper .bg-image,
-        [data-theme="dark"] #munisys-wrapper .bg-image.active {
-            opacity: 0 !important;
         }
 
         #munisys-wrapper .bg-image.prev {
