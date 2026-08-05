@@ -142,7 +142,7 @@ const defaultSlides = [
     desc: 'Secure your network, endpoints, and data against evolving digital threats with zero-trust architectures and proactive monitoring.',
     btnText: 'Discover security',
     btnLink: '/solutions/',
-    img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2560&auto=format&fit=crop'
+    img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2560&auto=format&fit=crop'
   },
   {
     meta: 'Managed Services',
@@ -150,7 +150,7 @@ const defaultSlides = [
     desc: 'Seamless cloud integration and managed services to accelerate your digital transformation journey while ensuring high availability.',
     btnText: 'Cloud services',
     btnLink: '/solutions/',
-    img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2560&auto=format&fit=crop'
+    img: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=2560&auto=format&fit=crop'
   }
 ];
 
@@ -326,7 +326,7 @@ export default function Home() {
           <div style={{ position: 'sticky', top: 0, width: '100%', height: '100vh', overflow: 'hidden' }}>
             
             {/* Images */}
-            <div className="images-wrapper hero-bg-layer" style={{ position: 'absolute', inset: 0 }}>
+            <div className="images-wrapper hero-bg-layer" style={{ position: 'absolute', inset: 0, opacity: 0.08 }}>
               {slides.map((slide, i) => (
                 <InlineImageEditor
                   key={i}
