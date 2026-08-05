@@ -326,7 +326,7 @@ export default function Home() {
           <div style={{ position: 'sticky', top: 0, width: '100%', height: '100vh', overflow: 'hidden' }}>
             
             {/* Images */}
-            <div className="images-wrapper" style={{ position: 'absolute', inset: 0, opacity: 0.08, mixBlendMode: 'multiply' }}>
+            <div className="images-wrapper hero-bg-layer" style={{ position: 'absolute', inset: 0 }}>
               {slides.map((slide, i) => (
                 <InlineImageEditor
                   key={i}

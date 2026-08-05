@@ -194,6 +194,12 @@ html[dir="rtl"] #munisys-wrapper .cnt-info-panel {
             transform: none !important;
         }
 
+        /* Dark mode: hide background photos — only keep the 3D sphere */
+        [data-theme="dark"] #munisys-wrapper .bg-image,
+        [data-theme="dark"] #munisys-wrapper .bg-image.active {
+            opacity: 0 !important;
+        }
+
         #munisys-wrapper .bg-image.prev {
             clip-path: inset(0 0 0 0%);
             transform: scale(1);
@@ -208,6 +214,15 @@ html[dir="rtl"] #munisys-wrapper .cnt-info-panel {
             /* Filtre Bleu foncé Munisys unificateur */
             z-index: 5;
             pointer-events: none;
+        }
+
+        /* Dark mode: remove the blue overlay — background is already dark enough */
+        [data-theme="dark"] #munisys-wrapper .images-wrapper::after {
+            background: transparent !important;
+        }
+
+        [data-theme="dark"] #munisys-wrapper .images-wrapper::before {
+            display: none !important;
         }
 
         #munisys-wrapper .images-wrapper::before {
