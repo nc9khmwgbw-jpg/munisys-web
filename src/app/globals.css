@@ -1343,6 +1343,110 @@ html[dir="rtl"] #munisys-wrapper .cnt-info-panel {
             border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
         }
 
+        /* ── FOOTER NEWSLETTER ── */
+        #munisys-wrapper .ft-newsletter {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            flex-wrap: wrap !important;
+            gap: 2rem !important;
+            padding: 2.5rem 5rem !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-text h4 {
+            color: #fff !important;
+            font-size: 1.1rem !important;
+            font-weight: 700 !important;
+            margin: 0 0 6px 0 !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-text p {
+            color: rgba(255, 255, 255, 0.55) !important;
+            font-size: 0.85rem !important;
+            margin: 0 !important;
+            max-width: 380px !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-form {
+            display: flex !important;
+            gap: 10px !important;
+            flex-shrink: 0 !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-input {
+            padding: 10px 16px !important;
+            border-radius: 6px !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            background: rgba(255, 255, 255, 0.07) !important;
+            color: #fff !important;
+            outline: none !important;
+            width: 240px !important;
+            font-size: 0.9rem !important;
+            font-family: inherit !important;
+            transition: border-color 0.2s !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-input::placeholder {
+            color: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-input:focus {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-btn {
+            padding: 10px 22px !important;
+            border-radius: 6px !important;
+            border: 1px solid #fff !important;
+            background: #fff !important;
+            color: #1a1a1a !important;
+            font-weight: 700 !important;
+            font-size: 0.88rem !important;
+            cursor: pointer !important;
+            font-family: inherit !important;
+            transition: background 0.2s, color 0.2s !important;
+            white-space: nowrap !important;
+        }
+
+        #munisys-wrapper .ft-newsletter-btn:hover {
+            background: transparent !important;
+            color: #fff !important;
+        }
+
+        @media (max-width: 768px) {
+            #munisys-wrapper .ft-newsletter {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                padding: 2rem 5% !important;
+            }
+            #munisys-wrapper .ft-newsletter-form {
+                width: 100% !important;
+            }
+            #munisys-wrapper .ft-newsletter-input {
+                flex: 1 !important;
+                width: auto !important;
+            }
+            #munisys-wrapper .ft-top {
+                padding: 2rem 5% !important;
+            }
+            #munisys-wrapper .ft-main {
+                grid-template-columns: repeat(2, 1fr) !important;
+                padding: 2rem 5% !important;
+            }
+            #munisys-wrapper .ft-bottom {
+                padding: 1.5rem 5% !important;
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #munisys-wrapper .ft-main {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
         /* ── POINTS DE RUPTURE TABLETTE (JUSQU'À 1024PX) ── */
         @media(max-width: 1024px) {
             #munisys-wrapper .text-panel {

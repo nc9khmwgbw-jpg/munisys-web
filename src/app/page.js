@@ -156,8 +156,8 @@ const defaultSlides = [
 
 const defaultBentoSolutions = [
   { title: 'Core Infrastructure<br/>Technologies', desc: 'Compute, storage, networking and backup infrastructure across data centers and public clouds with leading data-centric solutions.', btn: 'Read more', img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop', link: '/solutions/', span: 'span-2x3' },
-  { title: 'Cybersecurity<br/>Solutions', desc: 'End-to-end security architectures to protect your digital assets from evolving threats.', btn: 'Discover', img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'span-2x1' },
-  { title: 'Infrastructure<br/>Software', desc: 'Software-defined approaches and robust integrations for modern IT operations.', btn: '', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'glass' },
+  { title: 'Cybersecurity<br/>Solutions', desc: 'End-to-end security architectures to protect your digital assets from evolving threats.', btn: 'Discover', img: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'span-2x1' },
+  { title: 'Infrastructure<br/>Software', desc: 'Software-defined approaches and robust integrations for modern IT operations.', btn: '', img: 'https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'glass' },
   { title: 'Managed &<br/>Cloud Services', desc: 'Seamless operations across public, private, and hybrid cloud environments.', btn: '', img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'glass' },
   { title: 'Endpoint Solutions', desc: 'Empowering your workforce with secure and efficient computing devices.', btn: 'View Offerings', img: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=800&auto=format&fit=crop', link: '/solutions/', span: 'span-2x1' }
 ];
