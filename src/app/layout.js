@@ -88,6 +88,10 @@ export default async function RootLayout({ children }) {
     
     if (db.theme) theme = { ...theme, ...db.theme };
     if (db[lang]?.theme) theme = { ...theme, ...db[lang].theme };
+    
+    // Store lang for html tag
+    theme._lang = lang === 'ar' ? 'ar' : lang === 'fr' ? 'fr' : 'en';
+    theme._dir = lang === 'ar' ? 'rtl' : 'ltr';
   } catch (e) {}
 
   const dynamicCSS = `
@@ -108,7 +112,7 @@ export default async function RootLayout({ children }) {
   `;
 
   return (
-    <html lang="fr">
+    <html lang={theme._lang || 'en'} dir={theme._dir || 'ltr'}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

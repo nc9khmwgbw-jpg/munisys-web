@@ -4,54 +4,62 @@ import path from 'path';
 export default async function sitemap() {
   const baseUrl = 'https://www.munisys.net';
 
-  // Define static routes
-  const routes = [
-    '',
-    '/about-us',
-    '/solutions',
-    '/services',
-    '/insights',
-    '/contact',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
+  // All static routes with proper priority
+  const staticRoutes = [
+    { path: '',                      changeFreq: 'weekly',  priority: 1.0 },
+    { path: '/solutions',            changeFreq: 'monthly', priority: 0.9 },
+    { path: '/services',             changeFreq: 'monthly', priority: 0.9 },
+    { path: '/insights',             changeFreq: 'weekly',  priority: 0.85 },
+    { path: '/about-us',             changeFreq: 'monthly', priority: 0.8 },
+    { path: '/contact',              changeFreq: 'monthly', priority: 0.8 },
+    { path: '/careers',              changeFreq: 'weekly',  priority: 0.75 },
+    { path: '/customer-references',  changeFreq: 'monthly', priority: 0.7 },
+    { path: '/technology-partners',  changeFreq: 'monthly', priority: 0.7 },
+    { path: '/mentions-legales',     changeFreq: 'yearly',  priority: 0.2 },
+    { path: '/politique-confidentialite', changeFreq: 'yearly', priority: 0.2 },
+  ].map(({ path: routePath, changeFreq, priority }) => ({
+    url: `${baseUrl}${routePath}`,
     lastModified: new Date(),
-    changeFrequency: route === '' ? 'weekly' : 'monthly',
-    priority: route === '' ? 1 : 0.8,
+    changeFrequency: changeFreq,
+    priority,
   }));
 
+  const dynamicRoutes = [];
+
   try {
-    // Attempt to read db.json for dynamic routes
     const dbPath = path.join(process.cwd(), 'src/data/db.json');
     const fileContents = await fs.readFile(dbPath, 'utf8');
     const dbData = JSON.parse(fileContents);
-
-    // Add /solutions/[slug] routes
     const dbLang = dbData.en || dbData;
-    if (dbLang && dbLang.solutions) {
-      const solutionRoutes = Object.keys(dbLang.solutions).map((slug) => ({
-        url: `${baseUrl}/solutions/${slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.6,
-      }));
-      routes.push(...solutionRoutes);
+
+    // /solutions/[slug]
+    if (dbLang?.solutions) {
+      Object.keys(dbLang.solutions).forEach((slug) => {
+        dynamicRoutes.push({
+          url: `${baseUrl}/solutions/${slug}`,
+          lastModified: new Date(),
+          changeFrequency: 'monthly',
+          priority: 0.75,
+        });
+      });
     }
 
-    // Add /insights/[slug] article routes
+    // /insights/[slug]
     const insightsPosts = dbLang?.insights?.posts || dbData?.insights?.posts || [];
-    const articleRoutes = insightsPosts
+    insightsPosts
       .filter(post => post.slug)
-      .map(post => ({
-        url: `${baseUrl}/insights/${post.slug}`,
-        lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
-      }));
-    routes.push(...articleRoutes);
+      .forEach(post => {
+        dynamicRoutes.push({
+          url: `${baseUrl}/insights/${post.slug}`,
+          lastModified: new Date(post.date || new Date()),
+          changeFrequency: 'monthly',
+          priority: 0.7,
+        });
+      });
 
   } catch (error) {
-    console.error("Erreur lors de la génération du sitemap dynamique:", error);
+    console.error('Erreur lors de la génération du sitemap dynamique:', error);
   }
 
-  return routes;
+  return [...staticRoutes, ...dynamicRoutes];
 }
