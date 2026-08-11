@@ -145,12 +145,54 @@ function InfinityIntegrationLoop({ isTextRight }) {
   );
 }
 
-export default function DataCore({ isTextRight }) {
+// ── Lightweight SVG fallback for mobile / low-power devices ──
+function DataCoreFallback() {
   return (
-    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }}>
+    <div style={{
+      position: 'absolute', top: 0, left: 0, width: '100%', height: '100%',
+      zIndex: 0, pointerEvents: 'none', display: 'flex',
+      alignItems: 'center', justifyContent: 'center',
+      overflow: 'hidden',
+    }}>
+      {/* Static gradient orb — zero GPU cost */}
+      <div style={{
+        width: '280px', height: '280px', borderRadius: '50%',
+        background: 'radial-gradient(circle at 35% 35%, rgba(131,165,194,0.35) 0%, rgba(29,78,121,0.25) 40%, rgba(146,43,85,0.15) 70%, transparent 100%)',
+        filter: 'blur(20px)',
+        animation: 'orb-pulse 4s ease-in-out infinite alternate',
+      }} />
+      <style>{`
+        @keyframes orb-pulse {
+          from { transform: scale(0.95) rotate(-5deg); opacity: 0.7; }
+          to   { transform: scale(1.05) rotate(5deg);  opacity: 1; }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+export default function DataCore({ isTextRight }) {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const check = () => {
+      const mobile = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768;
+      setIsMobile(mobile);
+    };
+    check();
+    window.addEventListener('resize', check, { passive: true });
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  // On mobile/touch devices skip the heavy WebGL canvas entirely
+  if (isMobile) {
+    return <DataCoreFallback />;
+  }
+
+  return (
+    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0, pointerEvents: 'none' }} aria-hidden="true">
       <Canvas camera={{ position: [0, 0, 16], fov: 45 }}>
-        
-        {/* Studio lighting is essential to get the glossy reflections on the glass surface */}
+        {/* Studio lighting */}
         <ambientLight intensity={1.5} />
         <directionalLight position={[10, 10, 10]} intensity={3.5} color="#ffffff" />
         <directionalLight position={[-10, -5, 5]} intensity={6} color="#922b55" />

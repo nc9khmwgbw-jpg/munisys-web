@@ -8,6 +8,7 @@ import SmoothScroll from '@/components/SmoothScroll';
 import CookieBanner from '@/components/CookieBanner';
 import ToastContainer from '@/components/ToastContainer';
 import BackToTop from '@/components/BackToTop';
+import Analytics from '@/components/Analytics';
 import dbConnect from '@/lib/mongodb';
 import MunisysState from '@/models/MunisysState';
 import defaultDb from '@/data/db.json';
@@ -139,6 +140,7 @@ export default async function RootLayout({ children }) {
           <CookieBanner />
           <ToastContainer />
           <BackToTop />
+          <Analytics />
           </CMSProvider>
         </SmoothScroll>
       </body>

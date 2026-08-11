@@ -1,8 +1,7 @@
 "use client";
 import { useCMS } from '@/components/CMSProvider';
 import InlineEditor from '@/components/InlineEditor';
-
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function CareersPage() {
     const { dbData, isEditMode } = useCMS();
@@ -38,9 +37,40 @@ export default function CareersPage() {
         heroTitle: '', heroDesc: '', whyTitle: '', whyDesc: '', reasons: [], jobsTitle: '', jobs: [] 
     };
 
+    const [selectedJob, setSelectedJob] = useState(null);
+    const [isApplying, setIsApplying] = useState(false);
 
-
-
+    const handleApplySubmit = async (e) => {
+        e.preventDefault();
+        if (isApplying) return;
+        setIsApplying(true);
+        const formData = {
+            position: selectedJob,
+            name: e.target.name.value,
+            email: e.target.email.value,
+            phone: e.target.phone.value,
+            linkedin: e.target.linkedin.value,
+            motivation: e.target.motivation.value,
+        };
+        try {
+            const res = await fetch('/api/apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            });
+            const result = await res.json();
+            if (res.ok) {
+                if (typeof window.__toast === 'function') window.__toast('✅ Candidature envoyée avec succès !', 'success');
+                setSelectedJob(null);
+            } else {
+                if (typeof window.__toast === 'function') window.__toast(result.error || "Erreur lors de l'envoi.", 'error');
+            }
+        } catch(err) {
+            if (typeof window.__toast === 'function') window.__toast('Erreur réseau.', 'error');
+        } finally {
+            setIsApplying(false);
+        }
+    };
     return (
         <div className="m-car-page">
             {/* Split Hero */}
@@ -128,18 +158,87 @@ export default function CareersPage() {
                                     />
                                 </div>
                                 <div className="m-job-action">
-                                    <a href="#" className="m-btn-apply">
+                                    <button 
+                                        className="m-btn-apply" 
+                                        onClick={() => setSelectedJob(job.title)}
+                                        style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                                    >
                                         <InlineEditor as="span" className="d-md-none" dbPath={['careers', 'applyLabel']} fallback="Apply" style={{display: 'none'}} />
                                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                                         </svg>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
+
+            {/* Application Modal */}
+            {selectedJob && (
+                <div style={{
+                    position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+                    backgroundColor: 'rgba(15, 23, 42, 0.85)',
+                    backdropFilter: 'blur(8px)',
+                    zIndex: 99999,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    padding: '1rem'
+                }}>
+                    <div style={{
+                        background: 'linear-gradient(135deg, #1e293b, #0f172a)',
+                        padding: '2.5rem',
+                        borderRadius: '24px',
+                        width: '100%',
+                        maxWidth: '550px',
+                        position: 'relative',
+                        border: '1px solid rgba(255,255,255,0.1)',
+                        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                        maxHeight: '90vh',
+                        overflowY: 'auto'
+                    }}>
+                        <button 
+                            onClick={() => setSelectedJob(null)}
+                            style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: 'none', border: 'none', color: '#94a3b8', cursor: 'pointer' }}
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                        </button>
+                        <h3 style={{ color: '#f8fafc', fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 600 }}>Postuler chez Munisys</h3>
+                        <p style={{ color: '#922b55', marginBottom: '2rem', fontWeight: 500 }}>Poste : {selectedJob}</p>
+                        
+                        <form onSubmit={handleApplySubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+                            <div>
+                                <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Nom complet *</label>
+                                <input name="name" type="text" required style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '1rem' }} />
+                            </div>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                                <div>
+                                    <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Email *</label>
+                                    <input name="email" type="email" required style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '1rem' }} />
+                                </div>
+                                <div>
+                                    <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Téléphone</label>
+                                    <input name="phone" type="tel" style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '1rem' }} />
+                                </div>
+                            </div>
+                            <div>
+                                <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Lien LinkedIn / Portfolio</label>
+                                <input name="linkedin" type="url" style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '1rem' }} />
+                            </div>
+                            <div>
+                                <label style={{ display: 'block', color: '#cbd5e1', marginBottom: '0.5rem', fontSize: '0.9rem' }}>Lettre de motivation courte *</label>
+                                <textarea name="motivation" required rows="4" style={{ width: '100%', padding: '0.75rem 1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', color: '#fff', fontSize: '1rem', resize: 'vertical' }}></textarea>
+                            </div>
+                            <button type="submit" disabled={isApplying} style={{ 
+                                marginTop: '1rem', padding: '1rem', borderRadius: '50px', background: 'linear-gradient(135deg, #1d4e79, #922b55)', 
+                                color: '#fff', fontWeight: 600, border: 'none', cursor: 'pointer', opacity: isApplying ? 0.7 : 1, transition: 'opacity 0.2s'
+                            }}>
+                                {isApplying ? 'Envoi en cours...' : 'Envoyer ma candidature'}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
