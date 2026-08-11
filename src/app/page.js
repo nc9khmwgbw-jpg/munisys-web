@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useInView, animate } from 'framer-motion';
@@ -335,7 +336,7 @@ export default function Home() {
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
                 >
                   {(src) => (
-                    <img src={src} className={`bg-image${i === si ? ' active' : ''}`} alt={slide.meta} />
+                    <Image src={src} fill className={`bg-image${i === si ? ' active' : ''}`} alt={slide.meta} sizes="100vw" style={{ objectFit: 'cover' }} priority={i === 0} />
                   )}
                 </InlineImageEditor>
               ))}
@@ -524,9 +525,9 @@ export default function Home() {
             <Link href="/insights" className="ins-card" style={{ textDecoration: 'none' }}>
               <InlineImageEditor dbPath={['homepage', 'insights', 1, 'img']} fallback="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop">
                 {(src) => (
-                  <div className="ins-img-wrap">
-                    <img src={src} alt="New headquarters" />
-                  </div>
+                    <div className="ins-img-wrap" style={{ position: 'relative' }}>
+                    <Image src={src} fill alt="New headquarters" sizes="(max-width: 768px) 100vw, 33vw" style={{ objectFit: 'cover' }} />
+                    </div>
                 )}
               </InlineImageEditor>
               <div className="ins-text">

@@ -6,6 +6,8 @@ import EditableFooter from '@/components/EditableFooter';
 import CustomCursor from '@/components/CustomCursor';
 import SmoothScroll from '@/components/SmoothScroll';
 import CookieBanner from '@/components/CookieBanner';
+import ToastContainer from '@/components/ToastContainer';
+import BackToTop from '@/components/BackToTop';
 import dbConnect from '@/lib/mongodb';
 import MunisysState from '@/models/MunisysState';
 import defaultDb from '@/data/db.json';
@@ -135,6 +137,8 @@ export default async function RootLayout({ children }) {
           
           <AdminToolbar />
           <CookieBanner />
+          <ToastContainer />
+          <BackToTop />
           </CMSProvider>
         </SmoothScroll>
       </body>

@@ -7,6 +7,7 @@ export default function ContactPage() {
     const { dbData, isEditMode } = useCMS();
     const data = dbData?.contact || {};
     const [sent, setSent] = useState(false);
+    const [sending, setSending] = useState(false);
 
     return (
         <div className="cnt-wrapper">
@@ -89,7 +90,8 @@ export default function ContactPage() {
                     ) : (
                         <form onSubmit={async (e) => { 
                             e.preventDefault();
-                            if (isEditMode) return; // Don't submit form in edit mode
+                            if (isEditMode || sending) return;
+                            setSending(true);
                             const formData = {
                                 name: e.target['cnt-name'].value,
                                 email: e.target['cnt-email'].value,
@@ -103,10 +105,20 @@ export default function ContactPage() {
                                     headers: { 'Content-Type': 'application/json' },
                                     body: JSON.stringify(formData)
                                 });
-                                if (res.ok) setSent(true);
-                                else alert("Une erreur s'est produite lors de l'envoi.");
+                                const result = await res.json();
+                                if (res.ok) {
+                                    setSent(true);
+                                    if (typeof window.__toast === 'function')
+                                        window.__toast('✅ Message envoyé avec succès ! Nous vous répondrons sous 24h.', 'success');
+                                } else {
+                                    if (typeof window.__toast === 'function')
+                                        window.__toast(result.error || "Une erreur s'est produite lors de l'envoi.", 'error');
+                                }
                             } catch(err) {
-                                alert("Erreur réseau.");
+                                if (typeof window.__toast === 'function')
+                                    window.__toast('Erreur réseau. Vérifiez votre connexion.', 'error');
+                            } finally {
+                                setSending(false);
                             }
                         }}>
                             <div className="cnt-row-2">
@@ -135,12 +147,22 @@ export default function ContactPage() {
                             </div>
                             <div className="cnt-submit-row">
                                 <InlineEditor as="span" className="cnt-note" dbPath={['contact', 'formNote']} fallback="🔒 Your data is 100% secure & never shared." />
-                                <button type="submit" className="cnt-btn">
-                                    <InlineEditor as="span" dbPath={['contact', 'btnSubmit']} fallback="Send Message" />
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
+                                <button type="submit" className="cnt-btn" disabled={sending} style={{ opacity: sending ? 0.7 : 1 }}>
+                                    {sending ? (
+                                        <>
+                                            <span style={{ display: 'inline-block', width: '18px', height: '18px', border: '2px solid rgba(255,255,255,0.4)', borderTopColor: '#fff', borderRadius: '50%', animation: 'spin 0.7s linear infinite' }} />
+                                            <InlineEditor as="span" dbPath={['contact', 'btnSubmitting']} fallback="Envoi en cours..." />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <InlineEditor as="span" dbPath={['contact', 'btnSubmit']} fallback="Send Message" />
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                                <path d="M5 12h14M12 5l7 7-7 7" />
+                                            </svg>
+                                        </>
+                                    )}
                                 </button>
+                                <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
                             </div>
                         </form>
                     )}
