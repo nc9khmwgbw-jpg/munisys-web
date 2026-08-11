@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Environment, Sparkles, MeshTransmissionMaterial } from '@react-three/drei';
+import { Float, Environment, Lightformer, Sparkles, MeshTransmissionMaterial } from '@react-three/drei';
 import * as THREE from 'three';
 
 // ── COMPONENT: THE INFINITY LOOP (L'Anneau d'Infinité) ────
@@ -197,7 +197,14 @@ export default function DataCore({ isTextRight }) {
         <directionalLight position={[10, 10, 10]} intensity={3.5} color="#ffffff" />
         <directionalLight position={[-10, -5, 5]} intensity={6} color="#922b55" />
         <directionalLight position={[0, -10, -5]} intensity={5} color="#83a5c2" />
-        <Environment preset="city" />
+        <Environment resolution={256}>
+          <group rotation={[-Math.PI / 2, 0, 0]}>
+            <Lightformer intensity={4} rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={[10, 10, 1]} />
+            <Lightformer intensity={2} rotation-y={Math.PI / 2} position={[-5, 1, -1]} scale={[10, 2, 1]} />
+            <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={[20, 2, 1]} />
+            <Lightformer type="ring" intensity={2} rotation-y={Math.PI / 2} position={[-0.1, -1, -5]} scale={10} />
+          </group>
+        </Environment>
         
         <InfinityIntegrationLoop isTextRight={isTextRight} />
       </Canvas>
