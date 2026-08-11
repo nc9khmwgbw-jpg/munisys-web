@@ -8,6 +8,7 @@ import InlineEditor, { InlineImageEditor } from '@/components/InlineEditor';
 import { useCMS } from '@/components/CMSProvider';
 import FadeIn from '@/components/FadeIn';
 import DataCore from '@/components/DataCore';
+import JsonLd from '@/components/JsonLd';
 
 // ── DRAGGABLE LIST (for Offerings section) ──────────────
 function DraggableList({ items, dbPath, fallback }) {
@@ -316,8 +317,26 @@ export default function Home() {
     num: `0${i + 1}`
   })) : defaultServices;
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Munisys",
+    "url": "https://www.munisys.net",
+    "logo": "https://www.munisys.net/logo.png",
+    "description": "Munisys is a leading provider of Enterprise IT Architecture, Cybersecurity, and Cloud Solutions.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+212-000-000-000",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/munisys"
+    ]
+  };
+
   return (
     <div id="munisys-wrapper">
+      <JsonLd data={organizationSchema} />
       {/* ── UNIFIED BACKGROUND FOR HERO & SOLUTIONS ── */}
       <div style={{ position: 'relative', width: '100%', background: 'var(--bg-gradient, linear-gradient(to bottom, #f4f7fb 0%, #ffffff 100%))' }}>
         

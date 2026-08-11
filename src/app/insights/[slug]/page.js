@@ -3,6 +3,7 @@
 import { useCMS } from '@/components/CMSProvider';
 import InlineEditor from '@/components/InlineEditor';
 import ReadingProgressBar from '@/components/ReadingProgressBar';
+import JsonLd from '@/components/JsonLd';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -42,31 +43,46 @@ export default function InsightArticlePage() {
     const canEdit = isEditMode && editIdx !== null;
 
     if (loading) {
-        return (
-            <div style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ width: 40, height: 40, border: '3px solid #e2e8f0', borderTop: '3px solid #922b55', borderRadius: '50%', animation: 'spin 1s linear infinite' }} />
-                <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
-            </div>
-        );
+        return <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Chargement...</div>;
     }
 
     if (!post) {
         return (
-            <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <h2>Article introuvable</h2>
-                <Link href="/insights" style={{ color: '#1d4e79', textDecoration: 'underline', marginTop: '1rem' }}>
-                    Retour aux actualités
-                </Link>
+            <div style={{ minHeight: '60vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
+                <h1 style={{ fontSize: '2rem', color: '#1d4e79' }}>Article introuvable</h1>
+                <Link href="/insights" style={{ color: '#922b55', textDecoration: 'underline' }}>Retour aux actualités</Link>
             </div>
         );
     }
 
+    const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title || "Article",
+        "description": post.desc || "",
+        "image": post.img || "https://www.munisys.net/og-image.jpg",
+        "datePublished": post.date || new Date().toISOString(),
+        "author": {
+            "@type": "Organization",
+            "name": "Munisys"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Munisys",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.munisys.net/logo.png"
+            }
+        }
+    };
+
     return (
-        <article style={{ background: '#ffffff', minHeight: '100vh', paddingTop: '6rem' }}>
+        <div style={{ background: '#f8fafc', minHeight: '100vh', padding: '120px 20px 60px 20px' }}>
             <ReadingProgressBar />
-            
-            <div style={{ maxWidth: '800px', margin: '0 auto', padding: '4rem 5%' }}>
-                <Link href="/insights" style={{ display: 'inline-flex', alignItems: 'center', color: '#64748b', fontSize: '0.9rem', marginBottom: '3rem', textDecoration: 'none', transition: 'color 0.2s' }}>
+            <JsonLd data={articleSchema} />
+            <article style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', borderRadius: '24px', padding: '40px', boxShadow: '0 10px 40px rgba(0,0,0,0.03)' }}>
+                
+                <Link href="/insights" style={{ display: 'inline-flex', alignItems: 'center', color: '#64748b', textDecoration: 'none', marginBottom: '2rem', fontSize: '0.9rem', fontWeight: 600, transition: 'color 0.2s' }} onMouseOver={(e) => e.target.style.color = '#1d4e79'} onMouseOut={(e) => e.target.style.color = '#64748b'}>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginRight: '0.5rem' }}>
                         <line x1="19" y1="12" x2="5" y2="12"></line>
                         <polyline points="12 19 5 12 12 5"></polyline>
@@ -131,8 +147,8 @@ export default function InsightArticlePage() {
                         </a>
                     </div>
                 )}
-            </div>
-        </article>
+            </article>
+        </div>
     );
 }
 

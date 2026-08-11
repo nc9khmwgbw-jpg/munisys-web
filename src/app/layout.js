@@ -122,15 +122,21 @@ export default async function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Outfit:wght@200;300;400;600;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
         <style dangerouslySetInnerHTML={{ __html: dynamicCSS }} />
       </head>
-      <body>
+      <body className={theme._dir === 'rtl' ? 'rtl-layout' : ''}>
+        <a href="#main-content" className="skip-link">Aller au contenu principal</a>
         <SmoothScroll>
-          <CMSProvider>
+          <CMSProvider 
+            initialData={defaultDb} 
+            serverMunisysState={initialMunisysState}
+          >
           <CustomCursor />
           <header id="munisys-global-header">
             <EditableNavigation />
           </header>
 
-          {children}
+          <main id="main-content">
+            {children}
+          </main>
 
           <div id="munisys-wrapper">
             <EditableFooter />

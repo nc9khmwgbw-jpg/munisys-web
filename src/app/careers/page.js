@@ -1,6 +1,7 @@
 "use client";
 import { useCMS } from '@/components/CMSProvider';
 import InlineEditor from '@/components/InlineEditor';
+import JsonLd from '@/components/JsonLd';
 import { useState, useEffect } from 'react';
 
 export default function CareersPage() {
@@ -71,8 +72,33 @@ export default function CareersPage() {
             setIsApplying(false);
         }
     };
+
+    // Generate JSON-LD for open positions
+    const jobSchemas = (data.jobs || []).map(job => ({
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": job.title || "Open Position",
+        "description": job.title || "Open Position at Munisys",
+        "datePosted": new Date().toISOString().split('T')[0],
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Munisys",
+            "sameAs": "https://www.munisys.net"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Casablanca",
+                "addressCountry": "MA"
+            }
+        }
+    }));
+
     return (
         <div className="m-car-page">
+            {jobSchemas.map((schema, idx) => <JsonLd key={idx} data={schema} />)}
             {/* Split Hero */}
             <div className="m-car-hero">
                 <div className="m-car-hero-left m-reveal-left">
